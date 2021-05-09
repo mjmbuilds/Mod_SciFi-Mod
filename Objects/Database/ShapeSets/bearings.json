@@ -1,0 +1,89 @@
+{"partList" : [
+
+//--------------------------------------------------------------- Thick Bearing
+{
+	"uuid": "e80e33e9-5a40-4a8a-9d96-751bc542c997",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/thickBearing.obj"
+	}]},
+	"bearing": { },
+	"rotationSet": "PropZ",
+	"color": "505050",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 2
+},
+//---------------------------------------------------------------- Hubless Bearing (Small)
+{
+	"uuid": "0859e52d-c914-4367-aa80-23ce7393dbcc",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/HublessBearing_sm.obj"
+	}]},
+	"bearing": { },
+	"rotationSet": "PropZ",
+	"color": "505050",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 2
+},
+//---------------------------------------------------------------- Hubless Bearing (Medium)
+{
+	"uuid": "5e1a4084-a456-41da-9261-fb04e2e8e826",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/HublessBearing_md.obj"
+	}]},
+	"bearing": { },
+	"rotationSet": "PropZ",
+	"color": "505050",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 2
+},
+//---------------------------------------------------------------- Hubless Bearing (Large)
+{
+	"uuid": "7a2ad284-b434-4a77-9b79-6d0f56c4455a",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/HublessBearing_lg.obj"
+	}]},
+	"bearing": { },
+	"rotationSet": "PropZ",
+	"color": "505050",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 2
+}
+
+
+//---------------------------------------------------------------- END
+]}

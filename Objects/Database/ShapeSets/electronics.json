@@ -1,0 +1,689 @@
+{"partList" : [
+
+//---------------------------------------------------------------- Input Function Assignment
+{
+	"uuid": "467273c9-6e03-4e44-88f7-9d19a0209c26",
+	"name": "input_function_assignment",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+			"material": "DifAsg"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/ScifiLogic2.obj"
+		}]},
+	"box": { "x": 1, "y": 1, "z": 1 },
+	"rotationSet": "PropZ",
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/InputFunction.lua",
+		"classname": "InputFunction"},
+	"physicsMaterial": "Metal",
+	"color": "ff0000",
+	"density": 500.0,
+	"ratings": {
+		"density": 5,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 1
+		},
+	"flammable": false
+},
+
+//---------------------------------------------------------------- Settings Slider
+{
+	"uuid": "3a88347c-da9b-4a71-8b37-fb0721238784",
+	"name": "settings_slider",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+			"material": "DifAsg"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/ScifiLogic2.obj"
+		}]},
+	"box": { "x": 1, "y": 1, "z": 1 },
+	"rotationSet": "PropZ",
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/SettingsSlider.lua",
+		"classname": "SettingsSlider"},
+	"physicsMaterial": "Metal",
+	"color": "ff0000",
+	"density": 500.0,
+	"ratings": {
+		"density": 5,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 1
+		},
+	"flammable": false
+},
+
+//---------------------------------------------------------------- Small Fighter Radar
+{
+	"uuid": "416acd67-2372-4838-bc3a-1bf7b22f2a32",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "2PoseAnimDifAsg"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/RadarSmall_base.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/RadarSmall_x.fbx",
+	"pose1": "$MOD_DATA/Objects/Mesh/RadarSmall_y.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/RadarSmall.lua",
+		"classname": "RadarSmall" },
+	"rotationSet": "PropY",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 2, "y": 1, "z": 1,
+			"margin": 0, "pointList": [
+			{ "x": -0.28, "y": -1.00, "z": -1.00 },
+			{ "x": -0.50, "y": -1.00, "z": 0.98 },
+			{ "x": 0.50, "y": -1.00, "z": 0.98 },
+			{ "x": 0.28, "y": -1.00, "z": -1.00 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- 4 Digit Display
+{
+	"uuid": "b85adaa4-0af0-4c7f-8a13-69af46da2f84",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/ThreeDigitDisplay_dif.tga",
+		"$MOD_DATA/Objects/Textures/ThreeDigitDisplay_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "SkelAnimDifAsgNor"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/ThreeDigitDisplay_dif.tga",
+		"$MOD_DATA/Objects/Textures/ThreeDigitDisplay_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "UVAnimDifAsgNor",
+		"custom": {"uv0": { "u": 0.005859375, "v": 0.123046875 } }}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx",
+	"includes": [ "POSITION", "UV0", "NORMAL", "TANGENT", "BLEND_INDICES", "BLEND_WEIGHTS" ],
+	"animationList" : [
+		{ "name" : "Decimal", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "HideNumbers", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "Select", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "Select2", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "Negative", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "A", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "B", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "C", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "D", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "E", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "F", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" },
+		{ "name" : "G", "file": "$MOD_DATA/Objects/Mesh/FourDigitDisplay.fbx" }
+		]}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/FourDigitDisplay.lua",
+		"classname": "FourDigitDisplay" },
+	"rotationSet": "P404040",
+	"color": "de7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 2, "y": 1, "z": 1,
+			"margin": 0, "pointList": [
+			{ "x": 1.00, "y": 0.84, "z": -1.00 },
+			{ "x": 1.00, "y": -0.85, "z": -1.00 },
+			{ "x": -1.00, "y": -0.85, "z": -1.00 },
+			{ "x": -1.00, "y": 0.84, "z": -1.00 },
+			{ "x": 1.00, "y": 0.84, "z": -0.80 },
+			{ "x": 1.00, "y": -0.85, "z": -0.80 },
+			{ "x": -1.00, "y": 0.84, "z": -0.80 },
+			{ "x": -1.00, "y": -0.85, "z": -0.80 }
+		]},
+	"qualityLevel": 5
+},
+//--------------------------------------------------------------- Seat Logic Input Breakout
+{
+	"uuid": "6f64d36d-5e23-4f6b-bcb5-e0057ba43fce",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/seatLogic_dif.tga",
+		"$MOD_DATA/Objects/Textures/display_asg.png",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "UVAnimDifAsgNor",
+		"custom":{"uv0": { "u": 0.091, "v": 0.090909 }}},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/ScifiController_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/ScifiController_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/SeatLogic.lua",
+		"classname": "SeatLogic" },
+	"rotationSet": "P404040",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"previewRotation": [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ],
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- Buttons to Motor/Piston Power Converter
+{
+	"uuid": "c911424f-93a5-43c8-8c23-d4f05e4fdcf6",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/ScifiLogic2.obj"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/ButtonToPower.lua",
+		"classname": "ButtonToPower" },
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"box": { "x": 1, "y": 1, "z": 1 },
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- GlitchWelder
+{
+	"uuid": "4f5e6a7e-23f4-43ac-9070-234a90ccce27",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"},
+		{"textureList": [
+		"$GAME_DATA/Character/Char_Tools/Char_weldtool/char_weldtool_dif.tga",
+		"$GAME_DATA/Character/Char_Tools/Char_weldtool/char_weldtool_asg.tga",
+		"$GAME_DATA/Character/Char_Tools/Char_weldtool/char_weldtool_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/GlitchWelderV2.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/GlitchWeld.lua",
+		"classname": "GlitchWeld" },
+	"rotationSet": "PropZ",
+	"color": "3094ff",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"box": { "x": 1, "y": 1, "z": 1 },
+	"qualityLevel": 0,
+	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
+},
+//--------------------------------------------------------------- LC Wedge Button
+{
+	"uuid": "8fb9f92e-c7d0-4628-9f6f-a6d19803f354",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/WedgeButton_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/WedgeButton_on.fbx"
+	}]},
+	"button": { },
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.8, "y": -0.8, "z": 0.8 },
+			{ "x": -0.8, "y": 0.8, "z": -0.8 },
+			{ "x": -0.8, "y": -0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": 0.8 },
+			{ "x": 0.8, "y": 0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- LC Wedge Lever Switch
+{
+	"uuid": "7903f1df-5c52-4990-8b68-ed094e875d93",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/WedgeLeverSwitch_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/WedgeLeverSwitch_on.fbx"
+	}]},
+	"lever": { },
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.8, "y": -0.8, "z": 0.8 },
+			{ "x": -0.8, "y": 0.8, "z": -0.8 },
+			{ "x": -0.8, "y": -0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": 0.8 },
+			{ "x": 0.8, "y": 0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- LC Wedge Switch
+{
+	"uuid": "64c7c6c6-f938-46ef-8c5e-a467adcb1049",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/WedgeSwitch_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/WedgeSwitch_on.fbx"
+	}]},
+	"lever": { },
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.8, "y": -0.8, "z": 0.8 },
+			{ "x": -0.8, "y": 0.8, "z": -0.8 },
+			{ "x": -0.8, "y": -0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": 0.8 },
+			{ "x": 0.8, "y": 0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- LC Wedge Controller
+{
+	"uuid": "2eda8658-9e90-4bcc-b8ba-b19a3e5efc1d",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$GAME_DATA/Objects/Textures/interactive/obj_interactive_controller_dif.tga",
+		"$GAME_DATA/Objects/Textures/interactive/obj_interactive_controller_asg.tga",
+		"$GAME_DATA/Objects/Textures/interactive/obj_interactive_controller_nor.tga"],
+		"material": "DifAsgNor"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/WedgeController.fbx"
+	}]},
+	"timedjoint": { },
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.8, "y": -0.8, "z": 0.8 },
+			{ "x": -0.8, "y": 0.8, "z": -0.8 },
+			{ "x": -0.8, "y": -0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": 0.8 },
+			{ "x": 0.8, "y": 0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- Surface Button
+{
+	"uuid": "12cf2b36-3a40-48c4-bf3c-5d8d9ae5f7e1",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/SurfaceButton_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/SurfaceButton_on.fbx"
+	}]},
+	"button": { },
+	"rotationSet": "PropY",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.64, "y": -1.00, "z": -0.64 },
+			{ "x": -0.64, "y": -1.00, "z": 0.64 },
+			{ "x": -0.64, "y": -0.70, "z": 0.64 },
+			{ "x": -0.64, "y": -0.70, "z": -0.64 },
+			{ "x": 0.64, "y": -1.00, "z": -0.64 },
+			{ "x": 0.64, "y": -1.00, "z": 0.64 },
+			{ "x": 0.64, "y": -0.70, "z": -0.64 },
+			{ "x": 0.64, "y": -0.70, "z": 0.64 }
+		]},
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- Surface Switch
+{
+	"uuid": "c732b628-3820-4015-ae97-b58a6ab08523",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/SurfaceSwitch_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/SurfaceSwitch_on.fbx"
+	}]},
+	"lever": { },
+	"rotationSet": "PropY",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.50, "y": -1.00, "z": -0.76 },
+			{ "x": 0.50, "y": -1.00, "z": -0.76 },
+			{ "x": 0.50, "y": -1.00, "z": 0.76 },
+			{ "x": -0.50, "y": -1.00, "z": 0.76 },
+			{ "x": -0.50, "y": -0.80, "z": -0.76 },
+			{ "x": 0.50, "y": -0.80, "z": -0.76 },
+			{ "x": -0.50, "y": -0.80, "z": 0.76 },
+			{ "x": 0.50, "y": -0.80, "z": 0.76 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Slim Button
+{
+	"uuid": "d142992e-8938-47e7-9eee-2d76b3fe7168",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/slim_button_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/slim_button_on.obj"
+	}]},
+	"button": { },
+	"rotationSet": "PropZ",
+	"sticky": "-X+X-Y+Y-Z+Z",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": -0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": 1.0, "z": -0.8 },
+		{ "x": -0.5, "y": 1.0, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Slim Switch
+{
+	"uuid": "be3f0967-cfca-4889-98af-09a8cdd813ea",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/slim_switch_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/slim_switch_on.obj"
+	}]},
+	"lever": { },
+	"rotationSet": "PropZ",
+	"sticky": "-X+X-Y+Y-Z+Z",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": -0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": 1.0, "z": -0.8 },
+		{ "x": -0.5, "y": 1.0, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Slim Controller Panel
+{
+	"uuid": "5137647e-b893-48c9-a1b7-e5b92d9c3f9a",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/timer_controller_dif.tga",
+		"$MOD_DATA/Objects/Textures/timer_controller_asg.tga",
+		"$MOD_DATA/Objects/Textures/timer_controller_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/slim_controller.obj"
+	}]},
+	"timedjoint": { },
+	"rotationSet": "PropYZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": -0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": 1.0, "z": -0.8 },
+		{ "x": -0.5, "y": 1.0, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Slim Logic Panel
+{
+	"uuid": "af4b89cc-56c0-40ce-8adb-98335b44051c",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/logic_dif.tga",
+		"$MOD_DATA/Objects/Textures/logic_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "PoseAnimDifAsgNor"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/logic_dif.tga",
+		"$MOD_DATA/Objects/Textures/logic_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "UVAnimDifAsgNor",
+		"custom": {"uv0": { "u": 0.16666667, "v": 0.1645 } }}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/slim_logic_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/slim_logic_on.obj"
+	}]},
+	"logic": { },
+	"rotationSet": "PropYZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": -0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": 1.0, "z": -0.8 },
+		{ "x": -0.5, "y": 1.0, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Slim Timer Panel
+{
+	"uuid": "d9f65dad-aef8-4f2b-8da0-e9a5ccf5cf4b",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/timer_controller_dif.tga",
+		"$MOD_DATA/Objects/Textures/timer_controller_asg.tga",
+		"$MOD_DATA/Objects/Textures/timer_controller_nor.tga"],
+		"material": "UVAnimDifAsgNor",
+		"custom": {"uv0": { "u": 0.00390625, "v": 0.189453125 } }},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/timer_controller_dif.tga",
+		"$MOD_DATA/Objects/Textures/timer_controller_asg.tga",
+		"$MOD_DATA/Objects/Textures/timer_controller_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/slim_timer.obj"
+	}]},
+	"timer": { },
+	"rotationSet": "PropYZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": -0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": -1.0, "z": -1.0 },
+		{ "x": 0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": 1.0, "z": -1.0 },
+		{ "x": -0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": -1.0, "z": -0.8 },
+		{ "x": 0.5, "y": 1.0, "z": -0.8 },
+		{ "x": -0.5, "y": 1.0, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- LED Button
+{
+	"uuid": "20674e2f-810e-4291-8749-4b396e9a25ca",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/LED_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/LED_on.obj"
+	}]},
+	"button": { },
+	"rotationSet": "PropZ",
+	"sticky": "-X+X-Y+Y-Z+Z",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": 0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": 0.5, "z": -1.0 },
+		{ "x": -0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": -0.5, "z": -1.0 },
+		{ "x": 0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": 0.5, "z": -0.8 },
+		{ "x": -0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": -0.5, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- LED Switch
+{
+	"uuid": "c60f83c3-3617-4a72-8308-57aa95bd2873",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/LED_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/LED_on.obj"
+	}]},
+	"lever": { },
+	"rotationSet": "PropZ",
+	"sticky": "-X+X-Y+Y-Z+Z",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": 0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": 0.5, "z": -1.0 },
+		{ "x": -0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": -0.5, "z": -1.0 },
+		{ "x": 0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": 0.5, "z": -0.8 },
+		{ "x": -0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": -0.5, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Small Sensor
+{
+	"uuid": "f93f27da-ca85-4edc-85e6-5c5d053c05ab",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/sensor_small_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/sensor_small_on.obj"
+	}]},
+	"sensor": { },
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": 0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": 0.5, "z": -1.0 },
+		{ "x": -0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": -0.5, "z": -1.0 },
+		{ "x": 0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": 0.5, "z": -0.8 },
+		{ "x": -0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": -0.5, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+}
+
+
+//---------------------------------------------------------------- END
+]}

@@ -1,0 +1,304 @@
+{"partList" : [
+
+//---------------------------------------------------------------- LC Windshield 02 Left
+{
+	"uuid": "71a5abed-41c1-4b3f-b63f-11ed8a1b0826",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/winshield02L.fbx"
+	}]},
+	"rotationSet": "P404040",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 2, "z": 7,
+		"margin": 0.0, "pointList": [
+			{ "x": 0.80, "y": -0.80, "z": -0.94 },
+			{ "x": -1.00, "y": 0.48, "z": -0.12 },
+			{ "x": -1.00, "y": 0.90, "z": -0.67 },
+			{ "x": 0.80, "y": -0.80, "z": 0.70 },
+			{ "x": -1.00, "y": -0.80, "z": 0.97 },
+			{ "x": 0.80, "y": -0.04, "z": -0.94 },
+			{ "x": 0.80, "y": -0.20, "z": -0.40 },
+			{ "x": -1.00, "y": 0.90, "z": -0.94 }
+		]},
+	"qualityLevel": 1
+},
+//---------------------------------------------------------------- LC Windshield 02 Center
+{
+	"uuid": "7021e977-9f6c-4d24-b269-e9167bd3b2da",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/winshield02C.fbx"
+	}]},
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 2, "z": 7,
+		"margin": 0.0, "pointList": [
+			{ "x": 0.90, "y": -0.80, "z": 0.97 },
+			{ "x": 0.90, "y": 0.90, "z": -0.94 },
+			{ "x": 0.90, "y": 0.90, "z": -0.67 },
+			{ "x": 0.90, "y": 0.48, "z": -0.12 },
+			{ "x": -0.90, "y": -0.80, "z": 0.97 },
+			{ "x": -0.90, "y": 0.90, "z": -0.94 },
+			{ "x": -0.90, "y": 0.48, "z": -0.12 },
+			{ "x": -0.90, "y": 0.90, "z": -0.67 }
+		]},
+	"qualityLevel": 1
+},
+//---------------------------------------------------------------- LC Windshield 02 Right
+{
+	"uuid": "cf3c9eee-654e-46c3-9023-98f3d1cfb9f9",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/winshield02R.fbx"
+	}]},
+	"rotationSet": "P404004",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 2, "z": 7,
+		"margin": 0.0, "pointList": [
+			{ "x": 1.00, "y": 0.90, "z": -0.67 },
+			{ "x": 1.00, "y": 0.48, "z": -0.12 },
+			{ "x": -0.80, "y": -0.80, "z": -0.94 },
+			{ "x": -0.80, "y": -0.20, "z": -0.40 },
+			{ "x": -0.80, "y": -0.04, "z": -0.94 },
+			{ "x": -0.80, "y": -0.80, "z": 0.70 },
+			{ "x": 1.00, "y": -0.80, "z": 0.97 },
+			{ "x": 1.00, "y": 0.90, "z": -0.94 }
+		]},
+	"qualityLevel": 1
+},
+//---------------------------------------------------------------- Motorcycle Windshield
+{
+	"uuid": "6b3c9ecb-6752-4cde-ae1f-8c306e802529",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/MotorcycleWindshield.obj"
+	}]},
+	"rotationSet": "PropYZ",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 1, "z": 2,
+		"margin": 0.0, "pointList": [
+		{ "x": -0.50, "y": -1.00, "z": 1.00 },
+		{ "x": -1.00, "y": -1.00, "z": 0.50 },
+		{ "x": -1.00, "y": -1.00, "z": -1.00 },
+		{ "x": 1.00, "y": -1.00, "z": -1.00 },
+		{ "x": 1.00, "y": -1.00, "z": 0.50 },
+		{ "x": 0.50, "y": -1.00, "z": 1.00 },
+		{ "x": -0.50, "y": -0.31, "z": 0.63 },
+		{ "x": -0.50, "y": 0.50, "z": -0.50 },
+		{ "x": -1.00, "y": -0.20, "z": -1.00 },
+		{ "x": -0.50, "y": 0.50, "z": -1.00 },
+		{ "x": 0.50, "y": 0.50, "z": -0.50 },
+		{ "x": 0.50, "y": 0.50, "z": -1.00 },
+		{ "x": 1.00, "y": -0.20, "z": -1.00 },
+		{ "x": 0.50, "y": -0.31, "z": 0.63 }
+		]},
+	"qualityLevel": 1
+},
+//---------------------------------------------------------------- Windshield 01 Left V1
+{
+	"uuid": "91fa1087-17dc-4fef-912d-efd95853c4af",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/winshield01L1.obj"
+	}]},
+	"rotationSet": "P404040",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 2, "z": 4,
+		"margin": 0.0, "pointList": [
+			{ "x": -1.00, "y": -1.00, "z": 1.00 },
+			{ "x": 1.00, "y": -1.00, "z": 0.00 },
+			{ "x": -1.00, "y": 0.98, "z": -0.98 },
+			{ "x": 1.00, "y": -0.02, "z": -0.98 },
+			{ "x": 1.00, "y": -1.00, "z": -0.48 }
+		]},
+	"qualityLevel": 1
+},
+//---------------------------------------------------------------- Windshield 01 Left V2
+{
+	"uuid": "0afaac2e-1754-436f-aead-4c5a2cfb0734",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/winshield01L2.obj"
+	}]},
+	"rotationSet": "P404040",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 2, "z": 4,
+		"margin": 0.0, "pointList": [
+			{ "x": 0.43, "y": 0.63, "z": -0.76 },
+			{ "x": 0.43, "y": 0.38, "z": -0.95 },
+			{ "x": -0.19, "y": 0.96, "z": -0.96 },
+			{ "x": 0.43, "y": -1.00, "z": 0.86 },
+			{ "x": -1.00, "y": -1.00, "z": 1.00 },
+			{ "x": -1.00, "y": 0.96, "z": -0.96 }
+		]},
+	"qualityLevel": 1
+},
+//---------------------------------------------------------------- Windshield 01 Center
+{
+	"uuid": "cd443265-0653-4c26-a487-e71106682c0b",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/winshield01C.obj"
+	}]},
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 2, "z": 4,
+		"margin": 0.0, "pointList": [
+			{ "x": -1.00, "y": 0.98, "z": -0.98 },
+			{ "x": -1.00, "y": -1.00, "z": 1.00 },
+			{ "x": 1.00, "y": -1.00, "z": 1.00 },
+			{ "x": 1.00, "y": 0.98, "z": -0.98 }
+		]},
+	"qualityLevel": 1
+},
+//---------------------------------------------------------------- Windshield 01 Right V1
+{
+	"uuid": "4b42c271-f94f-4a01-88cd-c2c5214823b5",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/winshield01R1.obj"
+	}]},
+	"rotationSet": "P404004",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 2, "z": 4,
+		"margin": 0.0, "pointList": [
+			{ "x": 1.00, "y": 0.98, "z": -0.98 },
+			{ "x": -1.00, "y": -1.00, "z": 0.00 },
+			{ "x": 1.00, "y": -1.00, "z": 1.00 },
+			{ "x": -1.00, "y": -0.02, "z": -0.98 },
+			{ "x": -1.00, "y": -1.00, "z": -0.48 }
+		]},
+	"qualityLevel": 1
+},
+//---------------------------------------------------------------- Windshield 01 Right V2
+{
+	"uuid": "a657e009-d7c8-4365-ae07-560a5d078f5f",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/default_nor.tga"],
+		"material": "Glass"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/winshield01R2.obj"
+	}]},
+	"rotationSet": "P404004",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 2, "z": 4,
+		"margin": 0.0, "pointList": [
+			{ "x": 0.19, "y": 0.96, "z": -0.96 },
+			{ "x": -0.43, "y": 0.38, "z": -0.95 },
+			{ "x": -0.43, "y": 0.63, "z": -0.76 },
+			{ "x": -0.43, "y": -1.00, "z": 0.86 },
+			{ "x": 1.00, "y": -1.00, "z": 1.00 },
+			{ "x": 1.00, "y": 0.96, "z": -0.96 }
+		]},
+	"qualityLevel": 1
+}
+
+
+//---------------------------------------------------------------- END
+]}

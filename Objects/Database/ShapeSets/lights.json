@@ -1,0 +1,175 @@
+{"partList" : [
+
+//---------------------------------------------------------------- Targeting Laser Module
+{
+	"uuid": "a02b65b2-7925-4c9e-8e87-feba352099e9",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/laser_module_off.obj", 
+	"pose0": "$MOD_DATA/Objects/Mesh/laser_module_on.obj" 
+	}]},
+	"spotlight": {
+		"coneAngle": 0,
+		"coneFade": 0.0,
+		"minRange": 0.0,
+		"maxRange": 0.0,
+		"defaultLuminance": 0,
+		"color" : "df7f00",
+		"direction": { "x": 0, "y": 0, "z": 1 }},
+	"rotationSet": "PropZ",
+	"color": "cc0000",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.25, "pointList": [
+		{ "x": 0.0, "y": 0.0, "z": 1.0 },
+		{ "x": 0.0, "y": 0.0, "z": -1.0 }
+		]},
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- Slim Light Lense
+{
+	"uuid": "d6464858-c48f-4b4b-b16c-ab89c6eb07b8",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$GAME_DATA/Objects/Textures/lights/obj_light_headlightbeam_dif.tga","",""],
+		"material": "PoseAnimLightCone"},
+		{"textureList": [
+		"$GAME_DATA/Objects/Textures/lights/obj_light_headlightflare_dif.tga","",""],
+		"material": "PoseAnimLightFlare"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/SlimLightLense_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/SlimLightLense_on.fbx"
+	}]},
+	"spotlight": {"effect": "HeadLight", "defaultLuminance": 50},
+	"rotationSet": "PropZ",
+	"color": "7eedee",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 0.80, "y": -1.00, "z": -1.00 },
+			{ "x": 0.80, "y": -0.60, "z": -1.00 },
+			{ "x": -0.80, "y": -0.60, "z": -1.00 },
+			{ "x": -0.80, "y": -1.00, "z": -1.00 }
+		]},
+	"qualityLevel": 3
+},
+//--------------------------------------------------------------- Square Light Lense
+{
+	"uuid": "6e475401-d02a-4144-a8cb-101f5ca5428f",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$GAME_DATA/Objects/Textures/lights/obj_light_headlightbeam_dif.tga","",""],
+		"material": "PoseAnimLightCone"},
+		{"textureList": [
+		"$GAME_DATA/Objects/Textures/lights/obj_light_headlightflare_dif.tga","",""],
+		"material": "PoseAnimLightFlare"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/SquareLightLense_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/SquareLightLense_on.fbx"
+	}]},
+	"spotlight": {"effect": "HeadLight", "defaultLuminance": 60},
+	"rotationSet": "PropZ",
+	"color": "7eedee",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 0.80, "y": 0.80, "z": -1.00 },
+			{ "x": 0.80, "y": -0.80, "z": -1.00 },
+			{ "x": -0.80, "y": -0.80, "z": -1.00 },
+			{ "x": -0.80, "y": 0.80, "z": -1.00 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- LED Status Light
+{
+	"uuid": "71890bff-aacc-4a13-86b9-063ca33245f9",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/LED_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/LED_on.obj"
+	}]},
+	"spotlight": {
+		"coneAngle": 0,
+		"coneFade": 0.0,
+		"minRange": 0.0,
+		"maxRange": 0.0,
+		"defaultLuminance": 0,
+		"color" : "df7f00",
+		"direction": { "x": 0, "y": 0, "z": 1 }},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": 0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": 0.5, "z": -1.0 },
+		{ "x": -0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": -0.5, "z": -1.0 },
+		{ "x": 0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": 0.5, "z": -0.8 },
+		{ "x": -0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": -0.5, "z": -0.8 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- LED Path Light
+{
+	"uuid": "c994d76c-7d96-4877-b0c8-6a792d2c15c5",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/LED_path.obj"
+	}]},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Glass",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 0.35, "y": -0.35, "z": -1.00 },
+			{ "x": 0.00, "y": -0.50, "z": -1.00 },
+			{ "x": -0.35, "y": -0.35, "z": -1.00 },
+			{ "x": -0.50, "y": 0.00, "z": -1.00 },
+			{ "x": -0.35, "y": 0.35, "z": -1.00 },
+			{ "x": 0.00, "y": 0.50, "z": -1.00 },
+			{ "x": 0.35, "y": 0.35, "z": -1.00 },
+			{ "x": 0.50, "y": 0.00, "z": -1.00 }
+		]},
+	"qualityLevel": 3
+}
+
+//---------------------------------------------------------------- END
+]}

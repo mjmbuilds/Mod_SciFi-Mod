@@ -1,0 +1,137 @@
+{"partList" : [
+
+//--------------------------------------------------------------- ForceField (Depricated)
+{
+	"uuid": "a470a338-9fd8-4857-83aa-072b261e0de4",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga","",""],
+		"material": "PoseAnimLightFlare"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/ForceField_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/ForceField_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/ForceField.lua",
+		"classname": "ForceField" },
+	"rotationSet": "PropZ",
+	"color": "0000ff",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"qualityLevel": 5,
+	"box": { "x": 1, "y": 1, "z": 1 },
+	"showInInventory": false
+},
+//--------------------------------------------------------------- Plasma Gun
+{
+	"uuid": "c2117822-0ada-4b6e-a3e7-84ece4621c42",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "PoseAnimDifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/GunPlasma_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/GunPlasma_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/GunPlasma.lua",
+		"classname": "GunPlasma" },
+	"rotationSet": "PropY",
+	"sticky": "-Y",
+	"color": "de7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"qualityLevel": 5,
+	"cylinder": { "diameter": 1, "depth": 2, "axis": "Y" }
+},
+//--------------------------------------------------------------- Laser Gun
+{
+	"uuid": "7cfcf20b-ac1a-484d-8ba4-0e2a4f1bc0c4",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "PoseAnimDifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/GunLaser_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/GunLaser_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/GunLaser.lua",
+		"classname": "GunLaser" },
+	"rotationSet": "PropY",
+	"sticky": "-Y",
+	"color": "de7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"qualityLevel": 5,
+	"hull": { "x": 1, "y": 2, "z": 1,
+			"margin": 0.25, "pointList": [
+			{ "x": 0, "y": 1, "z": 0 },
+			{ "x": 0, "y": -1, "z": 0 }
+		]}
+},
+//--------------------------------------------------------------- Photon Missile
+{
+	"uuid": "ed8a0cb4-8514-46a3-932d-7c145eb1fc47",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "PoseAnimDifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/MissilePhoton_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/MissilePhoton_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/MissilePhoton.lua",
+		"classname": "MissilePhoton" },
+	"rotationSet": "P404040",
+	"sticky": "-X+X-Y-Z+Z",
+	"color": "de7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"qualityLevel": 5,
+	"box": { "x": 1, "y": 6, "z": 1 }
+},
+//--------------------------------------------------------------- Sidewinder Missile
+{
+	"uuid": "7db995dc-b4a5-4220-a106-50efe4541b2f",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "PoseAnimDifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/MissileSidewinder_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/MissileSidewinder_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/MissileSidewinder.lua",
+		"classname": "MissileSidewinder" },
+	"rotationSet": "PropZ",
+	"sticky": "-Z",
+	"color": "de7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"qualityLevel": 5,
+	"hull": { "x": 1, "y": 8, "z": 1,
+			"margin": 0.25, "pointList": [
+			{ "x": 0, "y": 1, "z": 0 },
+			{ "x": 0, "y": -1, "z": 0 }
+		]}
+}
+
+
+//---------------------------------------------------------------- END
+]}

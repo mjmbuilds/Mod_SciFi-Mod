@@ -1,0 +1,37 @@
+{"partList" : [
+
+//--------------------------------------------------------------- Storage Chest Remixed
+{
+	"uuid": "74a754d9-abe4-4818-a779-045594ff5dbe",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/chest_dif.tga",
+		"$MOD_DATA/Objects/Textures/chest_asg.tga",
+		"$MOD_DATA/Objects/Textures/chest_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/StorageChestRemixed_closed.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/StorageChestRemixed_open.fbx"
+	}]},
+	"chest": { "slots": 40 },
+	"rotationSet": "PropFullMinusNegZ",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 3, "y": 2, "z": 2,
+		"margin": 0, "pointList": [
+			{ "x": -0.93, "y": -0.90, "z": -0.95 },
+			{ "x": -0.93, "y": -0.90, "z": 0.90 },
+			{ "x": -0.93, "y": 0.90, "z": 0.90 },
+			{ "x": -0.93, "y": 0.90, "z": -0.95 },
+			{ "x": 0.93, "y": -0.90, "z": -0.95 },
+			{ "x": 0.93, "y": -0.90, "z": 0.90 },
+			{ "x": 0.93, "y": 0.90, "z": -0.95 },
+			{ "x": 0.93, "y": 0.90, "z": 0.90 }
+		]},
+	"qualityLevel": 0
+}
+
+//---------------------------------------------------------------- END
+]}

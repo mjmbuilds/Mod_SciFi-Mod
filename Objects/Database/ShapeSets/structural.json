@@ -1,0 +1,579 @@
+{"partList" : [
+
+//--------------------------------------------------------------- Low Collision Large Connector
+{
+	"uuid": "f20224f0-3915-4be7-969a-334ce3b17f43",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/LowCollisionLargeConnector.fbx"
+	}]},
+	"rotationSet": "P000010",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 0.30, "y": -0.87, "z": 0.50 },
+			{ "x": 0.30, "y": -0.87, "z": -0.50 },
+			{ "x": 0.30, "y": 0.00, "z": -1.00 },
+			{ "x": 0.30, "y": 0.87, "z": -0.50 },
+			{ "x": 0.30, "y": 0.87, "z": 0.50 },
+			{ "x": 0.30, "y": 0.00, "z": 1.00 },
+			{ "x": -0.30, "y": -0.87, "z": 0.50 },
+			{ "x": -0.30, "y": -0.87, "z": -0.50 },
+			{ "x": -0.30, "y": 0.00, "z": 1.00 },
+			{ "x": -0.30, "y": 0.87, "z": 0.50 },
+			{ "x": -0.30, "y": 0.87, "z": -0.50 },
+			{ "x": -0.30, "y": 0.00, "z": -1.00 }
+		]},
+	"qualityLevel": 4
+},
+
+//--------------------------------------------------------------- LC Panel Half
+{
+	"uuid": "e2f8b0c7-ff22-4654-a26f-f017d733fe44",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PanelHalf.fbx"
+	}]},
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.80, "y": -0.98, "z": -0.80 },
+			{ "x": -0.80, "y": -0.98, "z": -0.20 },
+			{ "x": -0.80, "y": -0.80, "z": -0.20 },
+			{ "x": -0.80, "y": -0.80, "z": -0.80 },
+			{ "x": 0.80, "y": -0.98, "z": -0.20 },
+			{ "x": 0.80, "y": -0.98, "z": -0.80 },
+			{ "x": 0.80, "y": -0.80, "z": -0.20 },
+			{ "x": 0.80, "y": -0.80, "z": -0.80 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Panel Wedge Half
+{
+	"uuid": "065082d3-662b-46c2-bf44-e192be328eab",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PanelWedgeHalf.fbx"
+	}]},
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.80, "y": 0.00, "z": -0.20 },
+			{ "x": 0.80, "y": 0.00, "z": -0.20 },
+			{ "x": 0.80, "y": 0.00, "z": 0.00 },
+			{ "x": -0.80, "y": 0.00, "z": 0.00 },
+			{ "x": -0.80, "y": 0.60, "z": -0.80 },
+			{ "x": 0.80, "y": 0.60, "z": -0.80 },
+			{ "x": -0.80, "y": 0.80, "z": -0.80 },
+			{ "x": 0.80, "y": 0.80, "z": -0.80 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Panel Wedge 3x
+{
+	"uuid": "70200983-7c95-480c-824b-5e0bef57270a",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PanelWedge3x.fbx"
+	}]},
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 1, "y": 1, "z": 3,
+		"margin": 0, "pointList": [
+			{ "x": 0.80, "y": -0.93, "z": 0.93 },
+			{ "x": 0.80, "y": 0.83, "z": -0.83 },
+			{ "x": -0.80, "y": 0.83, "z": -0.83 },
+			{ "x": -0.80, "y": -0.93, "z": 0.93 },
+			{ "x": 0.80, "y": -0.93, "z": 0.80 },
+			{ "x": 0.80, "y": 0.69, "z": -0.89 },
+			{ "x": -0.80, "y": -0.93, "z": 0.80 },
+			{ "x": -0.80, "y": 0.69, "z": -0.89 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Detail Wedge
+{
+	"uuid": "120177dc-b6e8-45ce-9ecb-3062d852d77f",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/DetailWedge.fbx"
+	}]},
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.8, "y": -0.8, "z": 0.8 },
+			{ "x": -0.8, "y": 0.8, "z": -0.8 },
+			{ "x": -0.8, "y": -0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": 0.8 },
+			{ "x": 0.8, "y": 0.8, "z": -0.8 },
+			{ "x": 0.8, "y": -0.8, "z": -0.8 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Panel Wedge-Connector
+{
+	"uuid": "8811320f-79ac-41fb-a7f0-c4387a7a104d",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PanelWedgeConnector.fbx"
+	}]},
+	"rotationSet": "P400040",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.80, "y": -1.00, "z": -1.00 },
+			{ "x": -0.80, "y": -1.00, "z": -0.80 },
+			{ "x": -0.80, "y": -0.80, "z": -1.00 },
+			{ "x": 0.80, "y": -1.00, "z": -1.00 },
+			{ "x": 0.80, "y": -1.00, "z": -0.80 },
+			{ "x": 0.80, "y": -0.80, "z": -1.00 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Panel Wedge-Corner R
+{
+	"uuid": "072565f4-800b-484c-984e-c36be03df5f5",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PanelWedgeCornerR.fbx"
+	}]},
+	"rotationSet": "PropFull",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.68, "y": -0.80, "z": 0.80 },
+			{ "x": 0.80, "y": -0.80, "z": 0.80 },
+			{ "x": 0.80, "y": 0.68, "z": -0.68 },
+			{ "x": -0.58, "y": -0.80, "z": 0.60 },
+			{ "x": 0.80, "y": -0.80, "z": 0.60 },
+			{ "x": 0.80, "y": 0.58, "z": -0.78 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Panel Wedge-Corner L
+{
+	"uuid": "87c5ae1a-7ee7-4e95-9b68-fbc8c3e5ea3a",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PanelWedgeCornerL.fbx"
+	}]},
+	"rotationSet": "PropFull",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.80, "y": 0.68, "z": -0.68 },
+			{ "x": -0.80, "y": -0.80, "z": 0.80 },
+			{ "x": 0.68, "y": -0.80, "z": 0.80 },
+			{ "x": -0.80, "y": 0.58, "z": -0.78 },
+			{ "x": -0.80, "y": -0.80, "z": 0.60 },
+			{ "x": 0.58, "y": -0.80, "z": 0.60 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Panel Corner
+{
+	"uuid": "a6b85367-5d90-40ed-900b-dfdfab9acdf7",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PanelCorner.fbx"
+	}]},
+	"rotationSet": "PropYZ",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 0.80, "y": -0.80, "z": -0.80 },
+			{ "x": -0.66, "y": -0.80, "z": -0.80 },
+			{ "x": 0.80, "y": -0.80, "z": 0.66 },
+			{ "x": 0.80, "y": -1.00, "z": -0.80 },
+			{ "x": -0.66, "y": -1.00, "z": -0.80 },
+			{ "x": 0.80, "y": -1.00, "z": 0.66 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Panel Wedge
+{
+	"uuid": "6b47fbd8-8362-4ac3-aad4-f1bcd3a51e3b",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PanelWedge.fbx"
+	}]},
+	"rotationSet": "P440040",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 0.80, "y": 0.80, "z": -0.80 },
+			{ "x": 0.80, "y": -0.80, "z": 0.80 },
+			{ "x": 0.80, "y": -0.80, "z": 0.60 },
+			{ "x": 0.80, "y": 0.60, "z": -0.80 },
+			{ "x": -0.80, "y": 0.80, "z": -0.80 },
+			{ "x": -0.80, "y": -0.80, "z": 0.80 },
+			{ "x": -0.80, "y": 0.60, "z": -0.80 },
+			{ "x": -0.80, "y": -0.80, "z": 0.60 }
+		]},
+	"qualityLevel": 4
+},
+//--------------------------------------------------------------- LC Panel
+{
+	"uuid": "f67ac28f-c993-462c-8005-62025da3a848",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Panel.fbx"
+	}]},
+	"rotationSet": "P204000",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.80, "y": -0.98, "z": -0.80 },
+			{ "x": -0.80, "y": -0.98, "z": 0.80 },
+			{ "x": -0.80, "y": -0.80, "z": 0.80 },
+			{ "x": -0.80, "y": -0.80, "z": -0.80 },
+			{ "x": 0.80, "y": -0.98, "z": 0.80 },
+			{ "x": 0.80, "y": -0.98, "z": -0.80 },
+			{ "x": 0.80, "y": -0.80, "z": 0.80 },
+			{ "x": 0.80, "y": -0.80, "z": -0.80 }
+		]},
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Robot Gripper 1
+{
+	"uuid": "f4b71f35-e21c-4068-9eaa-bde3f270b56b",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/gripper1.obj"
+	}]},
+	"rotationSet": "P404044",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 3,
+		"margin": 0, "pointList": [
+			{ "x": -0.50, "y": -0.88, "z": 0.33 },
+			{ "x": -0.50, "y": -0.35, "z": -0.83 },
+			{ "x": 0.50, "y": -0.35, "z": -0.83 },
+			{ "x": 0.50, "y": -0.88, "z": 0.33 },
+			{ "x": -0.50, "y": -0.60, "z": 1.00 },
+			{ "x": -0.50, "y": 0.50, "z": -0.33 },
+			{ "x": -0.50, "y": 0.50, "z": -0.67 },
+			{ "x": -0.50, "y": 0.35, "z": -0.83 },
+			{ "x": -0.50, "y": -0.99, "z": 1.00 },
+			{ "x": 0.50, "y": -0.60, "z": 1.00 },
+			{ "x": 0.50, "y": 0.50, "z": -0.33 },
+			{ "x": 0.50, "y": -0.99, "z": 1.00 },
+			{ "x": 0.50, "y": 0.35, "z": -0.83 },
+			{ "x": 0.50, "y": 0.50, "z": -0.67 }
+	]},
+	"friction": 100000,
+	"restitution": 0.00001,
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Robot Part 1
+{
+	"uuid": "f940368e-caeb-46a4-b7ef-dfb1ab870ffd",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/robotJoint1.obj"
+	}]},
+	"rotationSet": "P004044",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 2, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": -0.90, "y": 0.85, "z": 0.00 },
+			{ "x": 0.90, "y": 0.85, "z": 0.00 },
+			{ "x": 0.90, "y": 0.75, "z": -0.49 },
+			{ "x": -0.90, "y": 0.75, "z": -0.49 },
+			{ "x": -0.90, "y": 0.75, "z": 0.49 },
+			{ "x": 0.90, "y": 0.75, "z": 0.49 },
+			{ "x": -0.28, "y": -0.90, "z": 0.49 },
+			{ "x": 0.28, "y": -0.90, "z": 0.49 },
+			{ "x": 1.00, "y": -0.50, "z": 0.49 },
+			{ "x": -1.00, "y": -0.50, "z": 0.49 },
+			{ "x": -0.28, "y": -0.90, "z": -1.00 },
+			{ "x": 0.28, "y": -0.90, "z": -1.00 },
+			{ "x": -1.00, "y": -0.50, "z": -1.00 },
+			{ "x": 1.00, "y": -0.50, "z": -1.00 }
+		]},
+	"qualityLevel": 4,
+	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
+},
+//---------------------------------------------------------------- Robot Part 2
+{
+	"uuid": "4ddba758-114a-45f8-bcfc-5a35d7f283ec",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/robotJoint2.obj"
+	}]},
+	"rotationSet": "P044000",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 3, "y": 3, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 0.33, "y": 0.00, "z": 1.00 },
+			{ "x": -0.33, "y": 0.00, "z": 1.00 },
+			{ "x": -0.24, "y": 1.00, "z": 0.71 },
+			{ "x": 0.24, "y": 1.00, "z": 0.71 },
+			{ "x": 0.00, "y": -0.33, "z": 1.00 },
+			{ "x": -0.33, "y": 1.00, "z": 0.00 },
+			{ "x": -0.24, "y": 1.00, "z": -0.71 },
+			{ "x": 0.24, "y": 1.00, "z": -0.71 },
+			{ "x": 0.33, "y": 1.00, "z": 0.00 },
+			{ "x": 0.67, "y": 0.00, "z": -0.60 },
+			{ "x": 0.53, "y": 0.00, "z": -1.00 },
+			{ "x": -0.67, "y": 0.00, "z": -0.60 },
+			{ "x": -0.53, "y": 0.00, "z": -1.00 }
+		]},
+	"qualityLevel": 4,
+	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
+},
+//---------------------------------------------------------------- Robot Part 3
+{
+	"uuid": "1d5ac1e8-e47f-4fae-b3b7-f4d9fc9631cf",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/robotJoint3.obj"
+	}]},
+	"rotationSet": "P044000",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 1.00, "y": 0.00, "z": -1.00 },
+			{ "x": 0.71, "y": 0.71, "z": -1.00 },
+			{ "x": 0.71, "y": 0.71, "z": 0.49 },
+			{ "x": 1.00, "y": 0.00, "z": 0.49 },
+			{ "x": 0.71, "y": -0.71, "z": -1.00 },
+			{ "x": 0.00, "y": -1.00, "z": -1.00 },
+			{ "x": -0.71, "y": -0.71, "z": -1.00 },
+			{ "x": -1.00, "y": 0.00, "z": -1.00 },
+			{ "x": -0.71, "y": 0.71, "z": -1.00 },
+			{ "x": 0.00, "y": 1.00, "z": -1.00 },
+			{ "x": 0.71, "y": -0.71, "z": 0.49 },
+			{ "x": 0.00, "y": -1.00, "z": 0.49 },
+			{ "x": 0.00, "y": 1.00, "z": 0.49 },
+			{ "x": -0.71, "y": 0.71, "z": 0.49 },
+			{ "x": -1.00, "y": 0.00, "z": 0.49 },
+			{ "x": -0.71, "y": -0.71, "z": 0.49 }
+		]},
+	"qualityLevel": 4,
+	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
+},
+//---------------------------------------------------------------- Robot Part 4
+{
+	"uuid": "ac9c83e2-e08b-4d94-b647-0b7d320704be",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/robotJoint4.obj"
+	}]},
+	"rotationSet": "P401100",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 4,
+	"previewRotation": [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ]
+},
+//---------------------------------------------------------------- Robot Part 5
+{
+	"uuid": "be45a18d-cc0f-4ef6-9927-a8b45871abdb",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/robotJoint5.obj"
+	}]},
+	"rotationSet": "P044000",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 2, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 1.00, "y": 0.63, "z": -1.00 },
+			{ "x": -1.00, "y": 0.63, "z": -1.00 },
+			{ "x": -1.00, "y": 0.63, "z": -0.64 },
+			{ "x": 1.00, "y": 0.63, "z": -0.64 },
+			{ "x": 0.00, "y": -1.00, "z": -1.00 },
+			{ "x": 0.00, "y": -0.74, "z": 1.00 },
+			{ "x": -0.71, "y": -1.00, "z": 0.71 },
+			{ "x": 0.00, "y": -1.00, "z": 1.00 },
+			{ "x": 0.71, "y": -1.00, "z": 0.71 },
+			{ "x": 1.00, "y": -1.00, "z": 0.00 },
+			{ "x": 0.71, "y": -1.00, "z": -0.71 },
+			{ "x": -0.71, "y": -1.00, "z": -0.71 },
+			{ "x": -1.00, "y": -1.00, "z": 0.00 }
+		]},
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Robot Part 6
+{
+	"uuid": "8e6f4e63-9f52-44a0-ba3b-a5e08fbc2796",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/robotJoint6.obj"
+	}]},
+	"rotationSet": "PropYZ",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Robot part 7
+{
+	"uuid": "096e111d-0506-4277-9412-03631fb82440",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/robotJoint7.obj"
+	}]},
+	"rotationSet": "P044000",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0, "pointList": [
+			{ "x": 0.00, "y": 0.40, "z": 1.00 },
+			{ "x": 0.71, "y": 1.00, "z": 0.71 },
+			{ "x": 0.00, "y": 1.00, "z": 1.00 },
+			{ "x": 0.71, "y": 1.00, "z": -0.71 },
+			{ "x": 0.00, "y": 1.00, "z": -1.00 },
+			{ "x": -0.71, "y": 1.00, "z": -0.71 },
+			{ "x": -1.00, "y": 1.00, "z": 0.00 },
+			{ "x": -0.71, "y": 1.00, "z": 0.71 },
+			{ "x": 1.00, "y": 1.00, "z": 0.00 },
+			{ "x": 0.00, "y": -1.00, "z": -1.00 },
+			{ "x": 0.71, "y": -0.71, "z": -1.00 },
+			{ "x": 0.71, "y": -0.71, "z": 0.00 },
+			{ "x": 0.00, "y": -1.00, "z": 0.00 },
+			{ "x": 1.00, "y": 0.00, "z": -1.00 },
+			{ "x": 1.00, "y": 0.00, "z": 0.00 },
+			{ "x": -0.71, "y": -0.71, "z": -1.00 },
+			{ "x": -0.71, "y": -0.71, "z": 0.00 },
+			{ "x": -1.00, "y": 0.00, "z": -1.00 },
+			{ "x": -1.00, "y": 0.00, "z": 0.00 }
+		]},
+	"qualityLevel": 4,
+	"previewRotation": [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ]
+}
+
+//---------------------------------------------------------------- END
+]}

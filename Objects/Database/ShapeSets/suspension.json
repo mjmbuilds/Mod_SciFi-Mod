@@ -1,0 +1,50 @@
+{"partList" : [
+
+//---------------------------------------------------------------- Landing Gear Suspension
+{
+	"uuid": "8cc25fb0-c317-4e68-9b55-9b43d7a32f70",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/LandingGear3x_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/LandingGear3x_on.obj"
+	}]},
+	"spring": {
+		"length": 3,
+		"defaultStiffnessLevel" :  4,
+		"stiffnessLevels": [
+			{ "stiffness": 0 },
+			{ "stiffness": 5000 },
+			{ "stiffness": 10000 },
+			{ "stiffness": 15000 },
+			{ "stiffness": 20000 },
+			{ "stiffness": 25000 },
+			{ "stiffness": 30000 },
+			{ "stiffness": 35000 },
+			{ "stiffness": 40000 },
+			{ "stiffness": 45000 },
+			{ "stiffness": 50000 },
+			{ "stiffness": 55000 },
+			{ "stiffness": 60000 },
+			{ "stiffness": 65000 },
+			{ "stiffness": 70000 },
+			{ "stiffness": 80000 },
+			{ "stiffness": 90000 },
+			{ "stiffness": 100000 },
+			{ "stiffness": 110000 },
+			{ "stiffness": 120000 }]},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 3, "axis": "Z" },
+	"qualityLevel": 2
+}
+
+
+//---------------------------------------------------------------- END
+]}

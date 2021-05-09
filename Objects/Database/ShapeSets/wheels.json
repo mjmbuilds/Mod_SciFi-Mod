@@ -1,0 +1,419 @@
+{"partList" : [
+
+//--------------------------------------------------------------- Tank Track 1 Friction Part
+{
+	"uuid": "0092b542-e8a3-4700-8284-77f3f590772b",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/invisible.tga",
+		"$MOD_DATA/Objects/Textures/invisible.tga"],
+		"material": "DifAsgAlphaFlip"} //--DifAsgAlphaFlip
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/TankTrack1Friction.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/TankTrackFriction.lua",
+		"classname": "TankTrackFriction" },
+	"rotationSet": "PropZ",
+	"color": "ffffff",
+	"density": 0.1,
+	"physicsMaterial": "Grass",
+	"hull": { "x": 1, "y": 24, "z": 6,
+		"margin": 0, "pointList": [
+			{ "x": -0.85, "y": -0.75, "z": -0.90 },
+			{ "x": -0.85, "y": -0.69, "z": -1.00 },
+			{ "x": 1.0, "y": -0.69, "z": -1.00 },
+			{ "x": 1.0, "y": -0.75, "z": -0.90 },
+			{ "x": -0.85, "y": 0.95, "z": -0.01 },
+			{ "x": -0.85, "y": 0.75, "z": -0.90 },
+			{ "x": -0.85, "y": 0.69, "z": -1.00 },
+			{ "x": -0.85, "y": -0.95, "z": -0.01 },
+			{ "x": -0.85, "y": -0.98, "z": 0.33 },
+			{ "x": -0.85, "y": -0.93, "z": 0.72 },
+			{ "x": -0.85, "y": -0.86, "z": 0.88 },
+			{ "x": -0.85, "y": 0.86, "z": 0.88 },
+			{ "x": -0.85, "y": 0.93, "z": 0.72 },
+			{ "x": -0.85, "y": 0.98, "z": 0.31 },
+			{ "x": 1.0, "y": 0.95, "z": -0.01 },
+			{ "x": 1.0, "y": 0.75, "z": -0.90 },
+			{ "x": 1.0, "y": 0.98, "z": 0.31 },
+			{ "x": 1.0, "y": 0.93, "z": 0.72 },
+			{ "x": 1.0, "y": 0.86, "z": 0.88 },
+			{ "x": 1.0, "y": -0.86, "z": 0.88 },
+			{ "x": 1.0, "y": -0.93, "z": 0.72 },
+			{ "x": 1.0, "y": -0.98, "z": 0.33 },
+			{ "x": 1.0, "y": -0.95, "z": -0.01 },
+			{ "x": 1.0, "y": 0.69, "z": -1.00 }
+		]},
+	"sticky": "-X+X",
+	"qualityLevel": 5,
+	"friction": 1.0,
+	"showInInventory": false
+},
+//---------------------------------------------------------------- Tank Track 1
+{
+	"uuid": "b9f0d277-daca-49e4-9771-c16f721c8bcc",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "SkelAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/TankTrack1.fbx",
+	"includes": [ "POSITION", "UV0", "NORMAL", "TANGENT", "BLEND_INDICES", "BLEND_WEIGHTS" ],
+	"animationList" : [
+		{ "name" : "drive", "file": "$MOD_DATA/Objects/Mesh/TankTrack1.fbx" }
+		]}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/TankTrack1.lua",
+		"classname": "TankTrack1" },
+	"rotationSet": "P000044",
+	"color": "7f7f7f",
+	"density": 500.0,
+	"physicsMaterial": "Grass",
+	"hull": { "x": 1, "y": 24, "z": 6,
+		"margin": 0, "pointList": [
+			{ "x": -0.85, "y": -0.75, "z": -0.90 },
+			{ "x": -0.85, "y": -0.69, "z": -1.00 },
+			{ "x": 1.0, "y": -0.69, "z": -1.00 },
+			{ "x": 1.0, "y": -0.75, "z": -0.90 },
+			{ "x": -0.85, "y": 0.95, "z": -0.01 },
+			{ "x": -0.85, "y": 0.75, "z": -0.90 },
+			{ "x": -0.85, "y": 0.69, "z": -1.00 },
+			{ "x": -0.85, "y": -0.95, "z": -0.01 },
+			{ "x": -0.85, "y": -0.98, "z": 0.33 },
+			{ "x": -0.85, "y": -0.93, "z": 0.72 },
+			{ "x": -0.85, "y": -0.86, "z": 0.88 },
+			{ "x": -0.85, "y": 0.86, "z": 0.88 },
+			{ "x": -0.85, "y": 0.93, "z": 0.72 },
+			{ "x": -0.85, "y": 0.98, "z": 0.31 },
+			{ "x": 1.0, "y": 0.95, "z": -0.01 },
+			{ "x": 1.0, "y": 0.75, "z": -0.90 },
+			{ "x": 1.0, "y": 0.98, "z": 0.31 },
+			{ "x": 1.0, "y": 0.93, "z": 0.72 },
+			{ "x": 1.0, "y": 0.86, "z": 0.88 },
+			{ "x": 1.0, "y": -0.86, "z": 0.88 },
+			{ "x": 1.0, "y": -0.93, "z": 0.72 },
+			{ "x": 1.0, "y": -0.98, "z": 0.33 },
+			{ "x": 1.0, "y": -0.95, "z": -0.01 },
+			{ "x": 1.0, "y": 0.69, "z": -1.00 }
+		]},
+	"sticky": "-X+X",
+	"qualityLevel": 5,
+	"friction": 0.000001,
+	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
+},
+//---------------------------------------------------------------- Tire-01 (3x1)
+{
+	"uuid": "30fcc03d-9ce6-4837-8689-0d0fe8a15b54",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Tire1_3x1.obj"
+	}]},
+	"rotationSet": "P001100",
+	"color": "202024",
+	"density": 1000.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 3, "depth": 1, "margin": 0.5, "axis": "Z" },
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Tire-01 (4x1)
+{
+	"uuid": "3b34899b-cd56-46c9-844e-3561ca62c07f",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Tire1_4x1.obj"
+	}]},
+	"rotationSet": "P001100",
+	"color": "202024",
+	"density": 1000.0,
+	"physicsMaterial": "Plastic",
+	"hull": {"x": 5, "y": 5, "z": 1,
+		"margin": 0.5,
+		"pointList": [
+		{ "x": 0.0, "y": 0.6, "z": 0.0 },
+		{ "x": 0.23, "y": 0.55, "z": 0.0 },
+		{ "x": 0.42, "y": 0.42, "z": 0.0 },
+		{ "x": 0.55, "y": 0.23, "z": 0.0 },
+		{ "x": 0.6, "y": 0.0, "z": 0.0 },
+		{ "x": 0.55, "y": -0.23, "z": 0.0 },
+		{ "x": 0.42, "y": -0.42, "z": 0.0 },
+		{ "x": 0.23, "y": -0.55, "z": 0.0 },
+		{ "x": 0.0, "y": -0.6, "z": 0.0 },
+		{ "x": -0.23, "y": -0.55, "z": 0.0 },
+		{ "x": -0.42, "y": -0.42, "z": 0.0 },
+		{ "x": -0.55, "y": -0.23, "z": 0.0 },
+		{ "x": -0.6, "y": 0.0, "z": 0.0 },
+		{ "x": -0.55, "y": 0.23, "z": 0.0 },
+		{ "x": -0.42, "y": 0.42, "z": 0.0 },
+		{ "x": -0.23, "y": 0.55, "z": 0.0 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Tire-01 (4x2)
+{
+	"uuid": "1631f0bb-9166-4728-828d-3cafbcf4d845",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Tire1_4x2.obj"
+	}]},
+	"rotationSet": "P001100",
+	"color": "202024",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 5, "y": 5, "z": 2,
+		"margin": 1.0,
+		"pointList": [
+		{ "x": 0.0, "y": 0.4, "z": 0.0 },
+		{ "x": 0.15, "y": 0.37, "z": 0.0 },
+		{ "x": 0.28, "y": 0.28, "z": 0.0 },
+		{ "x": 0.37, "y": 0.15, "z": 0.0 },
+		{ "x": 0.4, "y": 0.0, "z": 0.0 },
+		{ "x": 0.37, "y": -0.15, "z": 0.0 },
+		{ "x": 0.28, "y": -0.28, "z": 0.0 },
+		{ "x": 0.15, "y": -0.37, "z": 0.0 },
+		{ "x": 0.0, "y": -0.4, "z": 0.0 },
+		{ "x": -0.15, "y": -0.37, "z": 0.0 },
+		{ "x": -0.28, "y": -0.28, "z": 0.0 },
+		{ "x": -0.37, "y": -0.15, "z": 0.0 },
+		{ "x": -0.4, "y": 0.0, "z": 0.0 },
+		{ "x": -0.37, "y": 0.15, "z": 0.0 },
+		{ "x": -0.28, "y": 0.28, "z": 0.0 },
+		{ "x": -0.15, "y": 0.37, "z": 0.0 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Tire-01 (5x2)
+{
+	"uuid": "b9b29106-8627-466c-bb68-e74151a22671",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Tire1_5x2.obj"
+	}]},
+	"rotationSet": "P001100",
+	"color": "202024",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 5, "depth": 2, "margin": 0.5, "axis": "Z" },
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Tire-01 (5x3)
+{
+	"uuid": "dba64f7a-3d3d-493f-a6fc-3f023377b2e9",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Tire1_5x3.obj"
+	}]},
+	"rotationSet": "P001100",
+	"color": "202024",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 5, "depth": 3, "margin": 0.5, "axis": "Z" },
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Tire-01 (7x3)
+{
+	"uuid": "bfcb6972-621b-4e32-bfdd-d65f4d7fc8a7",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Tire1_7x3.obj"
+	}]},
+	"rotationSet": "P001100",
+	"color": "202024",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 7, "depth": 3, "margin": 0.5, "axis": "Z" },
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Tire-01 (9x3)
+{
+	"uuid": "1ee5a276-a7cb-4477-8ff7-7f3c9c4577fa",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Tire1_9x3.obj"
+	}]},
+	"rotationSet": "P001100",
+	"color": "202024",
+	"density": 200.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 9, "depth": 3, "margin": 0.5, "axis": "Z" },
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Hollow Wheel 10x3
+{
+	"uuid": "2ce800e2-4ff2-4b93-8c9e-90866935b39b",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/SectionTire10x3.obj"
+	}]},
+	"rotationSet": "P404040",
+	"color": "202024",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 7, "y": 2, "z": 3,
+		"margin": 0.075,
+		"pointList": [
+		{ "x": -1.0, "y": -1.0, "z": -1.0 },
+		{ "x": -0.71, "y": -0.21, "z": -1.0 },
+		{ "x": -0.37, "y": 0.28, "z": -1.0 },
+		{ "x": 0.0, "y": 0.45, "z": -1.0 },
+		{ "x": 0.37, "y": 0.28, "z": -1.0 },
+		{ "x": 0.71, "y": -0.21, "z": -1.0 },
+		{ "x": 1.0, "y": -1.0, "z": -1.0 },
+		{ "x": -1.0, "y": -1.0, "z": 1.0 },
+		{ "x": -0.71, "y": -0.21, "z": 1.0 },
+		{ "x": -0.37, "y": 0.28, "z": 1.0 },
+		{ "x": 0.0, "y": 0.45, "z": 1.0 },
+		{ "x": 0.37, "y": 0.28, "z": 1.0 },
+		{ "x": 0.71, "y": -0.21, "z": 1.0 },
+		{ "x": 1.0, "y": -1.0, "z": 1.0 }
+		]},
+	"qualityLevel": 3
+},
+//---------------------------------------------------------------- Rim-01 (Small)
+{
+	"uuid": "440e0414-0c45-4a05-bccb-61ae0add2285",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Rim1_sm.obj"
+	}]},
+	"rotationSet": "PropZ",
+	"sticky": "-Z",
+	"color": "59615c",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 3, "y": 3, "z": 1,
+		"pointList": [
+		{ "x": 0.0, "y": 0.73, "z": -1.0 },
+		{ "x": 0.52, "y": 0.52, "z": -1.0 },
+		{ "x": 0.73, "y": 0.0, "z": -1.0 },
+		{ "x": 0.52, "y": -0.52, "z": -1.0 },
+		{ "x": 0.0, "y": -0.73, "z": -1.0 },
+		{ "x": -0.52, "y": -0.52, "z": -1.0 },
+		{ "x": -0.73, "y": 0.0, "z": -1.0 },
+		{ "x": -0.52, "y": 0.52, "z": -1.0 }
+		]},
+	"qualityLevel": 2
+},
+//---------------------------------------------------------------- Rim-01 (Medium)
+{
+	"uuid": "5ccffe5b-17b4-449d-b73c-112980e0436f",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Rim1_md.obj"
+	}]},
+	"rotationSet": "PropZ",
+	"sticky": "-Z",
+	"color": "59615c",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 3, "y": 3, "z": 1,
+		"pointList": [
+		{ "x": 0.0, "y": 1.0, "z": -1.0 },
+		{ "x": 0.71, "y": 0.71, "z": -1.0 },
+		{ "x": 1.0, "y": 0.0, "z": -1.0 },
+		{ "x": 0.71, "y": -0.71, "z": -1.0 },
+		{ "x": 0.0, "y": -1.0, "z": -1.0 },
+		{ "x": -0.71, "y": -0.71, "z": -1.0 },
+		{ "x": -1.0, "y": 0.0, "z": -1.0 },
+		{ "x": -0.71, "y": 0.71, "z": -1.0 }
+		]},
+	"qualityLevel": 2
+},
+//---------------------------------------------------------------- Rim-01 (Large)
+{
+	"uuid": "ae19633e-a1ce-407b-bfa6-509bd8ba2d8a",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Rim1_lg.obj"
+	}]},
+	"rotationSet": "PropZ",
+	"sticky": "-Z",
+	"color": "59615c",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 5, "y": 5, "z": 1,
+		"pointList": [
+		{ "x": 0.0, "y": 0.8, "z": -1.0 },
+		{ "x": 0.57, "y": 0.57, "z": -1.0 },
+		{ "x": 0.8, "y": 0.0, "z": -1.0 },
+		{ "x": 0.57, "y": -0.57, "z": -1.0 },
+		{ "x": 0.0, "y": -0.8, "z": -1.0 },
+		{ "x": -0.57, "y": -0.57, "z": -1.0 },
+		{ "x": -0.8, "y": 0.0, "z": -1.0 },
+		{ "x": -0.57, "y": 0.57, "z": -1.0 }
+		]},
+	"qualityLevel": 2
+}
+
+//---------------------------------------------------------------- END
+]}

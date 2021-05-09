@@ -1,0 +1,438 @@
+{"partList" : [
+
+//---------------------------------------------------------------- Seat Re-Exiter Teleporter
+{
+	"uuid": "229fd8b4-e098-4cb2-bd24-b4c01e470f53",
+	"name": "mjm_seat_reexiter_teleporter",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+			"material": "DifAsg"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/SeatReExiter.fbx"
+		}]},
+	"hull": { "x": 1, "y": 1, "z": 1, 
+		"pointList": [
+		{ "x": -1.0, "y": -1.0, "z": 1.0 },
+		{ "x": 1.0, "y": -1.0, "z": 1.0 },
+		{ "x": -1.0, "y": -1.0, "z": -1.0 },
+		{ "x": 1.0, "y": -1.0, "z": -1.0 }
+		]},
+	"rotationSet": "PropY",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/SeatReExiter.lua",
+		"classname": "SeatReExiter",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "Hips", "offset": { "x": 0, "y": 0, "z": 0 }}
+				],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_StandingSeat_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"}},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 3,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false
+},
+//---------------------------------------------------------------- Compact Seat Driver(Even)
+{
+	"uuid": "2032fea0-a034-48ad-ad29-56a4e2230026",
+	"name": "mjm_compact_seat_driver",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "SkelAnimDifAsgNor"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/mjm_CompactSeatE1.mesh",
+		"animationList": [
+			{"name": "steering", "file": "$MOD_DATA/Objects/Mesh/mjm_CompactSeatE1.skeleton"}
+		]}]},
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "Hips", "offset": { "x": 0.0, "y": -0.5, "z": -0.2 }},
+				{"name": "LeftForeArm",	"offset": { "x": 1.0, "y": 1.0, "z": 1.2 },
+					"freeRotation": true, "steers": true},
+				{"name": "RightForeArm", "offset": { "x": -1.0, "y": 1.0, "z": 1.2 },
+					"freeRotation": true, "steers": true}],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_CompactSeat1_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 45.0}},
+	"rotationSet": "P404444",
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"box": { "x": 2, "y": 3, "z": 4 },
+	"ratings": {
+		"density": 3,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false
+},
+//---------------------------------------------------------------- Compact Seat Pass(Even)
+{
+	"uuid": "16ae1a9d-84b6-4aeb-b6df-02b4fc4adfe1",
+	"name": "mjm_compact_seat_pass",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "DifAsgNor"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/CompactSeatE1.obj"
+		}]},
+	"hull": { "x": 2, "y": 3, "z": 4, 
+		"margin": 0.075,
+		"pointList": [
+		{ "x": -1.0, "y": -1.0, "z": 1.0 },
+		{ "x": 1.0, "y": -1.0, "z": 1.0 },
+		{ "x": -1.0, "y": -1.0, "z": -1.0 },
+		{ "x": 1.0, "y": -1.0, "z": -1.0 },
+		{ "x": -1.0, "y": 1.0, "z": -1.0 },
+		{ "x": 1.0, "y": 1.0, "z": -1.0 },
+		{ "x": -1.0, "y": 1.0, "z": -0.8 },
+		{ "x": 1.0, "y": 1.0, "z": -0.8 },
+		{ "x": -1.0, "y": -0.8, "z": 1.0 },
+		{ "x": 1.0, "y": -0.8, "z": 1.0 }
+		]},
+	"rotationSet": "P404444",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "Hips", "offset": { "x": 0.0, "y": -0.5, "z": -0.2 }},
+				{"name": "LeftForeArm",	"offset": { "x": 1.0, "y": 0.0, "z": 0.5 },
+					"freeRotation": true},
+				{"name": "RightForeArm", "offset": { "x": -1.0, "y": 0.0, "z": 0.5 },
+					"freeRotation": true}],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_CompactSeat1_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 45.0}},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 3,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false
+},
+//---------------------------------------------------------------- Compact Seat Bike(Odd)
+{
+	"uuid": "edce7d53-4a16-4ba8-b629-852c107656e9",
+	"name": "mjm_compact_seat_bike",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "SkelAnimDifAsgNor"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/mjm_CompactSeatO1.mesh",
+		"animationList": [
+			{"name": "steering", "file": "$MOD_DATA/Objects/Mesh/mjm_CompactSeatO1.skeleton"}
+		]}]},
+	"hull": { "x": 1, "y": 2, "z": 4,
+		"pointList": [
+		{ "x": -1.0, "y": -1.0, "z": 1.0 },
+		{ "x": 1.0, "y": -1.0, "z": 1.0 },
+		{ "x": -1.0, "y": -1.0, "z": -1.0 },
+		{ "x": 1.0, "y": -1.0, "z": -1.0 },
+		{ "x": -1.0, "y": 1.0, "z": 1.0 },
+		{ "x": 1.0, "y": 1.0, "z": 1.0 },
+		{ "x": -1.0, "y": 1.0, "z": 0.0 },
+		{ "x": 1.0, "y": 1.0, "z": 0.0 },
+		{ "x": -1.0, "y": 0.0, "z": -1.0 },
+		{ "x": 1.0, "y": 0.0, "z": -1.0 }
+		]},
+	"rotationSet": "P404444",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "Hips", "offset": { "x": 0.0, "y": 0.0, "z": -0.8 }},
+				{"name": "LeftForeArm",	"offset": { "x": 1.0, "y": 1.5, "z": 0.6 },
+					"freeRotation": true, "steers": true},
+				{"name": "RightForeArm", "offset": { "x": -1.0, "y": 1.5, "z": 0.6 }, 
+					"freeRotation": true, "steers": true}],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_CompactSeat1_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 45.0}},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 3,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false
+},
+//---------------------------------------------------------------- Compact Mech Seat
+{
+	"uuid": "67a2f7c6-0b01-4ef0-868b-6ed852fdfdae",
+	"name": "mjm_compact_mech_seat",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "SkelAnimDifAsgNor"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/mjm_CompactSeatT1.mesh",
+		"animationList": [
+			{"name": "steering", "file": "$MOD_DATA/Objects/Mesh/mjm_CompactSeatT1.skeleton"}
+		]}]},
+	"hull": { "x": 3, "y": 3, "z": 3,
+		"margin": 0.075, "pointList": [
+		{ "x": -1.0, "y": 1.0, "z": -1.0 },
+		{ "x": 1.0, "y": 1.0, "z": -1.0 },
+		{ "x": 1.0, "y": -1.0, "z": -1.0 },
+		{ "x": -1.0, "y": -1.0, "z": -1.0 },
+		{ "x": -1.0, "y": -1.0, "z": 1.0 },
+		{ "x": 1.0, "y": -1.0, "z": 1.0 }
+		]},
+	"rotationSet": "P404444",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "Hips", "offset": { "x": 0.0, "y": -0.5, "z": 0.0 }},
+				{"name": "LeftForeArm",	"offset": { "x": 1.6, "y": 0.5, "z": 1.1 }, 
+					"freeRotation": true, "steers": true},
+				{"name": "RightForeArm", "offset": { "x": -1.6, "y": 0.5, "z": 1.1 }, 
+					"freeRotation": true, "steers": true}],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_CompactSeatT1_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 12.0}},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 3,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false
+},
+//---------------------------------------------------------------- Spaceship Pilot Seat Odd(3x)
+{
+	"uuid": "e2383982-e250-4bac-bd6a-2776fe640920",
+	"name": "mjm_pilot_seat_odd",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "SkelAnimDifAsgNor"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/SpaceshipSeat3x.fbx",
+		"animationList": [
+			{"name": "steering", "file": "$MOD_DATA/Objects/Mesh/SpaceshipSeat3x.fbx"}
+		]}]},
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "root_jnt", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 }},
+				{"name": "LeftForeArm",	"offset": { "x": 1.2, "y": 1.0, "z": 0.8 },
+					"freeRotation": true, "steers": true},
+				{"name": "RightForeArm", "offset": { "x": -1.2, "y": 1.0, "z": 0.8 },
+					"freeRotation": true, "steers": true}],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_SpaceshipSeat1_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 15.0}},
+	"rotationSet": "P404444",
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"box": { "x": 3, "y": 2, "z": 6 },
+	"ratings": {
+				"density": 3,
+				"durability": 7,
+				"friction": 5,
+				"buoyancy": 2
+			},
+	"flammable": false
+},
+//---------------------------------------------------------------- Spaceship Pilot Seat Even(2x)
+{
+	"uuid": "6e0dfd00-8dc2-4690-a195-5124be441872",
+	"name": "mjm_pilot_seat_even",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "SkelAnimDifAsgNor"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/SpaceshipSeat2x.fbx",
+		"animationList": [
+			{"name": "steering", "file": "$MOD_DATA/Objects/Mesh/SpaceshipSeat2x.fbx"}
+		]}]},
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{ "name": "root_jnt", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 } },
+				{ "name": "LeftForeArm", "offset": { "x": 1.2, "y": 1.0, "z": 0.8 }, 
+					"freeRotation": true, "steers": true },
+				{ "name": "RightForeArm", "offset": { "x": -1.2, "y": 1.0, "z": 0.8 }, 
+					"freeRotation": true, "steers": true }],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_SpaceshipSeat1_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 15.0}},
+	"rotationSet": "P404444",
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"box": { "x": 2, "y": 2, "z": 6 },
+	"ratings": {
+				"density": 3,
+				"durability": 7,
+				"friction": 5,
+				"buoyancy": 2
+			},
+	"flammable": false
+},
+//---------------------------------------------------------------- Jetpack Seat
+{
+	"uuid": "2af55e2e-88dc-42df-ae65-afe58aec81bc",
+	"name": "mjm_jetpack_seat",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "DifAsgNor"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/JetPackSeat.obj"
+		}]},
+	"box": { "x": 1, "y": 1, "z": 1 },
+	"rotationSet": "P404444",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "Hips", "offset": { "x": 0.0, "y": -1.25, "z": -0.75 }},
+				{"name": "LeftForeArm",	"offset": { "x": 1.2, "y": -0.75, "z": 1.65 },
+					"freeRotation": true},
+				{"name": "RightForeArm", "offset": { "x": -1.2, "y": -0.75, "z": 1.65 },
+					"freeRotation": true}],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_JetpackJeat_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 35.0}},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 3,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false
+},
+//---------------------------------------------------------------- Scifi Motorcycle Seat
+{
+	"uuid": "df405d95-ffbb-46c5-919b-e5beadd12b30",
+	"name": "mjm_scifi_motorcycle_seat",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "SkelAnimDifAsgNor"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/mjm_CompactSeatO2.mesh",
+		"animationList": [
+			{"name": "steering", "file": "$MOD_DATA/Objects/Mesh/mjm_CompactSeatO2.skeleton"}
+		]}]},
+		"box": { "x": 1, "y": 1, "z": 5 },
+	"rotationSet": "P404444",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "root_jnt", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 }},
+				{"name": "LeftForeArm",	"offset": { "x": 1.1, "y": 0.4, "z": 1.9 },
+					"freeRotation": true, "steers": true},
+				{"name": "RightForeArm", "offset": { "x": -1.1, "y": 0.4, "z": 1.9 },
+					"freeRotation": true, "steers": true}],
+			"ragdollFile": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Character/mjm_MotorcycleSeat1_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 30.0}},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 3,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false
+},
+//---------------------------------------------------------------- Scifi Motorcycle Seat Passenger
+{
+	"uuid": "923de3c1-45c3-47b4-85b6-40ad185243f7",
+	"name": "mjm_scifi_motorcycle_seat_pass",
+	"renderable": {"lodList": [{
+		"subMeshList": [{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "DifAsg"}],
+		"mesh": "$MOD_DATA/Objects/Mesh/BikePassSeat.obj"
+		}]},
+	"hull": { "x": 1, "y": 1, "z": 2,
+		"margin": 0, "pointList": [
+			{ "x": -1.02, "y": 0.60, "z": -0.94 },
+			{ "x": -1.02, "y": -1.00, "z": 0.75 },
+			{ "x": 0.99, "y": -1.00, "z": 0.75 },
+			{ "x": 0.98, "y": 0.60, "z": -0.94 },
+			{ "x": -1.02, "y": -1.00, "z": -1.00 },
+			{ "x": 0.99, "y": -1.00, "z": -1.00 }
+		]},
+	"rotationSet": "P404444",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/DriverSeatMJM.lua",
+		"classname": "DriverSeatMJM",
+		"data": {},
+		"seat": {
+			"bones": [
+				{"name": "Hips", "offset": { "x": 0.0, "y": 0.3, "z": 0.0 }},
+				{"name": "LeftForeArm",	"offset": { "x": 1.1, "y": 0.4, "z": 1.9 },
+					"freeRotation": true},
+				{"name": "RightForeArm", "offset": { "x": -1.1, "y": 0.4, "z": 1.9 },
+					"freeRotation": true}],
+			"ragdollFile": "$GAME_DATA/Character/bikeseat_ragdoll.json",
+			"enterAudio": "Seat seated", "exitAudio": "Seat unseated"},
+		"steering": {"steerAngle": 45.0}},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 3,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false
+}
+//---------------------------------------------------------------- END
+]}

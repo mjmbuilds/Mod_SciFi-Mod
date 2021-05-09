@@ -1,0 +1,32 @@
+{"system":{
+	"emitters":[{
+
+		"diffuse" : "Textures/Debug/debugVector.tga",
+
+		"type" : "point",
+		"color" : { "r" : 1, "g" : 0, "b" : 0, "a" : 1 },
+		"emission_mode" : "loop",
+		"emission_rate" : 10,
+		"time_to_live_min" : 0.01,
+		"visual_particle_quota" : 1000,
+
+		"glow" : true,
+		"glow_exposure_max" : 20.0,
+		"glow_exposure_min" : 20.0,
+		"glow_exposure_val" : 20.0,
+		"glow_strength" : 20.0,
+
+		"keep_local" : true,
+		"particle" : "billboard",
+		"billboard_type" : "axial_self",
+		//"scene_blend" : "alpha_blend",
+		"scene_blend" : "addative",
+
+		"velocity_max" : 0.0,
+		"velocity_min" : 0.0,
+		"velocity_val" : 0.0
+		}],
+	"scale" : 0.2,
+	"scale_time" : 1,
+	"system_type" : "stream"
+}}

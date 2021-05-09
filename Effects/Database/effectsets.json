@@ -1,0 +1,8 @@
+{
+	"effectSetList":
+	[
+		"$MOD_DATA/Effects/Database/EffectSets/engine.json",
+		"$MOD_DATA/Effects/Database/EffectSets/weapons.json",
+		"$MOD_DATA/Effects/Database/EffectSets/debug.json"
+	]
+}

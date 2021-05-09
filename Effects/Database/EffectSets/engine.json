@@ -1,0 +1,48 @@
+{
+
+	"MJM_ThrusterScifi_01":{
+		"parameterList":{ "velocity": 0.0, "power": 0.0, "color": "007fff", "radius": 1.5, "intensity": 0.01},
+		"effectList":[
+			{"type": "particle", "name": "mjm_scifi_afterburner_01", "offset": { "x": 0.0, "y": 0.0, "z": 0.5 }, "delay": 0.0},
+			{"type": "audio", "name": "Thruster", "offset": { "x": 0.0, "y": 0.0, "z": 0.5 },
+				"parameters":[ "velocity", "power" ], "delay": 0.0 },
+			{"type": "pointLight", "name": "", "offset": { "x": 0.0, "y": 0.0, "z": 0.875 },
+				"parameters":[ "color", "radius", "intensity" ], "delay": 0.0 }
+		]
+	},
+	
+	"ModGasEngine":{
+		"effectList":[
+			{"type": "audio", "name": "GasEngine", "offset": { "x": 0, "y": 0, "z": 0 },
+				"delay": 0.0} ]
+	},
+	"ModElecricEngine":{
+		"parameterList":{ "velocity": 0.0, "power": 0.0 },
+		"effectList":[
+			{"type": "audio", "name": "ElectricEngine", "offset": { "x": 0, "y": 0, "z": 0 },
+				"parameters":[ "velocity", "power" ],
+				"delay": 0.0} ]
+	},
+	"ModThruster":{
+		"parameterList":{ "velocity": 0.0, "power": 0.0 },
+		"effectList":[
+			{"type": "audio", "name": "Thruster", "offset": { "x": 0, "y": 0, "z": 0 },
+				"parameters":[ "velocity", "power"],
+				"delay": 0.0 } ]
+	},
+	"ModThrusterDust":{
+		"parameterList":{ "velocity": 0.0, "power": 0.0 },
+		"effectList":[
+			{"type": "audio", "name": "Thruster dust", "offset": { "x": 0, "y": 0, "z": 0 },
+				"parameters":[ "velocity", "power"],
+				"delay": 0.0 } ]
+	},
+	"ModController":{
+		"parameterList":{ "Velocity": 0.0 },
+		"effectList":[
+			{"type": "audio", "name": "SequenceController", "offset": { "x": 0, "y": 0, "z": 0 },
+				"parameters":[ "Velocity"],
+				"delay": 0.0 } ]
+	}
+
+}

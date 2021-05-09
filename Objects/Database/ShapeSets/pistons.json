@@ -1,0 +1,131 @@
+{"partList" : [
+
+//---------------------------------------------------------------- Pipe Piston 5x
+{
+	"uuid": "a829d150-5020-47a8-b2ad-7cbbeeb0d96a",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PistonPipe5.fbx"
+	}]},
+	"piston": {
+		"length": 5,
+		"defaultRange": 2,
+		"speedLevels": [
+			{ "speed": 2.0 },
+			{ "speed": 4.0 },
+			{ "speed": 6.0 },
+			{ "speed": 8.0 },
+			{ "speed": 10.0 },
+			{ "speed": 12.0 },
+			{ "speed": 14.0 },
+			{ "speed": 16.0 },
+			{ "speed": 18.0 },
+			{ "speed": 20.0 }],
+			"defaultSpeedLevel": 2,
+			"force": 100000},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"physicsMaterial": "Metal",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 2,
+	"previewRotation": [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ]
+},
+//---------------------------------------------------------------- Piston Rod
+{
+	"uuid": "3b6ce27f-e209-4cee-950e-2d0ecc5393c9",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PistonRod_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/PistonRod_on.fbx"
+	}]},
+	"piston": {
+		"length": 16,
+		"defaultRange": 3,
+		"speedLevels": [
+			{ "speed": 2.0 },
+			{ "speed": 4.0 },
+			{ "speed": 6.0 },
+			{ "speed": 8.0 },
+			{ "speed": 10.0 },
+			{ "speed": 12.0 },
+			{ "speed": 14.0 },
+			{ "speed": 16.0 },
+			{ "speed": 18.0 },
+			{ "speed": 20.0 },
+			{ "speed": 40.0 },
+			{ "speed": 60.0 },
+			{ "speed": 80.0 },
+			{ "speed": 100.0 },
+			{ "speed": 120.0 },
+			{ "speed": 140.0 },
+			{ "speed": 160.0 },
+			{ "speed": 180.0 },
+			{ "speed": 200.0 }],
+			"defaultSpeedLevel": 2,
+			"force": 1000000},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 2
+},
+//---------------------------------------------------------------- Piston Round
+{
+	"uuid": "0c0a0e43-861e-4c36-9c6c-cf509a87cf9c",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/PistonRound_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/PistonRound_on.fbx"
+	}]},
+	"piston": {
+		"length": 16,
+		"defaultRange": 3,
+		"speedLevels": [
+			{ "speed": 2.0 },
+			{ "speed": 4.0 },
+			{ "speed": 6.0 },
+			{ "speed": 8.0 },
+			{ "speed": 10.0 },
+			{ "speed": 12.0 },
+			{ "speed": 14.0 },
+			{ "speed": 16.0 },
+			{ "speed": 18.0 },
+			{ "speed": 20.0 },
+			{ "speed": 40.0 },
+			{ "speed": 60.0 },
+			{ "speed": 80.0 },
+			{ "speed": 100.0 },
+			{ "speed": 120.0 },
+			{ "speed": 140.0 },
+			{ "speed": 160.0 },
+			{ "speed": 180.0 },
+			{ "speed": 200.0 }],
+			"defaultSpeedLevel": 2,
+			"force": 1000000},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"physicsMaterial": "Metal",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 2
+}
+
+//---------------------------------------------------------------- END
+]}

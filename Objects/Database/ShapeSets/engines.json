@@ -1,0 +1,152 @@
+{"partList" : [
+
+
+//--------------------------------------------------------------- Gravity Core
+{
+	"uuid": "f3d96978-887a-4751-b1d2-d1e831c92657",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/invisible.tga",
+		"$MOD_DATA/Objects/Textures/invisible.tga"],
+		"material": "DifAsgAlphaFlip"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/GravityCore_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/GravityCore_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/GravityCore.lua",
+		"classname": "GravityCore" },
+	"rotationSet": "PropFull",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"qualityLevel": 0,
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.45, "pointList": [
+			{ "x": 0, "y": 0, "z": 0 }
+		]},
+	"showInInventory": true
+},
+
+//--------------------------------------------------------------- Inertia Drive
+{
+	"uuid": "5f16a5b1-394e-492f-afff-f4c2301b1073",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "PoseAnimDifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/InertiaDrive_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/InertiaDrive_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/InertiaDrive.lua",
+		"classname": "InertiaDrive" },
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"box": { "x": 2, "y": 3, "z": 1 },
+	"qualityLevel": 5,
+	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ],
+	"showInInventory": true
+},
+//--------------------------------------------------------------- Tank Engine
+{
+	"uuid": "92c856e6-9a9b-4832-91f0-2c741258b40b",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+		"material": "DifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/TankEngine.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/TankEngine.lua",
+		"classname": "TankEngine" },
+	"rotationSet": "P404040",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"box": { "x": 3, "y": 2, "z": 2 },
+	"qualityLevel": 5,
+	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
+},
+//---------------------------------------------------------------- Mini Electric Motor
+{
+	"uuid": "bb1f9495-a25e-4045-ad0e-da5fefc413f6",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/engine_electric_1x1.obj"
+	}]},
+	"electricEngine": {
+		"gears": [
+			{ "velocity": 0, "power": 100000 },
+			{ "velocity": 22.5, "power": 100000 },
+			{ "velocity": 45, "power": 100000 },
+			{ "velocity": 90, "power": 100000 },
+			{ "velocity": 180, "power": 100000 },
+			{ "velocity": 360, "power": 100000 },
+			{ "velocity": 720, "power": 100000 },
+			{ "velocity": 1440, "power": 100000 },
+			{ "velocity": 2880, "power": 100000 }], 
+			"effect": "ElectricEngine - Level 4"},
+	"rotationSet": "P201000",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 5
+},
+//---------------------------------------------------------------- Mini Gas Engine
+{
+	"uuid": "abbe03ef-97cb-4ec6-b915-8f59e50d1ce1",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/engine_gas_1x1.obj"
+	}]},
+	"gasEngine":{
+		"gears":[
+			{ "velocity": 0, "power": 0 },
+			{ "velocity": 45, "power": 8 },
+			{ "velocity": 90, "power": 16 },
+			{ "velocity": 180, "power": 32 },
+			{ "velocity": 360, "power": 64 },
+			{ "velocity": 720, "power": 128 },
+			{ "velocity": 1440, "power": 256 },
+			{ "velocity": 2880, "power": 512 },
+			{ "velocity": 5760, "power": 1024 }],
+			"effect": "GasEngine - Level 3"},
+	"rotationSet": "P201000",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 5
+}
+
+
+//---------------------------------------------------------------- END
+]}

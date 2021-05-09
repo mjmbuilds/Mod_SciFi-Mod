@@ -1,0 +1,95 @@
+{
+
+	"MJM_MuzzelFlash1":{
+		"parameterList":{ "pitch": 0 },
+		"effectList":[
+			{"type": "particle", "name": "mjm_muzzleflash_01", "offset": { "x": 0, "y": 0, "z": 0 }, "attached": false, "delay": 0.05 }
+		]
+	},
+	
+	"MJM_GunDrum1":{
+		"parameterList":{ "pitch": 0 },
+		"effectList":[
+			{"type": "audio", "name": "Dancedrum", "offset": { "x": 0, "y": 0, "z": 0 },
+				"parameters":[ "pitch" ], "delay": 0.0, "duration":0.175}
+		]
+	},
+	
+	"MJM_GunDrum2":{
+		"parameterList":{ "pitch": 0 },
+		"effectList":[
+			{"type": "audio", "name": "Retrodrum", "offset": { "x": 0, "y": 0, "z": 0 },
+				"parameters":[ "pitch" ], "delay": 0.0, "duration":0.175}
+		]
+	},
+	
+	"MJM_BulletPlasma":{
+		"parameterList":{"color": "ff9999", "radius": 5, "intensity": 2.0},
+		"effectList":[
+			{"type": "particle", "name": "mjm_flare_01", "offset": { "x": 0, "y": 0, "z": 0 }, "delay": 0.0},
+			{"type": "particle", "name": "mjm_flare_02", "offset": { "x": 0, "y": 0, "z": 0 }, "delay": 0.1},
+			{"type": "pointLight", "name": "", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters":[ "color", "radius", "intensity" ], "delay": 0.0}
+		]
+	},
+
+	"MJM_BulletLaser":{
+		"parameterList":{"color": "ff0000", "radius": 5, "intensity": 2.0},
+		"effectList":[
+			{"type": "particle", "name": "mjm_bullet_laser", "offset": { "x": 0, "y": 0, "z": 0 }, "delay": 0.0},
+			{"type": "pointLight", "name": "", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters":[ "color", "radius", "intensity" ], "delay": 0.0}
+		]
+	},
+	
+	"MJM_Missile_Photon":{
+		"parameterList":{"velocity": 1.0, "power": 1.0, "color": "007fff", "radius": 5, "intensity": 2.0},
+		"effectList":[
+			{"type": "particle", "name": "mjm_missile_photon", "offset": { "x": 0, "y": 0, "z": 0 }, "delay": 0.0},
+			{"type": "particle", "name": "mjm_missile_flame_01", "offset": { "x": 0.0, "y": -2.2, "z": 0.0 }, "delay": 0.0},
+			{"type": "audio", "name": "Thruster", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters":[ "velocity",	"power"], "delay": 0.0},
+			{"type": "pointLight", "name": "", "offset": { "x": 0.0, "y": -2.0, "z": 0.0 },
+				"parameters":[ "color", "radius", "intensity" ], "delay": 0.0}
+		]
+	},
+	
+	"MJM_Missile_Sidewinder":{
+		"parameterList":{"velocity": 1.0, "power": 1.0, "color": "007fff", "radius": 5, "intensity": 2.0},
+		"effectList":[
+			{"type": "particle", "name": "mjm_missile_sidewinder", "offset": { "x": 0, "y": 0, "z": 0 }, "delay": 0.0},
+			{"type": "particle", "name": "mjm_missile_flame_02", "offset": { "x": 0.0, "y": -2.2, "z": 0.0 }, "delay": 0.0},
+			{"type": "audio", "name": "Thruster", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters":[ "velocity",	"power"], "delay": 0.0},
+			{"type": "pointLight", "name": "", "offset": { "x": 0.0, "y": -2.0, "z": 0.0 },
+				"parameters":[ "color", "radius", "intensity" ], "delay": 0.0}
+		]
+	},
+	
+	"MJM_MissileFlame_01":{
+		"parameterList":{"velocity": 0.0, "power": 0.0, "color": "007fff", "radius": 1.5, "intensity": 0.01},
+		"effectList":[
+			{"type": "particle", "name": "mjm_missile_flame_01", "offset": { "x": 0.0, "y": -1.0, "z": 0.0 }, "delay": 0.0},
+			{"type": "audio", "name": "Thruster", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters":[ "velocity",	"power"], "delay": 0.0},
+			{"type": "pointLight", "name": "", "offset": { "x": 0.0, "y": -1.0, "z": 0.0 },
+				"parameters":[ "color", "radius", "intensity" ], "delay": 0.0}
+		]
+	},
+	
+	"MJM_ExplosionSmall":{
+		"maxInstances": 64,
+		"parameterList":{"size": 0.0, "color": "ffcc34", "radius": 16.0, "intensity": 2.0,	"shakeStrength": 0.01, "shakeRadius": 40.0},
+		"parameterCurves":{"radius":{"timeline":[{"time":0.0, "value":0.0}, {"time":0.1, "value":15.0}, {"time":0.6, "value":0.0}]}},
+		"effectList":[
+			{"type": "particle", "name": "mjm_explosion_small", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 }, "attached": true, "delay": 0.0},
+			{"type": "audio", "name": "Gas Explosion", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters":[ "size"], "delay": 0.0, "duration":0.35},
+			{"type": "pointLight", "name": "", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters":[ "color", "radius", "intensity"], "duration": 1.0, "delay": 0.0},
+			{"type": "cameraShake", "name": "", "offset": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"parameters":[ "shakeStrength", "shakeRadius"], "duration": 0.4, "delay": 0.0}
+		]
+	}
+
+}

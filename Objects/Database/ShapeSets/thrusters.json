@@ -1,0 +1,388 @@
+{"partList" : [
+
+//---------------------------------------------------------------- Thruster 2-Way 1x1 V1
+{
+	"uuid": "bda9598d-58aa-4957-8dfc-43400afe6563",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/invisible.tga",
+		"$MOD_DATA/Objects/Textures/invisible.tga"],
+		"material": "DifAsgAlphaFlip"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Thruster2Way1_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/Thruster2Way1_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/Thruster2Way.lua",
+		"classname": "Thruster2Way" },
+	"rotationSet": "P401100",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"box": { "x": 1, "y": 1, "z": 1 },
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Thruster 2-Way 1x1 V2
+{
+	"uuid": "608e145a-9d13-4a39-9ff1-91648f887a19",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/invisible.tga",
+		"$MOD_DATA/Objects/Textures/invisible.tga"],
+		"material": "DifAsgAlphaFlip"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Thruster2Way2_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/Thruster2Way2_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/Thruster2Way.lua",
+		"classname": "Thruster2Way" },
+	"rotationSet": "PropY",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Thruster 2-Way 2x2 V1
+{
+	"uuid": "aef192be-d09a-49f9-9c9c-779d09873b10",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/invisible.tga",
+		"$MOD_DATA/Objects/Textures/invisible.tga"],
+		"material": "DifAsgAlphaFlip"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Thruster2Way3_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/Thruster2Way3_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/Thruster2Way.lua",
+		"classname": "Thruster2Way" },
+	"rotationSet": "P401100",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"box": { "x": 2, "y": 2, "z": 1 },
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Thruster 2-Way 2x2 V2
+{
+	"uuid": "a5e56ad4-a4a8-491d-b8d7-e032b52f7b67",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/invisible.tga",
+		"$MOD_DATA/Objects/Textures/invisible.tga"],
+		"material": "DifAsgAlphaFlip"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/Thruster2Way4_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/Thruster2Way4_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/Thruster2Way.lua",
+		"classname": "Thruster2Way" },
+	"rotationSet": "PropY",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"cylinder": { "diameter": 2, "depth": 1, "axis": "Z" },
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Scifi Thruster 1
+{
+	"uuid": "36b93d28-77b9-493f-b5e9-a2182eaa5627",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		""],
+		"material": "PoseAnimDifAsg"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		""],
+		"material": "PoseAnimDifAsg"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		""],
+		"material": "PoseAnimDifAsg"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/thrusterScifi1_off.obj",
+	"pose0": "$MOD_DATA/Objects/Mesh/thrusterScifi1_on.obj"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/ThrusterScifi.lua",
+		"classname": "ThrusterScifi" },
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"hull": { "x": 2, "y": 2, "z": 3,
+		"margin": 0, "pointList": [
+			{ "x": 0.71, "y": 0.71, "z": -1.00 },
+			{ "x": 0.00, "y": 1.00, "z": -1.00 },
+			{ "x": 0.00, "y": 1.00, "z": -0.33 },
+			{ "x": 0.71, "y": 0.71, "z": -0.33 },
+			{ "x": 1.00, "y": 0.00, "z": -1.00 },
+			{ "x": 0.71, "y": -0.71, "z": -1.00 },
+			{ "x": 0.00, "y": -1.00, "z": -1.00 },
+			{ "x": -0.71, "y": -0.71, "z": -1.00 },
+			{ "x": -1.00, "y": 0.00, "z": -1.00 },
+			{ "x": -0.71, "y": 0.71, "z": -1.00 },
+			{ "x": 1.00, "y": 0.00, "z": -0.33 },
+			{ "x": 0.35, "y": 0.35, "z": 1.00 },
+			{ "x": 0.50, "y": 0.00, "z": 1.00 },
+			{ "x": 0.00, "y": 0.50, "z": 1.00 },
+			{ "x": -0.71, "y": 0.71, "z": -0.33 },
+			{ "x": -0.35, "y": 0.35, "z": 1.00 },
+			{ "x": -1.00, "y": 0.00, "z": -0.33 },
+			{ "x": -0.50, "y": 0.00, "z": 1.00 },
+			{ "x": -0.71, "y": -0.71, "z": -0.33 },
+			{ "x": -0.35, "y": -0.35, "z": 1.00 },
+			{ "x": 0.00, "y": -1.00, "z": -0.33 },
+			{ "x": 0.00, "y": -0.50, "z": 1.00 },
+			{ "x": 0.71, "y": -0.71, "z": -0.33 },
+			{ "x": 0.35, "y": -0.35, "z": 1.00 }
+		]},
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Side Thruster
+{
+	"uuid": "9d98bcc0-abc8-472b-9060-05e516d67ec2",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/thrusterSide.obj"
+	}]},
+	"thruster": { "levels": [
+		{ "averageForce": 2222.22, "forceVariation": 0 },
+		{ "averageForce": 3333.33, "forceVariation": 0 },
+		{ "averageForce": 5000, "forceVariation": 0 },
+		{ "averageForce": 7500, "forceVariation": 0 },
+		{ "averageForce": 11250, "forceVariation": 0 },
+		{ "averageForce": 16875, "forceVariation": 0 },
+		{ "averageForce": 25312.5, "forceVariation": 0 }]},
+	"rotationSet": "PropY",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { 
+		"x": 1, "y": 1, "z": 1,
+		"margin": 0.075,
+		"pointList": [
+			{ "x": -1.0, "y": -1.0, "z": -1.0 },
+			{ "x": -1.0, "y": -0.8, "z": -1.0 },
+			{ "x": -1.0, "y": 0.0, "z": 0.43 },
+			{ "x": -1.0, "y": -0.1, "z": 1.0 },
+			{ "x": -1.0, "y": -1.0, "z": 1.0 },
+			{ "x": 1.0, "y": -1.0, "z": -1.0 },
+			{ "x": 1.0, "y": -0.8, "z": -1.0 },
+			{ "x": 1.0, "y": 0.0, "z": 0.43 },
+			{ "x": 1.0, "y": -0.1, "z": 1.0 },
+			{ "x": 1.0, "y": -1.0, "z": 1.0 }
+			]},
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Surface Thruster LVL1
+{
+	"uuid": "b3f3f3a2-3ea1-4e65-8f78-c79580d33a56",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/thruster_cap1.obj"
+	}]},
+	"thruster": { "levels": [
+		{ "averageForce": 500, "forceVariation": 0 },
+		{ "averageForce": 1000, "forceVariation": 0 },
+		{ "averageForce": 1500, "forceVariation": 0 },
+		{ "averageForce": 2000, "forceVariation": 0 },
+		{ "averageForce": 2500, "forceVariation": 0 },
+		{ "averageForce": 3000, "forceVariation": 0 },
+		{ "averageForce": 3500, "forceVariation": 0 }]},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": 0.0, "y": 1.0, "z": -1.0 },
+		{ "x": 1.0, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": -1.0, "z": -1.0 },
+		{ "x": -1.0, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": 1.0, "z": -0.8 },
+		{ "x": 1.0, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": -1.0, "z": -0.8 },
+		{ "x": -1.0, "y": 0.0, "z": -0.8 }
+		]},
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Surface Thruster LVL2
+{
+	"uuid": "61a4658f-824b-4e78-a06f-9de630c7ecdb",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/thruster_cap2.obj"
+	}]},
+	"thruster": { "levels": [
+		{ "averageForce": 4000, "forceVariation": 0 },
+		{ "averageForce": 5000, "forceVariation": 0 },
+		{ "averageForce": 6000, "forceVariation": 0 },
+		{ "averageForce": 7000, "forceVariation": 0 },
+		{ "averageForce": 8000, "forceVariation": 0 },
+		{ "averageForce": 9000, "forceVariation": 0 },
+		{ "averageForce": 10000, "forceVariation": 0 }]},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": 0.0, "y": 1.0, "z": -1.0 },
+		{ "x": 1.0, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": -1.0, "z": -1.0 },
+		{ "x": -1.0, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": 1.0, "z": -0.8 },
+		{ "x": 1.0, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": -1.0, "z": -0.8 },
+		{ "x": -1.0, "y": 0.0, "z": -0.8 }
+		]},
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Surface Thruster LVL3
+{
+	"uuid": "7951b872-41b7-482b-9540-8b081efffdca",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "DifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/thruster_cap3.obj"
+	}]},
+	"thruster": { "levels": [
+		{ "averageForce": 12500, "forceVariation": 0 },
+		{ "averageForce": 15000, "forceVariation": 0 },
+		{ "averageForce": 17500, "forceVariation": 0 },
+		{ "averageForce": 20000, "forceVariation": 0 },
+		{ "averageForce": 22500, "forceVariation": 0 },
+		{ "averageForce": 25000, "forceVariation": 0 },
+		{ "averageForce": 27500, "forceVariation": 0 }]},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 250.0,
+	"physicsMaterial": "Plastic",
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": 0.0, "y": 1.0, "z": -1.0 },
+		{ "x": 1.0, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": -1.0, "z": -1.0 },
+		{ "x": -1.0, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": 1.0, "z": -0.8 },
+		{ "x": 1.0, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": -1.0, "z": -0.8 },
+		{ "x": -1.0, "y": 0.0, "z": -0.8 }
+		]},
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Scifi Gimbal Thruster 1
+{
+	"uuid": "3418ba40-ebd2-4bff-bc54-d568d9bd9342",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "SkelAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/ScifiGimbalThruster1.fbx",
+	"includes": [ "POSITION", "UV0", "NORMAL", "TANGENT", "BLEND_INDICES", "BLEND_WEIGHTS" ],
+	"animationList" : [
+		{ "name" : "animZ", "file": "$MOD_DATA/Objects/Mesh/ScifiGimbalThruster1.fbx" },
+		{ "name" : "animX", "file": "$MOD_DATA/Objects/Mesh/ScifiGimbalThruster1.fbx" }
+		]}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/BB_gimbal.lua", 
+		"classname": "Gimball"},
+	"rotationSet": "PropZ",
+	"sticky": "-Z",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 3, "depth": 2, "axis": "Y" },
+	"qualityLevel": 4
+},
+//---------------------------------------------------------------- Scifi Gimbal Thruster 2
+{
+	"uuid": "290a6d9b-7a8a-4094-8355-5865c464e38e",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "SkelAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/ScifiGimbalThruster2.fbx",
+	"includes": [ "POSITION", "UV0", "NORMAL", "TANGENT", "BLEND_INDICES", "BLEND_WEIGHTS" ],
+	"animationList" : [
+		{ "name" : "animZ", "file": "$MOD_DATA/Objects/Mesh/ScifiGimbalThruster2.fbx" },
+		{ "name" : "animX", "file": "$MOD_DATA/Objects/Mesh/ScifiGimbalThruster2.fbx" }
+		]}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/BB_gimbal.lua", 
+		"classname": "Gimball"},
+	"rotationSet": "PropZ",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Plastic",
+	"cylinder": { "diameter": 3, "depth": 1, "axis": "Y" },
+	"qualityLevel": 4
+}
+
+//---------------------------------------------------------------- END
+]}
