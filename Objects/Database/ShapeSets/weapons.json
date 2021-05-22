@@ -25,6 +25,7 @@
 	"physicsMaterial": "Metal",
 	"qualityLevel": 5,
 	"box": { "x": 1, "y": 1, "z": 1 },
+	"stackSize": 1,
 	"showInInventory": false
 },
 //--------------------------------------------------------------- Plasma Gun
@@ -49,7 +50,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Metal",
 	"qualityLevel": 5,
-	"cylinder": { "diameter": 1, "depth": 2, "axis": "Y" }
+	"cylinder": { "diameter": 1, "depth": 2, "axis": "Y" },
+	"stackSize": 1
 },
 //--------------------------------------------------------------- Laser Gun
 {
@@ -77,7 +79,8 @@
 			"margin": 0.25, "pointList": [
 			{ "x": 0, "y": 1, "z": 0 },
 			{ "x": 0, "y": -1, "z": 0 }
-		]}
+		]},
+	"stackSize": 1
 },
 //--------------------------------------------------------------- Photon Missile
 {
@@ -101,7 +104,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Metal",
 	"qualityLevel": 5,
-	"box": { "x": 1, "y": 6, "z": 1 }
+	"box": { "x": 1, "y": 6, "z": 1 },
+	"stackSize": 1
 },
 //--------------------------------------------------------------- Sidewinder Missile
 {
@@ -129,7 +133,8 @@
 			"margin": 0.25, "pointList": [
 			{ "x": 0, "y": 1, "z": 0 },
 			{ "x": 0, "y": -1, "z": 0 }
-		]}
+		]},
+	"stackSize": 1
 }
 
 

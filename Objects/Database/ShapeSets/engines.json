@@ -31,7 +31,8 @@
 		"margin": 0.45, "pointList": [
 			{ "x": 0, "y": 0, "z": 0 }
 		]},
-	"showInInventory": true
+	"showInInventory": false,
+	"stackSize": 1
 },
 
 //--------------------------------------------------------------- Inertia Drive
@@ -57,7 +58,8 @@
 	"box": { "x": 2, "y": 3, "z": 1 },
 	"qualityLevel": 5,
 	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ],
-	"showInInventory": true
+	"showInInventory": false,
+	"stackSize": 1
 },
 //--------------------------------------------------------------- Tank Engine
 {
@@ -80,6 +82,7 @@
 	"physicsMaterial": "Plastic",
 	"box": { "x": 3, "y": 2, "z": 2 },
 	"qualityLevel": 5,
+	"stackSize": 1
 	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
 },
 //---------------------------------------------------------------- Mini Electric Motor
@@ -112,7 +115,8 @@
 	"density": 250.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 5
+	"qualityLevel": 5,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Mini Gas Engine
 {
@@ -144,7 +148,8 @@
 	"density": 250.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 5
+	"qualityLevel": 5,
+	"stackSize": 1
 }
 
 

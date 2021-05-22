@@ -42,7 +42,8 @@
 	"color": "df7f00",
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 1, "depth": 3, "axis": "Z" },
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 }
 
 

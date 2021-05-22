@@ -18,7 +18,8 @@
 	"density": 250.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 },
 //---------------------------------------------------------------- Hubless Bearing (Small)
 {
@@ -39,7 +40,8 @@
 	"density": 250.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 },
 //---------------------------------------------------------------- Hubless Bearing (Medium)
 {
@@ -60,7 +62,8 @@
 	"density": 250.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 },
 //---------------------------------------------------------------- Hubless Bearing (Large)
 {
@@ -81,7 +84,8 @@
 	"density": 250.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 }
 
 

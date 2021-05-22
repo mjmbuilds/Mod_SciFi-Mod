@@ -1,0 +1,3947 @@
+{
+   "system" : {
+      "emitters" : [
+	  
+// ------------------------------------------ 1 Init: /glow_smokeglow01.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "1 - Init Explo",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.0,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//glow_smokeglow01.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.5690608024597168,
+                           "r" : 1.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.1869918704032898,
+                           "r" : 1.0
+                        },
+                        "time" : 0.8028169274330139
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 1,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.2861841917037964,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.6907895207405090,
+                        "time" : 0.3589108884334564
+                     },
+                     {
+                        "scale" : 1.648026227951050,
+                        "time" : 0.7178217768669128
+                     },
+                     {
+                        "scale" : 2.694079160690308,
+                        "time" : 0.8787128925323486
+                     },
+                     {
+                        "scale" : 2.859002113342285,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 2,
+                  "max_scale" : 3.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 0.0,
+            "friction_min" : 0.0,
+            "friction_val" : 0.0,
+            "glow" : true,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 22.0,
+            "glow_exposure_min" : 22.0,
+            "glow_exposure_val" : 22.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 0,
+            "height_delta" : 0.250,
+            "height_max" : 3.250,
+            "height_min" : 2.750,
+            "height_val" : 3.0,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Init_Fireball_01 new",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 360.0,
+            "rotation_max" : 360.0,
+            "rotation_min" : -360.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "addative",
+            "shadows" : true,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 2.0,
+            "sphere_radius" : 0.1000000014901161,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 1,
+            "texture_coords_rows" : 1,
+            "time_to_live_delta" : 0.0,
+            "time_to_live_max" : 0.2099999934434891,
+            "time_to_live_min" : 0.2099999934434891,
+            "time_to_live_val" : 0.2099999934434891,
+            "type" : "point",
+            "velocity_delta" : 0.0,
+            "velocity_max" : 0.0,
+            "velocity_min" : 0.0,
+            "velocity_val" : 0.0,
+            "visual_particle_quota" : 1,
+            "width_delta" : 0.250,
+            "width_max" : 3.250,
+            "width_min" : 2.750,
+            "width_val" : 3.0,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	  
+// ------------------------------------------ 1 Init: /flash_circleflashanimated01.tga
+		
+		 {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "1 - Init Explo",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.0,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//flash_circleflashanimated01.TGA",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.2901960909366608,
+                           "g" : 0.6941176652908325,
+                           "r" : 1.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.5176470875740051,
+                           "g" : 0.6078431606292725,
+                           "r" : 1.0
+                        },
+                        "time" : 0.7943661808967590
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 4,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.3914474248886108,
+                        "time" : 0.3044554591178894
+                     },
+                     {
+                        "scale" : 1.151315927505493,
+                        "time" : 0.6460396051406860
+                     },
+                     {
+                        "scale" : 2.291118383407593,
+                        "time" : 0.8688119053840637
+                     },
+                     {
+                        "scale" : 3.335502624511719,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 5,
+                  "max_scale" : 3.50,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 8,
+                  "fps" : 30,
+                  "guid" : 6,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : false,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 0.0,
+            "friction_min" : 0.0,
+            "friction_val" : 0.0,
+            "glow" : true,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 22.0,
+            "glow_exposure_min" : 22.0,
+            "glow_exposure_val" : 22.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 3,
+            "height_delta" : 0.250,
+            "height_max" : 3.250,
+            "height_min" : 2.750,
+            "height_val" : 3.0,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Init_Fireball_01 new SPIKES",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 360.0,
+            "rotation_max" : 360.0,
+            "rotation_min" : -360.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "addative",
+            "shadows" : true,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 2.0,
+            "sphere_radius" : 0.1000000014901161,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 4,
+            "texture_coords_rows" : 2,
+            "time_to_live_delta" : 0.0,
+            "time_to_live_max" : 0.1500000059604645,
+            "time_to_live_min" : 0.1500000059604645,
+            "time_to_live_val" : 0.1500000059604645,
+            "type" : "point",
+            "velocity_delta" : 0.0,
+            "velocity_max" : 0.0,
+            "velocity_min" : 0.0,
+            "velocity_val" : 0.0,
+            "visual_particle_quota" : 1,
+            "width_delta" : 0.250,
+            "width_max" : 3.250,
+            "width_min" : 2.750,
+            "width_val" : 3.0,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+		 
+// ------------------------------------------ 1 Init: /shockwave_shockwave01.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "1 - Init Explo",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 0.2156862765550613,
+               "g" : 0.3647058904170990,
+               "r" : 0.8431372642517090
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.200000047683716,
+            "default_particle_width" : 1.200000047683716,
+            "delay" : 0.05000000074505806,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//shockwave_shockwave01.TGA",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "constant",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 1.0,
+                           "g" : 1.0,
+                           "r" : 1.0
+                        },
+                        "time" : 0.1566666662693024
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 1.0,
+                           "g" : 1.0,
+                           "r" : 1.0
+                        },
+                        "time" : 0.8579999804496765
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 60,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.1580000072717667,
+                  "control_point" : [
+                     {
+                        "scale" : 0.2939999997615814,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.264000058174133,
+                        "time" : 0.7480000257492065
+                     },
+                     {
+                        "scale" : 1.307999968528748,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 61,
+                  "max_scale" : 2.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 1,
+                  "fps" : 30,
+                  "guid" : 62,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.0,
+                  "guid" : 63,
+                  "length" : 1.0,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 0.0,
+            "friction_min" : 0.0,
+            "friction_val" : 0.0,
+            "glow" : true,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 59,
+            "height_delta" : 0.0,
+            "height_max" : 7.0,
+            "height_min" : 7.0,
+            "height_val" : 7.0,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Shockwave01",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 270.0,
+            "rotation_min" : -90.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 90.0,
+            "scene_blend" : "addative",
+            "shadows" : true,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 2.0,
+            "sphere_radius" : 1.0,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 1,
+            "texture_coords_rows" : 1,
+            "time_to_live_delta" : 0.0,
+            "time_to_live_max" : 0.2000000029802322,
+            "time_to_live_min" : 0.2000000029802322,
+            "time_to_live_val" : 0.2000000029802322,
+            "type" : "point",
+            "velocity_delta" : 0.0,
+            "velocity_max" : 0.0,
+            "velocity_min" : 0.0,
+            "velocity_val" : 0.0,
+            "visual_particle_quota" : 2,
+            "width_delta" : 0.0,
+            "width_max" : 7.0,
+            "width_min" : 7.0,
+            "width_val" : 7.0,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	  
+// ------------------------------------------ 1 Init: /Shockwave_smokeshockwave02.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "1 - Init Explo",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 0.722656250,
+               "g" : 0.722656250,
+               "r" : 0.722656250
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.1500000059604645,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//Shockwave_smokeshockwave02.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "constant",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.29003906250,
+                           "g" : 0.3076629638671875,
+                           "r" : 0.343750
+                        },
+                        "time" : 0.1802816838026047
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.2862745225429535,
+                           "g" : 0.3058823645114899,
+                           "r" : 0.3411764800548554
+                        },
+                        "time" : 0.8225352168083191
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 65,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.1580000072717667,
+                  "control_point" : [
+                     {
+                        "scale" : 0.5154933929443359,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.9214605689048767,
+                        "time" : 0.3935643434524536
+                     },
+                     {
+                        "scale" : 1.097177863121033,
+                        "time" : 0.6311880946159363
+                     },
+                     {
+                        "scale" : 1.307999968528748,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 66,
+                  "max_scale" : 2.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 1,
+                  "fps" : 30,
+                  "guid" : 67,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.3000000119209290,
+                  "guid" : 68,
+                  "length" : 1.0,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 0.0,
+            "friction_min" : 0.0,
+            "friction_val" : 0.0,
+            "glow" : false,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 64,
+            "height_delta" : 0.0,
+            "height_max" : 8.50,
+            "height_min" : 8.50,
+            "height_val" : 8.50,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Shockwave02 AB ",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 270.0,
+            "rotation_min" : -90.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 90.0,
+            "scene_blend" : "alpha_blend",
+            "shadows" : false,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 3.0,
+            "sphere_radius" : 1.0,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 1,
+            "texture_coords_rows" : 1,
+            "time_to_live_delta" : 0.0,
+            "time_to_live_max" : 0.6499999761581421,
+            "time_to_live_min" : 0.6499999761581421,
+            "time_to_live_val" : 0.6499999761581421,
+            "type" : "point",
+            "velocity_delta" : 0.0,
+            "velocity_max" : 0.0,
+            "velocity_min" : 0.0,
+            "velocity_val" : 0.0,
+            "visual_particle_quota" : 1,
+            "width_delta" : 0.0,
+            "width_max" : 8.50,
+            "width_min" : 8.50,
+            "width_val" : 8.50,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	 	  
+// ------------------------------------------ 2 FireBall: /fire_flames03.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "top_center",
+            "billboard_type" : "axial_self",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "2 - FireBall",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.05000000074505806,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//fire_flames03.TGA",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.009999999776482582,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.2901960909366608,
+                           "r" : 1.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.1647058874368668,
+                           "g" : 0.5058823823928833,
+                           "r" : 1.0
+                        },
+                        "time" : 0.8870000243186951
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 8,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.1217105388641357,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 9,
+                  "max_scale" : 1.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.6930000185966492,
+                        "time" : 0.4650000035762787
+                     },
+                     {
+                        "scale" : 0.9750000238418579,
+                        "time" : 0.8500000238418579
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.1000000014901161,
+                  "guid" : 10,
+                  "length" : 0.50,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "y-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.8600000739097595,
+                        "time" : 0.7400000095367432
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 11,
+                  "max_scale" : 1.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 100001,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 3.0,
+            "friction_min" : 3.0,
+            "friction_val" : 3.0,
+            "glow" : true,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 7,
+            "height_delta" : 0.6999999880790710,
+            "height_max" : 2.700000047683716,
+            "height_min" : 1.299999952316284,
+            "height_val" : 2.0,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : true,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "FireBall Thick",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 0.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : 180.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 180.0,
+            "scene_blend" : "blend_add",
+            "shadows" : true,
+            "soft_particles_bias" : 556,
+            "sort" : 0,
+            "sort_offset" : 4.0,
+            "sphere_radius" : 0.05000000074505806,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : true,
+            "texture_coords_columns" : 1,
+            "texture_coords_rows" : 1,
+            "time_to_live_delta" : 0.05000000074505806,
+            "time_to_live_max" : 0.3000000119209290,
+            "time_to_live_min" : 0.2000000029802322,
+            "time_to_live_val" : 0.250,
+            "type" : "sphere",
+            "velocity_delta" : 0.0,
+            "velocity_max" : 0.1000000014901161,
+            "velocity_min" : 0.1000000014901161,
+            "velocity_val" : 0.1000000014901161,
+            "visual_particle_quota" : 20,
+            "width_delta" : 0.50,
+            "width_max" : 1.899999976158142,
+            "width_min" : 0.8999999761581421,
+            "width_val" : 1.399999976158142,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	  
+// ------------------------------------------ 2 FireBall: /fire_flames03.tga
+		         
+		 {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "top_center",
+            "billboard_type" : "axial_self",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "2 - FireBall",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.009999999776482582,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//fire_flames03.TGA",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.2901960909366608,
+                           "r" : 1.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.1647058874368668,
+                           "g" : 0.5058823823928833,
+                           "r" : 1.0
+                        },
+                        "time" : 0.6529999971389771
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 13,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 1,
+                  "fps" : 30,
+                  "guid" : 14,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.4830000102519989,
+                        "time" : 0.4429999887943268
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 15,
+                  "max_scale" : 1.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.6930000185966492,
+                        "time" : 0.4650000035762787
+                     },
+                     {
+                        "scale" : 0.9750000238418579,
+                        "time" : 0.8500000238418579
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.1000000014901161,
+                  "guid" : 16,
+                  "length" : 0.50,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "y-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.250,
+                        "time" : 0.7850000262260437
+                     },
+                     {
+                        "scale" : 0.7537501454353333,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 17,
+                  "max_scale" : 1.250,
+                  "name" : "Scale",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 10001,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 1.50,
+            "friction_min" : 1.50,
+            "friction_val" : 1.50,
+            "glow" : true,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 12,
+            "height_delta" : 0.50,
+            "height_max" : 4.50,
+            "height_min" : 3.50,
+            "height_val" : 4.0,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : true,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "FireBall Stretched",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : -180.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "blend_add",
+            "shadows" : true,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 4.0,
+            "sphere_radius" : 0.1000000014901161,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : true,
+            "texture_coords_columns" : 1,
+            "texture_coords_rows" : 1,
+            "time_to_live_delta" : 0.05000000074505806,
+            "time_to_live_max" : 0.3000000119209290,
+            "time_to_live_min" : 0.2000000029802322,
+            "time_to_live_val" : 0.250,
+            "type" : "sphere",
+            "velocity_delta" : 1.0,
+            "velocity_max" : 9.0,
+            "velocity_min" : 7.0,
+            "velocity_val" : 8.0,
+            "visual_particle_quota" : 10,
+            "width_delta" : 0.2529999911785126,
+            "width_max" : 1.253000020980835,
+            "width_min" : 0.7469999790191650,
+            "width_val" : 1.0,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+  
+// ------------------------------------------ 3 FireBall GlowSmoke: /smoke_clouds03_addcompatible.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 45.0,
+            "angle_min" : 45.0,
+            "angle_val" : 45.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 3.0,
+            "box_height" : 4.0,
+            "box_width" : 4.0,
+            "category" : "3 - FireBall GlowSmoke",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.1500000059604645,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//smoke_clouds03_addcompatible.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "constant",
+            "duration" : 0.1000000014901161,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 0.05000000074505806,
+                           "b" : 0.0,
+                           "g" : 0.007843137718737125,
+                           "r" : 0.05490196123719215
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.3372549116611481,
+                           "r" : 0.8705882430076599
+                        },
+                        "time" : 0.1570000052452087
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.3294117748737335,
+                           "r" : 0.7607843279838562
+                        },
+                        "time" : 0.3943662047386169
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.1406250,
+                           "g" : 0.1406250,
+                           "r" : 0.1406250
+                        },
+                        "time" : 0.6873239278793335
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 25,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 32,
+                  "fps" : 30,
+                  "guid" : 26,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.5986841917037964,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.269736766815186,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 27,
+                  "max_scale" : 2.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "y",
+                  "base" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 2.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 2.375366449356079,
+                        "time" : 0.09477124363183975
+                     },
+                     {
+                        "scale" : 1.312316656112671,
+                        "time" : 0.1830065399408341
+                     },
+                     {
+                        "scale" : 0.6085526943206787,
+                        "time" : 0.2896039485931397
+                     },
+                     {
+                        "scale" : 0.1233552396297455,
+                        "time" : 0.5396039485931397
+                     },
+                     {
+                        "scale" : 0.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 28,
+                  "local" : true,
+                  "max" : 2.50,
+                  "name" : "Velocity",
+                  "repeat_over_time" : false,
+                  "repeat_time" : 0.0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "x-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 2.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.888157844543457,
+                        "time" : 0.1544117629528046
+                     },
+                     {
+                        "scale" : 1.282894730567932,
+                        "time" : 0.3480392098426819
+                     },
+                     {
+                        "scale" : 1.131578922271729,
+                        "time" : 0.4558823406696320
+                     },
+                     {
+                        "scale" : 0.9407894611358643,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 29,
+                  "max_scale" : 2.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "friction_delta" : 1.0,
+            "friction_max" : 6.0,
+            "friction_min" : 4.0,
+            "friction_val" : 5.0,
+            "glow" : false,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 24,
+            "height_delta" : 0.50,
+            "height_max" : 3.0,
+            "height_min" : 2.0,
+            "height_val" : 2.50,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Smoke Glowing MAIN",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.50
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : -180.0,
+            "rotation_speed_delta" : 15.0,
+            "rotation_speed_max" : 30.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 15.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "blend_add",
+            "shadows" : false,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 1.0,
+            "sphere_radius" : 0.50,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 8,
+            "texture_coords_rows" : 4,
+            "time_to_live_delta" : 0.3499999940395355,
+            "time_to_live_max" : 1.600000023841858,
+            "time_to_live_min" : 0.8999999761581421,
+            "time_to_live_val" : 1.250,
+            "type" : "sphere",
+            "velocity_delta" : 1.0,
+            "velocity_max" : 6.0,
+            "velocity_min" : 4.0,
+            "velocity_val" : 5.0,
+            "visual_particle_quota" : 10,
+            "width_delta" : 0.50,
+            "width_max" : 3.0,
+            "width_min" : 2.0,
+            "width_val" : 2.50,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	  
+// ------------------------------------------ 3 FireBall GlowSmoke: /smoke_clouds02.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 45.0,
+            "angle_min" : 45.0,
+            "angle_val" : 45.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 3.0,
+            "box_height" : 4.0,
+            "box_width" : 4.0,
+            "category" : "3 - FireBall GlowSmoke",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.1500000059604645,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//smoke_clouds02.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "constant",
+            "duration" : 0.1000000014901161,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.007843140512704849,
+                           "r" : 0.05490196123719215
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.1400560289621353,
+                           "r" : 0.3822862505912781
+                        },
+                        "time" : 0.1661971807479858
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.3372549116611481,
+                           "r" : 0.8705882430076599
+                        },
+                        "time" : 0.4140844941139221
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.3294117748737335,
+                           "r" : 0.7607843279838562
+                        },
+                        "time" : 0.6704225540161133
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 31,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 58,
+                  "fps" : 30,
+                  "guid" : 32,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 15,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.5986841917037964,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.9802631139755249,
+                        "time" : 0.4133663475513458
+                     },
+                     {
+                        "scale" : 1.269736766815186,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 33,
+                  "max_scale" : 2.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.5263158082962036,
+                        "time" : 0.7706422209739685
+                     },
+                     {
+                        "scale" : 0.7929999828338623,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.1000000014901161,
+                  "guid" : 34,
+                  "length" : 1.0,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "x-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 2.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.888157844543457,
+                        "time" : 0.1544117629528046
+                     },
+                     {
+                        "scale" : 1.282894730567932,
+                        "time" : 0.3480392098426819
+                     },
+                     {
+                        "scale" : 1.131578922271729,
+                        "time" : 0.4558823406696320
+                     },
+                     {
+                        "scale" : 0.9407894611358643,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 35,
+                  "max_scale" : 2.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "y",
+                  "base" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 1.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.8453947305679321,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 36,
+                  "local" : true,
+                  "max" : 1.0,
+                  "name" : "Velocity",
+                  "repeat_over_time" : false,
+                  "repeat_time" : 1.0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "y-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 1.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.9473683834075928,
+                        "time" : 0.4607843160629273
+                     },
+                     {
+                        "scale" : 0.7894736528396606,
+                        "time" : 0.6617646813392639
+                     },
+                     {
+                        "scale" : 0.4802631139755249,
+                        "time" : 0.8700980544090271
+                     },
+                     {
+                        "scale" : 0.2236841917037964,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 37,
+                  "max_scale" : 2.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "friction_delta" : 1.0,
+            "friction_max" : 6.0,
+            "friction_min" : 4.0,
+            "friction_val" : 5.0,
+            "glow" : true,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 30,
+            "height_delta" : 0.750,
+            "height_max" : 4.250,
+            "height_min" : 2.750,
+            "height_val" : 3.50,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Smoke Glowing WIDE ?",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 0.50,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : -180.0,
+            "rotation_speed_delta" : 25.0,
+            "rotation_speed_max" : 50.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 25.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "blend_add",
+            "shadows" : false,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 1.0,
+            "sphere_radius" : 1.0,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 8,
+            "texture_coords_rows" : 8,
+            "time_to_live_delta" : 0.1500000059604645,
+            "time_to_live_max" : 1.250,
+            "time_to_live_min" : 0.9500000476837158,
+            "time_to_live_val" : 1.100000023841858,
+            "type" : "circle",
+            "velocity_delta" : 1.0,
+            "velocity_max" : 4.50,
+            "velocity_min" : 2.50,
+            "velocity_val" : 3.50,
+            "visual_particle_quota" : 5,
+            "width_delta" : 0.750,
+            "width_max" : 4.250,
+            "width_min" : 2.750,
+            "width_val" : 3.50,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	  
+// ------------------------------------------ 3 FireBall GlowSmoke: /smoke_clouds02.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 3.0,
+            "box_height" : 4.0,
+            "box_width" : 4.0,
+            "category" : "3 - FireBall GlowSmoke",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.03999999910593033,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//smoke_clouds02.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.009999999776482582,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 0.05000000074505806,
+                           "b" : 0.0,
+                           "g" : 0.1350446939468384,
+                           "r" : 0.94531250
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.1001281738281250,
+                           "g" : 0.3299720287322998,
+                           "r" : 0.753906250
+                        },
+                        "time" : 0.2901408374309540
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.1490196138620377,
+                           "g" : 0.1647058874368668,
+                           "r" : 0.1803921610116959
+                        },
+                        "time" : 0.7887324094772339
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 39,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 53,
+                  "fps" : 30,
+                  "guid" : 40,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 12,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.1114369630813599,
+                        "time" : 0.1274509876966476
+                     },
+                     {
+                        "scale" : 0.8944281339645386,
+                        "time" : 0.2173202633857727
+                     },
+                     {
+                        "scale" : 0.9472140669822693,
+                        "time" : 0.2908496856689453
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 41,
+                  "max_scale" : 1.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.3000000119209290,
+                  "guid" : 42,
+                  "length" : 0.50,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "MJM/EmissionMeshs/Hemisphear01.fbx",
+            "emission_mesh_scale" : {
+               "x" : 0.50,
+               "y" : 0.50,
+               "z" : 0.50
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 1.50,
+            "friction_min" : 1.50,
+            "friction_val" : 1.50,
+            "glow" : false,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 38,
+            "height_delta" : 0.50,
+            "height_max" : 4.50,
+            "height_min" : 3.50,
+            "height_val" : 4.0,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Explosion Smoke Sphear",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 1.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : -180.0,
+            "rotation_speed_delta" : 1.0,
+            "rotation_speed_max" : 2.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 1.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "blend_add",
+            "shadows" : false,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 0.0,
+            "sphere_radius" : 1.0,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : true,
+            "texture_coords_columns" : 8,
+            "texture_coords_rows" : 8,
+            "time_to_live_delta" : 0.05000000074505806,
+            "time_to_live_max" : 0.3500000238418579,
+            "time_to_live_min" : 0.250,
+            "time_to_live_val" : 0.3000000119209290,
+            "type" : "mesh",
+            "velocity_delta" : 1.0,
+            "velocity_max" : 21.0,
+            "velocity_min" : 19.0,
+            "velocity_val" : 20.0,
+            "visual_particle_quota" : 30,
+            "width_delta" : 0.50,
+            "width_max" : 4.50,
+            "width_min" : 3.50,
+            "width_val" : 4.0,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	  
+// ------------------------------------------ 3 FireBall GlowSmoke: /Smoke_explosionsmoke_01.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.009999999776482582,
+            "box_height" : 0.009999999776482582,
+            "box_width" : 0.009999999776482582,
+            "category" : "3 - FireBall GlowSmoke",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 0.50,
+            "default_particle_width" : 0.50,
+            "delay" : 0.0,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//Smoke_explosionsmoke_01.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.1000000014901161,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.3294117748737335,
+                           "g" : 0.3568627536296845,
+                           "r" : 0.3843137323856354
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.1632353067398071,
+                           "r" : 0.8705883026123047
+                        },
+                        "time" : 0.1549295783042908
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.03942871093750,
+                           "g" : 0.2541657984256744,
+                           "r" : 0.593750
+                        },
+                        "time" : 0.7059999704360962
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 44,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 32,
+                  "fps" : 30,
+                  "guid" : 45,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.651315808296204,
+                        "time" : 0.3211009204387665
+                     },
+                     {
+                        "scale" : 1.868421077728272,
+                        "time" : 0.4892966449260712
+                     },
+                     {
+                        "scale" : 2.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 46,
+                  "max_scale" : 2.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "y",
+                  "base" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.008322368375957012,
+                        "time" : 0.3792048990726471
+                     },
+                     {
+                        "scale" : 0.009671052917838097,
+                        "time" : 0.5596330165863037
+                     },
+                     {
+                        "scale" : 0.009999999776482582,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 47,
+                  "local" : false,
+                  "max" : 0.009999999776482582,
+                  "name" : "Velocity",
+                  "repeat_over_time" : false,
+                  "repeat_time" : 1.0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "x-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 3.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 2.861842155456543,
+                        "time" : 0.1284403651952744
+                     },
+                     {
+                        "scale" : 2.457236766815186,
+                        "time" : 0.2844036817550659
+                     },
+                     {
+                        "scale" : 1.884868383407593,
+                        "time" : 0.394495427608490
+                     },
+                     {
+                        "scale" : 1.68750,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 48,
+                  "max_scale" : 3.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 5.0,
+            "friction_min" : 5.0,
+            "friction_val" : 5.0,
+            "glow" : true,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 5.0,
+            "glow_exposure_min" : 5.0,
+            "glow_exposure_val" : 5.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 43,
+            "height_delta" : 0.0,
+            "height_max" : 3.750,
+            "height_min" : 3.750,
+            "height_val" : 3.750,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Explosion Smoke !!",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 0.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : 180.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 180.0,
+            "scene_blend" : "addative",
+            "shadows" : false,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 3.0,
+            "sphere_radius" : 1.0,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 8,
+            "texture_coords_rows" : 4,
+            "time_to_live_delta" : 0.0,
+            "time_to_live_max" : 1.0,
+            "time_to_live_min" : 1.0,
+            "time_to_live_val" : 1.0,
+            "type" : "box",
+            "velocity_delta" : 0.0,
+            "velocity_max" : 1.0,
+            "velocity_min" : 1.0,
+            "velocity_val" : 1.0,
+            "visual_particle_quota" : 1,
+            "width_delta" : 0.0,
+            "width_max" : 1.50,
+            "width_min" : 1.50,
+            "width_val" : 1.50,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	  
+// ------------------------------------------ 5 SmokePillar: /smoke_smoke01.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "axial_self",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "5 - SmokePillar",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 0.9333333373069763,
+               "g" : 0.9843137264251709,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.05000000074505806,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//smoke_smoke01.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.03137255087494850,
+                           "g" : 0.1529411822557449,
+                           "r" : 0.2549019753932953
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0627451017498970,
+                           "g" : 0.09019608050584793,
+                           "r" : 0.1215686276555061
+                        },
+                        "time" : 0.6299999952316284
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.1490196138620377,
+                           "g" : 0.2117647081613541,
+                           "r" : 0.2784313857555389
+                        },
+                        "time" : 0.9369999766349793
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.1803921610116959,
+                           "g" : 0.2823529541492462,
+                           "r" : 0.3725490272045136
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 19,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 1,
+                  "fps" : 30,
+                  "guid" : 20,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 8,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "y-scale",
+                  "base_scale" : 0.1580000072717667,
+                  "control_point" : [
+                     {
+                        "scale" : 0.4631999731063843,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.156200051307678,
+                        "time" : 0.3639999926090241
+                     },
+                     {
+                        "scale" : 1.557999968528748,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 21,
+                  "max_scale" : 1.557999968528748,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.0,
+                  "guid" : 22,
+                  "length" : 1.0,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.50,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 23,
+                  "max_scale" : 1.50,
+                  "name" : "Scale",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 0.0,
+            "friction_min" : 0.0,
+            "friction_val" : 0.0,
+            "glow" : false,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 18,
+            "height_delta" : 0.50,
+            "height_max" : 4.0,
+            "height_min" : 3.0,
+            "height_val" : 3.50,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "SmokePillar 01",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : -0.0,
+               "z" : 0.0
+            },
+            "radius" : 3.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : -180.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "alpha_blend",
+            "shadows" : false,
+            "soft_particles_bias" : 512,
+            "sort" : 0,
+            "sort_offset" : 2.0,
+            "sphere_radius" : 1.250,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 1,
+            "texture_coords_rows" : 1,
+            "time_to_live_delta" : 0.1000000014901161,
+            "time_to_live_max" : 0.2700000107288361,
+            "time_to_live_min" : 0.07000000029802322,
+            "time_to_live_val" : 0.1700000017881393,
+            "type" : "sphere",
+            "velocity_delta" : 2.0,
+            "velocity_max" : 12.0,
+            "velocity_min" : 8.0,
+            "velocity_val" : 10.0,
+            "visual_particle_quota" : 25,
+            "width_delta" : 0.50,
+            "width_max" : 2.50,
+            "width_min" : 1.50,
+            "width_val" : 2.0,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	
+// ------------------------------------------ 6 Smoke: /smoke_animated01.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "6 - Smoke",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.1500000059604645,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//smoke_animated01.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.06250,
+                           "g" : 0.479980468750,
+                           "r" : 1.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.133850097656250,
+                           "g" : 0.3229994773864746,
+                           "r" : 0.6718750
+                        },
+                        "time" : 0.1887324005365372
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.04527282714843750,
+                           "g" : 0.1241136789321899,
+                           "r" : 0.269531250
+                        },
+                        "time" : 0.4619718194007874
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.1634814739227295,
+                           "g" : 0.1729871034622192,
+                           "r" : 0.1905197203159332
+                        },
+                        "time" : 0.6845070719718933
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.066406250,
+                           "g" : 0.066406250,
+                           "r" : 0.066406250
+                        },
+                        "time" : 0.8591549396514893
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 50,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 32,
+                  "fps" : 30,
+                  "guid" : 51,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.1580000072717667,
+                  "control_point" : [
+                     {
+                        "scale" : 0.5080000162124634,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.6185262799263001,
+                        "time" : 0.08578431606292725
+                     },
+                     {
+                        "scale" : 1.019842147827148,
+                        "time" : 0.1495098024606705
+                     },
+                     {
+                        "scale" : 1.103000044822693,
+                        "time" : 0.4469999969005585
+                     },
+                     {
+                        "scale" : 1.157999992370606,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 52,
+                  "max_scale" : 1.157999992370606,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 1.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.5099999904632568,
+                        "time" : 0.2090000063180924
+                     },
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.7429999709129334
+                     },
+                     {
+                        "scale" : 0.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.0,
+                  "guid" : 53,
+                  "length" : 1.0,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 0.0,
+            "friction_min" : 0.0,
+            "friction_val" : 0.0,
+            "glow" : false,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 49,
+            "height_delta" : 0.0,
+            "height_max" : 6.0,
+            "height_min" : 6.0,
+            "height_val" : 6.0,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Smoke Big NEW ",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : -0.2000000029802322,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 1.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : -180.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "alpha_blend",
+            "shadows" : false,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 0.8999999761581421,
+            "sphere_radius" : 0.1000000014901161,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 8,
+            "texture_coords_rows" : 4,
+            "time_to_live_delta" : 0.250,
+            "time_to_live_max" : 1.50,
+            "time_to_live_min" : 1.0,
+            "time_to_live_val" : 1.250,
+            "type" : "circle",
+            "velocity_delta" : 0.0,
+            "velocity_max" : 0.0,
+            "velocity_min" : 0.0,
+            "velocity_val" : 0.0,
+            "visual_particle_quota" : 3,
+            "width_delta" : 0.0,
+            "width_max" : 6.0,
+            "width_min" : 6.0,
+            "width_val" : 6.0,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+	  
+// ------------------------------------------ 6 Smoke: /smoke_animated01.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "6 - Smoke",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 90.0,
+            "cone_radius" : 2.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 1.0,
+            "default_particle_width" : 1.0,
+            "delay" : 0.1000000014901161,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//smoke_animated01.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.250,
+                           "g" : 0.566406250,
+                           "r" : 1.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.1568627506494522,
+                           "g" : 0.2000000178813934,
+                           "r" : 0.4196078777313232
+                        },
+                        "time" : 0.5605633854866028
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.17968750,
+                           "g" : 0.17968750,
+                           "r" : 0.17968750
+                        },
+                        "time" : 0.8450704216957092
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.0,
+                           "r" : 0.0
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 55,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 32,
+                  "fps" : 30,
+                  "guid" : 56,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.1580000072717667,
+                  "control_point" : [
+                     {
+                        "scale" : 0.5080000162124634,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.8553683757781982,
+                        "time" : 0.06862745434045792
+                     },
+                     {
+                        "scale" : 1.075763225555420,
+                        "time" : 0.2794117629528046
+                     },
+                     {
+                        "scale" : 1.103000044822693,
+                        "time" : 0.4469999969005585
+                     },
+                     {
+                        "scale" : 1.157999992370606,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 57,
+                  "max_scale" : 1.157999992370606,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 1.0,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.5099999904632568,
+                        "time" : 0.2090000063180924
+                     },
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.7429999709129334
+                     },
+                     {
+                        "scale" : 0.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.0,
+                  "guid" : 58,
+                  "length" : 1.0,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 1.0,
+            "friction_min" : 1.0,
+            "friction_val" : 1.0,
+            "glow" : false,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 54,
+            "height_delta" : 0.750,
+            "height_max" : 3.250,
+            "height_min" : 1.750,
+            "height_val" : 2.50,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Smoke NEW",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "radius" : 4.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 180.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : -180.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 0.0,
+            "scene_blend" : "alpha_blend",
+            "shadows" : false,
+            "soft_particles_bias" : 256,
+            "sort" : 0,
+            "sort_offset" : 1.100000023841858,
+            "sphere_radius" : 0.1000000014901161,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : false,
+            "texture_coords_columns" : 8,
+            "texture_coords_rows" : 4,
+            "time_to_live_delta" : 0.250,
+            "time_to_live_max" : 1.250,
+            "time_to_live_min" : 0.750,
+            "time_to_live_val" : 1.0,
+            "type" : "cone",
+            "velocity_delta" : 0.50,
+            "velocity_max" : 2.50,
+            "velocity_min" : 1.50,
+            "velocity_val" : 2.0,
+            "visual_particle_quota" : 20,
+            "width_delta" : 0.750,
+            "width_max" : 3.250,
+            "width_min" : 1.750,
+            "width_val" : 2.50,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         },
+ 
+// ------------------------------------------ 7 LeftOver: /fire_flamesanimated05.tga
+		
+         {
+            "ASG_map" : "",
+            "alpha" : false,
+            "angle_delta" : 0.0,
+            "angle_max" : 0.0,
+            "angle_min" : 0.0,
+            "angle_val" : 0.0,
+            "billboard_origin" : "center",
+            "billboard_type" : "world",
+            "bounce_delta" : 0.0,
+            "bounce_max" : 0.50,
+            "bounce_min" : 0.50,
+            "bounce_val" : 0.50,
+            "box_depth" : 0.0,
+            "box_height" : 0.0,
+            "box_width" : 0.0,
+            "category" : "7 - LeftOver",
+            "circle_angle" : 0.0,
+            "collision" : "none",
+            "color" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "cone_angle" : 25.0,
+            "cone_radius" : 1.0,
+            "default_mesh_depth" : 1.0,
+            "default_mesh_height" : 1.0,
+            "default_mesh_width" : 1.0,
+            "default_particle_depth" : 0.0,
+            "default_particle_height" : 0.50,
+            "default_particle_width" : 0.50,
+            "delay" : 0.2000000029802322,
+            "depth_delta" : 0.0,
+            "depth_max" : 0.0,
+            "depth_min" : 0.0,
+            "depth_val" : 0.0,
+            "diffuse" : "MJM/Textures//fire_flamesanimated05.tga",
+            "direction" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 1.0
+            },
+            "direction_type" : "shape",
+            "duration" : 0.05000000074505806,
+            "editorColor" : {
+               "a" : 1.0,
+               "b" : 1.0,
+               "g" : 1.0,
+               "r" : 1.0
+            },
+            "effects" : [
+               {
+                  "control_point" : [
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.4941176474094391,
+                           "r" : 1.0
+                        },
+                        "time" : 0.0
+                     },
+                     {
+                        "color" : {
+                           "a" : 1.0,
+                           "b" : 0.0,
+                           "g" : 0.2156862765550613,
+                           "r" : 1.0
+                        },
+                        "time" : 0.7699999809265137
+                     },
+                     {
+                        "color" : {
+                           "a" : 0.0,
+                           "b" : 0.0,
+                           "g" : 0.114440917968750,
+                           "r" : 0.97656250
+                        },
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 70,
+                  "name" : "Color",
+                  "toggle" : true
+               },
+               {
+                  "animation" : "sheet",
+                  "end_texture_coords_range" : 26,
+                  "fps" : 30,
+                  "guid" : 71,
+                  "mode" : "over_life_time",
+                  "name" : "TextureAnimator",
+                  "repeat" : true,
+                  "start_texture_coords_range" : 0,
+                  "toggle" : true
+               },
+               {
+                  "axis" : "uniform-scale",
+                  "base_scale" : 0.1580000072717667,
+                  "control_point" : [
+                     {
+                        "scale" : 0.1580000072717667,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 1.123999953269959,
+                        "time" : 0.2070000022649765
+                     },
+                     {
+                        "scale" : 1.307999968528748,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 72,
+                  "max_scale" : 1.307999968528748,
+                  "name" : "Scale",
+                  "toggle" : true
+               },
+               {
+                  "control_point" : [
+                     {
+                        "scale" : 0.50,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.7400000095367432,
+                        "time" : 0.7749999761581421
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "fade" : 0.2000000029802322,
+                  "guid" : 73,
+                  "length" : 0.6000000238418579,
+                  "name" : "Cutoff",
+                  "toggle" : true
+               },
+               {
+                  "axis" : "y-scale",
+                  "base_scale" : 0.0,
+                  "control_point" : [
+                     {
+                        "scale" : 0.09539473056793213,
+                        "time" : 0.0
+                     },
+                     {
+                        "scale" : 0.1611841917037964,
+                        "time" : 0.1906873583793640
+                     },
+                     {
+                        "scale" : 0.8026315569877625,
+                        "time" : 0.5388026833534241
+                     },
+                     {
+                        "scale" : 0.9407894611358643,
+                        "time" : 0.7361419200897217
+                     },
+                     {
+                        "scale" : 1.0,
+                        "time" : 1.0
+                     }
+                  ],
+                  "guid" : 74,
+                  "max_scale" : 1.0,
+                  "name" : "Scale",
+                  "toggle" : true
+               }
+            ],
+            "emission_mesh" : "",
+            "emission_mesh_scale" : {
+               "x" : 1.0,
+               "y" : -1.0,
+               "z" : 1.0
+            },
+            "emission_mode" : "burst",
+            "emission_rate" : 1000,
+            "force_vector" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : 2.539999961853027
+            },
+            "friction_delta" : 0.0,
+            "friction_max" : 0.0,
+            "friction_min" : 0.0,
+            "friction_val" : 0.0,
+            "glow" : false,
+            "glow_exposure_delta" : 0.0,
+            "glow_exposure_max" : 1.0,
+            "glow_exposure_min" : 1.0,
+            "glow_exposure_val" : 1.0,
+            "glow_strength" : 1.0,
+            "gradient" : {
+               "control_point" : [
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.6392157077789307,
+                        "g" : 0.6627451181411743,
+                        "r" : 1.0
+                     },
+                     "time" : 0.0
+                  },
+                  {
+                     "color" : {
+                        "a" : 1.0,
+                        "b" : 0.4588235318660736,
+                        "g" : 0.8313725590705872,
+                        "r" : 1.0
+                     },
+                     "time" : 1.0
+                  }
+               ]
+            },
+            "guid" : 69,
+            "height_delta" : 0.0,
+            "height_max" : 4.0,
+            "height_min" : 4.0,
+            "height_val" : 4.0,
+            "hidden" : false,
+            "inherit_velocity" : false,
+            "keep_local" : false,
+            "lifetime_loss" : 0.0,
+            "mesh" : "",
+            "mesh_diffuse" : "",
+            "name" : "Main FireBall AfterMarth1",
+            "normal_map" : "",
+            "params" : 0,
+            "particle" : "billboard",
+            "position" : {
+               "x" : 0.0,
+               "y" : 0.0,
+               "z" : -0.2099999934434891
+            },
+            "radius" : 0.0,
+            "repeat_delay" : 0.0,
+            "rotation_axis" : {
+               "x" : 1.0,
+               "y" : 0.0,
+               "z" : 0.0
+            },
+            "rotation_delta" : 0.0,
+            "rotation_max" : 180.0,
+            "rotation_min" : 180.0,
+            "rotation_speed_delta" : 0.0,
+            "rotation_speed_max" : 0.0,
+            "rotation_speed_min" : 0.0,
+            "rotation_speed_val" : 0.0,
+            "rotation_val" : 180.0,
+            "scene_blend" : "addative",
+            "shadows" : false,
+            "soft_particles_bias" : 512,
+            "sort" : 0,
+            "sort_offset" : 1.50,
+            "sphere_radius" : 1.0,
+            "start_color" : "solid",
+            "sub" : null,
+            "sub_emit" : "death",
+            "surface" : true,
+            "texture_coords_columns" : 8,
+            "texture_coords_rows" : 4,
+            "time_to_live_delta" : 0.0,
+            "time_to_live_max" : 1.299999952316284,
+            "time_to_live_min" : 1.299999952316284,
+            "time_to_live_val" : 1.299999952316284,
+            "type" : "point",
+            "velocity_delta" : 0.0,
+            "velocity_max" : 0.0,
+            "velocity_min" : 0.0,
+            "velocity_val" : 0.0,
+            "visual_particle_quota" : 2,
+            "width_delta" : 0.0,
+            "width_max" : 3.0,
+            "width_min" : 3.0,
+            "width_val" : 3.0,
+            "wind_delta" : 0.0,
+            "wind_max" : 0.0,
+            "wind_min" : 0.0,
+            "wind_val" : 0.0
+         }
+	  
+// ------------------------------------------------------------------------------------
+		
+      ],
+      "scale" : 0.2,
+      "scale_time" : 1.0,
+      "scale_velocity" : 1.0,
+      "system_type" : "stream"
+   }
+}

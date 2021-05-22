@@ -1,20 +1,4 @@
 {
-	"14be8880-9219-49f2-b89e-28f0902b17c7": {
-		"title": "Signal Relay Gate",
-		"description": ""
-	},
-	"b8e65c4c-fcbc-49d2-a1b5-5452f4a06d57": {
-		"title": "Signal Inverter",
-		"description": ""
-	},
-	"467273c9-6e03-4e44-88f7-9d19a0209c26": {
-		"title": "Input Function Assignment",
-		"description": "Use between input signal and special parts to have a menu for selecting signal function."
-	},
-	"3a88347c-da9b-4a71-8b37-fb0721238784": {
-		"title": "Settings Slider",
-		"description": "Use to send a settings value to parts that accept numbers or special inputs."
-	},
 	"229fd8b4-e098-4cb2-bd24-b4c01e470f53": {
 		"title": "Seat Re-Exiter Teleporter",
 		"description": "Connect a seat (from SciFi mod) as a new exit point (avoid getting stuck in roof over seat by getting out where it's safe). Can also be a teleporter within a creation."
@@ -487,4 +471,5 @@
 		"title": "Robot Gripper (High Friction)",
 		"description": "A robotic gripper part with high friction."
 	}
+//---end
 }

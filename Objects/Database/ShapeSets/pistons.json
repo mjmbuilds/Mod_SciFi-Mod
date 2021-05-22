@@ -34,6 +34,7 @@
 	"physicsMaterial": "Metal",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
 	"qualityLevel": 2,
+	"stackSize": 10,
 	"previewRotation": [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ]
 },
 //---------------------------------------------------------------- Piston Rod
@@ -79,7 +80,8 @@
 	"color": "df7f00",
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 },
 //---------------------------------------------------------------- Piston Round
 {
@@ -124,7 +126,8 @@
 	"color": "df7f00",
 	"physicsMaterial": "Metal",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 }
 
 //---------------------------------------------------------------- END

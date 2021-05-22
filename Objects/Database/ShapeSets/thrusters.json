@@ -26,7 +26,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Metal",
 	"box": { "x": 1, "y": 1, "z": 1 },
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Thruster 2-Way 1x1 V2
 {
@@ -54,7 +55,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Metal",
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Thruster 2-Way 2x2 V1
 {
@@ -82,7 +84,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Metal",
 	"box": { "x": 2, "y": 2, "z": 1 },
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Thruster 2-Way 2x2 V2
 {
@@ -110,7 +113,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Metal",
 	"cylinder": { "diameter": 2, "depth": 1, "axis": "Z" },
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Scifi Thruster 1
 {
@@ -170,7 +174,8 @@
 			{ "x": 0.71, "y": -0.71, "z": -0.33 },
 			{ "x": 0.35, "y": -0.35, "z": 1.00 }
 		]},
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Side Thruster
 {
@@ -212,7 +217,8 @@
 			{ "x": 1.0, "y": -0.1, "z": 1.0 },
 			{ "x": 1.0, "y": -1.0, "z": 1.0 }
 			]},
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Surface Thruster LVL1
 {
@@ -250,7 +256,8 @@
 		{ "x": 0.0, "y": -1.0, "z": -0.8 },
 		{ "x": -1.0, "y": 0.0, "z": -0.8 }
 		]},
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Surface Thruster LVL2
 {
@@ -288,7 +295,8 @@
 		{ "x": 0.0, "y": -1.0, "z": -0.8 },
 		{ "x": -1.0, "y": 0.0, "z": -0.8 }
 		]},
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Surface Thruster LVL3
 {
@@ -326,7 +334,8 @@
 		{ "x": 0.0, "y": -1.0, "z": -0.8 },
 		{ "x": -1.0, "y": 0.0, "z": -0.8 }
 		]},
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Scifi Gimbal Thruster 1
 {
@@ -354,7 +363,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 3, "depth": 2, "axis": "Y" },
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Scifi Gimbal Thruster 2
 {
@@ -381,7 +391,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 3, "depth": 1, "axis": "Y" },
-	"qualityLevel": 4
+	"qualityLevel": 4,
+	"stackSize": 1
 }
 
 //---------------------------------------------------------------- END

@@ -49,6 +49,7 @@
 	"sticky": "-X+X",
 	"qualityLevel": 5,
 	"friction": 1.0,
+	"stackSize": 1,
 	"showInInventory": false
 },
 //---------------------------------------------------------------- Tank Track 1
@@ -104,6 +105,7 @@
 	"sticky": "-X+X",
 	"qualityLevel": 5,
 	"friction": 0.000001,
+	"stackSize": 1,
 	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
 },
 //---------------------------------------------------------------- Tire-01 (3x1)
@@ -124,7 +126,8 @@
 	"density": 1000.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 3, "depth": 1, "margin": 0.5, "axis": "Z" },
-	"qualityLevel": 3
+	"qualityLevel": 3,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Tire-01 (4x1)
 {
@@ -163,7 +166,8 @@
 		{ "x": -0.42, "y": 0.42, "z": 0.0 },
 		{ "x": -0.23, "y": 0.55, "z": 0.0 }
 		]},
-	"qualityLevel": 3
+	"qualityLevel": 3,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Tire-01 (4x2)
 {
@@ -202,7 +206,8 @@
 		{ "x": -0.28, "y": 0.28, "z": 0.0 },
 		{ "x": -0.15, "y": 0.37, "z": 0.0 }
 		]},
-	"qualityLevel": 3
+	"qualityLevel": 3,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Tire-01 (5x2)
 {
@@ -222,7 +227,8 @@
 	"density": 500.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 5, "depth": 2, "margin": 0.5, "axis": "Z" },
-	"qualityLevel": 3
+	"qualityLevel": 3,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Tire-01 (5x3)
 {
@@ -242,7 +248,8 @@
 	"density": 250.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 5, "depth": 3, "margin": 0.5, "axis": "Z" },
-	"qualityLevel": 3
+	"qualityLevel": 3,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Tire-01 (7x3)
 {
@@ -262,7 +269,8 @@
 	"density": 250.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 7, "depth": 3, "margin": 0.5, "axis": "Z" },
-	"qualityLevel": 3
+	"qualityLevel": 3,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Tire-01 (9x3)
 {
@@ -282,7 +290,8 @@
 	"density": 200.0,
 	"physicsMaterial": "Plastic",
 	"cylinder": { "diameter": 9, "depth": 3, "margin": 0.5, "axis": "Z" },
-	"qualityLevel": 3
+	"qualityLevel": 3,
+	"stackSize": 1
 },
 //---------------------------------------------------------------- Hollow Wheel 10x3
 {
@@ -319,7 +328,8 @@
 		{ "x": 0.71, "y": -0.21, "z": 1.0 },
 		{ "x": 1.0, "y": -1.0, "z": 1.0 }
 		]},
-	"qualityLevel": 3
+	"qualityLevel": 3,
+	"stackSize": 4
 },
 //---------------------------------------------------------------- Rim-01 (Small)
 {
@@ -350,7 +360,8 @@
 		{ "x": -0.73, "y": 0.0, "z": -1.0 },
 		{ "x": -0.52, "y": 0.52, "z": -1.0 }
 		]},
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 },
 //---------------------------------------------------------------- Rim-01 (Medium)
 {
@@ -381,7 +392,8 @@
 		{ "x": -1.0, "y": 0.0, "z": -1.0 },
 		{ "x": -0.71, "y": 0.71, "z": -1.0 }
 		]},
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 },
 //---------------------------------------------------------------- Rim-01 (Large)
 {
@@ -412,7 +424,8 @@
 		{ "x": -0.8, "y": 0.0, "z": -1.0 },
 		{ "x": -0.57, "y": 0.57, "z": -1.0 }
 		]},
-	"qualityLevel": 2
+	"qualityLevel": 2,
+	"stackSize": 10
 }
 
 //---------------------------------------------------------------- END

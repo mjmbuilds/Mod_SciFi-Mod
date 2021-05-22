@@ -1,0 +1,28 @@
+{
+   "system" : {
+      "emitters" : [
+		{
+		"particle" : "mesh",		
+		"mesh" : "MJM/Mesh/LaserBullet.fbx",
+		"mesh_diffuse" : "MJM/Textures//mjm_pallet1_dif.tga",
+		"ASG_map" : "MJM/Textures//mjm_pallet1_asg.tga",
+		"default_mesh_depth" : 1,
+		"default_mesh_height" : 1,
+		"default_mesh_width" : 1,
+		"emission_rate" : 12,
+		"emission_mode" : "loop",
+		"time_to_live_max" : 0.1,
+		"time_to_live_min" : 0.1,
+		"time_to_live_val" : 0.1,
+		"visual_particle_quota" : 1000,
+		"scene_blend" : "alpha_blend",
+		"keep_local" : true,
+		"color" : { "a" : 1, "b" : 0, "g" : 0, "r" : 1 }
+		}
+      ],
+      "scale" : 1.0,
+      "scale_time" : 1.0,
+      "scale_velocity" : 0.0,
+      "system_type" : "stream"
+   }
+}
