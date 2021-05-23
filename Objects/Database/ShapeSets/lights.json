@@ -3,35 +3,38 @@
 //---------------------------------------------------------------- Targeting Laser Module
 {
 	"uuid": "a02b65b2-7925-4c9e-8e87-feba352099e9",
+	"name": "mjm_targeting_laser_module",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/laser_module_off.obj", 
-	"pose0": "$MOD_DATA/Objects/Mesh/laser_module_on.obj" 
-	}]},
-	"spotlight": {
-		"coneAngle": 0,
-		"coneFade": 0.0,
-		"minRange": 0.0,
-		"maxRange": 0.0,
-		"defaultLuminance": 0,
-		"color" : "df7f00",
-		"direction": { "x": 0, "y": 0, "z": 1 }},
-	"rotationSet": "PropZ",
-	"color": "cc0000",
-	"density": 250.0,
-	"physicsMaterial": "Plastic",
-	"hull": { "x": 1, "y": 1, "z": 1,
-		"margin": 0.25, "pointList": [
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/laser_module_off.obj",
+		"pose0": "$MOD_DATA/Objects/Mesh/laser_module_on.obj"
+		}]},
+	"hull": { "x": 1, "y": 1, "z": 1, 
+		"margin": 0.25,
+		"pointList": [
 		{ "x": 0.0, "y": 0.0, "z": 1.0 },
 		{ "x": 0.0, "y": 0.0, "z": -1.0 }
 		]},
-	"qualityLevel": 3,
+	"rotationSet": "PropZ",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/TargetLaser.lua",
+		"classname": "TargetLaser"
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "cc0000",
+	"ratings": {
+		"density": 2,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //--------------------------------------------------------------- Slim Light Lense
