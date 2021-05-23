@@ -217,7 +217,6 @@ function TankTrack1.server_onFixedUpdate( self, dt ) -- Server Fixed Update ----
 					self.frictionOn = true
 					self.parkingFrictionOn = false
 					self.shape:replaceShape(self.highFrictionUuid)
-					print("friction ON") --debug
 				end
 			end
 		end
@@ -230,7 +229,6 @@ function TankTrack1.server_onFixedUpdate( self, dt ) -- Server Fixed Update ----
 		-- check if parking friction needs to be applies
 		if self.frictionOn and not self.parkingFrictionOn then
 			if vel:length() < 0.01 then
-				print("parking friction ON") --debug
 				self.parkingFrictionOn = true
 				self.shape:replaceShape(self.parkingFrictionUuid)
 			end
@@ -242,7 +240,6 @@ function TankTrack1.removeFriction( self )
 	self.frictionOn = false
 	self.parkingFrictionOn = false
 	self.shape:replaceShape(self.lowFrictionUuid)
-	print("friction OFF") --debug
 end
 
 -- ____________________________________ Client ____________________________________

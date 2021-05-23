@@ -1,58 +1,6 @@
 [
 //---MJM Scifi Mod
 	{
-		"name": "Input Function Assignment",
-		"itemId": "467273c9-6e03-4e44-88f7-9d19a0209c26",
-		"quantity": 1,
-		"craftTime": 1,
-		"ingredientList": [
-			{
-				"name": "Metal 1",
-				"quantity": 1,
-				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
-			}
-		]
-	},
-	{
-		"name": "Settings Slider",
-		"itemId": "3a88347c-da9b-4a71-8b37-fb0721238784",
-		"quantity": 1,
-		"craftTime": 1,
-		"ingredientList": [
-			{
-				"name": "Metal 1",
-				"quantity": 1,
-				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
-			}
-		]
-	},
-	{
-		"name": "Inertia Drive",
-		"itemId": "5f16a5b1-394e-492f-afff-f4c2301b1073",
-		"quantity": 1,
-		"craftTime": 1,
-		"ingredientList": [
-			{
-				"name": "Metal 1",
-				"quantity": 1,
-				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
-			}
-		]
-	},
-	{
-		"name": "Gravity Core",
-		"itemId": "f3d96978-887a-4751-b1d2-d1e831c92657",
-		"quantity": 1,
-		"craftTime": 1,
-		"ingredientList": [
-			{
-				"name": "Metal 1",
-				"quantity": 1,
-				"itemId": "8aedf6c2-94e1-4506-89d4-a0227c552f1e"
-			}
-		]
-	},
-	{
 		"name": "Thick Bearing",
 		"itemId": "e80e33e9-5a40-4a8a-9d96-751bc542c997",
 		"quantity": 1,

@@ -51,12 +51,12 @@
 		"filename": "$MOD_DATA/Scripts/TankTrack1.lua",
 		"classname": "TankTrack1"
 		},
-	"physicsMaterial": "Mechanical",
+	"physicsMaterial": "Steering",
 	"color": "7f7f7f",
 	"ratings": {
-		"density": 7,
+		"density": 5,
 		"durability": 9,
-		"friction": 2,
+		"friction": 0,
 		"buoyancy": 0
 		},
 	"flammable": false,
@@ -113,10 +113,10 @@
 		"filename": "$MOD_DATA/Scripts/TankTrack1.lua",
 		"classname": "TankTrack1"
 		},
-	"physicsMaterial": "Mechanical",
+	"physicsMaterial": "Grass",
 	"color": "7f7f7f",
 	"ratings": {
-		"density": 7,
+		"density": 5,
 		"durability": 9,
 		"friction": 6,
 		"buoyancy": 0
@@ -179,7 +179,7 @@
 	"physicsMaterial": "Mechanical",
 	"color": "7f7f7f",
 	"ratings": {
-		"density": 7,
+		"density": 5,
 		"durability": 9,
 		"friction": 10,
 		"buoyancy": 0

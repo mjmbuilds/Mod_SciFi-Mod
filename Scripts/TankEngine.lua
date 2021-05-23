@@ -33,8 +33,8 @@ TankEngine.rampedDecelStepSize = 160
 
 TankEngine.defaultGears = {
 --Settings	 GEAR	MPH in test tank
-{200, 0.70},--	1	2.5
-{450, 0.60},--	2	8
+{300, 0.70},--	1	2.5
+{500, 0.60},--	2	8
 {850, 0.46},--	3	16
 {1350, 0.35},--	4	25
 {1850, 0.29},--	5	35
@@ -156,18 +156,18 @@ function TankEngine.server_onFixedUpdate( self, dt ) --- Server Fixed Update
 end
 
 function TankEngine.server_getData( self )
-	local cData = {self.sData.speed, self.sData.turnMult}
+	local cData = {gear = self.sData.gear, speed = self.sData.speed, turnMult = self.sData.turnMult}
 	self.network:sendToClients('client_setData', cData)
 end
 
 function TankEngine.server_shift( self, shiftDir )
-	self.sData.gear = sm.util.clamp(self.sData.gear + shiftDir, 1, 10)
+	self.sData.gear = sm.util.clamp(self.sData.gear + shiftDir, 1, #self.defaultGears)
 	self.sData.speed = self.sData.gears[self.sData.gear][1]
 	self.prevSpeed = self.sData.speed
 	self.sData.turnMult = self.sData.gears[self.sData.gear][2]
 	self.prevTurnMult = self.sData.turnMult
 	self.storage:save(self.sData)
-	local cData = {self.sData.speed, self.sData.turnMult}
+	local cData = {gear = self.sData.gear, speed = self.sData.speed, turnMult = self.sData.turnMult}
 	self.network:sendToClients('client_setData', cData)
 end
 
@@ -187,6 +187,7 @@ function TankEngine.client_onCreate( self ) -- Client setup
 	self.cgData.speed = self.defaultGears[1][1]
 	self.cgData.rampedSpeed = self.cgData.speed
 	self.cgData.inputRight = 0
+	self.cgData.gear = 1
 	self.cgData.turnMult = self.defaultGears[1][2]
 	self.cgData.steeringSpeed = 0
 	self.cgData.neutral = false
@@ -195,9 +196,7 @@ function TankEngine.client_onCreate( self ) -- Client setup
 	self.soundCountdown = 0
 	self.network:sendToServer('server_getData')
 
-	--self.effectGasEngine = sm.effect.createEffect("ModGasEngine",self.interactable)	
-	self.effectController = sm.effect.createEffect("ModController",self.interactable)
-	--self.effectTrusterDust = sm.effect.createEffect("ModThrusterDust",self.interactable)
+	self.effectEngine = sm.effect.createEffect( "GasEngine - Level 3", self.interactable )
 end
 function TankEngine.client_onRefresh( self )
 	print("* * * REFRESH: Tank Engine * * *")
@@ -205,8 +204,9 @@ function TankEngine.client_onRefresh( self )
 end
 
 function TankEngine.client_setData( self, data )
-	self.cgData.speed = data[1]
-	self.cgData.turnMult = data[2]
+	self.cgData.gear = data.gear
+	self.cgData.speed = data.speed
+	self.cgData.turnMult = data.turnMult
 end
 
 function TankEngine.client_onFixedUpdate( self, dt ) ----- Client Fixed Update
@@ -340,19 +340,6 @@ function TankEngine.client_onFixedUpdate( self, dt ) ----- Client Fixed Update
 		end
 	end
 	
-	-- has driver sound effects
-	--[[
-	if hasDriver then
-		if not self.effectGasEngine:isPlaying() then 
-			self.effectGasEngine:start()
-		end
-	else
-		if self.effectGasEngine:isPlaying() then
-			self.effectGasEngine:stop()
-		end
-	end
-	--]]
-	
 	-- Values debug
 	--[[
 	print()
@@ -419,8 +406,53 @@ function TankEngine.client_onFixedUpdate( self, dt ) ----- Client Fixed Update
 		end
 	end
 	
-	--[[
 	-- sound effects
+	--self.effectEngine:setParameter("gas", 1.0 ) --what does this do???
+	
+	local maxVelocity = 30
+	local forwardVelocity = self.shape:getVelocity():length() -- this should really come from the track animation speeds
+	forwardVelocity = math.min(forwardVelocity, maxVelocity)
+	if forwardVelocity < 2 then
+		forwardVelocity = 0
+	elseif forwardVelocity < 5 then
+		forwardVelocity = 5
+	end
+		
+	local rpm = forwardVelocity / maxVelocity
+	
+	local engineLoad = 0
+	if self.cgData.inputFwd ~= 0 or self.cgData.inputRight ~= 0 then
+		local velocityFraction = self.cgData.rampedSpeed / math.max(self.cgData.speed, 1)
+		velocityFraction = velocityFraction * 0.65
+		engineLoad = engineLoad + velocityFraction
+	end
+	
+	--print("------------------DEBUG-------------------")
+	--print("Gear: "..self.cgData.gear)
+	--print("Speed: "..self.cgData.speed)
+	--print("Velocity: "..forwardVelocity) --debug
+	--print("rmp: "..rpm) --debug
+	--print("engineLoad: "..engineLoad) --debug
+	
+	if hasDriver then
+		if not self.effectEngine:isPlaying() then 
+			self.effectEngine:start()
+		end
+	else
+		if self.effectEngine:isPlaying() then
+			self.effectEngine:setParameter( "load", 0.1 )
+			self.effectEngine:setParameter( "rpm", 0 )
+			self.effectEngine:stop()
+		end
+	end
+	if self.effectEngine:isPlaying() then
+		--self.effectEngine:setParameter("rpm", 0.0 )
+		--self.effectEngine:setParameter("load", 0.1 )
+		self.effectEngine:setParameter("rpm", rpm)
+		self.effectEngine:setParameter("load", engineLoad)
+	end
+	
+	--[[
 	local soundSpeed = (math.abs(self.cgData.rampedSpeed) + math.abs(self.cgData.inputRight * self.cgData.speed) + math.abs(self.cgData.steeringSpeed)) / 3
 	if soundSpeed ~=0 then
 		self.soundCountdown = 20
@@ -447,4 +479,14 @@ function TankEngine.client_onFixedUpdate( self, dt ) ----- Client Fixed Update
 		end
 	end
 	--]]
+end
+
+function TankEngine.client_onDestroy( self )
+	self.effectEngine:destroy()
+
+	if self.gui then
+		self.gui:close()
+		self.gui:destroy()
+		self.gui = nil
+	end
 end
