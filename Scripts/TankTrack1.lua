@@ -1,5 +1,12 @@
---[[ 
-********** Tank Track 1 by MJM ********** 
+--[[
+Old instructions...
+Must use a Tank Engine to control tracks.
+If a seat is already on the vehicle, then tracks will auto-detect mode when placed.
+To manually set mode 'Press [E] to use' for GUI.
+Stacked tracks can be connected to the track with the engine to sync animation
+(modes still needs to match for correct movement).
+For Half-track or Mono-track builds, use the 'Mono-Track' modes for fwd/rev only.
+If a track goes the wrong way, try a 'Reversed' mode.
 --]]
 dofile "Utility.lua"
 TankTrack1 = class()
@@ -11,7 +18,9 @@ TankTrack1.colorNormal = sm.color.new( 0x0000deff )
 TankTrack1.colorHighlight = sm.color.new( 0x3737ffff )
 
 TankTrack1.modes = {"Left Reversed", "Right", "Left", "Right Reversed", "MonoTrack", "MonoTrack Reversed"}
-TankTrack1.frictionUuid = sm.uuid.new("0092b542-e8a3-4700-8284-77f3f590772b")
+TankTrack1.lowFrictionUuid = sm.uuid.new("b9f0d277-daca-49e4-9771-c16f721c8bcc")
+TankTrack1.highFrictionUuid = sm.uuid.new("d6b12a47-c2df-46d3-a67f-4ef7c64802c8")
+TankTrack1.parkingFrictionUuid = sm.uuid.new("1b4e8d47-8360-4c9f-bd02-77576d4cac0a")
 
 -- Default Values
 TankTrack1.defaultSpeed = 600 -- default speed
@@ -67,26 +76,6 @@ TankTrack1.raycastsSide = {
 	{-1,-0.375}
 }
 
-function TankTrack1.printDescription()
-    local description = "\n\n"..
-	"Tank Track Usage: \n"..
-    "---------------Connected to Tank Engine-----------------------------\n"..
-    "Must use a Tank Engine to control tracks.\n"..
-    "If a seat is already on the vehicle, then tracks\n"..
-    "will auto-detect mode when placed.\n"..
-    "To manually set mode 'Press [E] to use' for GUI.\n"..
-    "---------------Connected to other Tank Track----------------------\n"..
-    "Stacked tracks can have connections chained off\n"..
-    "of the track with the engine, this will sync the tracks.\n"..
-    "(mode still needs to match for correct movement)\n"..
-    "---------------Tips---------------------------------------------------------------\n"..
-    "For Half-track or Mono-track builds, use the 'Mono-Track'\n"..
-    "modes for using seat fwd/rev with no steering mixed in.\n"..
-	"If a track goes the wrong way, try a 'Reversed' mode.\n"..
-    "-----------------------------------------------------------------------------------\n\n\n"
-    print(description)
-end
-
 -- ____________________________________ Server ____________________________________
 
 function TankTrack1.server_onCreate( self ) -- Server setup
@@ -97,7 +86,6 @@ function TankTrack1.server_onCreate( self ) -- Server setup
 	else
 		self.sData.mode = self:server_detectMode()
 	end
-	_G[self.shape.id.."friction"] = nil -- a reference to the spawned friction part
 end
 function TankTrack1.server_onRefresh( self )
 	print(" * * * TankTrack 1 REFRESH * * * ")
@@ -155,7 +143,6 @@ function TankTrack1.server_onFixedUpdate( self, dt ) -- Server Fixed Update ----
 		end
 		local localUp = self.shape.up
 		local worldUp = sm.vec3.new(0,0,1)
-		local frictionPart = _G[self.shape.id.."friction"]
 		
 		-- Movement vector
 		local movementVec = self.movementVec or sm.vec3.new(0,1,0) -- direction to apply force
@@ -200,7 +187,7 @@ function TankTrack1.server_onFixedUpdate( self, dt ) -- Server Fixed Update ----
 		-- if user giving input
 		if fwdSpeed ~= 0 or turnSpeed ~= 0 then
 			-- try removing friction part
-			if frictionPart then
+			if self.frictionOn then
 				self:removeFriction()
 			end
 			-- if grounded, apply drag forces + movement forces
@@ -226,47 +213,41 @@ function TankTrack1.server_onFixedUpdate( self, dt ) -- Server Fixed Update ----
 				sm.physics.applyImpulse( self.shape, impulse, false, nil )
 			else
 				--spawn friction part
-				if not frictionPart then
-					_G[self.shape.id.."destroy"] = false
-					local position = self.shape.localPosition
-					_G[self.shape.id.."friction"] = self.shape.body:createPart(self.frictionUuid, position, self.shape.zAxis, self.shape.xAxis, true)
-					_G[_G[self.shape.id.."friction"].id.."track"] = self.shape
+				if not self.frictionOn then
+					self.frictionOn = true
+					self.parkingFrictionOn = false
+					self.shape:replaceShape(self.highFrictionUuid)
+					print("friction ON") --debug
 				end
 			end
 		end
 		
 		-- check if friction need to be removed
-		if (not self.hasParents or self.cgData.neutral) and frictionPart then
+		if (not self.hasParents or self.cgData.neutral) and self.frictionOn then
 			self:removeFriction()
 		end
 		
-		-- check if friction has been manually deleted, and delete track
-		if frictionPart and not sm.exists(frictionPart) then
-			self.shape:destroyShape(0)
-		end
-		
-		-- check if friction got painted
-		if frictionPart and sm.exists(frictionPart) then
-			if frictionPart.color ~= sm.color.new( 0xffffffff ) and frictionPart.color ~= self.shape.color then
-				self.shape:setColor(frictionPart.color)
+		-- check if parking friction needs to be applies
+		if self.frictionOn and not self.parkingFrictionOn then
+			if vel:length() < 0.01 then
+				print("parking friction ON") --debug
+				self.parkingFrictionOn = true
+				self.shape:replaceShape(self.parkingFrictionUuid)
 			end
 		end
 	end
 end
 
 function TankTrack1.removeFriction( self )
-	local frictionPart = _G[self.shape.id.."friction"]
-	if frictionPart and sm.exists(frictionPart) then
-		frictionPart:destroyShape(0)
-		_G[self.shape.id.."destroy"] = true
-	end
-	_G[self.shape.id.."friction"] = nil
+	self.frictionOn = false
+	self.parkingFrictionOn = false
+	self.shape:replaceShape(self.lowFrictionUuid)
+	print("friction OFF") --debug
 end
 
 -- ____________________________________ Client ____________________________________
 
 function TankTrack1.client_onCreate( self )
-	self:printDescription()
 	-- Setup
 	_G[tostring(self.interactable.id) .. "data"] = {}
 	self.cgData = _G[tostring(self.interactable.id) .. "data"]

@@ -1,5 +1,23 @@
 --[[ 
-********** Tank Engine by MJM ********** 
+Old instructions:
+	"--------------------------------------Seat signal-----------------------------------------------\n"..
+	"        W : Forward     S : Reverse     A : Left     D : Right\n"..
+    "-------------Number signals------------    -------------------Output-------------------\n"..
+    "Pink 1      : +/- Forward/Reverse     Pink 4      : Speed value\n"..
+	"Orange 1 : +/- Left/Right                Red 4       : Turn-ratio value    \n"..
+	"Pink 4      : Speed                          Brown 4   : Steering value\n"..
+	"Red 4      : Turn-ratio                     Other...  : Current Gear\n"..	
+    "-------------------------------------Logic signal-----------------------------------------------\n"..
+	"Red 1      : Forward                        White        : Speed +5\n".. 
+	"Red 2      : Neutral (free rolling)     Light Grey : Speed +1\n"..
+	"Red 3      : Reverse                        Dark Grey  : Speed -1\n"..
+	"Pink 2      : Left                              Black        : Speed -5\n"..
+	"Orange 2 : Right                            Yellow 1     : TurnRatio +5\n"..
+	"Green 1   : Shift to Highest Gear    Yellow 2     : TurnRatio +1\n"..
+	"Green 2   : Shift Up 1 Gear            Yellow 3     : TurnRatio -1\n"..
+	"Green 3   : Shift Down 1 Gear        Yellow 4     : TurnRatio -5\n"..
+	"Green 4   : Shift to Lowest Gear     Cyan Blue 1 : Save current Gear \n"..
+    "------------------------------------------------------------------------------------------------------"
 --]]
 dofile "Utility.lua"
 TankEngine = class()
@@ -26,30 +44,6 @@ TankEngine.defaultGears = {
 {4450, 0.14},--	9	85
 {5250, 0.13}--	10	100
 }
-
-function TankEngine.printDescription()
-    local description = "\n\n"..
-	"Tank Engine Usage: \n"..
-	"--------------------------------------Seat signal-----------------------------------------------\n"..
-	"        W : Forward     S : Reverse     A : Left     D : Right\n"..
-    "-------------Number signals------------    -------------------Output-------------------\n"..
-    "Pink 1      : +/- Forward/Reverse     Pink 4      : Speed value\n"..
-	"Orange 1 : +/- Left/Right                Red 4       : Turn-ratio value    \n"..
-	"Pink 4      : Speed                          Brown 4   : Steering value\n"..
-	"Red 4      : Turn-ratio                     Other...  : Current Gear\n"..	
-    "-------------------------------------Logic signal-----------------------------------------------\n"..
-	"Red 1      : Forward                        White        : Speed +5\n".. 
-	"Red 2      : Neutral (free rolling)     Light Grey : Speed +1\n"..
-	"Red 3      : Reverse                        Dark Grey  : Speed -1\n"..
-	"Pink 2      : Left                              Black        : Speed -5\n"..
-	"Orange 2 : Right                            Yellow 1     : TurnRatio +5\n"..
-	"Green 1   : Shift to Highest Gear    Yellow 2     : TurnRatio +1\n"..
-	"Green 2   : Shift Up 1 Gear            Yellow 3     : TurnRatio -1\n"..
-	"Green 3   : Shift Down 1 Gear        Yellow 4     : TurnRatio -5\n"..
-	"Green 4   : Shift to Lowest Gear     Cyan Blue 1 : Save current Gear \n"..
-    "------------------------------------------------------------------------------------------------------"
-    print(description)
-end
 
 -- ____________________________________ Server ____________________________________
 
@@ -185,7 +179,6 @@ end
 -- ____________________________________ Client ____________________________________
 
 function TankEngine.client_onCreate( self ) -- Client setup
-	self:printDescription()
 	_G[tostring(self.interactable.id) .. "data"] = {}
 	self.cgData = _G[tostring(self.interactable.id) .. "data"]
 	self.cgData.type = "TankEngine"
@@ -426,6 +419,7 @@ function TankEngine.client_onFixedUpdate( self, dt ) ----- Client Fixed Update
 		end
 	end
 	
+	--[[
 	-- sound effects
 	local soundSpeed = (math.abs(self.cgData.rampedSpeed) + math.abs(self.cgData.inputRight * self.cgData.speed) + math.abs(self.cgData.steeringSpeed)) / 3
 	if soundSpeed ~=0 then
@@ -452,5 +446,5 @@ function TankEngine.client_onFixedUpdate( self, dt ) ----- Client Fixed Update
 			end
 		end
 	end
-	
+	--]]
 end

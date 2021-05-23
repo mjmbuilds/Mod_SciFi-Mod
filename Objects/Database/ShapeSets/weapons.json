@@ -1,33 +1,5 @@
 {"partList" : [
 
-//--------------------------------------------------------------- ForceField (Depricated)
-{
-	"uuid": "a470a338-9fd8-4857-83aa-072b261e0de4",
-	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
-		"material": "DifAsg"},
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga","",""],
-		"material": "PoseAnimLightFlare"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/ForceField_off.fbx",
-	"pose0": "$MOD_DATA/Objects/Mesh/ForceField_on.fbx"
-	}]},
-	"scripted" : {
-		"filename": "$MOD_DATA/Scripts/ForceField.lua",
-		"classname": "ForceField" },
-	"rotationSet": "PropZ",
-	"color": "0000ff",
-	"density": 500.0,
-	"physicsMaterial": "Metal",
-	"qualityLevel": 5,
-	"box": { "x": 1, "y": 1, "z": 1 },
-	"stackSize": 1,
-	"showInInventory": false
-},
 //--------------------------------------------------------------- Plasma Gun
 {
 	"uuid": "c2117822-0ada-4b6e-a3e7-84ece4621c42",
