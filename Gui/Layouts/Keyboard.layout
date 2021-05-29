@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="MenuBar" skin="BackgroundPromptWide" position="0 0 720 510" name="BackPanel"/>
+    <Widget type="Widget" skin="PanelEmpty" position="0 0 720 510">
+        <Widget type="Widget" skin="PanelEmpty" position="66 125 600 250">
+            <Widget type="Widget" skin="PanelEmpty" position="0 0 595 55">
+                <Widget type="Button" skin="SMButton" position="0 0 55 55" name="Button1">
+                    <Property key="Caption" value="1"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="59 0 55 55" name="Button2">
+                    <Property key="Caption" value="2"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="118 0 55 55" name="Button3">
+                    <Property key="Caption" value="3"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="177 0 55 55" name="Button4">
+                    <Property key="Caption" value="4"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="236 0 55 55" name="Button5">
+                    <Property key="Caption" value="5"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="295 0 55 55" name="Button6">
+                    <Property key="Caption" value="6"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="354 0 55 55" name="Button7">
+                    <Property key="Caption" value="7"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="413 0 55 55" name="Button8">
+                    <Property key="Caption" value="8"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="472 0 55 55" name="Button9">
+                    <Property key="Caption" value="9"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="531 0 55 55" name="Button0">
+                    <Property key="Caption" value="0"/>
+                </Widget>
+            </Widget>
+            <Widget type="Widget" skin="PanelEmpty" position="0 60 595 55">
+                <Widget type="Button" skin="SMButton" position="0 0 55 55" name="ButtonQ">
+                    <Property key="Caption" value="Q"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="59 0 55 55" name="ButtonW">
+                    <Property key="Caption" value="W"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="118 0 55 55" name="ButtonE">
+                    <Property key="Caption" value="E"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="177 0 55 55" name="ButtonR">
+                    <Property key="Caption" value="R"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="236 0 55 55" name="ButtonT">
+                    <Property key="Caption" value="T"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="295 0 55 55" name="ButtonY">
+                    <Property key="Caption" value="Y"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="354 0 55 55" name="ButtonU">
+                    <Property key="Caption" value="U"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="413 0 55 55" name="ButtonI">
+                    <Property key="Caption" value="I"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="472 0 55 55" name="ButtonO">
+                    <Property key="Caption" value="O"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="531 0 55 55" name="ButtonP">
+                    <Property key="Caption" value="P"/>
+                </Widget>
+            </Widget>
+            <Widget type="Widget" skin="PanelEmpty" position="0 120 595 55">
+                <Widget type="Button" skin="SMButton" position="0 0 55 55" name="ButtonA">
+                    <Property key="Caption" value="A"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="59 0 55 55" name="ButtonS">
+                    <Property key="Caption" value="S"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="118 0 55 55" name="ButtonD">
+                    <Property key="Caption" value="D"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="177 0 55 55" name="ButtonF">
+                    <Property key="Caption" value="F"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="236 0 55 55" name="ButtonG">
+                    <Property key="Caption" value="G"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="295 0 55 55" name="ButtonH">
+                    <Property key="Caption" value="H"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="354 0 55 55" name="ButtonJ">
+                    <Property key="Caption" value="J"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="413 0 55 55" name="ButtonK">
+                    <Property key="Caption" value="K"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="472 0 55 55" name="ButtonL">
+                    <Property key="Caption" value="L"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="531 0 55 55" name="ButtonDash">
+                    <Property key="Caption" value="-"/>
+                </Widget>
+            </Widget>
+            <Widget type="Widget" skin="PanelEmpty" position="0 180 595 55">
+                <Widget type="Button" skin="SMButton" position="0 0 55 55" name="ButtonZ">
+                    <Property key="Caption" value="Z"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="59 0 55 55" name="ButtonX">
+                    <Property key="Caption" value="X"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="118 0 55 55" name="ButtonC">
+                    <Property key="Caption" value="C"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="177 0 55 55" name="ButtonV">
+                    <Property key="Caption" value="V"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="236 0 55 55" name="ButtonB">
+                    <Property key="Caption" value="B"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="295 0 55 55" name="ButtonN">
+                    <Property key="Caption" value="N"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="354 0 55 55" name="ButtonM">
+                    <Property key="Caption" value="M"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="413 0 114 55" name="ButtonSpace">
+                    <Property key="Caption" value="Space"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="531 0 55 55" name="ButtonDel">
+                    <Property key="Caption" value="Del"/>
+                </Widget>
+            </Widget>
+        </Widget>
+        <Widget type="Button" skin="SMButton" position="420 385 110 45" name="ButtonCancel">
+            <Property key="Caption" value="Cancel"/>
+        </Widget>
+        <Widget type="Button" skin="SMButton" position="540 385 110 45" name="ButtonOk">
+            <Property key="Caption" value="OK"/>
+        </Widget>
+        <Widget type="TextBox" skin="SMTextBox" position="66 70 467 45" name="MessageText">
+            <Property key="Caption" value="&quot;SAMPLE TEXT&quot;"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="TextColour" value="0 0 0"/>
+        </Widget>
+        <Widget type="Button" skin="SMButton" position="540 70 110 45" name="ButtonClear">
+            <Property key="Caption" value="Clear"/>
+        </Widget>
+    </Widget>
+</MyGUI>

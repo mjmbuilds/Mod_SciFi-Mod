@@ -178,22 +178,18 @@
 //--------------------------------------------------------------- LC Wedge Button
 {
 	"uuid": "8fb9f92e-c7d0-4628-9f6f-a6d19803f354",
+	"name": "mjm_lc_wedge_button",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/WedgeButton_off.fbx",
-	"pose0": "$MOD_DATA/Objects/Mesh/WedgeButton_on.fbx"
-	}]},
-	"button": { },
-	"rotationSet": "P404044",
-	"color": "df7f00",
-	"density": 500.0,
-	"physicsMaterial": "Metal",
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/WedgeButton_off.fbx",
+		"pose0": "$MOD_DATA/Objects/Mesh/WedgeButton_on.fbx"
+		}]},
 	"hull": { "x": 1, "y": 1, "z": 1,
 		"margin": 0, "pointList": [
 			{ "x": -0.8, "y": -0.8, "z": 0.8 },
@@ -203,28 +199,38 @@
 			{ "x": 0.8, "y": 0.8, "z": -0.8 },
 			{ "x": 0.8, "y": -0.8, "z": -0.8 }
 		]},
-	"qualityLevel": 3,
+	"rotationSet": "P404044",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 1}
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //--------------------------------------------------------------- LC Wedge Lever Switch
 {
 	"uuid": "7903f1df-5c52-4990-8b68-ed094e875d93",
+	"name": "mjm_lc_wedge_lever_switch",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/WedgeLeverSwitch_off.fbx",
-	"pose0": "$MOD_DATA/Objects/Mesh/WedgeLeverSwitch_on.fbx"
-	}]},
-	"lever": { },
-	"rotationSet": "P404044",
-	"color": "df7f00",
-	"density": 500.0,
-	"physicsMaterial": "Metal",
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/WedgeLeverSwitch_off.fbx",
+		"pose0": "$MOD_DATA/Objects/Mesh/WedgeLeverSwitch_on.fbx"
+		}]},
 	"hull": { "x": 1, "y": 1, "z": 1,
 		"margin": 0, "pointList": [
 			{ "x": -0.8, "y": -0.8, "z": 0.8 },
@@ -234,28 +240,38 @@
 			{ "x": 0.8, "y": 0.8, "z": -0.8 },
 			{ "x": 0.8, "y": -0.8, "z": -0.8 }
 		]},
-	"qualityLevel": 3,
+	"rotationSet": "P404044",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 5}
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //--------------------------------------------------------------- LC Wedge Switch
 {
 	"uuid": "64c7c6c6-f938-46ef-8c5e-a467adcb1049",
+	"name": "mjm_lc_wedge_switch",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/WedgeSwitch_off.fbx",
-	"pose0": "$MOD_DATA/Objects/Mesh/WedgeSwitch_on.fbx"
-	}]},
-	"lever": { },
-	"rotationSet": "P404044",
-	"color": "df7f00",
-	"density": 500.0,
-	"physicsMaterial": "Metal",
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/WedgeSwitch_off.fbx",
+		"pose0": "$MOD_DATA/Objects/Mesh/WedgeSwitch_on.fbx"
+		}]},
 	"hull": { "x": 1, "y": 1, "z": 1,
 		"margin": 0, "pointList": [
 			{ "x": -0.8, "y": -0.8, "z": 0.8 },
@@ -265,7 +281,21 @@
 			{ "x": 0.8, "y": 0.8, "z": -0.8 },
 			{ "x": 0.8, "y": -0.8, "z": -0.8 }
 		]},
-	"qualityLevel": 3,
+	"rotationSet": "P404044",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 5}
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //--------------------------------------------------------------- LC Wedge Controller
@@ -305,22 +335,18 @@
 //--------------------------------------------------------------- Surface Button
 {
 	"uuid": "12cf2b36-3a40-48c4-bf3c-5d8d9ae5f7e1",
+	"name": "mjm_surface_button",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/SurfaceButton_off.fbx",
-	"pose0": "$MOD_DATA/Objects/Mesh/SurfaceButton_on.fbx"
-	}]},
-	"button": { },
-	"rotationSet": "PropY",
-	"color": "df7f00",
-	"density": 500.0,
-	"physicsMaterial": "Metal",
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/SurfaceButton_off.fbx",
+		"pose0": "$MOD_DATA/Objects/Mesh/SurfaceButton_on.fbx"
+		}]},
 	"hull": { "x": 1, "y": 1, "z": 1,
 		"margin": 0, "pointList": [
 			{ "x": -0.64, "y": -1.00, "z": -0.64 },
@@ -332,28 +358,39 @@
 			{ "x": 0.64, "y": -0.70, "z": -0.64 },
 			{ "x": 0.64, "y": -0.70, "z": 0.64 }
 		]},
-	"qualityLevel": 3,
+	"sticky": "-X+X-Y-Z+Z",
+	"rotationSet": "PropY",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 1}
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //--------------------------------------------------------------- Surface Switch
 {
 	"uuid": "c732b628-3820-4015-ae97-b58a6ab08523",
+	"name": "mjm_surface_switch",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/SurfaceSwitch_off.fbx",
-	"pose0": "$MOD_DATA/Objects/Mesh/SurfaceSwitch_on.fbx"
-	}]},
-	"lever": { },
-	"rotationSet": "PropY",
-	"color": "df7f00",
-	"density": 500.0,
-	"physicsMaterial": "Metal",
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/SurfaceSwitch_off.fbx",
+		"pose0": "$MOD_DATA/Objects/Mesh/SurfaceSwitch_on.fbx"
+		}]},
 	"hull": { "x": 1, "y": 1, "z": 1,
 		"margin": 0, "pointList": [
 			{ "x": -0.50, "y": -1.00, "z": -0.76 },
@@ -365,29 +402,39 @@
 			{ "x": -0.50, "y": -0.80, "z": 0.76 },
 			{ "x": 0.50, "y": -0.80, "z": 0.76 }
 		]},
-	"qualityLevel": 3,
+	"sticky": "-X+X-Y-Z+Z",
+	"rotationSet": "PropY",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 5}
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //---------------------------------------------------------------- Slim Button
 {
 	"uuid": "d142992e-8938-47e7-9eee-2d76b3fe7168",
+	"name": "mjm_slim_button",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/slim_button_off.obj",
-	"pose0": "$MOD_DATA/Objects/Mesh/slim_button_on.obj"
-	}]},
-	"button": { },
-	"rotationSet": "PropZ",
-	"sticky": "-X+X-Y+Y-Z+Z",
-	"color": "df7f00",
-	"density": 250.0,
-	"physicsMaterial": "Plastic",
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/slim_button_off.obj",
+		"pose0": "$MOD_DATA/Objects/Mesh/slim_button_on.obj"
+		}]},
 	"hull": { "x": 1, "y": 1, "z": 1,
 		"margin": 0.075, "pointList": [
 		{ "x": -0.5, "y": -1.0, "z": -1.0 },
@@ -399,29 +446,39 @@
 		{ "x": 0.5, "y": 1.0, "z": -0.8 },
 		{ "x": -0.5, "y": 1.0, "z": -0.8 }
 		]},
-	"qualityLevel": 3,
+	"sticky": "-X+X-Y+Y-Z",
+	"rotationSet": "PropZ",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 1}
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //---------------------------------------------------------------- Slim Switch
 {
 	"uuid": "be3f0967-cfca-4889-98af-09a8cdd813ea",
+	"name": "mjm_slim_switch",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/slim_switch_off.obj",
-	"pose0": "$MOD_DATA/Objects/Mesh/slim_switch_on.obj"
-	}]},
-	"lever": { },
-	"rotationSet": "PropZ",
-	"sticky": "-X+X-Y+Y-Z+Z",
-	"color": "df7f00",
-	"density": 250.0,
-	"physicsMaterial": "Plastic",
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/slim_switch_off.obj",
+		"pose0": "$MOD_DATA/Objects/Mesh/slim_switch_on.obj"
+		}]},
 	"hull": { "x": 1, "y": 1, "z": 1,
 		"margin": 0.075, "pointList": [
 		{ "x": -0.5, "y": -1.0, "z": -1.0 },
@@ -433,7 +490,22 @@
 		{ "x": 0.5, "y": 1.0, "z": -0.8 },
 		{ "x": -0.5, "y": 1.0, "z": -0.8 }
 		]},
-	"qualityLevel": 3,
+	"sticky": "-X+X-Y+Y-Z",
+	"rotationSet": "PropZ",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 5}
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //---------------------------------------------------------------- Slim Controller Panel
@@ -465,6 +537,7 @@
 		{ "x": 0.5, "y": 1.0, "z": -0.8 },
 		{ "x": -0.5, "y": 1.0, "z": -0.8 }
 		]},
+	"sticky": "-X+X-Y+Y-Z",
 	"qualityLevel": 3,
 	"stackSize": 10
 },
@@ -504,6 +577,7 @@
 		{ "x": 0.5, "y": 1.0, "z": -0.8 },
 		{ "x": -0.5, "y": 1.0, "z": -0.8 }
 		]},
+	"sticky": "-X+X-Y+Y-Z",
 	"qualityLevel": 3,
 	"stackSize": 10
 },
@@ -542,29 +616,25 @@
 		{ "x": 0.5, "y": 1.0, "z": -0.8 },
 		{ "x": -0.5, "y": 1.0, "z": -0.8 }
 		]},
+	"sticky": "-X+X-Y+Y-Z",
 	"qualityLevel": 3,
 	"stackSize": 10
 },
 //---------------------------------------------------------------- LED Button
 {
 	"uuid": "20674e2f-810e-4291-8749-4b396e9a25ca",
+	"name": "mjm_led_button",
 	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/LED_off.obj",
-	"pose0": "$MOD_DATA/Objects/Mesh/LED_on.obj"
-	}]},
-	"button": { },
-	"rotationSet": "PropZ",
-	"sticky": "-X+X-Y+Y-Z+Z",
-	"color": "df7f00",
-	"density": 250.0,
-	"physicsMaterial": "Plastic",
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/LED_off.obj",
+		"pose0": "$MOD_DATA/Objects/Mesh/LED_on.obj"
+		}]},
 	"hull": { "x": 1, "y": 1, "z": 1,
 		"margin": 0.075, "pointList": [
 		{ "x": 0.5, "y": 0.0, "z": -1.0 },
@@ -576,41 +646,22 @@
 		{ "x": -0.5, "y": 0.0, "z": -0.8 },
 		{ "x": 0.0, "y": -0.5, "z": -0.8 }
 		]},
-	"qualityLevel": 3,
-	"stackSize": 10
-},
-//---------------------------------------------------------------- LED Switch
-{
-	"uuid": "c60f83c3-3617-4a72-8308-57aa95bd2873",
-	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/LED_off.obj",
-	"pose0": "$MOD_DATA/Objects/Mesh/LED_on.obj"
-	}]},
-	"lever": { },
+	"sticky": "-X+X-Y+Y-Z",
 	"rotationSet": "PropZ",
-	"sticky": "-X+X-Y+Y-Z+Z",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 1}
+		},
+	"physicsMaterial": "Mechanical",
 	"color": "df7f00",
-	"density": 250.0,
-	"physicsMaterial": "Plastic",
-	"hull": { "x": 1, "y": 1, "z": 1,
-		"margin": 0.075, "pointList": [
-		{ "x": 0.5, "y": 0.0, "z": -1.0 },
-		{ "x": 0.0, "y": 0.5, "z": -1.0 },
-		{ "x": -0.5, "y": 0.0, "z": -1.0 },
-		{ "x": 0.0, "y": -0.5, "z": -1.0 },
-		{ "x": 0.5, "y": 0.0, "z": -0.8 },
-		{ "x": 0.0, "y": 0.5, "z": -0.8 },
-		{ "x": -0.5, "y": 0.0, "z": -0.8 },
-		{ "x": 0.0, "y": -0.5, "z": -0.8 }
-		]},
-	"qualityLevel": 3,
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
 	"stackSize": 10
 },
 //---------------------------------------------------------------- Small Sensor
@@ -643,10 +694,60 @@
 		{ "x": -0.5, "y": 0.0, "z": -0.8 },
 		{ "x": 0.0, "y": -0.5, "z": -0.8 }
 		]},
+	"sticky": "-X+X-Y+Y-Z",
 	"qualityLevel": 3,
 	"stackSize": 10
-}
+},
 
+//----------------------------------------------------------------------------
+//--------------------------------------------------------------- DEPRECATED
+//----------------------------------------------------------------------------
+
+//---------------------------------------------------------------- LED Switch
+{
+	"uuid": "c60f83c3-3617-4a72-8308-57aa95bd2873",
+	"name": "mjm_led_switch",
+	"renderable": {"lodList": [{
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+			"material": "PoseAnimDifAsgNor"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/LED_off.obj",
+		"pose0": "$MOD_DATA/Objects/Mesh/LED_on.obj"
+		}]},
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.075, "pointList": [
+		{ "x": 0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": 0.5, "z": -1.0 },
+		{ "x": -0.5, "y": 0.0, "z": -1.0 },
+		{ "x": 0.0, "y": -0.5, "z": -1.0 },
+		{ "x": 0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": 0.5, "z": -0.8 },
+		{ "x": -0.5, "y": 0.0, "z": -0.8 },
+		{ "x": 0.0, "y": -0.5, "z": -0.8 }
+		]},
+	"sticky": "-X+X-Y+Y-Z",
+	"rotationSet": "PropZ",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
+		"classname": "AdvancedButton",
+		"data": {"modeIndex": 5}
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 5,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
+	"stackSize": 10,
+	"showInInventory": false
+}
 
 //---------------------------------------------------------------- END
 ]}

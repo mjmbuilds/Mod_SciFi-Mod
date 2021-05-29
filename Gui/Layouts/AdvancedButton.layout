@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" skin="PanelEmpty" position="0 0 510 681" name="BackPanel">
+        <Widget type="Widget" skin="BeaconBG" position="0 0 510 485">
+            <Widget type="TextBox" skin="TextBox" position="0 0 510 79">
+                <Property key="Caption" value="Advanced Button"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_HeaderLarge_Wide"/>
+            </Widget>
+            <Widget type="Widget" skin="PanelEmpty" position="21 134 465 343">
+                <Widget type="Button" skin="SMButton" position="115 0 232 35" name="NameButton">
+                    <Property key="Caption" value="RENAME"/>
+                    <Property key="FontName" value="SM_ButtonLarge"/>
+                    <Property key="TextAlign" value="Center"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="10 90 208 27" name="ModeButton1">
+                    <Property key="Caption" value="BUTTON"/>
+                    <Property key="TextAlign" value="Center"/>
+                    <Property key="FontName" value="SM_ButtonSmall"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="243 90 208 27" name="ModeButton2">
+                    <Property key="Caption" value="BUTTON INVERTED"/>
+                    <Property key="FontName" value="SM_ButtonSmall"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position_real="0.0215054 0.393586 0.447312 0.0787172" name="ModeButton3">
+                    <Property key="Caption" value="SINGLE TICK"/>
+                    <Property key="FontName" value="SM_ButtonSmall"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="243 135 208 27" name="ModeButton4">
+                    <Property key="Caption" value="SINGLE TICK INVERTED"/>
+                    <Property key="FontName" value="SM_ButtonSmall"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="10 179 208 27" name="ModeButton5">
+                    <Property key="Caption" value="SWITCH"/>
+                    <Property key="FontName" value="SM_ButtonSmall"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="243 179 208 27" name="ModeButton6">
+                    <Property key="Caption" value="SWITCH INVERTED"/>
+                    <Property key="FontName" value="SM_ButtonSmall"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="10 225 208 27" name="ModeButton7">
+                    <Property key="Caption" value="SWITCH MEMORY"/>
+                    <Property key="FontName" value="SM_ButtonSmall"/>
+                </Widget>
+                <Widget type="TextBox" skin="TextBox" position="115 55 232 26">
+                    <Property key="Caption" value="Select mode"/>
+                    <Property key="TextAlign" value="Center"/>
+                    <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="365 290 90 40" name="OkButton">
+                    <Property key="Caption" value="OK"/>
+                    <Property key="FontName" value="SM_Button"/>
+                </Widget>
+                <Widget type="Button" skin="SMButton" position="265 290 90 40" name="CancelButton">
+                    <Property key="Caption" value="CANCEL"/>
+                    <Property key="FontName" value="SM_Button"/>
+                </Widget>
+                <Widget type="Button" skin="CheckBox" position="15 290 20 20" name="TinkerHintButton"/>
+                <Widget type="Button" skin="ButtonImage" position="35 289 125 24" name="TinkerHintTextButton">
+                    <Property key="Caption" value=" Hide &quot;Edit&quot; hint"/>
+                    <Property key="TextAlign" value="Left VCenter"/>
+                </Widget>
+                <Widget type="Button" skin="CheckBox" position="15 315 20 20" name="AllHintsButton"/>
+                <Widget type="Button" skin="ButtonImage" position="35 314 145 24" name="AllHintsTextButton">
+                    <Property key="TextAlign" value="Left VCenter"/>
+                    <Property key="Caption" value=" Hide all text hints"/>
+                </Widget>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="0 93 510 34" name="NameText">
+                <Property key="Caption" value="&quot;BUTTON&quot;"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+            </Widget>
+        </Widget>
+        <Widget type="Widget" skin="BeaconBottomBG" position="0 485 510 188">
+            <Widget type="EditBox" skin="EditBoxEmpty" position="76 20 354 159" name="DescriptionText">
+                <Property key="Static" value="true"/>
+                <Property key="Caption" value="Description..."/>
+                <Property key="FontName" value="SM_TextSmall"/>
+                <Property key="MultiLine" value="true"/>
+                <Property key="ReadOnly" value="true"/>
+                <Property key="WordWrap" value="true"/>
+                <Property key="TextAlign" value="Left Top"/>
+            </Widget>
+        </Widget>
+    </Widget>
+    <CodeGeneratorSettings/>
+</MyGUI>
