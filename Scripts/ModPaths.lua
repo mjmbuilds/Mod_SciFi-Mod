@@ -1,0 +1,2 @@
+MOD_PATH = "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/"
+LAYOUTS_PATH = "$MOD_DATA/Gui/Layouts/"
