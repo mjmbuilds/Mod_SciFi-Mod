@@ -156,13 +156,14 @@ end
 -- client_onAction will allow us to minitor some keys when the character is locked to the interactable
 function AdvancedButton.client_onAction( self, controllerAction, isKeyDown )
 	if self.actionLocks.button then
-		-- 15 is the "Use" key. If the action was false, the player just released that key.
-		if isKeyDown == false and controllerAction == 15 and self.lockedCharacter then
+		-- If the action was false, the player just released that key.
+		if isKeyDown == false and controllerAction == sm.interactable.actions.use and self.lockedCharacter then
 			self:cl_release()
 		end
 		return false
 	elseif self.actionLocks.gui then
-		--print(controllerAction)--debug
+		print("---debug---")
+		print(controllerAction)--debug
 		return false
 	end
 end
@@ -270,7 +271,7 @@ function AdvancedButton.cl_onOkButtonClick( self, buttonName )
 	self.gui:close()
 	if (self.newName == nil and self.newModeIndex == nil and self.newHideTinkerHint == nil and self.newHideAllHints == nil) then return end
 	local data = {} -- members can be nil (sv_setData allows missing values)
-	data.name = self.newName
+	data.name = (self.newName ~= "") and self.newName or false -- endcode empty string as false beucase sending empty string logs an error
 	data.modeIndex = self.newModeIndex
 	data.hideTinkerHint = self.newHideTinkerHint
 	data.hideAllHints = self.newHideAllHints
@@ -305,7 +306,6 @@ function AdvancedButton.cl_onTinkerHintButtonClick( self, buttonName )
 	else
 		self.newHideTinkerHint = not self.cl_data.hideTinkerHint
 	end
-	print(self.newHideTinkerHint)
 	self.gui:setButtonState("TinkerHintButton", self.newHideTinkerHint)
 end
 
@@ -316,7 +316,6 @@ function AdvancedButton.cl_onAllHintsButtonClick( self, buttonName )
 	else
 		self.newHideAllHints = not self.cl_data.hideAllHints
 	end
-	print(self.newHideAllHints)
 	self.gui:setButtonState("AllHintsButton", self.newHideAllHints)
 end
 
@@ -332,6 +331,9 @@ end
 -- fo the server to update the client's data
 function AdvancedButton.cl_setData( self, data )
 	self.cl_data.modeIndex = data.modeIndex or self.cl_data.modeIndex
+	if data.name == false then 
+		data.name = ""
+	end
 	self.cl_data.name = data.name or self.cl_data.name
 	if data.hideTinkerHint ~= nil then
 		self.cl_data.hideTinkerHint = data.hideTinkerHint

@@ -1,8 +1,8 @@
 {
-   "description" : "Recent Updates:\n-Buttons and Switches are now \"Advanced buttons\" with GUI to give them names and select their function modes.\n-Tank engine has gas engine sound.\n-Targeting Laser now stops when it hits things and gives a logic signal.\n-Fix some bugs with seats/logic.\n-Fix old code in lasers/missiles so they detect players/seats correctly.\n-New \"Seat ReExiter Teleporter\" part. Connect a seat to it and you will teleport to its location upon esit. I made it to avoid getting stuck in the roof in small vehicles, but it's basically a teleporter.\n-Seat Logic reader new modes: left/right mouse click, scroll up/down, and space (space doesn't exit seat when being detected as logic). \n-Seat Logic reader now has GUI for selecting modes.\n-Seats have survival seat bearing control. Also space bar is disabled form jumping out of seat.\n-Tank Engine/Tracks work with survival seats.",
+   "description" : "Feel free to learn from, remix, or copy any of my mod parts. \nJust want to use the parts? Subscribe!\nLearning to script but can't model? Feel free to use one!\nWant to make your own model but not rewrite the functionality of one of my parts? Use the script!\nDon't know how to mod but want to copy paste just the parts you want into your own special blend? Go for it!\nJust looking for how I did something? Feel free to poke around, but I've been learning LUA and the Scrap Mechanic API as I go, so my solutions may not be the best solutions.\n",
    "fileId" : 905650948,
    "localId" : "5f4e3f9f-d25e-46f4-86b5-d93809470fb9",
-   "name" : "MJM SciFi Mod",
+   "name" : "MJM Mod",
    "type" : "Blocks and Parts",
    "version" : 0
 }

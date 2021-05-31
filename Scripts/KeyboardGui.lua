@@ -25,7 +25,7 @@ function KeyboardGui.open( private, self, callback, initialMessage )
 	end
 	self.keyboard_onDelButtonClick = function( self ) -- if DEL clicked, remove last character from current message
 		if private.messageBuffer and #private.messageBuffer > 0 then
-			private.messageBuffer = string.sub(private.messageBuffer, 0, #private.messageBuffer -1)
+			private.messageBuffer = private.messageBuffer:sub(1, -2)
 			self.keyboard_gui:setText("MessageText", "\""..private.messageBuffer.."\"")
 		end
 	end
