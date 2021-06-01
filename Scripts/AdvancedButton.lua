@@ -161,10 +161,6 @@ function AdvancedButton.client_onAction( self, controllerAction, isKeyDown )
 			self:cl_release()
 		end
 		return false
-	elseif self.actionLocks.gui then
-		print("---debug---")
-		print(controllerAction)--debug
-		return false
 	end
 end
 
@@ -190,12 +186,12 @@ function AdvancedButton.client_canInteract( self )
 	local tinkerKey = sm.gui.getKeyBinding("Tinker")
 	if self.cl_data.hideAllHints then
 		sm.gui.setInteractionText("")
-	else
+		sm.gui.setInteractionText("")
+	elseif self.cl_data.hideTinkerHint then
 		sm.gui.setInteractionText("", interactKey, self.cl_data.name)
-	end
-	if self.cl_data.hideAllHints or self.cl_data.hideTinkerHint then
 		sm.gui.setInteractionText("")
 	else
+		sm.gui.setInteractionText("", interactKey, self.cl_data.name)
 		sm.gui.setInteractionText("", tinkerKey, "Edit")
 	end
 	return true
@@ -214,8 +210,6 @@ end
 function AdvancedButton.client_onTinker( self, character, lookAt )
 	if lookAt then
 		self:cl_release()
-		self.actionLocks.gui = true
-		self:cl_lockCharacter(character)
 		self:cl_openMainGui()
 	end
 end
@@ -242,12 +236,6 @@ function AdvancedButton.cl_openMainGui( self )
 	self.gui:open()
 end
 
--- unlock the character from the interactable when the GUI is closed
-function AdvancedButton.cl_onGuiClose( self )
-	self.actionLocks.gui = false
-	self:cl_unlockCharacter()
-end
-
 -- updates the GUI text and button states
 function AdvancedButton.cl_drawGui( self )
 	local description = ""..
@@ -271,7 +259,11 @@ function AdvancedButton.cl_onOkButtonClick( self, buttonName )
 	self.gui:close()
 	if (self.newName == nil and self.newModeIndex == nil and self.newHideTinkerHint == nil and self.newHideAllHints == nil) then return end
 	local data = {} -- members can be nil (sv_setData allows missing values)
-	data.name = (self.newName ~= "") and self.newName or false -- endcode empty string as false beucase sending empty string logs an error
+	if self.newName == "" then -- endcode empty string as false beucase sending empty string logs an error
+		data.name = false
+	else
+		data.name = self.newName
+	end
 	data.modeIndex = self.newModeIndex
 	data.hideTinkerHint = self.newHideTinkerHint
 	data.hideAllHints = self.newHideAllHints
