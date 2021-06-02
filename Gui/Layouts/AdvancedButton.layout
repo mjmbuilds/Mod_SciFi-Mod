@@ -1,79 +1,89 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout" version="3.2.0">
-    <Widget type="Widget" skin="PanelEmpty" position="0 0 510 681" name="BackPanel">
-        <Widget type="Widget" skin="BeaconBG" position="0 0 510 485">
-            <Widget type="TextBox" skin="TextBox" position="0 0 510 79">
+    <Widget type="Widget" skin="PanelEmpty" position_real="0 0 0.265625 0.630556" name="BackPanel">
+        <Widget type="Widget" skin="BeaconBG" position_real="0 0 1 0.712188">
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.0618557 1 0.0804124" name="Title">
                 <Property key="Caption" value="Advanced Button"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_HeaderLarge_Wide"/>
             </Widget>
-            <Widget type="Widget" skin="PanelEmpty" position="21 134 465 343">
-                <Widget type="Button" skin="SMButton" position="115 0 232 35" name="NameButton">
+            <Widget type="Widget" skin="PanelEmpty" position_real="0.0411765 0.276289 0.911765 0.707217">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.247312 0 0.498925 0.113703" name="NameButton">
                     <Property key="Caption" value="RENAME"/>
-                    <Property key="FontName" value="SM_ButtonLarge"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
                     <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position="10 90 208 27" name="ModeButton1">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.0322581 0.262391 0.447312 0.113703" name="ModeButton1">
                     <Property key="Caption" value="BUTTON"/>
                     <Property key="TextAlign" value="Center"/>
-                    <Property key="FontName" value="SM_ButtonSmall"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position="243 90 208 27" name="ModeButton2">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.511828 0.262391 0.447312 0.113703" name="ModeButton2">
                     <Property key="Caption" value="BUTTON INVERTED"/>
-                    <Property key="FontName" value="SM_ButtonSmall"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position_real="0.0215054 0.393586 0.447312 0.0787172" name="ModeButton3">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.0322581 0.405248 0.447312 0.113703" name="ModeButton3">
                     <Property key="Caption" value="SINGLE TICK"/>
-                    <Property key="FontName" value="SM_ButtonSmall"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position="243 135 208 27" name="ModeButton4">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.511828 0.405248 0.447312 0.113703" name="ModeButton4">
                     <Property key="Caption" value="SINGLE TICK INVERTED"/>
-                    <Property key="FontName" value="SM_ButtonSmall"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position="10 179 208 27" name="ModeButton5">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.0322581 0.553936 0.447312 0.113703" name="ModeButton5">
                     <Property key="Caption" value="SWITCH"/>
-                    <Property key="FontName" value="SM_ButtonSmall"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position="243 179 208 27" name="ModeButton6">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.511828 0.553936 0.447312 0.113703" name="ModeButton6">
                     <Property key="Caption" value="SWITCH INVERTED"/>
-                    <Property key="FontName" value="SM_ButtonSmall"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position="10 225 208 27" name="ModeButton7">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.0322581 0.696793 0.447312 0.113703" name="ModeButton7">
                     <Property key="Caption" value="SWITCH MEMORY"/>
-                    <Property key="FontName" value="SM_ButtonSmall"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="TextBox" skin="TextBox" position="115 55 232 26">
+                <Widget type="TextBox" skin="TextBox" position_real="0 0.16035 1 0.0874636">
                     <Property key="Caption" value="Select mode"/>
                     <Property key="TextAlign" value="Center"/>
-                    <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                    <Property key="FontName" value="SM_SubHeader"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position="365 290 90 40" name="OkButton">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.763441 0.857143 0.191398 0.113703" name="OkButton">
                     <Property key="Caption" value="OK"/>
-                    <Property key="FontName" value="SM_Button"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="Button" skin="SMButton" position="265 290 90 40" name="CancelButton">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.546237 0.857143 0.191398 0.113703" name="CancelButton">
                     <Property key="Caption" value="CANCEL"/>
-                    <Property key="FontName" value="SM_Button"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
-                <Widget type="Button" skin="CheckBox" position="15 290 20 20" name="TinkerHintButton"/>
-                <Widget type="Button" skin="ButtonImage" position="35 289 125 24" name="TinkerHintTextButton">
+                <Widget type="Button" skin="CheckBox" position="15 289 20 19" name="TinkerHintButton"/>
+                <Widget type="Button" skin="ButtonImage" position_real="0.0731183 0.842566 0.367742 0.0553936" name="TinkerHintTextButton">
                     <Property key="Caption" value=" Hide &quot;Edit&quot; hint"/>
                     <Property key="TextAlign" value="Left VCenter"/>
+                    <Property key="FontName" value="SM_Label"/>
                 </Widget>
-                <Widget type="Button" skin="CheckBox" position="15 315 20 20" name="AllHintsButton"/>
-                <Widget type="Button" skin="ButtonImage" position="35 314 145 24" name="AllHintsTextButton">
+                <Widget type="Button" skin="CheckBox" position_real="0.0322581 0.915452 0.0430108 0.0553936" name="AllHintsButton"/>
+                <Widget type="Button" skin="ButtonImage" position_real="0.0731183 0.915452 0.367742 0.0553936" name="AllHintsTextButton">
                     <Property key="TextAlign" value="Left VCenter"/>
                     <Property key="Caption" value=" Hide all text hints"/>
+                    <Property key="FontName" value="SM_Label"/>
                 </Widget>
             </Widget>
-            <Widget type="TextBox" skin="TextBox" position="0 93 510 34" name="NameText">
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.17732 1 0.0701031" name="NameText">
                 <Property key="Caption" value="&quot;BUTTON&quot;"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_HeaderLarge_Medium"/>
             </Widget>
         </Widget>
-        <Widget type="Widget" skin="BeaconBottomBG" position="0 485 510 188">
-            <Widget type="EditBox" skin="EditBoxEmpty" position="76 20 354 159" name="DescriptionText">
+        <Widget type="Widget" skin="BeaconBottomBG" position_real="0 0.712188 1 0.276065">
+            <Widget type="EditBox" skin="EditBoxEmpty" position_real="0.14902 0.148936 0.694118 0.781915" name="DescriptionText">
                 <Property key="Static" value="true"/>
                 <Property key="Caption" value="Description..."/>
                 <Property key="FontName" value="SM_TextSmall"/>
