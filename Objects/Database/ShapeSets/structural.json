@@ -358,9 +358,12 @@
 			{ "x": 0.50, "y": 0.35, "z": -0.83 },
 			{ "x": 0.50, "y": 0.50, "z": -0.67 }
 	]},
-	"friction": 100000,
-	"restitution": 0.00001,
-	"qualityLevel": 4,
+	"ratings": {
+		"density": 5,
+		"durability": 7,
+		"friction": 10,
+		"buoyancy": 2
+		},
 	"stackSize": 10
 },
 //---------------------------------------------------------------- Robot Part 1

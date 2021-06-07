@@ -25,6 +25,7 @@ function AdvancedButton.server_onCreate( self )
 	self.sv_data = self.storage:load() or {}
 	self.sv_data.modeIndex = self.sv_data.modeIndex or (self.data and self.data.modeIndex or 1)
 	self.sv_data.name = self.sv_data.name or self.modes[self.sv_data.modeIndex]
+	self.sv_data.hasBeenRenamed = self.sv_data.hasBeenRenamed or false
 	self.sv_data.hideTinkerHint = self.sv_data.hideTinkerHint or false
 	self.sv_data.hideAllHints = self.sv_data.hideAllHints or false
 	self.sv_data.savedState = self.sv_data.savedState or false
@@ -62,7 +63,7 @@ function AdvancedButton.server_onFixedUpdate( self, dt )
 	elseif self.sv_data.modeIndex == 3 then -- single tick
 		newActive = hasInteraction and not self.prevInteraction
 	elseif self.sv_data.modeIndex == 4 then -- single tick inverted
-		newActive = not (hasInteraction and not self.prevInteraction)
+		newActive = self.prevInteraction and not hasInteraction
 	elseif self.sv_data.modeIndex > 4 then -- switch, switch inverted, switch memory
 		if hasInteraction and not self.prevInteraction then
 			newActive = not self.interactable:isActive()
@@ -92,7 +93,7 @@ function AdvancedButton.server_onFixedUpdate( self, dt )
 		end
 		self.prevOnLift = isOnLift
 	end
-	self.interactable:setActive(newActive)
+	self.interactable:setActive(newActive or false) -- "or false" because "nil" got in there somehow
 end
 
 -- function for the client to tell the server if they are interacting with the part
@@ -109,6 +110,9 @@ end
 function AdvancedButton.sv_setData( self, data )
 	self.sv_data.modeIndex = data.modeIndex or self.sv_data.modeIndex
 	self.sv_data.name = data.name or self.sv_data.name
+	if data.hasBeenRenamed then
+		self.sv_data.hasBeenRenamed = true
+	end
 	self.interactable:setPublicData({name = self.sv_data.name})
 	if data.hideTinkerHint ~= nil then
 		self.sv_data.hideTinkerHint = data.hideTinkerHint
@@ -136,6 +140,7 @@ function AdvancedButton.client_onCreate( self )
 	self.cl_data = {}
 	self.cl_data.modeIndex = 1
 	self.cl_data.name = "unset"
+	self.cl_data.hasBeenRenamed = false
 	self.cl_data.hideTinkerHint = false
 	self.cl_data.hideAllHints = false
 	self.network:sendToServer("sv_getData")
@@ -146,7 +151,7 @@ end
 
 function AdvancedButton.client_onFixedUpdate( self, dt )
 	-- reset interaction of switches and single tick buttons (so they were only for 1 tick)
-	if self.cl_interacting and self.cl_data.modeIndex > 2 then
+	if self.cl_interacting and (self.cl_data.modeIndex == 3 or self.cl_data.modeIndex > 4 ) then
 		self:cl_release()
 	end
 	-- update pose
@@ -221,7 +226,6 @@ function AdvancedButton.cl_openMainGui( self )
 	self.newHideTinkerHint = nil
 	self.newHideAllHints = nil
 	if not self.gui then self.gui = sm.gui.createGuiFromLayout(LAYOUTS_PATH..'AdvancedButton.layout') end
-	self.gui:setOnCloseCallback("cl_onGuiClose")
 	self.gui:setButtonCallback("OkButton", "cl_onOkButtonClick")
 	self.gui:setButtonCallback("CancelButton", "cl_onCancelButtonClick")
 	self.gui:setButtonCallback("NameButton", "cl_onNameButtonClick")
@@ -239,7 +243,8 @@ end
 -- updates the GUI text and button states
 function AdvancedButton.cl_drawGui( self )
 	local description = ""..
-		"\"Inverted\" options default to ON position.\n\n"..
+		"\"Inverted\" button and switch default to ON position.\n"..
+		"\"Inverted\" single tick sends a tick when released.\n\n"..
 		"\"Switch Memory\" keeps the last state instead of resetting on the lift.\""
 	self.gui:setText("DescriptionText", description)
 	local name = self.newName or self.cl_data.name
@@ -259,10 +264,17 @@ function AdvancedButton.cl_onOkButtonClick( self, buttonName )
 	self.gui:close()
 	if (self.newName == nil and self.newModeIndex == nil and self.newHideTinkerHint == nil and self.newHideAllHints == nil) then return end
 	local data = {} -- members can be nil (sv_setData allows missing values)
-	if self.newName == "" then -- endcode empty string as false beucase sending empty string logs an error
-		data.name = false
+	if self.newName == nil then
+		if self.newModeIndex and not self.cl_data.hasBeenRenamed then
+			data.name = self.modes[self.newModeIndex]
+		end
 	else
-		data.name = self.newName
+		data.hasBeenRenamed = true
+		if self.newName == "" then -- endcode empty string as false beucase sending empty string logs an error
+			data.name = false
+		else
+			data.name = self.newName
+		end
 	end
 	data.modeIndex = self.newModeIndex
 	data.hideTinkerHint = self.newHideTinkerHint
@@ -320,11 +332,14 @@ function AdvancedButton.cl_onModeButtonClick( self, buttonName )
 	end
 end
 
--- fo the server to update the client's data
+-- for the server to update the client's data
 function AdvancedButton.cl_setData( self, data )
 	self.cl_data.modeIndex = data.modeIndex or self.cl_data.modeIndex
 	if data.name == false then 
 		data.name = ""
+	end
+	if data.hasBeenRenamed then
+		self.cl_data.hasBeenRenamed = true
 	end
 	self.cl_data.name = data.name or self.cl_data.name
 	if data.hideTinkerHint ~= nil then
@@ -341,7 +356,9 @@ function AdvancedButton.cl_press( self, character )
 	self.actionLocks.button = true
 	self:cl_lockCharacter(character)
 	self.network:sendToServer( 'sv_setInteracting', true )
-	sm.audio.play("Button on", self.shape.worldPosition)
+	if self.cl_data.modeIndex ~= 4 then -- don't make press noise for inverted single tick
+		sm.audio.play("Button on", self.shape.worldPosition)
+	end
 end
 
 -- for updating interactable lock and notifying the server when the player stops interacting

@@ -130,8 +130,8 @@
 	"pose0": "$MOD_DATA/Objects/Mesh/ForceField_on.fbx"
 	}]},
 	"scripted" : {
-		"filename": "$MOD_DATA/Scripts/ForceField.lua",
-		"classname": "ForceField" },
+		"filename": "$MOD_DATA/Scripts/Deprecated.lua",
+		"classname": "Deprecated" },
 	"rotationSet": "PropZ",
 	"color": "0000ff",
 	"density": 500.0,

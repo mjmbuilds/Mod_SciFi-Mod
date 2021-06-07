@@ -79,11 +79,11 @@
             <Widget type="TextBox" skin="TextBox" position_real="0 0.17732 1 0.0701031" name="NameText">
                 <Property key="Caption" value="&quot;BUTTON&quot;"/>
                 <Property key="TextAlign" value="Center"/>
-                <Property key="FontName" value="SM_HeaderLarge_Medium"/>
+                <Property key="FontName" value="SM_HeaderLarge_Wide"/>
             </Widget>
         </Widget>
         <Widget type="Widget" skin="BeaconBottomBG" position_real="0 0.712188 1 0.276065">
-            <Widget type="EditBox" skin="EditBoxEmpty" position_real="0.14902 0.148936 0.694118 0.781915" name="DescriptionText">
+            <Widget type="EditBox" skin="EditBoxEmpty" position_real="0.14902 0.143617 0.694118 0.781915" name="DescriptionText">
                 <Property key="Static" value="true"/>
                 <Property key="Caption" value="Description..."/>
                 <Property key="FontName" value="SM_TextSmall"/>

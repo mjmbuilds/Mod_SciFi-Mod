@@ -1,43 +1,9 @@
 {"partList" : [
 
-
-//--------------------------------------------------------------- Gravity Core
-{
-	"uuid": "f3d96978-887a-4751-b1d2-d1e831c92657",
-	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/invisible.tga",
-		"$MOD_DATA/Objects/Textures/invisible.tga"],
-		"material": "DifAsgAlphaFlip"},
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-		"material": "PoseAnimDifAsgNor"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/GravityCore_off.fbx",
-	"pose0": "$MOD_DATA/Objects/Mesh/GravityCore_on.fbx"
-	}]},
-	"scripted" : {
-		"filename": "$MOD_DATA/Scripts/GravityCore.lua",
-		"classname": "GravityCore" },
-	"rotationSet": "PropFull",
-	"color": "df7f00",
-	"density": 500.0,
-	"physicsMaterial": "Metal",
-	"qualityLevel": 0,
-	"hull": { "x": 1, "y": 1, "z": 1,
-		"margin": 0.45, "pointList": [
-			{ "x": 0, "y": 0, "z": 0 }
-		]},
-	"showInInventory": false,
-	"stackSize": 1
-},
-
 //--------------------------------------------------------------- Inertia Drive
 {
 	"uuid": "5f16a5b1-394e-492f-afff-f4c2301b1073",
+	"name": "mjm_inertia_drive",
 	"renderable": {"lodList": [{
 	"subMeshList": [
 		{"textureList": [
@@ -53,12 +19,15 @@
 		"classname": "InertiaDrive" },
 	"rotationSet": "PropZ",
 	"color": "df7f00",
-	"density": 500.0,
-	"physicsMaterial": "Metal",
+	"physicsMaterial": "Mechanical",
 	"box": { "x": 2, "y": 3, "z": 1 },
-	"qualityLevel": 5,
+	"ratings": {
+		"density": 5,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
 	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ],
-	"showInInventory": false,
 	"stackSize": 1
 },
 //--------------------------------------------------------------- Tank Engine
@@ -150,8 +119,45 @@
 	"cylinder": { "diameter": 1, "depth": 1, "axis": "Z" },
 	"qualityLevel": 5,
 	"stackSize": 1
-}
+},
 
+//----------------------------------------------------------------------------
+//--------------------------------------------------------------- DEPRECATED
+//----------------------------------------------------------------------------
+
+//--------------------------------------------------------------- Gravity Core
+{
+	"uuid": "f3d96978-887a-4751-b1d2-d1e831c92657",
+	"renderable": {"lodList": [{
+	"subMeshList": [
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/invisible.tga",
+		"$MOD_DATA/Objects/Textures/invisible.tga"],
+		"material": "DifAsgAlphaFlip"},
+		{"textureList": [
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
+		"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
+		"material": "PoseAnimDifAsgNor"}
+	],
+	"mesh": "$MOD_DATA/Objects/Mesh/GravityCore_off.fbx",
+	"pose0": "$MOD_DATA/Objects/Mesh/GravityCore_on.fbx"
+	}]},
+	"scripted" : {
+		"filename": "$MOD_DATA/Scripts/Deprecated.lua",
+		"classname": "Deprecated" },
+	"rotationSet": "PropFull",
+	"color": "df7f00",
+	"density": 500.0,
+	"physicsMaterial": "Metal",
+	"qualityLevel": 0,
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.45, "pointList": [
+			{ "x": 0, "y": 0, "z": 0 }
+		]},
+	"stackSize": 1,
+	"showInInventory": false
+}
 
 //---------------------------------------------------------------- END
 ]}

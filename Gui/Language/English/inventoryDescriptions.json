@@ -1,19 +1,11 @@
 {
 	"229fd8b4-e098-4cb2-bd24-b4c01e470f53": {
 		"title": "Seat Re-Exiter Teleporter",
-		"description": "Connect a seat (from SciFi mod) as a new exit point (avoid getting stuck in roof over seat by getting out where it's safe). Can also be a teleporter within a creation."
-	},
-	"7d4847a8-7cc1-4a0c-a8e4-632ad08cfead": {
-		"title": "Code Tester 1",
-		"description": ""
-	},
-	"7a0225a7-5e4a-4006-a0ad-51b459ad1981": {
-		"title": "Code Tester 2",
-		"description": ""
+		"description": "Tired of getting stuck in the roof of your car? Connect from a mod seat for a new exit point. Also works as a basic teleporter."
 	},
 	"f3d96978-887a-4751-b1d2-d1e831c92657": {
-		"title": "Gravity Core",
-		"description": "Provides Antigrav, Stability, Orientation, and Drag. Use Slider Block for settings."
+		"title": "Deprecated",
+		"description": "Old Gravety Core part"
 	},
 	"416acd67-2372-4838-bc3a-1bf7b22f2a32": {
 		"title": "Small Fighter Radar",
@@ -41,31 +33,31 @@
 	},
 	"68f1d1e3-b27f-4024-a691-d0e237da66ba": {
 		"title": "Small Monitor Screen",
-		"description": "Just decor for now."
+		"description": "Decorative monitor"
 	},
 	"5f16a5b1-394e-492f-afff-f4c2301b1073": {
 		"title": "Inertia Drive",
-		"description": "Fly like a spaceship using the Inertial Drive. Controls movement and damping. Use Slider Block for settings."
+		"description": "Press E for GUI"
 	},
 	"ce729ebd-fb8f-48b4-9482-1cbacc19766d": {
 		"title": "Panel Vent (LC)",
-		"description": "Panel with vent holes"
+		"description": "Decorative panel with vent holes"
 	},
 	"dcd36038-741b-4ca0-83c1-25c2a734826e": {
 		"title": "Wedge Vent (LC)",
-		"description": "Wedge with vent"
+		"description": "Decorative wedge with vent"
 	},
 	"64c7c6c6-f938-46ef-8c5e-a467adcb1049": {
-		"title": "Wedge Switch (LC)",
-		"description": "Wedge shaped switch"
+		"title": "Advanced Wedge Switch (LC)",
+		"description": "Press U to select mode and rename"
 	},
 	"8fb9f92e-c7d0-4628-9f6f-a6d19803f354": {
-		"title": "Wedge Button (LC)",
-		"description": "Wedge shaped button"
+		"title": "Advanced Wedge Button (LC)",
+		"description": "Press U to select mode and rename"
 	},
 	"7903f1df-5c52-4990-8b68-ed094e875d93": {
-		"title": "Wedge Lever Switch (LC)",
-		"description": "Wedge shaped lever switch"
+		"title": "Advanced Wedge Lever Switch (LC)",
+		"description": "Press U to select mode and rename"
 	},
 	"2eda8658-9e90-4bcc-b8ba-b19a3e5efc1d": {
 		"title": "Wedge Controller (LC)",
@@ -81,18 +73,18 @@
 	},
 	"c2a4c0dc-31d2-4c70-b2ce-8bb751d715e1": {
 		"title": "Small Padded Pipe",
-		"description": ""
+		"description": "Decorative pipe step"
 	},
 	"c732b628-3820-4015-ae97-b58a6ab08523": {
-		"title": "Surface Switch",
-		"description": ""
+		"title": "Advanced Surface Switch",
+		"description": "Press U to select mode and rename"
 	},
 	"12cf2b36-3a40-48c4-bf3c-5d8d9ae5f7e1": {
-		"title": "Surface Button",
-		"description": ""
+		"title": "Advanced Surface Button",
+		"description": "Press U to select mode and rename"
 	},
 	"f20224f0-3915-4be7-969a-334ce3b17f43": {
-		"title": "Low Collision Large Connector",
+		"title": "Low Collision Large Connector (LC)",
 		"description": "Use on a bearing to connect rotating parts with less collision hitting."
 	},
 	"b85adaa4-0af0-4c7f-8a13-69af46da2f84": {
@@ -101,11 +93,11 @@
 	},
 	"c2117822-0ada-4b6e-a3e7-84ece4621c42": {
 		"title": "Plasma Gun",
-		"description": "Connect to seat for limited camera aiming(1st person). Outputs a tick half way through cooldown for alternating fire with second gun."
+		"description": "Connect to seat for limited camera aiming(1st person)."
 	},
 	"7cfcf20b-ac1a-484d-8ba4-0e2a4f1bc0c4": {
 		"title": "Laser Gun",
-		"description": "Connect to seat for limited camera aiming(1st person). Outputs a tick half way through cooldown for alternating fire with second gun."
+		"description": "Connect to seat for limited camera aiming(1st person)."
 	},
 	"ed8a0cb4-8514-46a3-932d-7c145eb1fc47": {
 		"title": "Photon Missile",
@@ -116,8 +108,8 @@
 		"description": "Connect to seat for camera aiming(1st person). White signal reloads. Connect one missile to other missiles to launch in order. Hold button for multiple fire."
 	},
 	"a470a338-9fd8-4857-83aa-072b261e0de4": {
-		"title": "ForceField",
-		"description": "Removed"
+		"title": "Deprecated",
+		"description": "Old ForceField experiment"
 	},
 	"3d25d13c-06d1-48f8-b1a7-9a40d301184a": {
 		"title": "Paneled Frame Block",
@@ -136,32 +128,32 @@
 		"description": "Square surface light."
 	},
 	"6f64d36d-5e23-4f6b-bcb5-e0057ba43fce": {
-		"title": "Seat Input Logic Breakout",
-		"description": "Detects many possible logic combinations of seat signals."
+		"title": "Seat Logic Breakout (WASD)",
+		"description": "Detects signals from mod seats including WASD and mouse buttons."
 	},
 	"0c0a0e43-861e-4c36-9c6c-cf509a87cf9c": {
 		"title": "Piston Round",
-		"description": "Round Piston."
+		"description": "A round version of the piston."
 	},
 	"065082d3-662b-46c2-bf44-e192be328eab": {
 		"title": "Panel Half Wedge (LC)",
 		"description": "Low Collision Panel Half-Wedge"
 	},
 	"d2f8af14-fa40-4e2f-8398-2c5ba707bfe5": {
-		"title": "Pyramid Transition (Detail)",
-		"description": "Detail part that transition into pyramid shape console parts"
+		"title": "Pyramid Transition",
+		"description": "Transition to the Small Monitor Screen"
 	},
 	"70200983-7c95-480c-824b-5e0bef57270a": {
 		"title": "Panel Wedge 3x (LC)",
 		"description": "Low Collision 3x Panel Wedge"
 	},
 	"c911424f-93a5-43c8-8c23-d4f05e4fdcf6": {
-		"title": "Piston, Bearing, and Motor Controller",
-		"description": "Bottom row colors = reverse, other colors = forward. Takes input bottons/logic. Controlls Piston, Bearing, or Motor. Piston advanced settings: Orange1 = position, Orange2 = speed, Orange3 = strength."
+		"title": "Universal Controller for Piston, Bearing, and Motor",
+		"description": "Bottom row colors = reverse, other colors = forward. Takes input bottons/logic. Controlls Piston, Bearing, or Motor. Piston advanced settings: Orange1 = position, Orange2 = speed, Orange3 = strength"
 	},
 	"a829d150-5020-47a8-b2ad-7cbbeeb0d96a": {
 		"title": "Linear Slider Pipe Piston 5x",
-		"description": "This piston looks like the parts on it slide along a linear rail."
+		"description": "Gives the effect of the block sliding along the rail instaed of extending"
 	},
 	"71a5abed-41c1-4b3f-b63f-11ed8a1b0826": {
 		"title": "Windshield 02 Left (LC)",
@@ -177,11 +169,11 @@
 	},
 	"0ab880e5-b36e-484c-8fce-40c07228d96e": {
 		"title": "Tow Hook",
-		"description": "Detail Part"
+		"description": "Decorative detail Part"
 	},
 	"120177dc-b6e8-45ce-9ecb-3062d852d77f": {
 		"title": "Detail Wedge (LC)",
-		"description": "Detail Part"
+		"description": "Decorative detail Part"
 	},
 	"8811320f-79ac-41fb-a7f0-c4387a7a104d": {
 		"title": "Panel Wedge-Connector (LC)",
@@ -209,183 +201,183 @@
 	},
 	"74a754d9-abe4-4818-a779-045594ff5dbe": {
 		"title": "Small Armored Storage Chest",
-		"description": "A 2x2x3 armored storage chest."
+		"description": "2x2x3 armored storage chest"
 	},
 	"4f5e6a7e-23f4-43ac-9070-234a90ccce27": {
 		"title": "Glitch Welder",
-		"description": "Place Glitchwelder on creation. Paint parts light-cyan blue and use Glitchwelder to hide parts. Using Glitchwelder again to unhide parts. Painting parts light green for static placement. Glitchwelder can be painted color you want parts to be when unhidden."
+		"description": "Place Glitchwelder on creation. Paint parts light-cyan blue and use Glitchwelder to hide parts. Using Glitchwelder again to unhide parts. Painting parts light green for static placement. Glitchwelder can be painted color you want parts to be when unhidden"
 	},
 	"92c856e6-9a9b-4832-91f0-2c741258b40b": {
 		"title": "Tank Engine",
-		"description": "Connect to seat and Tank Tracks. White input speeds up, Black input slows down."
+		"description": "Connect to seat and Tank Tracks. White input speeds up, Black input slows down"
 	},
 	"b9f0d277-daca-49e4-9771-c16f721c8bcc": {
 		"title": "Tank Track Large",
-		"description": "Driven by Tank Enging. Press E to change modes (must disconnect from engine to update mode)."
+		"description": "Driven by Tank Enging. Press E to change modes (must disconnect from engine to update mode)"
 	},
 	"0092b542-e8a3-4700-8284-77f3f590772b": {
-		"title": "Friction component of Tank Track 1.",
-		"description": "Not for manual placement. Low friction track spawns this higher friction part into self when stopped."
+		"title": "Deprecated",
+		"description": "Used to be part of how tank tracks implmented friction"
 	},
 	"91fa1087-17dc-4fef-912d-efd95853c4af": {
 		"title": "Windshield 01 Left V1",
-		"description": "Windshield Style 1. Left side, version 1."
+		"description": "Windshield Style 1. Left side, version 1"
 	},
 	"0afaac2e-1754-436f-aead-4c5a2cfb0734": {
 		"title": "Windshield 01 Left V2",
-		"description": "Windsheild Style 1, Left side, version 2."
+		"description": "Windsheild Style 1, Left side, version 2"
 	},
 	"cd443265-0653-4c26-a487-e71106682c0b": {
 		"title": "Windshield 01 Center",
-		"description": "Windsheild Style 1, Center."
+		"description": "Windsheild Style 1, Center"
 	},
 	"4b42c271-f94f-4a01-88cd-c2c5214823b5": {
 		"title": "Windshield 01 Right V1",
-		"description": "Windsheild Style 1, Right side, version 1."
+		"description": "Windsheild Style 1, Right side, version 1"
 	},
 	"a657e009-d7c8-4365-ae07-560a5d078f5f": {
 		"title": "Windshield 01 Right V2",
-		"description": "Windsheild Style 1, Right side, version 2."
+		"description": "Windsheild Style 1, Right side, version 2"
 	},
 	"6b3c9ecb-6752-4cde-ae1f-8c306e802529": {
-		"title": "Motorcycle Windshield",
-		"description": "A super small 1x1x2 windshield."
+		"title": "Mini Motorcycle Windshield",
+		"description": "A super small 1x1x2 decorative windshield"
 	},
 	"096e111d-0506-4277-9412-03631fb82440": {
 		"title": "Robot Part 07",
-		"description": "A part for building robots."
+		"description": "Decorative part for building robots"
 	},
 	"8e6f4e63-9f52-44a0-ba3b-a5e08fbc2796": {
 		"title": "Robot Part 06",
-		"description": "A part for building robots."
+		"description": "Decorative part for building robots"
 	},
 	"be45a18d-cc0f-4ef6-9927-a8b45871abdb": {
 		"title": "Robot Part 05",
-		"description": "A part for building robots."
+		"description": "Decorative part for building robots"
 	},
 	"ac9c83e2-e08b-4d94-b647-0b7d320704be": {
 		"title": "Robot Part 04",
-		"description": "A part for building robots."
+		"description": "Decorative part for building robots"
 	},
 	"abbe03ef-97cb-4ec6-b915-8f59e50d1ce1": {
 		"title": "1x1 Mini Gas Engine",
-		"description": "A compact gas engine."
+		"description": "Gas engine for micro builds"
 	},
 	"1d5ac1e8-e47f-4fae-b3b7-f4d9fc9631cf": {
 		"title": "Robot Part 03",
-		"description": "A part for building robots."
+		"description": "Decorative part for building robots"
 	},
 	"4ddba758-114a-45f8-bcfc-5a35d7f283ec": {
 		"title": "Robot Part 02",
-		"description": "A part for building robots."
+		"description": "Decorative part for building robots"
 	},
 	"f940368e-caeb-46a4-b7ef-dfb1ab870ffd": {
 		"title": "Robot Part 01",
-		"description": "A part for building robots."
+		"description": "Decorative part for building robots"
 	},
 	"2032fea0-a034-48ad-ad29-56a4e2230026": {
 		"title": "Compact Seat Driver",
-		"description": "A 2x4x3 compact driver seat."
+		"description": "A 2x4x3 compact driver seat"
 	},
 	"16ae1a9d-84b6-4aeb-b6df-02b4fc4adfe1": {
 		"title": "Compact Seat Pass",
-		"description": "A 2x4x3 compact passenger seat."
+		"description": "A 2x4x3 compact passenger seat"
 	},
 	"edce7d53-4a16-4ba8-b629-852c107656e9": {
 		"title": "Compact Seat Bike",
-		"description": "A 1x4x2 compact driver seat."
+		"description": "A 1x4x2 compact driver seat"
 	},
 	"6c12b644-b5c4-4bd8-9411-ff006af23006": {
 		"title": "Detail Panel 02 (Sticker)",
-		"description": "Detail part. Has 2D collision like a sticker."
+		"description": "Decorative detail part. Has 2D collision like a sticker"
 	},
 	"0859e52d-c914-4367-aa80-23ce7393dbcc": {
 		"title": "Hubless Bearing (Small)",
-		"description": "For 3x1, and 4x1 tires."
+		"description": "For 3x1, and 4x1 tires"
 	},
 	"5e1a4084-a456-41da-9261-fb04e2e8e826": {
 		"title": "Hubless Bearing (Medium)",
-		"description": "For 4x2, and 5x2 tires."
+		"description": "For 4x2, and 5x2 tires"
 	},
 	"7a2ad284-b434-4a77-9b79-6d0f56c4455a": {
 		"title": "Hubless Bearing (Large)",
-		"description": "For 5x3, 7x3, and 9x3 tires."
+		"description": "For 5x3, 7x3, and 9x3 tires"
 	},
 	"30fcc03d-9ce6-4837-8689-0d0fe8a15b54": {
 		"title": "Tire-01 (3x1)",
-		"description": "Works with small rims."
+		"description": "Works with small rims"
 	},
 	"3b34899b-cd56-46c9-844e-3561ca62c07f": {
 		"title": "Tire-01 (4x1)",
-		"description": "Works with small rims."
+		"description": "Works with small rims"
 	},
 	"1631f0bb-9166-4728-828d-3cafbcf4d845": {
 		"title": "Tire-01 (4x2)",
-		"description": "Works with medium rims."
+		"description": "Works with medium rims"
 	},
 	"b9b29106-8627-466c-bb68-e74151a22671": {
 		"title": "Tire-01 (5x2)",
-		"description": "Works with medium rims."
+		"description": "Works with medium rims"
 	},
 	"dba64f7a-3d3d-493f-a6fc-3f023377b2e9": {
 		"title": "Tire-01 (5x3)",
-		"description": "Works with large rims."
+		"description": "Works with large rims"
 	},
 	"bfcb6972-621b-4e32-bfdd-d65f4d7fc8a7": {
 		"title": "Tire-01 (7x3)",
-		"description": "Works with large rims."
+		"description": "Works with large rims"
 	},
 	"1ee5a276-a7cb-4477-8ff7-7f3c9c4577fa": {
 		"title": "Tire-01 (9x3)",
-		"description": "Works with large rims."
+		"description": "Works with large rims"
 	},
 	"440e0414-0c45-4a05-bccb-61ae0add2285": {
 		"title": "Rim-01 (Small)",
-		"description": "For 3x1, and 4x1 tires."
+		"description": "For 3x1, and 4x1 tires"
 	},
 	"5ccffe5b-17b4-449d-b73c-112980e0436f": {
 		"title": "Rim-01 (Medium)",
-		"description": "For 4x2, and 5x2 tires."
+		"description": "For 4x2, and 5x2 tires"
 	},
 	"ae19633e-a1ce-407b-bfa6-509bd8ba2d8a": {
 		"title": "Rim-01 (Large)",
-		"description": "For 5x3, 7x3, and 9x3 tires."
+		"description": "For 5x3, 7x3, and 9x3 tires"
 	},
 	"8cc25fb0-c317-4e68-9b55-9b43d7a32f70": {
 		"title": "Landing Gear Suspension",
-		"description": "For desired rotation you may need to palce and then weld."
+		"description": "You may need to palce on a block then weld for desired rotation"
 	},
 	"2ce800e2-4ff2-4b93-8c9e-90866935b39b": {
 		"title": "Hollow Wheel 10x3",
-		"description": ""
+		"description": "Modular sections of a wheel that can create a hollow wheel. Need blocks on inside corners to connect"
 	},
 	"d71474de-c21d-4b2b-a08e-523d714a8817": {
 		"title": "Detail Panel 01 (Sticker)",
-		"description": "Detail part. Has 2D collision like a sticker."
+		"description": "Decorative detail part. Has 2D collision like a sticker"
 	},
 	"9d98bcc0-abc8-472b-9060-05e516d67ec2": {
 		"title": "Side Thruster",
 		"description": ""
 	},
 	"67a2f7c6-0b01-4ef0-868b-6ed852fdfdae": {
-		"title": "Compact Mech Seat",
-		"description": "A compact seat for industrial applications like driving a Mech."
+		"title": "Compact Heavy Equipment or Mech Seat",
+		"description": "A compact seat for industrial machines or driving a mech."
 	},
 	"af4b89cc-56c0-40ce-8adb-98335b44051c": {
 		"title": "Slim Logic Panel",
-		"description": ""
+		"description": "Small logic panel for micro builds"
 	},
 	"5137647e-b893-48c9-a1b7-e5b92d9c3f9a": {
 		"title": "Slim Controller Panel",
-		"description": ""
+		"description": "Small controller panel for micro builds"
 	},
 	"d9f65dad-aef8-4f2b-8da0-e9a5ccf5cf4b": {
 		"title": "Slim Timer Panel",
-		"description": ""
+		"description": "Small timer panel for micro builds"
 	},
 	"bb1f9495-a25e-4045-ad0e-da5fefc413f6": {
 		"title": "Mini Electric Motor",
-		"description": "High torque, small size."
+		"description": "Small electric motor for micro builds"
 	},
 	"b3f3f3a2-3ea1-4e65-8f78-c79580d33a56": {
 		"title": "Surface Thruster LVL1",
@@ -400,28 +392,28 @@
 		"description": ""
 	},
 	"d142992e-8938-47e7-9eee-2d76b3fe7168": {
-		"title": "Slim Button",
-		"description": ""
+		"title": "Advanced Slim Button",
+		"description": "Press U to select mode and rename"
 	},
 	"be3f0967-cfca-4889-98af-09a8cdd813ea": {
-		"title": "Slim Switch",
-		"description": ""
+		"title": "Advanced Slim Switch",
+		"description": "Press U to select mode and rename"
 	},
 	"20674e2f-810e-4291-8749-4b396e9a25ca": {
-		"title": "LED Button",
-		"description": ""
+		"title": "Advanced LED Button",
+		"description": "Press U to select mode and rename"
 	},
 	"c60f83c3-3617-4a72-8308-57aa95bd2873": {
 		"title": "LED Switch",
-		"description": ""
+		"description": "Was LED Switch but Advanced version is redundant with LED Button"
 	},
 	"71890bff-aacc-4a13-86b9-063ca33245f9": {
 		"title": "LED Status Light",
-		"description": ""
+		"description": "A small LED that can glow but does not shine light."
 	},
 	"f93f27da-ca85-4edc-85e6-5c5d053c05ab": {
 		"title": "Small Sensor",
-		"description": ""
+		"description": "Small sensor for micro builds"
 	},
 	"3b6ce27f-e209-4cee-950e-2d0ecc5393c9": {
 		"title": "Small Piston Rod",
@@ -429,27 +421,27 @@
 	},
 	"a02b65b2-7925-4c9e-8e87-feba352099e9": {
 		"title": "Targeting Laser Pointer Module",
-		"description": "Targeting laser pointer, does not deal damage."
+		"description": "Laser pointer for targeting, does not deal damage"
 	},
 	"e2383982-e250-4bac-bd6a-2776fe640920": {
 		"title": "Spaceship Pilot Seat (Odd)",
-		"description": "A low profile spaceship seat. Odd width."
+		"description": "A low profile spaceship seat. 3x Odd width"
 	},
 	"6e0dfd00-8dc2-4690-a195-5124be441872": {
 		"title": "Spaceship Pilot Seat (Even)",
-		"description": "A low profile spaceship seat. Even width."
+		"description": "A low profile spaceship seat. 2x Even width"
 	},
 	"c994d76c-7d96-4877-b0c8-6a792d2c15c5": {
 		"title": "LED Path Light",
-		"description": "A 2D collision LED(always on) for marking pathways but not creating bumps on the ground."
+		"description": "2D collision LED(always on) for marking pathways but not creating bumps on the ground"
 	},
 	"2af55e2e-88dc-42df-ae65-afe58aec81bc": {
 		"title": "Jetpack Seat",
-		"description": "Seat for putting things on your back... Like rockets."
+		"description": "Seat for putting things on your back... like rockets"
 	},
 	"df405d95-ffbb-46c5-919b-e5beadd12b30": {
 		"title": "Scifi Motorcycle Seat",
-		"description": "A 1x1x5 scifi motorcycle seat."
+		"description": "A 1x1x5 scifi motorcycle seat"
 	},
 	"923de3c1-45c3-47b4-85b6-40ad185243f7": {
 		"title": "Scifi Motorcycle Passenger Seat",
@@ -457,15 +449,15 @@
 	},
 	"3418ba40-ebd2-4bff-bc54-d568d9bd9342": {
 		"title": "Scifi Gimbal Thruster 1",
-		"description": "Same functions as Gimbal Thruster from main Modpack"
+		"description": "Same functions as Gimbal Thruster from Modpack"
 	},
 	"290a6d9b-7a8a-4094-8355-5865c464e38e": {
 		"title": "Scifi Gimbal Thruster 2",
-		"description": "Same functions as Gimbal Thruster from main Modpack"
+		"description": "Same functions as Gimbal Thruster from Modpack"
 	},
 	"e80e33e9-5a40-4a8a-9d96-751bc542c997": {
 		"title": "Thick Bearing",
-		"description": "This bearing helps blend between small parts"
+		"description": "This bearing helps blend between small parts (is NOT stronger than normal bearings)"
 	},
 	"f4b71f35-e21c-4068-9eaa-bde3f270b56b": {
 		"title": "Robot Gripper (High Friction)",
