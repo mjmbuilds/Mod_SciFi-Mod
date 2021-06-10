@@ -35,14 +35,14 @@ InertiaDrive.locationHoldMargin = 0.1
 ---- list of the advanved input names that are recognized
 InertiaDrive.inputList = {
 	"OPEN GUI",
-	"NEXT GEAR",
-	"PREV GEAR",
-	"GEAR 1",
-	"GEAR 2",
-	"GEAR 3",
-	"GEAR 4",
-	"GEAR 5",
-	"GEAR 6",
+	"NEXT GEAR", --TODO
+	"PREV GEAR", --TODO
+	"GEAR 1", --TODO
+	"GEAR 2", --TODO
+	"GEAR 3", --TODO
+	"GEAR 4", --TODO
+	"GEAR 5", --TODO
+	"GEAR 6", --TODO
 	"PITCH UP",
 	"PITCH DOWN",
 	"ROLL LEFT",
@@ -96,11 +96,6 @@ InertiaDrive.defaultGear = {
 }
 
 function InertiaDrive.server_onCreate( self )
-	local publicData = {}
-	publicData.inputList = self.inputList
-	publicData.partName = "Inertia Drive"
-	self.interactable:setPublicData(publicData)
-
 	self.sv_data = self.storage:load() or {}
 	self.sv_data.currentGear = self.sv_data.currentGear or 1	
 	self.sv_data.gears = self.sv_data.gears or {}
@@ -110,10 +105,43 @@ function InertiaDrive.server_onCreate( self )
 	self.sv_data.gears[4] = self.sv_data.gears[4] or self.defaultGear
 	self.sv_data.gears[5] = self.sv_data.gears[5] or self.defaultGear
 	self.sv_data.gears[6] = self.sv_data.gears[6] or self.defaultGear
+	
+	self.publicData = {}
+	self.publicData.inputList = self.inputList
+	self.publicData.partName = "Inertia Drive"
+	self.publicData.gear = self.sv_data.currentGear
+	self.interactable:setPublicData(self.publicData)
 end
 function InertiaDrive.server_onRefresh( self )
 	print("* * * * * REFRESH Inertia Drive * * * * *")
 	self:server_onCreate()
+end
+
+function InertiaDrive.sv_setData( self, data )
+	self.sv_data.currentGear = data.currentGear or self.sv_data.currentGear
+	self.sv_data.gears[1] = data.gear1 or self.sv_data.gears[1]
+	self.sv_data.gears[2] = data.gear2 or self.sv_data.gears[2]
+	self.sv_data.gears[3] = data.gear3 or self.sv_data.gears[3]
+	self.sv_data.gears[4] = data.gear4 or self.sv_data.gears[4]
+	self.sv_data.gears[5] = data.gear5 or self.sv_data.gears[5]
+	self.sv_data.gears[6] = data.gear6 or self.sv_data.gears[6]
+	self.storage:save(self.sv_data)
+	if data.currentGear then
+		self.publicData.gear = data.currentGear
+		self.interactable:setPublicData(self.publicData)
+	end
+end
+
+function InertiaDrive.sv_requestGuiData( self, player )
+	local data = {}
+	data.currentGear = self.sv_data.currentGear
+	data.gear1 = self.sv_data.gears[1]
+	data.gear2 = self.sv_data.gears[2]
+	data.gear3 = self.sv_data.gears[3]
+	data.gear4 = self.sv_data.gears[4]
+	data.gear5 = self.sv_data.gears[5]
+	data.gear6 = self.sv_data.gears[6]
+	self.network:sendToClient(player, "cl_openGui", data)
 end
 
 function InertiaDrive.server_onFixedUpdate( self, dt )
@@ -127,11 +155,12 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 			local name = input:getPublicData().name
 			if name == "ANTIGRAV" then
 				inputs["ANTIGRAV"] = false
-			elseif name == "EMERGENCY LIFT" or name == "OPEN GUI" then
-				player = input:getPublicData().player
 			end
 			if input:isActive() then
 				inputs[name] = true
+				if name == "EMERGENCY LIFT" or name == "OPEN GUI" then
+					player = input:getPublicData().player
+				end
 			end
 		end
 	end
@@ -188,11 +217,13 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		end
 	end
 
+	----- check for usage of Emergency Lift
 	if inputs["EMERGENCY LIFT"] and not self.prevEmergencyLift then
 		self:sv_emergencyLift(player)
 	end
 	self.prevEmergencyLift = inputs["EMERGENCY LIFT"]
 
+	----- check for usage of Landing Lift
 	if inputs["LANDING LIFT"] and not self.prevLiftLanding then
 		local liftRotation = 1
 		if driveFront.x > 0.707107 then
@@ -206,13 +237,16 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 	end
 	self.prevLiftLanding = inputs["LANDING LIFT"]
 
+	----- check for use of openeing Gui from button
 	if inputs["OPEN GUI"] and not self.prevOpenGui and player then
-		self.network:sendToClient(player, "cl_openGui")
+		self:sv_requestGuiData(player)
 	end
 	self.prevOpenGui = inputs["OPEN GUI"]
 
 	----- calc impulses if powered on
 	if inputs["POWER"] then
+		local gearData = self.sv_data.gears[self.sv_data.currentGear]
+		
 		---- adjustments related to power reset
 		local applyImpulse = true
 		if not self.prevPower then
@@ -220,9 +254,7 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 			self.prevAltitudeLock = nil -- reset previous altitude lock flag
 			self.prevLocationLock = nil -- reset previous location lock flag
 		end
-	
-		local gearData = self.sv_data.gears[self.sv_data.currentGear]
-				
+
 		----- calc linear input
 		local linearInput = sm.vec3.zero()
 		local inputRight = (inputs["RIGHT"] and 1 or 0) + (inputs["LEFT"] and -1 or 0)
@@ -307,9 +339,12 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		local angDragYaw = toGlobal(self.shape, sm.vec3.new((localRotDrag.z * -1),0,0)) * gearData.dragYaw
 		
 		----- calc antigrav
-		local antigravStrength = sm.physics.getGravity() * mass * 1.047494 * dt * (gearData.antigravPower/100)
-		local antigrav = sm.vec3.new(0,0,antigravStrength)
-	   
+		local antigrav = sm.vec3.zero()
+		if not gearData.antigravDisabled then
+			local antigravStrength = sm.physics.getGravity() * mass * 1.047494 * dt * (gearData.antigravPower/100)
+			antigrav = sm.vec3.new(0,0,antigravStrength)
+		end
+
 		----- noise
 		--local pitchNoise = sm.vec3.zero()
 		--local rollNoise = sm.vec3.zero()
@@ -400,7 +435,7 @@ function InertiaDrive.sv_emergencyLift( self, player )
 		player:removeLift()
 		return
 	end
-	local liftPos = self.lastLiftLocation or sm.vec3.new(0,0,0)
+	local liftPos = self.lastLiftLocation or sm.vec3.zero()
 	local raycastStart = sm.vec3.new(liftPos.x,liftPos.y,(liftPos.z + 1000))
 	local raycastEnd = sm.vec3.new(liftPos.x,liftPos.y,(liftPos.z -1000))
 	local success, result = sm.physics.raycast(raycastStart, raycastEnd)
@@ -447,13 +482,17 @@ function InertiaDrive.sv_liftLanding( self, player, liftRotation )
 			minY = math.min(pos.y, minY)
 		end
 	end
+	local castLen = 6
 	local raycastStart = sm.vec3.new((maxX+minX)/2, (maxY+minY)/2, body:getCenterOfMassPosition().z)
-	local raycastEnd = sm.vec3.new(raycastStart.x,raycastStart.y,(raycastStart.z - 6))
+	local raycastEnd = sm.vec3.new(raycastStart.x,raycastStart.y,(raycastStart.z - castLen))
 	local success, result = sm.physics.raycast(raycastStart, raycastEnd, self.shape.body)
 	if success then
 		local liftPos = result.pointWorld
-		local liftHeight = math.floor(result.fraction * 20)
-		print(liftHeight)
+		local liftHeight = 10
+		local heightSuccess, heightResult = sm.physics.raycast(liftPos + sm.vec3.new(0,0,0.25), liftPos + sm.vec3.new(0,0,castLen))
+		if heightSuccess then
+			liftHeight = math.floor(heightResult.fraction * castLen * 4 - 0.5)
+		end
 		if liftRotation == nil then
 			liftRotation = 1
 		elseif liftRotation == 1 then
@@ -486,23 +525,23 @@ end
 -- when the player "uses" the part (E)
 function InertiaDrive.client_onInteract( self, character, lookAt )
 	if lookAt then
-		self:cl_openGui()	
+		self.network:sendToServer("sv_requestGuiData", character:getPlayer())
 	end
 end
 
-function InertiaDrive.cl_openGui( self )
+function InertiaDrive.cl_openGui( self, data )
 	if not self.gui then self.gui = sm.gui.createGuiFromLayout(LAYOUTS_PATH..'InertiaDrive.layout') end
 	self.gui:setOnCloseCallback("cl_onGuiClose")
 	
 	--TODO: set button callbacks
 	--self.gui:setButtonCallback("RenameButton", "cl_onRenameButtonClick")
 
-	self:cl_drawGui()	
+	self:cl_drawGui(data)	
 	self.gui:open()
 end
 
 -- updates the GUI text and button states
-function InertiaDrive.cl_drawGui( self )
+function InertiaDrive.cl_drawGui( self, data )
 
 	print("Drawing GUI")
 	self.gui:setText("testButton", "Hello World")
@@ -538,12 +577,14 @@ end
 
 -- when the GUI closes, send the server the updates if anything has changed
 function InertiaDrive.cl_onGuiClose( self, buttonName )
-	
+	local data = nil
 	--TODO: send updates to server if anything changed
 	
 	print("GUI closed")
 	
-	--self.network:sendToServer("sv_setData", data)
+	if data then
+		self.network:sendToServer("sv_setData", data)
+	end
 end
 
 

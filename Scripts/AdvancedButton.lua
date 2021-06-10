@@ -30,7 +30,8 @@ function AdvancedButton.server_onCreate( self )
 	self.sv_data.hideTinkerHint = self.sv_data.hideTinkerHint or false
 	self.sv_data.hideAllHints = self.sv_data.hideAllHints or false
 	self.sv_data.savedState = self.sv_data.savedState or false
-	self.interactable:setPublicData({name = self.sv_data.name})
+	self.publicData = {name = self.sv_data.name}
+	self.interactable:setPublicData(self.publicData)
 end
 function AdvancedButton.server_onRefresh( self )
 	print("* * * * * REFRESH AdvancedButton * * * * *")
@@ -98,8 +99,12 @@ function AdvancedButton.server_onFixedUpdate( self, dt )
 end
 
 -- function for the client to tell the server if they are interacting with the part
-function AdvancedButton.sv_setInteracting( self, interacting )
-	self.sv_interacting = interacting
+function AdvancedButton.sv_setInteracting( self, data )
+	self.sv_interacting = data.interacting
+	if data.player then
+		self.publicData.player = data.player
+		self.interactable:setPublicData(self.publicData)
+	end
 end
 
 -- function returns the state of its data to the clients
@@ -114,10 +119,8 @@ function AdvancedButton.sv_setData( self, data )
 	if data.hasBeenRenamed then
 		self.sv_data.hasBeenRenamed = true
 	end
-	local publicData = {}
-	publicData.name = self.sv_data.name
-	publicData.player = data.player
-	self.interactable:setPublicData(publicData)
+	self.publicData.name = self.sv_data.name
+	self.interactable:setPublicData(self.publicData)
 	if data.hideTinkerHint ~= nil then
 		self.sv_data.hideTinkerHint = data.hideTinkerHint
 	end
@@ -322,7 +325,6 @@ function AdvancedButton.cl_onGuiClose( self, buttonName )
 	data.modeIndex = self.newModeIndex
 	data.hideTinkerHint = self.newHideTinkerHint
 	data.hideAllHints = self.newHideAllHints
-	data.player = sm.localPlayer.getPlayer()
 	self.network:sendToServer("sv_setData", data)
 end
 
@@ -403,7 +405,7 @@ function AdvancedButton.cl_press( self, character )
 	self.cl_interacting = true
 	self.actionLocks.button = true
 	self:cl_lockCharacter(character)
-	self.network:sendToServer( 'sv_setInteracting', true )
+	self.network:sendToServer( 'sv_setInteracting', {interacting = true, player = character:getPlayer()} )
 	if self.cl_data.modeIndex ~= 4 then -- don't make press noise for inverted single tick
 		sm.audio.play("Button on", self.shape.worldPosition)
 	end
@@ -414,7 +416,7 @@ function AdvancedButton.cl_release( self )
 	self.cl_interacting = false
 	self.actionLocks.button = false
 	self:cl_unlockCharacter()
-	self.network:sendToServer( 'sv_setInteracting', false )
+	self.network:sendToServer( 'sv_setInteracting', {interacting = false} )
 	sm.audio.play("Button off", self.shape.worldPosition)
 end
 
