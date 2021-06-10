@@ -35,14 +35,14 @@ InertiaDrive.locationHoldMargin = 0.1
 ---- list of the advanved input names that are recognized
 InertiaDrive.inputList = {
 	"OPEN GUI",
-	"NEXT GEAR", --TODO
-	"PREV GEAR", --TODO
-	"GEAR 1", --TODO
-	"GEAR 2", --TODO
-	"GEAR 3", --TODO
-	"GEAR 4", --TODO
-	"GEAR 5", --TODO
-	"GEAR 6", --TODO
+	"NEXT GEAR",
+	"PREV GEAR",
+	"GEAR 1",
+	"GEAR 2",
+	"GEAR 3",
+	"GEAR 4",
+	"GEAR 5",
+	"GEAR 6",
 	"PITCH UP",
 	"PITCH DOWN",
 	"ROLL LEFT",
@@ -242,6 +242,44 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		self:sv_requestGuiData(player)
 	end
 	self.prevOpenGui = inputs["OPEN GUI"]
+
+	----- check for Gear changes
+	if inputs["NEXT GEAR"] and not self.prevNextGear then
+		local newGear = self.sv_data.currentGear
+		newGear = newGear < 6 and newGear + 1 or 6
+		self:sv_setData({currentGear = newGear})
+	end
+	self.prevNextGear = inputs["NEXT GEAR"]
+	if inputs["PREV GEAR"] and not self.prevPrevGear then
+		local newGear = self.sv_data.currentGear
+		newGear = newGear > 1 and newGear - 1 or 1
+		self:sv_setData({currentGear = newGear})
+	end
+	self.prevPrevGear = inputs["PREV GEAR"]
+	if inputs["GEAR 1"] and not self.prevGear1 then
+		self:sv_setData({currentGear = 1})
+	end
+	self.prevGear1 = inputs["GEAR 1"]
+	if inputs["GEAR 2"] and not self.prevGear2 then
+		self:sv_setData({currentGear = 2})
+	end
+	self.prevGear2 = inputs["GEAR 2"]
+	if inputs["GEAR 3"] and not self.prevGear3 then
+		self:sv_setData({currentGear = 3})
+	end
+	self.prevGear3 = inputs["GEAR 3"]
+	if inputs["GEAR 4"] and not self.prevGear4 then
+		self:sv_setData({currentGear = 4})
+	end
+	self.prevGear4 = inputs["GEAR 4"]
+	if inputs["GEAR 5"] and not self.prevGear5 then
+		self:sv_setData({currentGear = 5})
+	end
+	self.prevGear5 = inputs["GEAR 5"]
+	if inputs["GEAR 6"] and not self.prevGear6 then
+		self:sv_setData({currentGear = 6})
+	end
+	self.prevGear6 = inputs["GEAR 6"]
 
 	----- calc impulses if powered on
 	if inputs["POWER"] then
