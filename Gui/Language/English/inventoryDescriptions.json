@@ -1,7 +1,11 @@
 {
+	"9d21b8f6-71ba-4484-b725-1a96a9cf25ea": {
+		"title": "Orientation Module",
+		"description": "A passive module that can provide orientation data to parts which specify its use"
+	},
 	"229fd8b4-e098-4cb2-bd24-b4c01e470f53": {
 		"title": "Seat Re-Exiter Teleporter",
-		"description": "Tired of getting stuck in the roof of your car? Connect from a mod seat for a new exit point. Also works as a basic teleporter."
+		"description": "Tired of getting stuck in the roof of your car? Connect from a mod seat for a new exit point. Also works as a basic teleporter"
 	},
 	"f3d96978-887a-4751-b1d2-d1e831c92657": {
 		"title": "Deprecated",
@@ -13,23 +17,23 @@
 	},
 	"36b93d28-77b9-493f-b5e9-a2182eaa5627": {
 		"title": "Scifi Thruster 1",
-		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust."
+		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust"
 	},
 	"bda9598d-58aa-4957-8dfc-43400afe6563": {
 		"title": "Thruster 2-Way 1x1 V1",
-		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust."
+		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust"
 	},
 	"608e145a-9d13-4a39-9ff1-91648f887a19": {
 		"title": "Thruster 2-Way 1x1 V2",
-		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust."
+		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust"
 	},
 	"aef192be-d09a-49f9-9c9c-779d09873b10": {
 		"title": "Thruster 2-Way 2x2 V1",
-		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust."
+		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust"
 	},
 	"a5e56ad4-a4a8-491d-b8d7-e032b52f7b67": {
 		"title": "Thruster 2-Way 2x2 V2",
-		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust."
+		"description": "Number input = thrust when not 0. Number + logic = number thrust when logic is active. Logic only = default thrust"
 	},
 	"68f1d1e3-b27f-4024-a691-d0e237da66ba": {
 		"title": "Small Monitor Screen",

@@ -8,7 +8,7 @@
                 <Property key="FontName" value="SM_HeaderLarge_Wide"/>
             </Widget>
             <Widget type="Widget" skin="PanelEmpty" position_real="0.0411765 0.276289 0.911765 0.707217">
-                <Widget type="Button" skin="SecondaryButton" position_real="0.247312 0 0.498925 0.113703" name="NameButton">
+                <Widget type="Button" skin="SecondaryButton" position_real="0.247312 0 0.498925 0.113703" name="RenameButton">
                     <Property key="Caption" value="RENAME"/>
                     <Property key="FontName" value="ButtonCaptionSmall"/>
                     <Property key="TextAlign" value="Center"/>
@@ -53,27 +53,22 @@
                     <Property key="TextAlign" value="Center"/>
                     <Property key="FontName" value="SM_SubHeader"/>
                 </Widget>
-                <Widget type="Button" skin="SecondaryButton" position_real="0.763441 0.857143 0.191398 0.113703" name="OkButton">
-                    <Property key="Caption" value="OK"/>
-                    <Property key="FontName" value="ButtonCaptionSmall"/>
-                    <Property key="TextAlign" value="Center"/>
-                </Widget>
-                <Widget type="Button" skin="SecondaryButton" position_real="0.546237 0.857143 0.191398 0.113703" name="CancelButton">
-                    <Property key="Caption" value="CANCEL"/>
-                    <Property key="FontName" value="ButtonCaptionSmall"/>
-                    <Property key="TextAlign" value="Center"/>
-                </Widget>
-                <Widget type="Button" skin="CheckBox" position="15 289 20 19" name="TinkerHintButton"/>
-                <Widget type="Button" skin="ButtonImage" position_real="0.0731183 0.842566 0.367742 0.0553936" name="TinkerHintTextButton">
+                <Widget type="Button" skin="CheckBox" position="240 295 20 19" name="TinkerHintButton"/>
+                <Widget type="Button" skin="ButtonImage" position_real="0.55914 0.860058 0.410753 0.0553936" name="TinkerHintTextButton">
                     <Property key="Caption" value=" Hide &quot;Edit&quot; hint"/>
                     <Property key="TextAlign" value="Left VCenter"/>
                     <Property key="FontName" value="SM_Label"/>
                 </Widget>
-                <Widget type="Button" skin="CheckBox" position_real="0.0322581 0.915452 0.0430108 0.0553936" name="AllHintsButton"/>
-                <Widget type="Button" skin="ButtonImage" position_real="0.0731183 0.915452 0.367742 0.0553936" name="AllHintsTextButton">
+                <Widget type="Button" skin="CheckBox" position_real="0.516129 0.932945 0.0430108 0.0553936" name="AllHintsButton"/>
+                <Widget type="Button" skin="ButtonImage" position_real="0.55914 0.932945 0.410753 0.0553936" name="AllHintsTextButton">
                     <Property key="TextAlign" value="Left VCenter"/>
                     <Property key="Caption" value=" Hide all text hints"/>
                     <Property key="FontName" value="SM_Label"/>
+                </Widget>
+                <Widget type="Button" skin="PrimaryButton" position_real="0.225806 -0.0145773 0.537634 0.145773" name="SelectFunctionButton">
+                    <Property key="Caption" value="SELECT FUNCTION"/>
+                    <Property key="FontName" value="ButtonCaptionSmall"/>
+                    <Property key="TextAlign" value="Center"/>
                 </Widget>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position_real="0 0.17732 1 0.0701031" name="NameText">
@@ -83,10 +78,10 @@
             </Widget>
         </Widget>
         <Widget type="Widget" skin="BeaconBottomBG" position_real="0 0.712188 1 0.276065">
-            <Widget type="EditBox" skin="EditBoxEmpty" position_real="0.14902 0.143617 0.694118 0.781915" name="DescriptionText">
+            <Widget type="EditBox" skin="EditBoxEmpty" position_real="0.14902 0.138298 0.694118 0.781915" name="DescriptionText">
                 <Property key="Static" value="true"/>
                 <Property key="Caption" value="Description..."/>
-                <Property key="FontName" value="SM_TextSmall"/>
+                <Property key="FontName" value="SM_TextTiny"/>
                 <Property key="MultiLine" value="true"/>
                 <Property key="ReadOnly" value="true"/>
                 <Property key="WordWrap" value="true"/>

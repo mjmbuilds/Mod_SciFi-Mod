@@ -2,42 +2,43 @@ dofile("ModPaths.lua")
 
 KeyboardGui = class()
 --KeyboardGui.open arguments:
---"private" is the "self" of this class
+--"_" is the "self" of this class and not used
 --"self" is the "self" from the class importing this one
 --"callback" is a function to be called when this GUI closes
 --"initialMessage" is the initial text to start with for the message
-function KeyboardGui.open( private, self, callback, initialMessage )
-	private.messageBuffer = initialMessage --current message while GUI is open
-	private.returnMessage = nil --messsage to send to the callback
+function KeyboardGui.open( _, self, callback, initialMessage )
+	if self == nil or callback == nil then return end
+	local messageBuffer = initialMessage or "" --current message while GUI is open
+	local returnMessage = nil --messsage to send to the callback
 	self.keyboard_onOkButtonClick = function( self ) --if OK clicked, set the return message
-		private.returnMessage = private.messageBuffer
+		returnMessage = messageBuffer
 		self.keyboard_gui:close()
 	end
 	self.keyboard_onCancelButtonClick = function( self ) -- if CANCEL clicked, close with no message
 		self.keyboard_gui:close()
 	end
 	self.keyboard_onGuiClose = function( self ) -- when closed, return the message (can be null)
-		callback(self, private.returnMessage)
+		callback(self, returnMessage)
 	end
 	self.keyboard_onClearButtonClick = function( self ) -- if CLEAR clicked, current message is empty string
-		private.messageBuffer = ""
-		self.keyboard_gui:setText("MessageText", "\""..private.messageBuffer.."\"")
+		messageBuffer = ""
+		self.keyboard_gui:setText("MessageText", "\""..messageBuffer.."\"")
 	end
 	self.keyboard_onDelButtonClick = function( self ) -- if DEL clicked, remove last character from current message
-		if private.messageBuffer and #private.messageBuffer > 0 then
-			private.messageBuffer = private.messageBuffer:sub(1, -2)
-			self.keyboard_gui:setText("MessageText", "\""..private.messageBuffer.."\"")
+		if messageBuffer and #messageBuffer > 0 then
+			messageBuffer = messageBuffer:sub(1, -2)
+			self.keyboard_gui:setText("MessageText", "\""..messageBuffer.."\"")
 		end
 	end
 	self.keyboard_onSpaceButtonClick = function( self ) -- is SPACE clicked, append a space to current message
-		private.messageBuffer = private.messageBuffer.." "
-		self.keyboard_gui:setText("MessageText", "\""..private.messageBuffer.."\"")
+		messageBuffer = messageBuffer.." "
+		self.keyboard_gui:setText("MessageText", "\""..messageBuffer.."\"")
 	end
 	
 	self.keyboard_onKeyButtonClick = function( self, buttonName ) -- if any other key clicked, append key's value to current message
 		local keyValue = string.sub(buttonName, 7) -- the key's value is a substring of the button name such that "Button3" has the value "3"
-		private.messageBuffer = private.messageBuffer..keyValue
-		self.keyboard_gui:setText("MessageText", "\""..private.messageBuffer.."\"")
+		messageBuffer = messageBuffer..keyValue
+		self.keyboard_gui:setText("MessageText", "\""..messageBuffer.."\"")
 	end
 	
 	-- initialize the GUI with values and callbacks

@@ -1,5 +1,6 @@
 dofile("ModPaths.lua")
 dofile("KeyboardGui.lua")
+dofile("SelectFunctionGui.lua")
 
 AdvancedButton = class()
 AdvancedButton.maxParentCount = -1
@@ -113,7 +114,10 @@ function AdvancedButton.sv_setData( self, data )
 	if data.hasBeenRenamed then
 		self.sv_data.hasBeenRenamed = true
 	end
-	self.interactable:setPublicData({name = self.sv_data.name})
+	local publicData = {}
+	publicData.name = self.sv_data.name
+	publicData.player = data.player
+	self.interactable:setPublicData(publicData)
 	if data.hideTinkerHint ~= nil then
 		self.sv_data.hideTinkerHint = data.hideTinkerHint
 	end
@@ -130,6 +134,24 @@ function AdvancedButton.sv_setData( self, data )
 		end
 	end
 	self.network:sendToClients("cl_setData", data)
+end
+
+-- function checks child connections for recognized input names
+function AdvancedButton.sv_getRecognizedInputs( self, player )
+	local data = {}
+	for _, child in pairs (self.interactable:getChildren()) do
+		if child.type == "scripted" then
+			local publicData = child:getPublicData()
+			if publicData then
+					data.inputList = publicData.inputList
+					data.partName = publicData.partName
+				break
+			end
+		end
+	end
+	-- if part of the data was nil, return nil, otherwise return data
+	if data.inputList == nil or data.partName == nil then data = nil end	
+	self.network:sendToClient(player, "cl_setRecognizedInputs", data)
 end
 
 -- ____________________________________ Client ____________________________________
@@ -215,8 +237,20 @@ end
 function AdvancedButton.client_onTinker( self, character, lookAt )
 	if lookAt then
 		self:cl_release()
-		self:cl_openMainGui()
+		-- if there's a child connection, see if it has recognized inputs before opening GUI
+		if #self.interactable:getChildren() > 0 then
+			self.network:sendToServer("sv_getRecognizedInputs", character:getPlayer())
+		else
+			self.recognizedData = nil
+			self:cl_openMainGui()
+		end
 	end
+end
+
+-- for the server to set data about child part's recognized input names
+function AdvancedButton.cl_setRecognizedInputs( self, data )
+	self.recognizedData = data
+	self:cl_openMainGui()
 end
 
 -- initialize the GUI with values and callbacks
@@ -226,9 +260,9 @@ function AdvancedButton.cl_openMainGui( self )
 	self.newHideTinkerHint = nil
 	self.newHideAllHints = nil
 	if not self.gui then self.gui = sm.gui.createGuiFromLayout(LAYOUTS_PATH..'AdvancedButton.layout') end
-	self.gui:setButtonCallback("OkButton", "cl_onOkButtonClick")
-	self.gui:setButtonCallback("CancelButton", "cl_onCancelButtonClick")
-	self.gui:setButtonCallback("NameButton", "cl_onNameButtonClick")
+	self.gui:setOnCloseCallback("cl_onGuiClose")
+	self.gui:setButtonCallback("RenameButton", "cl_onRenameButtonClick")
+	self.gui:setButtonCallback("SelectFunctionButton", "cl_onSelectFunctionButtonClick")
 	self.gui:setButtonCallback("TinkerHintButton", "cl_onTinkerHintButtonClick")
 	self.gui:setButtonCallback("TinkerHintTextButton", "cl_onTinkerHintButtonClick")
 	self.gui:setButtonCallback("AllHintsButton", "cl_onAllHintsButtonClick")
@@ -244,8 +278,9 @@ end
 function AdvancedButton.cl_drawGui( self )
 	local description = ""..
 		"\"Inverted\" button and switch default to ON position.\n"..
-		"\"Inverted\" single tick sends a tick when released.\n\n"..
-		"\"Switch Memory\" keeps the last state instead of resetting on the lift.\""
+		"\"Inverted\" single tick sends a tick when released.\n"..
+		"\"Switch Memory\" keeps the last state instead of resetting on the lift.\n\n"..
+		"Note: If a vanilla part doesn't recogniz the scripted logic output, you can use a logic gate in between."
 	self.gui:setText("DescriptionText", description)
 	local name = self.newName or self.cl_data.name
 	self.gui:setText("NameText", "\""..name.."\"")
@@ -257,15 +292,23 @@ function AdvancedButton.cl_drawGui( self )
 	for i = 1, 7 do
 		self.gui:setButtonState("ModeButton"..tostring(i), i == modeIndex)
 	end
+	if self.recognizedData then
+		self.gui:setVisible("SelectFunctionButton", true)
+		self.gui:setVisible("RenameButton", false)
+		self.gui:setText("Title", self.recognizedData.partName)
+	else
+		self.gui:setVisible("RenameButton", true)
+		self.gui:setVisible("SelectFunctionButton", false)
+		self.gui:setText("Title", "Advanced Button")
+	end
 end
 
--- when OK button clicked, close the GUI and send the server the updates if anything has changed
-function AdvancedButton.cl_onOkButtonClick( self, buttonName )
-	self.gui:close()
+-- when the GUI closes, send the server the updates if anything has changed
+function AdvancedButton.cl_onGuiClose( self, buttonName )
 	if (self.newName == nil and self.newModeIndex == nil and self.newHideTinkerHint == nil and self.newHideAllHints == nil) then return end
 	local data = {} -- members can be nil (sv_setData allows missing values)
 	if self.newName == nil then
-		if self.newModeIndex and not self.cl_data.hasBeenRenamed then
+		if self.newModeIndex and not self.cl_data.hasBeenRenamed and not self.recognizedData then
 			data.name = self.modes[self.newModeIndex]
 		end
 	else
@@ -279,32 +322,35 @@ function AdvancedButton.cl_onOkButtonClick( self, buttonName )
 	data.modeIndex = self.newModeIndex
 	data.hideTinkerHint = self.newHideTinkerHint
 	data.hideAllHints = self.newHideAllHints
+	data.player = sm.localPlayer.getPlayer()
 	self.network:sendToServer("sv_setData", data)
 end
 
--- if CANCEL button clicked, just close the GUI
-function AdvancedButton.cl_onCancelButtonClick( self, buttonName )
-	self.gui:close()
-end
-
 -- if the REANAME button clicked, open the keyboard GUI
-function AdvancedButton.cl_onNameButtonClick( self, buttonName )
+function AdvancedButton.cl_onRenameButtonClick( self, buttonName )
 	self.gui:close()
 	-- arguments for KeyboardGui:open( {self}, {callback for when keyboard GUI closes}, {intial text for keyboard's message} )
 	KeyboardGui:open( self, self.cl_onKeyboardGuiClose, self.newName or self.cl_data.name )
 end
 
--- will get called from the callback of the keyboard GUI, repoen the advanced button GUI
+-- will get called from the callback of the keyboard GUI
 function AdvancedButton.cl_onKeyboardGuiClose( self, newName )
-	self:cl_openMainGui()
 	if newName ~= nil then
 		self.newName = newName
-		self.gui:setText("NameText", "\""..newName.."\"")
+		self:cl_onGuiClose()
 	end
+end
+
+-- if the SELECT FUNCTION button clicked, open the select function GUI
+function AdvancedButton.cl_onSelectFunctionButtonClick( self, buttonName )
+	self.gui:close()
+	-- arguments for SelectFunction:open( {self}, {callback for when SelectFunction GUI closes}, {data for recognized inputs} )
+	SelectFunction:open( self, self.cl_onKeyboardGuiClose, self.recognizedData )
 end
 
 -- handle toggling the hiding of the "Edit" hint text when looking at the part
 function AdvancedButton.cl_onTinkerHintButtonClick( self, buttonName )
+	self.gui:close()
 	if self.newHideTinkerHint ~= nil then
 		self.newHideTinkerHint = not self.newHideTinkerHint
 	else
@@ -315,6 +361,7 @@ end
 
 -- handle toggling the hiding of all the text when looking at the part
 function AdvancedButton.cl_onAllHintsButtonClick( self, buttonName )
+	self.gui:close()
 	if self.newHideAllHints ~= nil then
 		self.newHideAllHints = not self.newHideAllHints
 	else
@@ -325,6 +372,7 @@ end
 
 -- handle clicking on a new mode
 function AdvancedButton.cl_onModeButtonClick( self, buttonName )
+	self.gui:close()
 	local buttonString = string.sub(buttonName, 11)
 	self.newModeIndex = tonumber(buttonString)
 	for i = 1, 7 do

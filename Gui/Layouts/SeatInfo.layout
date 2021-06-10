@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="Widget" skin="BackgroundPromptNarrow" position_real="0 0 0.269792 0.467593" name="BackPanel">
+        <Widget type="TextBox" skin="TextBox" position_real="0.1139 0.128713 0.772201 0.0594059" name="Title">
+            <Property key="Caption" value="CONNECTIONS"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="SM_HeaderLarge_Wide"/>
+        </Widget>
+        <Widget type="Widget" skin="PanelEmpty" position_real="0.210425 0.227723 0.675676 0.588119">
+            <Widget type="TextBox" skin="TextBox" position_real="0 0 0.0857143 0.0942761">
+                <Property key="Caption" value="1"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.0942761 0.0857143 0.0942761">
+                <Property key="Caption" value="2"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.195286 0.0857143 0.0942761">
+                <Property key="Caption" value="3"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.296296 0.0857143 0.0942761">
+                <Property key="Caption" value="4"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.397306 0.0857143 0.0942761">
+                <Property key="Caption" value="5"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.498316 0.0857143 0.0942761">
+                <Property key="Caption" value="6"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.599327 0.0857143 0.0942761">
+                <Property key="Caption" value="7"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.700337 0.0857143 0.0942761">
+                <Property key="Caption" value="8"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.801347 0.0857143 0.0942761">
+                <Property key="Caption" value="9"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0 0.902357 0.0857143 0.0942761">
+                <Property key="Caption" value="10"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0 0.914286 0.0942761" name="Con1">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.0942761 0.914286 0.0942761" name="Con2">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.195286 0.914286 0.0942761" name="Con3">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.296296 0.914286 0.0942761" name="Con4">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.397306 0.914286 0.0942761" name="Con5">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.498316 0.914286 0.0942761" name="Con6">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.599327 0.914286 0.0942761" name="Con7">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.700337 0.914286 0.0942761" name="Con8">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.801347 0.914286 0.0942761" name="Con9">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position_real="0.0857143 0.902357 0.914286 0.0942761" name="Con10">
+                <Property key="TextAlign" value="Left VCenter"/>
+                <Property key="FontName" value="SM_SubHeader"/>
+            </Widget>
+        </Widget>
+    </Widget>
+</MyGUI>
