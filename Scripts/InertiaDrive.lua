@@ -73,39 +73,36 @@ InertiaDrive.inputList = {
 }
 
 InertiaDrive.defaultGear = {
-	["antigravEnabled"] = true,		-- defaults on but can be toggled with a switch
-	["pitchAutoLevel"] = false,		-- defaults off and can be turned on with switch, true = always on
-	["rollAutoLevel"] = false,		-- defaults off and can be turned on with switch, true = always on
-	["powerRight"] = 500,			-- power level left/right translation (1000)
-	["powerForward"] = 500,			-- power level forward/back translation (3000)
-	["powerUp"] = 500,				-- power level up/down translation (2000)
-	["powerPitch"] = 100,			-- power level pitch rotation (450)
-	["powerRoll"] = 50,				-- power level roll rotation (250)
-	["powerYaw"] = 100,				-- power level yaw rotation (450)
-	["dragRight"] = 25,				-- drag damping left/right (400)
-	["dragForward"] = 25,			-- drag damping forward/back(100)
-	["dragUp"] = 25,				-- drag damping up/down (400)
-	["dragPitch"] = 1,				-- drag damping pitch (200)
-	["dragRoll"] = 0.25,			-- drag damping roll (100)
-	["dragYaw"] = 1,				-- drag damping yaw (200)
-	["antigravPower"] = 100,		-- 0-100%
-	["powerAutoLevelPitch"] = 50,	-- power level autolevel pitch (200)
-	["powerAutoLevelRoll"] = 5,		-- power level autolevel roll (200)
-	["powerAltitudeLock"] = 20,		-- power level altitude lock
-	["powerLocationLock"] = 20		-- power level location lock
+	antigravEnabled = true,		-- defaults on but can be toggled with a switch
+	pitchAutoLevel = false,		-- defaults off and can be turned on with switch, true = always on
+	rollAutoLevel = false,		-- defaults off and can be turned on with switch, true = always on
+	powerRight = 500,			-- power level left/right translation (1000)
+	powerForward = 500,			-- power level forward/back translation (3000)
+	powerUp = 500,				-- power level up/down translation (2000)
+	powerPitch = 100,			-- power level pitch rotation (450)
+	powerRoll = 50,				-- power level roll rotation (250)
+	powerYaw = 100,				-- power level yaw rotation (450)
+	dragRight = 25,				-- drag damping left/right (400)
+	dragForward = 25,			-- drag damping forward/back(100)
+	dragUp = 25,				-- drag damping up/down (400)
+	dragPitch = 1,				-- drag damping pitch (200)
+	dragRoll = 0.25,			-- drag damping roll (100)
+	dragYaw = 1,				-- drag damping yaw (200)
+	antigravPower = 100,		-- 0-100%
+	powerAutoLevelPitch = 50,	-- power level autolevel pitch (200)
+	powerAutoLevelRoll = 5,		-- power level autolevel roll (200)
+	powerAltitudeLock = 20,		-- power level altitude lock
+	powerLocationLock = 20		-- power level location lock
 }
 
 function InertiaDrive.server_onCreate( self )
 	self.sv_data = self.storage:load() or {}
-	self.sv_data.currentGear = self.sv_data.currentGear or 1	
-	self.sv_data.gears = self.sv_data.gears or {}
-	self.sv_data.gears[1] = self.sv_data.gears[1] or self.defaultGear
-	self.sv_data.gears[2] = self.sv_data.gears[2] or self.defaultGear
-	self.sv_data.gears[3] = self.sv_data.gears[3] or self.defaultGear
-	self.sv_data.gears[4] = self.sv_data.gears[4] or self.defaultGear
-	self.sv_data.gears[5] = self.sv_data.gears[5] or self.defaultGear
-	self.sv_data.gears[6] = self.sv_data.gears[6] or self.defaultGear
-	
+	self.sv_data.currentGear = self.sv_data.currentGear or 1
+	for g = 1, 6 do
+		for k, v in pairs(self.defaultGear) do
+			self.sv_data[k..g] = self.sv_data[k..g] or v
+		end
+	end
 	self.publicData = {}
 	self.publicData.inputList = self.inputList
 	self.publicData.partName = "Inertia Drive"
@@ -118,13 +115,9 @@ function InertiaDrive.server_onRefresh( self )
 end
 
 function InertiaDrive.sv_setData( self, data )
-	self.sv_data.currentGear = data.currentGear or self.sv_data.currentGear
-	self.sv_data.gears[1] = data.gear1 or self.sv_data.gears[1]
-	self.sv_data.gears[2] = data.gear2 or self.sv_data.gears[2]
-	self.sv_data.gears[3] = data.gear3 or self.sv_data.gears[3]
-	self.sv_data.gears[4] = data.gear4 or self.sv_data.gears[4]
-	self.sv_data.gears[5] = data.gear5 or self.sv_data.gears[5]
-	self.sv_data.gears[6] = data.gear6 or self.sv_data.gears[6]
+	for k, v in pairs(data) do
+		self.sv_data[k] = v
+	end
 	self.storage:save(self.sv_data)
 	if data.currentGear then
 		self.publicData.gear = data.currentGear
@@ -133,15 +126,7 @@ function InertiaDrive.sv_setData( self, data )
 end
 
 function InertiaDrive.sv_requestGuiData( self, player )
-	local data = {}
-	data.currentGear = self.sv_data.currentGear
-	data.gear1 = self.sv_data.gears[1]
-	data.gear2 = self.sv_data.gears[2]
-	data.gear3 = self.sv_data.gears[3]
-	data.gear4 = self.sv_data.gears[4]
-	data.gear5 = self.sv_data.gears[5]
-	data.gear6 = self.sv_data.gears[6]
-	self.network:sendToClient(player, "cl_openGui", data)
+	self.network:sendToClient(player, "cl_openGui", self.sv_data)
 end
 
 function InertiaDrive.server_onFixedUpdate( self, dt )
@@ -173,7 +158,7 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 	end
 	self.prevOnLift = isOnLift
 	
-	----- calc orientation reference if requires
+	----- calc orientation reference if required
 	local driveUp = nil
 	local driveRight = nil
 	local driveFront = nil
@@ -283,8 +268,9 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 
 	----- calc impulses if powered on
 	if inputs["POWER"] then
-		local gearData = self.sv_data.gears[self.sv_data.currentGear]
-		
+		local g = self.sv_data.currentGear
+		local d = self.sv_data
+	
 		---- adjustments related to power reset
 		local applyImpulse = true
 		if not self.prevPower then
@@ -297,32 +283,32 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		local linearInput = sm.vec3.zero()
 		local inputRight = (inputs["RIGHT"] and 1 or 0) + (inputs["LEFT"] and -1 or 0)
 		if inputRight ~= 0 then
-			linearInput = linearInput + (driveRight * inputRight * gearData.powerRight)
+			linearInput = linearInput + (driveRight * inputRight * d["powerRight"..g])
 		end
 		local inputUp = (inputs["UP"] and 1 or 0) + (inputs["DOWN"] and -1 or 0)
 		if inputUp ~= 0 then
-			linearInput = linearInput + (driveUp * inputUp * gearData.powerUp)
+			linearInput = linearInput + (driveUp * inputUp * d["powerUp"..g])
 		end
 		local inputForward = (inputs["FORWARD"] and 1 or 0) + (inputs["BACK"] and -1 or 0)
 		if inputForward ~= 0 then
-			linearInput = linearInput + (driveFront * inputForward * gearData.powerForward)
+			linearInput = linearInput + (driveFront * inputForward * d["powerForward"..g])
 		end
 		local inputRightGlobal = (inputs["RIGHT GLOBAL"] and 1 or 0) + (inputs["LEFT GLOBAL"] and -1 or 0)
 		if inputRightGlobal ~= 0 then
 			local globRight = driveRight
 			globRight.z = 0
-			linearInput = linearInput + (globRight * inputRightGlobal * gearData.powerRight)
+			linearInput = linearInput + (globRight * inputRightGlobal * d["powerRight"..g])
 		end
 		local inputUpGlobal = (inputs["UP GLOBAL"] and 1 or 0) + (inputs["DOWN GLOBAL"] and -1 or 0)
 		if inputUpGlobal ~= 0 then
 			local globUp = sm.vec3.new(0,0,1)
-			linearInput = linearInput + (globUp * inputUpGlobal * gearData.powerUp)
+			linearInput = linearInput + (globUp * inputUpGlobal * d["powerUp"..g])
 		end
 		local inputForwardGlobal = (inputs["FORWARD GLOBAL"] and 1 or 0) + (inputs["BACK GLOBAL"] and -1 or 0)
 		if inputForwardGlobal ~= 0 then
 			local globForward = driveFront
 			globForward.z = 0
-			linearInput = linearInput + (globForward * inputForwardGlobal * gearData.powerForward)
+			linearInput = linearInput + (globForward * inputForwardGlobal * d["powerForward"..g])
 		end
 		
 		----- calc rotational input
@@ -331,15 +317,15 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		local yawInput = sm.vec3.zero()
 		local inputPitch = (inputs["PITCH UP"] and 1 or 0) + (inputs["PITCH DOWN"] and -1 or 0)
 		if inputPitch ~= 0 then
-			pitchInput = ((driveUp * -1) * inputPitch * gearData.powerPitch)
+			pitchInput = ((driveUp * -1) * inputPitch * d["powerPitch"..g])
 		end
 		local inputRoll = (inputs["ROLL RIGHT"] and 1 or 0) + (inputs["ROLL LEFT"] and -1 or 0)
 		if inputRoll ~= 0 then
-			rollInput = ((driveUp * -1) * inputRoll * gearData.powerRoll)
+			rollInput = ((driveUp * -1) * inputRoll * d["powerRoll"..g])
 		end
 		local inputYaw = (inputs["YAW RIGHT"] and 1 or 0) + (inputs["YAW LEFT"] and -1 or 0)
 		if inputYaw ~= 0 then
-			yawInput = (driveRight * inputYaw * gearData.powerYaw)
+			yawInput = (driveRight * inputYaw * d["powerYaw"..g])
 		end
 		
 		----- calc mass and COM offset
@@ -366,20 +352,20 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		
 		----- calc linear drag
 		local localLinDrag = toLocal(self.shape, self.shape.velocity) * -1
-		local linDragFwd = toGlobal(self.shape, sm.vec3.new(0,localLinDrag.y,0)) * gearData.dragForward
-		local linDragRight = toGlobal(self.shape, sm.vec3.new(localLinDrag.x,0,0)) * gearData.dragRight
-		local linDragUp = toGlobal(self.shape, sm.vec3.new(0,0,localLinDrag.z)) * gearData.dragUp
+		local linDragFwd = toGlobal(self.shape, sm.vec3.new(0,localLinDrag.y,0)) * d["dragForward"..g]
+		local linDragRight = toGlobal(self.shape, sm.vec3.new(localLinDrag.x,0,0)) * d["dragRight"..g]
+		local linDragUp = toGlobal(self.shape, sm.vec3.new(0,0,localLinDrag.z)) * d["dragUp"..g]
 		
 		----- calc rotational drag
 		local localRotDrag = toLocal(self.shape, self.shape.body.angularVelocity) * -1
-		local angDragPitch = toGlobal(self.shape, sm.vec3.new(0,0,localRotDrag.x)) * gearData.dragPitch
-		local angDragRoll = toGlobal(self.shape, sm.vec3.new(0,0,(localRotDrag.y * -1))) * gearData.dragRoll
-		local angDragYaw = toGlobal(self.shape, sm.vec3.new((localRotDrag.z * -1),0,0)) * gearData.dragYaw
+		local angDragPitch = toGlobal(self.shape, sm.vec3.new(0,0,localRotDrag.x)) * d["dragPitch"..g]
+		local angDragRoll = toGlobal(self.shape, sm.vec3.new(0,0,(localRotDrag.y * -1))) * d["dragRoll"..g]
+		local angDragYaw = toGlobal(self.shape, sm.vec3.new((localRotDrag.z * -1),0,0)) * d["dragYaw"..g]
 		
 		----- calc antigrav
 		local antigrav = sm.vec3.zero()
-		if gearData.antigravEnabled then
-			local antigravStrength = sm.physics.getGravity() * mass * 1.047494 * dt * (gearData.antigravPower/100)
+		if d["antigravEnabled"..g] then
+			local antigravStrength = sm.physics.getGravity() * mass * 1.047494 * dt * (d["antigravPower"..g]/100)
 			antigrav = sm.vec3.new(0,0,antigravStrength)
 		end
 
@@ -404,10 +390,10 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 			inputs["AUTOLEVEL ROLL"] = true
 		end
 		if inputs["AUTOLEVEL PITCH"] then
-			pitchLeveling = driveUp * (backLoc.z - frontLoc.z)* gearData.powerAutoLevelPitch
+			pitchLeveling = driveUp * (backLoc.z - frontLoc.z)* d["powerAutoLevelPitch"..g]
 		end
 		if inputs["AUTOLEVEL ROLL"] then
-			rollLeveling = driveUp * (leftLoc.z - rightLoc.z)* gearData.powerAutoLevelRoll
+			rollLeveling = driveUp * (leftLoc.z - rightLoc.z)* d["powerAutoLevelRoll"..g]
 		end
 		
 		----- calc altitude lock
@@ -417,9 +403,9 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 				self.hoverAltitude = self.shape.worldPosition.z
 			end
 			if self.shape.worldPosition.z < self.hoverAltitude - self.altitudeHoldMargin then
-				altitudeVec = altitudeVec + sm.vec3.new(0,0,gearData.powerAltitudeLock)
+				altitudeVec = altitudeVec + sm.vec3.new(0,0,d["powerAltitudeLock"..g])
 			elseif self.shape.worldPosition.z > self.hoverAltitude + self.altitudeHoldMargin then
-				altitudeVec = altitudeVec + sm.vec3.new(0,0,gearData.powerAltitudeLock * -1)
+				altitudeVec = altitudeVec + sm.vec3.new(0,0,d["powerAltitudeLock"..g] * -1)
 			end
 		end
 		self.prevAltitudeLock = inputs["ALTITUDE LOCK"]
@@ -432,14 +418,14 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 				self.lockLocationY = self.shape.worldPosition.y
 			end
 			if self.shape.worldPosition.x < self.lockLocationX - self.locationHoldMargin then
-				locationVec = locationVec + sm.vec3.new(gearData.powerLocationLock,0,0)
+				locationVec = locationVec + sm.vec3.new(d["powerLocationLock"..g],0,0)
 			elseif self.shape.worldPosition.x > self.lockLocationX + self.locationHoldMargin then
-				locationVec = locationVec + sm.vec3.new(gearData.powerLocationLock * -1,0,0)
+				locationVec = locationVec + sm.vec3.new(d["powerLocationLock"..g] * -1,0,0)
 			end
 			if self.shape.worldPosition.y < self.lockLocationY - self.locationHoldMargin then
-				locationVec = locationVec + sm.vec3.new(0,gearData.powerLocationLock,0)
+				locationVec = locationVec + sm.vec3.new(0,d["powerLocationLock"..g],0)
 			elseif self.shape.worldPosition.y > self.lockLocationY + self.locationHoldMargin then
-				locationVec = locationVec + sm.vec3.new(0,gearData.powerLocationLock * -1,0)
+				locationVec = locationVec + sm.vec3.new(0,d["powerLocationLock"..g] * -1,0)
 			end
 		end
 		self.prevLocationLock = inputs["LOCATION LOCK"]
@@ -569,12 +555,12 @@ end
 
 -- when gui is opened, set up callbacks
 function InertiaDrive.cl_openGui( self, data )
-	self.cl_guiData = data
+	if data then self.cl_guiData = data end
 	if not self.gui then self.gui = sm.gui.createGuiFromLayout(LAYOUTS_PATH..'InertiaDrive.layout') end
 	self.gui:setOnCloseCallback("cl_onGuiClose")
 	for g = 1, 6 do
 		self.gui:setButtonCallback("Gear"..g, "cl_onGuiButtonClick")
-		for k,v in pairs(data["gear"..g]) do
+		for k, v in pairs(self.defaultGear) do
 			self.gui:setButtonCallback(k..g, "cl_onGuiButtonClick")
 		end
 	end
@@ -584,50 +570,59 @@ end
 
 -- updates the GUI text and button states
 function InertiaDrive.cl_drawGui( self )
-	local data = self.cl_guiData
 	for g = 1, 6 do
-		self.gui:setButtonState("Gear"..g, data.currentGear == g)
-		for k,v in pairs(data["gear"..g]) do
+		self.gui:setButtonState("Gear"..g, self.cl_guiData.currentGear == tostring(g))
+		for k, v in pairs(self.defaultGear) do
 			if k == "antigravEnabled" or k == "pitchAutoLevel" or k == "rollAutoLevel" then
-				self.gui:setText(k..g, data["gear"..g][k] and "ON" or "OFF")
+				self.gui:setText(k..g, self.cl_guiData[k..g] and "ON" or "OFF")
 			else
-				self.gui:setText(k..g, ""..data["gear"..g][k])
+				self.gui:setText(k..g, ""..self.cl_guiData[k..g])
 			end
 		end
 	end
 end
 
--- when GUI buttons are clicked
-function InertiaDrive.cl_onGuiButtonClick( self, buttonName )
-	
-	print(buttonName:sub(1, -1))
-	--print("CLICK")
-	
-end
-
 -- when the GUI closes, send the server the updates if anything has changed
 function InertiaDrive.cl_onGuiClose( self )
-	--local data = nil
-	--TODO: send updates to server if anything changed
-	
-	print("GUI closed")
-	
-	--if self.data then
-	--	self.network:sendToServer("sv_setData", data)
-	--end
+	if self.cl_newGuiData then
+		self.network:sendToServer("sv_setData", self.cl_newGuiData)
+	end
+	self.cl_newGuiData = nil
 end
 
+-- when GUI buttons are clicked
+function InertiaDrive.cl_onGuiButtonClick( self, buttonName )
+	local name = buttonName:sub(1, -2)
+	local g = buttonName:sub(-1)
+	if name == "Gear" then
+		if not self.cl_newGuiData then self.cl_newGuiData = {} end
+		self.cl_newGuiData.currentGear = g
+		self.cl_guiData.currentGear = g
+		self:cl_drawGui()
+	elseif name == "antigravEnabled" or name == "pitchAutoLevel" or name == "rollAutoLevel" then
+		if not self.cl_newGuiData then self.cl_newGuiData = {} end
+		local newState = not self.cl_guiData[buttonName]
+		self.cl_newGuiData[buttonName] = newState
+		self.cl_guiData[buttonName] = newState
+		self.gui:setText(buttonName, newState and "ON" or "OFF")
+	else
+		local currentValue = self.cl_guiData[buttonName]
+		self.gui:close()
+		self:cl_openPowerInputGui(buttonName, currentValue)
+	end
 
+end 
 
+-- number pad gui for editing values
+function InertiaDrive.cl_openPowerInputGui( self, buttonName, currentValue )
+	local name = buttonName:sub(1, -2)
+	local g = buttonName:sub(-1)
+	print("---open---")
+	print(name)
+	print(g)
+	print(currentValue)
 
-
-
-
-
-
-
-
-
+end
 
 
 
