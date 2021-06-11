@@ -73,8 +73,7 @@ InertiaDrive.inputList = {
 }
 
 InertiaDrive.defaultGear = {
-	["antigravDisabled"] = false,	-- if not disabled, antigrav defaults on but can be toggled by attaching a switch
-	["antigravPower"] = 100,		-- 0-100%
+	["antigravEnabled"] = true,		-- defaults on but can be toggled with a switch
 	["pitchAutoLevel"] = false,		-- defaults off and can be turned on with switch, true = always on
 	["rollAutoLevel"] = false,		-- defaults off and can be turned on with switch, true = always on
 	["powerRight"] = 500,			-- power level left/right translation (1000)
@@ -89,6 +88,7 @@ InertiaDrive.defaultGear = {
 	["dragPitch"] = 1,				-- drag damping pitch (200)
 	["dragRoll"] = 0.25,			-- drag damping roll (100)
 	["dragYaw"] = 1,				-- drag damping yaw (200)
+	["antigravPower"] = 100,		-- 0-100%
 	["powerAutoLevelPitch"] = 50,	-- power level autolevel pitch (200)
 	["powerAutoLevelRoll"] = 5,		-- power level autolevel roll (200)
 	["powerAltitudeLock"] = 20,		-- power level altitude lock
@@ -378,7 +378,7 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		
 		----- calc antigrav
 		local antigrav = sm.vec3.zero()
-		if not gearData.antigravDisabled then
+		if gearData.antigravEnabled then
 			local antigravStrength = sm.physics.getGravity() * mass * 1.047494 * dt * (gearData.antigravPower/100)
 			antigrav = sm.vec3.new(0,0,antigravStrength)
 		end
