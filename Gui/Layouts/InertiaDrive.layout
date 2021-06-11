@@ -132,124 +132,124 @@
             </Widget>
         </Widget>
         <Widget type="Widget" skin="PanelEmpty" position="245 45 120 640" name="Gear1Panel">
-            <Widget type="Button" skin="InventoryTab" position="0 5 117 25">
+            <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="Gear1">
                 <Property key="Caption" value="GEAR 1"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="Antigrav1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="antigravEnabled1">
                 <Property key="Caption" value="ON"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="AutolevelPitch1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="pitchAutoLevel1">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="AutolevelRoll1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="rollAutoLevel1">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="PowerRight1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="powerRight1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="PowerForward1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="powerForward1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="PowerUp1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="powerUp1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="PowerPitch1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="powerPitch1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="PowerRoll1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="powerRoll1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="PowerYaw1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="powerYaw1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="DampingRight1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="dragRight1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="DampingForward1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="dragForward1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="DampingUp1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="dragUp1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="DampingPitch1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="dragPitch1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="DampingRoll1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="dragRoll1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="DampingYaw1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="dragYaw1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="PowerAntigrav1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="antigravPower1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="PowerAutolevelPitch1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="powerAutoLevelPitch1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="PowerAutolevelRoll1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="powerAutoLevelRoll1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="PowerAltitudeLock1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="powerAltitudeLock1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="PowerLocationLock1">
+            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="powerLocationLock1">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
@@ -257,124 +257,124 @@
             </Widget>
         </Widget>
         <Widget type="Widget" skin="PanelEmpty" position="365 45 120 640" name="Gear2Panel">
-            <Widget type="Button" skin="InventoryTab" position="0 5 117 25">
+            <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="Gear2">
                 <Property key="Caption" value="GEAR 2"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="Antigrav2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="antigravEnabled2">
                 <Property key="Caption" value="ON"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="AutolevelPitch2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="pitchAutoLevel2">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="AutolevelRoll2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="rollAutoLevel2">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="PowerRight2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="powerRight2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="PowerForward2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="powerForward2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="PowerUp2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="powerUp2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="PowerPitch2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="powerPitch2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="PowerRoll2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="powerRoll2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="PowerYaw2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="powerYaw2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="DampingRight2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="dragRight2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="DampingForward2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="dragForward2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="DampingUp2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="dragUp2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="DampingPitch2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="dragPitch2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="DampingRoll2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="dragRoll2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="DampingYaw2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="dragYaw2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="PowerAntigrav2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="antigravPower2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="PowerAutolevelPitch2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="powerAutoLevelPitch2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="PowerAutolevelRoll2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="powerAutoLevelRoll2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="PowerAltitudeLock2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="powerAltitudeLock2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="PowerLocationLock2">
+            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="powerLocationLock2">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
@@ -382,124 +382,124 @@
             </Widget>
         </Widget>
         <Widget type="Widget" skin="PanelEmpty" position="485 45 120 640" name="Gear3Panel">
-            <Widget type="Button" skin="InventoryTab" position="0 5 117 25">
+            <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="Gear3">
                 <Property key="Caption" value="GEAR 3"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="Antigrav3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="antigravEnabled3">
                 <Property key="Caption" value="ON"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="AutolevelPitch3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="pitchAutoLevel3">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="AutolevelRoll3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="rollAutoLevel3">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="PowerRight3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="powerRight3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="PowerForward3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="powerForward3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="PowerUp3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="powerUp3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="PowerPitch3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="powerPitch3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="PowerRoll3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="powerRoll3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="PowerYaw3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="powerYaw3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="DampingRight3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="dragRight3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="DampingForward3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="dragForward3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="DampingUp3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="dragUp3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="DampingPitch3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="dragPitch3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="DampingRoll3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="dragRoll3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="DampingYaw3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="dragYaw3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="PowerAntigrav3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="antigravPower3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="PowerAutolevelPitch3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="powerAutoLevelPitch3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="PowerAutolevelRoll3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="powerAutoLevelRoll3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="PowerAltitudeLock3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="powerAltitudeLock3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="PowerLocationLock3">
+            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="powerLocationLock3">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
@@ -507,124 +507,124 @@
             </Widget>
         </Widget>
         <Widget type="Widget" skin="PanelEmpty" position="605 45 120 640" name="Gear4Panel">
-            <Widget type="Button" skin="InventoryTab" position="0 5 117 25">
+            <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="Gear4">
                 <Property key="Caption" value="GEAR 4"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="Antigrav4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="antigravEnabled4">
                 <Property key="Caption" value="ON"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="AutolevelPitch4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="pitchAutoLevel4">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="AutolevelRoll4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="rollAutoLevel4">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="PowerRight4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="powerRight4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="PowerForward4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="powerForward4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="PowerUp4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="powerUp4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="PowerPitch4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="powerPitch4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="PowerRoll4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="powerRoll4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="PowerYaw4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="powerYaw4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="DampingRight4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="dragRight4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="DampingForward4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="dragForward4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="DampingUp4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="dragUp4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="DampingPitch4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="dragPitch4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="DampingRoll4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="dragRoll4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="DampingYaw4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="dragYaw4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="PowerAntigrav4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="antigravPower4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="PowerAutolevelPitch4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="powerAutoLevelPitch4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="PowerAutolevelRoll4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="powerAutoLevelRoll4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="PowerAltitudeLock4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="powerAltitudeLock4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="PowerLocationLock4">
+            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="powerLocationLock4">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
@@ -632,124 +632,124 @@
             </Widget>
         </Widget>
         <Widget type="Widget" skin="PanelEmpty" position="725 45 120 640" name="Gear5Panel">
-            <Widget type="Button" skin="InventoryTab" position="0 5 117 25">
+            <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="Gear5">
                 <Property key="Caption" value="GEAR 5"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="Antigrav5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 30 120 30" name="antigravEnabled5">
                 <Property key="Caption" value="ON"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="AutolevelPitch5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 60 120 30" name="pitchAutoLevel5">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="AutolevelRoll5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 90 120 30" name="rollAutoLevel5">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="PowerRight5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 120 120 30" name="powerRight5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="PowerForward5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 150 120 30" name="powerForward5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="PowerUp5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 180 120 30" name="powerUp5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="PowerPitch5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 210 120 30" name="powerPitch5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="PowerRoll5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 240 120 30" name="powerRoll5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="PowerYaw5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 270 120 30" name="powerYaw5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="DampingRight5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 300 120 30" name="dragRight5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="DampingForward5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 330 120 30" name="dragForward5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="DampingUp5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 360 120 30" name="dragUp5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="DampingPitch5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 390 120 30" name="dragPitch5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="DampingRoll5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 420 120 30" name="dragRoll5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="DampingYaw5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 450 120 30" name="dragYaw5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="PowerAntigrav5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 480 120 30" name="antigravPower5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="PowerAutolevelPitch5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 510 120 30" name="powerAutoLevelPitch5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="PowerAutolevelRoll5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 540 120 30" name="powerAutoLevelRoll5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="PowerAltitudeLock5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 570 120 30" name="powerAltitudeLock5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="PowerLocationLock5">
+            <Widget type="Button" skin="SMButtonCenter" position="0 600 120 30" name="powerLocationLock5">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
@@ -757,124 +757,124 @@
             </Widget>
         </Widget>
         <Widget type="Widget" skin="PanelEmpty" position="845 45 120 640" name="Gear6Panel">
-            <Widget type="Button" skin="InventoryTab" position="0 5 117 25">
+            <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="Gear6">
                 <Property key="Caption" value="GEAR 6"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 30 120 30" name="Antigrav6">
+            <Widget type="Button" skin="SMButtonRight" position="0 30 120 30" name="antigravEnabled6">
                 <Property key="Caption" value="ON"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 60 120 30" name="AutolevelPitch6">
+            <Widget type="Button" skin="SMButtonRight" position="0 60 120 30" name="pitchAutoLevel6">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 90 120 30" name="AutolevelRoll6">
+            <Widget type="Button" skin="SMButtonRight" position="0 90 120 30" name="rollAutoLevel6">
                 <Property key="Caption" value="OFF"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 120 120 30" name="PowerRight6">
+            <Widget type="Button" skin="SMButtonRight" position="0 120 120 30" name="powerRight6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 150 120 30" name="PowerForward6">
+            <Widget type="Button" skin="SMButtonRight" position="0 150 120 30" name="powerForward6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 180 120 30" name="PowerUp6">
+            <Widget type="Button" skin="SMButtonRight" position="0 180 120 30" name="powerUp6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 210 120 30" name="PowerPitch6">
+            <Widget type="Button" skin="SMButtonRight" position="0 210 120 30" name="powerPitch6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 240 120 30" name="PowerRoll6">
+            <Widget type="Button" skin="SMButtonRight" position="0 240 120 30" name="powerRoll6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 270 120 30" name="PowerYaw6">
+            <Widget type="Button" skin="SMButtonRight" position="0 270 120 30" name="powerYaw6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 300 120 30" name="DampingRight6">
+            <Widget type="Button" skin="SMButtonRight" position="0 300 120 30" name="dragRight6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 330 120 30" name="DampingForward6">
+            <Widget type="Button" skin="SMButtonRight" position="0 330 120 30" name="dragForward6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 360 120 30" name="DampingUp6">
+            <Widget type="Button" skin="SMButtonRight" position="0 360 120 30" name="dragUp6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 390 120 30" name="DampingPitch6">
+            <Widget type="Button" skin="SMButtonRight" position="0 390 120 30" name="dragPitch6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 420 120 30" name="DampingRoll6">
+            <Widget type="Button" skin="SMButtonRight" position="0 420 120 30" name="dragRoll6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 450 120 30" name="DampingYaw6">
+            <Widget type="Button" skin="SMButtonRight" position="0 450 120 30" name="dragYaw6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="1 1 0.4"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 480 120 30" name="PowerAntigrav6">
+            <Widget type="Button" skin="SMButtonRight" position="0 480 120 30" name="antigravPower6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 510 120 30" name="PowerAutolevelPitch6">
+            <Widget type="Button" skin="SMButtonRight" position="0 510 120 30" name="powerAutoLevelPitch6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 540 120 30" name="PowerAutolevelRoll6">
+            <Widget type="Button" skin="SMButtonRight" position="0 540 120 30" name="powerAutoLevelRoll6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 570 120 30" name="PowerAltitudeLock6">
+            <Widget type="Button" skin="SMButtonRight" position="0 570 120 30" name="powerAltitudeLock6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SMButtonRight" position="0 600 120 30" name="PowerLocationLock6">
+            <Widget type="Button" skin="SMButtonRight" position="0 600 120 30" name="powerLocationLock6">
                 <Property key="Caption" value="0000"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
                 <Property key="TextAlign" value="Center"/>

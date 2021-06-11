@@ -568,49 +568,31 @@ function InertiaDrive.client_onInteract( self, character, lookAt )
 end
 
 function InertiaDrive.cl_openGui( self, data )
+	self.cl_guiData = data
 	if not self.gui then self.gui = sm.gui.createGuiFromLayout(LAYOUTS_PATH..'InertiaDrive.layout') end
 	self.gui:setOnCloseCallback("cl_onGuiClose")
 	
 	--TODO: set button callbacks
 	--self.gui:setButtonCallback("RenameButton", "cl_onRenameButtonClick")
-
-	self:cl_drawGui(data)	
+	--print(k:sub(1, -1))
+	
+	self:cl_drawGui()	
 	self.gui:open()
 end
 
 -- updates the GUI text and button states
-function InertiaDrive.cl_drawGui( self, data )
-
-	print("Drawing GUI")
-	self.gui:setText("testButton", "Hello World")
-	--TODO: set GUI current state
-
-	--[[
-	local description = ""..
-		"\"Inverted\" button and switch default to ON position.\n"..
-		"\"Inverted\" single tick sends a tick when released.\n\n"..
-		"\"Switch Memory\" keeps the last state instead of resetting on the lift.\""
-	self.gui:setText("DescriptionText", description)
-	local name = self.newName or self.cl_data.name
-	self.gui:setText("NameText", "\""..name.."\"")
-	local hideTinkerHint = self.newHideTinkerHint or self.cl_data.hideTinkerHint
-	self.gui:setButtonState("TinkerHintButton", hideTinkerHint)
-	local hideAllHints = self.newHideAllHints or self.cl_data.hideAllHints
-	self.gui:setButtonState("AllHintsButton", hideAllHints)
-	local modeIndex = self.newModeIndex or self.cl_data.modeIndex
-	for i = 1, 7 do
-		self.gui:setButtonState("ModeButton"..tostring(i), i == modeIndex)
+function InertiaDrive.cl_drawGui( self )
+	local data = self.cl_guiData
+	for g = 1, 6 do
+		self.gui:setButtonState("Gear"..g, data.currentGear == g)
+		for k,v in pairs(data["gear"..g]) do
+			if k == "antigravEnabled" or k == "pitchAutoLevel" or k == "rollAutoLevel" then
+				self.gui:setText(k..g, data["gear"..g][k] and "ON" or "OFF")
+			else
+				self.gui:setText(k..g, ""..data["gear"..g][k])
+			end
+		end
 	end
-	if self.recognizedData then
-		self.gui:setVisible("SelectFunctionButton", true)
-		self.gui:setVisible("RenameButton", false)
-		self.gui:setText("Title", self.recognizedData.partName)
-	else
-		self.gui:setVisible("RenameButton", true)
-		self.gui:setVisible("SelectFunctionButton", false)
-		self.gui:setText("Title", "Advanced Button")
-	end
-	--]]
 end
 
 -- when the GUI closes, send the server the updates if anything has changed
