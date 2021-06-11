@@ -567,15 +567,17 @@ function InertiaDrive.client_onInteract( self, character, lookAt )
 	end
 end
 
+-- when gui is opened, set up callbacks
 function InertiaDrive.cl_openGui( self, data )
 	self.cl_guiData = data
 	if not self.gui then self.gui = sm.gui.createGuiFromLayout(LAYOUTS_PATH..'InertiaDrive.layout') end
 	self.gui:setOnCloseCallback("cl_onGuiClose")
-	
-	--TODO: set button callbacks
-	--self.gui:setButtonCallback("RenameButton", "cl_onRenameButtonClick")
-	--print(k:sub(1, -1))
-	
+	for g = 1, 6 do
+		self.gui:setButtonCallback("Gear"..g, "cl_onGuiButtonClick")
+		for k,v in pairs(data["gear"..g]) do
+			self.gui:setButtonCallback(k..g, "cl_onGuiButtonClick")
+		end
+	end
 	self:cl_drawGui()	
 	self.gui:open()
 end
@@ -595,21 +597,25 @@ function InertiaDrive.cl_drawGui( self )
 	end
 end
 
+-- when GUI buttons are clicked
+function InertiaDrive.cl_onGuiButtonClick( self, buttonName )
+	
+	print(buttonName:sub(1, -1))
+	--print("CLICK")
+	
+end
+
 -- when the GUI closes, send the server the updates if anything has changed
-function InertiaDrive.cl_onGuiClose( self, buttonName )
-	local data = nil
+function InertiaDrive.cl_onGuiClose( self )
+	--local data = nil
 	--TODO: send updates to server if anything changed
 	
 	print("GUI closed")
 	
-	if data then
-		self.network:sendToServer("sv_setData", data)
-	end
+	--if self.data then
+	--	self.network:sendToServer("sv_setData", data)
+	--end
 end
-
-
-
-
 
 
 
