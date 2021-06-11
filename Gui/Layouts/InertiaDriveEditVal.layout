@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout" version="3.2.0">
+    <Widget type="MenuBar" skin="BackgroundPopup" position_real="0 0 0.197917 0.494444" name="BackPanel"/>
+    <Widget type="Widget" skin="PanelEmpty" position="0 0 380 505">
+        <Widget type="TextBox" skin="SMTextBox" position="180 91 110 39" name="NewVal">
+            <Property key="Caption" value="000.000"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="TextColour" value="0 0 0"/>
+            <Property key="FontName" value="SM_Text"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="225 430 85 75" name="Button.">
+            <Property key="Caption" value="."/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="45 190 85 75" name="Button1">
+            <Property key="Caption" value="1"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="135 190 85 75" name="Button2">
+            <Property key="Caption" value="2"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="225 190 85 75" name="Button3">
+            <Property key="Caption" value="3"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="45 270 85 75" name="Button4">
+            <Property key="Caption" value="4"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="135 270 85 75" name="Button5">
+            <Property key="Caption" value="5"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="225 270 85 75" name="Button6">
+            <Property key="Caption" value="6"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="45 350 85 75" name="Button7">
+            <Property key="Caption" value="7"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="135 350 85 75" name="Button8">
+            <Property key="Caption" value="8"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="225 350 85 75" name="Button9">
+            <Property key="Caption" value="9"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="45 430 175 75" name="Button0">
+            <Property key="Caption" value="0"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="180 140 130 45" name="Ok">
+            <Property key="Caption" value="OK"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+            <Property key="TextColour" value="0 1 0"/>
+        </Widget>
+        <Widget type="Button" skin="SecondaryButton" position="45 140 130 45" name="Clear">
+            <Property key="Caption" value="CL"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+            <Property key="TextColour" value="1 0 0"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position="70 10 25 40" name="Gear">
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="Caption" value="0"/>
+            <Property key="FontName" value="SM_Header"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position="95 10 270 40" name="Name">
+            <Property key="Caption" value="SETTINGS NAME"/>
+            <Property key="TextAlign" value="Center"/>
+            <Property key="FontName" value="SM_SubHeader"/>
+        </Widget>
+        <Widget type="TextBox" skin="SMTextBox" position="180 51 110 39" name="CurrentVal">
+            <Property key="Caption" value="000.000"/>
+            <Property key="TextAlign" value="Left VCenter"/>
+            <Property key="FontName" value="SM_Text"/>
+            <Property key="TextColour" value="0 0 0"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position="0 10 70 40">
+            <Property key="Caption" value="GEAR: "/>
+            <Property key="TextAlign" value="Right VCenter"/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position="0 50 180 40">
+            <Property key="TextAlign" value="Right VCenter"/>
+            <Property key="Caption" value="OLD VALUE: "/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+        </Widget>
+        <Widget type="TextBox" skin="TextBox" position="0 90 180 40">
+            <Property key="TextAlign" value="Right VCenter"/>
+            <Property key="Caption" value="NEW VALUE: "/>
+            <Property key="FontName" value="ButtonCaptionSmall"/>
+            <Property key="TextColour" value="0 1 0"/>
+        </Widget>
+    </Widget>
+</MyGUI>
