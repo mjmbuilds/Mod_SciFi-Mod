@@ -37,8 +37,8 @@
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.307018 0.230626 0.0684211" name="NEXT GEAR">
-            <Property key="Caption" value="NEXT GEAR"/>
+        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.307018 0.230626 0.0684211" name="NEXT MODE">
+            <Property key="Caption" value="NEXT MODE"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
@@ -57,43 +57,43 @@
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.385965 0.230626 0.0684211" name="PREV GEAR">
-            <Property key="Caption" value="PREV GEAR"/>
+        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.385965 0.230626 0.0684211" name="PREV MODE">
+            <Property key="Caption" value="PREV MODE"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.463158 0.230626 0.0684211" name="GEAR 1">
-            <Property key="Caption" value="GEAR 1"/>
+        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.463158 0.230626 0.0684211" name="MODE 1">
+            <Property key="Caption" value="MODE 1"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.262372 0.701754 0.230626 0.0684211" name="FORWARD GLOBAL">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.262372 0.698246 0.230626 0.0684211" name="FORWARD GLOBAL">
             <Property key="Caption" value="FORWARD GLOBAL"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.340351 0.230626 0.0684211" name="AUTOLEVEL">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.377193 0.230626 0.0684211" name="AUTOLEVEL">
             <Property key="Caption" value="AUTOLEVEL"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.54386 0.230626 0.0684211" name="GEAR 2">
-            <Property key="Caption" value="GEAR 2"/>
+        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.54386 0.230626 0.0684211" name="MODE 2">
+            <Property key="Caption" value="MODE 2"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.497666 0.701754 0.230626 0.0684211" name="BACK GLOBAL">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.497666 0.698246 0.230626 0.0684211" name="BACK GLOBAL">
             <Property key="Caption" value="BACK GLOBAL"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.421053 0.230626 0.0684211" name="AUTOLEVEL ROLL">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.45614 0.230626 0.0684211" name="AUTOLEVEL ROLL">
             <Property key="Caption" value="AUTOLEVEL ROLL"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.622807 0.230626 0.0684211" name="GEAR 3">
-            <Property key="Caption" value="GEAR 3"/>
+        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.622807 0.230626 0.0684211" name="MODE 3">
+            <Property key="Caption" value="MODE 3"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
@@ -107,13 +107,13 @@
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.5 0.230626 0.0684211" name="AUTOLEVEL PITCH">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.535088 0.230626 0.0684211" name="AUTOLEVEL PITCH">
             <Property key="Caption" value="AUTOLEVEL PITCH"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.698246 0.230626 0.0684211" name="GEAR 4">
-            <Property key="Caption" value="GEAR 4"/>
+        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.698246 0.230626 0.0684211" name="MODE 4">
+            <Property key="Caption" value="MODE 4"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
@@ -127,13 +127,14 @@
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.859649 0.230626 0.0684211" name="EMERGENCY LIFT">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.859649 0.230626 0.0666667" name="EMERGENCY LIFT">
             <Property key="Caption" value="EMERGENCY LIFT"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
+            <Property key="TextColour" value="1 0 0"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.780702 0.230626 0.0684211" name="GEAR 5">
-            <Property key="Caption" value="GEAR 5"/>
+        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.780702 0.230626 0.0684211" name="MODE 5">
+            <Property key="Caption" value="MODE 5"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
@@ -142,18 +143,18 @@
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.262372 0.859649 0.230626 0.0684211" name="UP GLOBAL">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.262372 0.857895 0.230626 0.0684211" name="UP GLOBAL">
             <Property key="Caption" value="UP GLOBAL"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.577193 0.230626 0.0684211" name="ALTITUDE LOCK">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.614035 0.230626 0.0684211" name="ALTITUDE LOCK">
             <Property key="Caption" value="ALTITUDE LOCK"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.859649 0.230626 0.0684211" name="GEAR 6">
-            <Property key="Caption" value="GEAR 6"/>
+        <Widget type="Button" skin="SecondaryButton" position_real="0.000933707 0.857895 0.230626 0.0684211" name="MODE 6">
+            <Property key="Caption" value="MODE 6"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
@@ -162,12 +163,12 @@
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.497666 0.859649 0.230626 0.0684211" name="DOWN GLOBAL">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.497666 0.857895 0.230626 0.0684211" name="DOWN GLOBAL">
             <Property key="Caption" value="DOWN GLOBAL"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.657895 0.230626 0.0684211" name="LOCATION LOCK">
+        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.692982 0.230626 0.0684211" name="LOCATION LOCK">
             <Property key="Caption" value="LOCATION LOCK"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
@@ -179,11 +180,6 @@
         </Widget>
         <Widget type="Button" skin="SecondaryButton" position_real="0.497666 0.577193 0.230626 0.0684211" name="DOWN">
             <Property key="Caption" value="DOWN"/>
-            <Property key="FontName" value="ButtonCaptionSmall"/>
-            <Property key="TextAlign" value="Center"/>
-        </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.759104 0.780702 0.230626 0.0666667" name="LANDING LIFT">
-            <Property key="Caption" value="LANDING LIFT"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>

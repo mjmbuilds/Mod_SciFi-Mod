@@ -1,0 +1,43 @@
+{"partList" : [
+
+//--------------------------------------------------------------- Auto Lift
+{
+	"uuid": "449e32a6-d720-4af0-8423-3246ce9771a2",
+	"name": "mjm_auto_lift",
+	"renderable": {"lodList": [{
+		"subMeshMap": {
+			"crate_mat": {"textureList": [
+				"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_treecrate_dif.tga",
+				"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_treecrate_asg.tga",
+				"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_treecrate_nor.tga"],
+				"material": "PoseAnimDifAsgNor"},
+			"lift_mat": {"textureList": [
+				"$GAME_DATA/Character/Char_Tools/Char_lift/char_lift_dif.tga",
+				"$GAME_DATA/Character/Char_Tools/Char_lift/char_lift_asg.tga",
+				"$GAME_DATA/Character/Char_Tools/Char_lift/char_lift_nor.tga"],
+				"material": "PoseAnimDifAsgNor"}
+		},
+		"mesh": "$MOD_DATA/Objects/Mesh/AutoLift_off.fbx",
+		"pose0": "$MOD_DATA/Objects/Mesh/AutoLift_on.fbx"
+		}]},
+	"box": { "x": 3, "y": 3, "z": 2 },
+	"sticky": "-Z",
+	"rotationSet": "PropZ",
+	"scripted": {
+		"filename": "$MOD_DATA/Scripts/AutoLift.lua",
+		"classname": "AutoLift"
+		},
+	"physicsMaterial": "Mechanical",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
+	"stackSize": 1
+}
+
+//---------------------------------------------------------------- END
+]}

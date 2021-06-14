@@ -1,7 +1,7 @@
 -- SeatReExiter.lua --
 SeatReExiter = class()
 SeatReExiter.maxChildCount = 1
-SeatReExiter.maxParentCount = 1
+SeatReExiter.maxParentCount = -1
 SeatReExiter.connectionInput = sm.interactable.connectionType.power
 SeatReExiter.connectionOutput = sm.interactable.connectionType.power
 SeatReExiter.colorNormal = sm.color.new( 0x00ff80ff )
