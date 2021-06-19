@@ -104,7 +104,7 @@ InertiaDrive.defaultMode = {
 	["DAMPING YAW"] = 500,			-- drag damping yaw
 	["POWER ANTIGRAV"] = 100,		-- 0-100%
 	["POWER AUTOLEVEL PITCH"] = 1000,-- power level autolevel pitch
-	["POWER AUTOLEVEL ROLL"] = 5,	-- power level autolevel roll
+	["POWER AUTOLEVEL ROLL"] = 500,	-- power level autolevel roll
 	["POWER ALTITUDE LOCK"] = 500,	-- power level altitude lock
 	["POWER LOCATION LOCK"] = 500	-- power level location lock
 }

@@ -5,13 +5,17 @@
 	"uuid": "9d21b8f6-71ba-4484-b725-1a96a9cf25ea",
 	"name": "mjm_orientation_module",
 	"renderable": {"lodList": [{
-		"subMeshList": [
-			{"textureList": [
-			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
-			"material": "DifAsg"}
-		],
-		"mesh": "$MOD_DATA/Objects/Mesh/OrientationBlock.fbx"
+		"subMeshMap": {
+			"mjm_mat": {"textureList": [
+				"$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Objects/Textures/mjm_pallet1_dif.tga",
+				"$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Objects/Textures/mjm_pallet1_asg.tga"],
+				"material": "DifAsg"},
+			"invisible_mat": {"textureList": [
+				"$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Objects/Textures/invisible.tga",
+				"$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Objects/Textures/invisible.tga"],
+				"material": "DifAsgAlphaFlip"}
+		},
+		"mesh": "$MOD_DATA/Objects/Mesh/OrientationModule.fbx"
 		}]},
 	"scripted" : {
 		"filename": "$MOD_DATA/Scripts/OrientationModule.lua",
@@ -27,7 +31,8 @@
 		"buoyancy": 2
 		},
 	"flammable": false,
-	"stackSize": 1
+	"stackSize": 1,
+	"previewRotation": [ -1, 0, 0, 0, -1, 0, 0, 0, 1 ]
 },
 //---------------------------------------------------------------- Small Fighter Radar
 {
