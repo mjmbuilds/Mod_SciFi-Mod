@@ -507,30 +507,6 @@
 		]},
 	"qualityLevel": 2,
 	"stackSize": 10
-},
-
-//----------------------------------------------------------------------------
-//--------------------------------------------------------------- DEPRECATED
-//----------------------------------------------------------------------------
-
-//--------------------------------------------------------------- Tank Track 1 Friction Part
-{
-	"uuid": "0092b542-e8a3-4700-8284-77f3f590772b",
-	"renderable": {"lodList": [{
-	"subMeshList": [
-		{"textureList": [
-		"$MOD_DATA/Objects/Textures/invisible.tga",
-		"$MOD_DATA/Objects/Textures/invisible.tga"],
-		"material": "DifAsgAlphaFlip"}
-	],
-	"mesh": "$MOD_DATA/Objects/Mesh/TankTrack1Friction.fbx"
-	}]},
-	"scripted" : {
-		"filename": "$MOD_DATA/Scripts/DeprecatedDelete.lua",
-		"classname": "DeprecatedDelete" },
-	"color": "000000",
-	"box": { "x": 1, "y": 24, "z": 6 },
-	"showInInventory": false
 }
 
 //---------------------------------------------------------------- END

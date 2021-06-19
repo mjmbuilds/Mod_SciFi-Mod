@@ -15,8 +15,8 @@
 		"keywords": ["MJM"]
 	},
 	"f3d96978-887a-4751-b1d2-d1e831c92657": {
-		"title": "Gravety Core(Temporarily removed)",
-		"description": "Temporarily removed for rework: Old Gravety Core part"
+		"title": "Micro Inertia Drive",
+		"description": "All-in-one spaceship flight core. Press E for GUI. 1x1 size for micro builds"
 	},
 	"416acd67-2372-4838-bc3a-1bf7b22f2a32": {
 		"title": "Small Fighter Radar",
@@ -55,7 +55,7 @@
 	},
 	"5f16a5b1-394e-492f-afff-f4c2301b1073": {
 		"title": "Inertia Drive",
-		"description": "All in one spaceship flight core. Press E for GUI",
+		"description": "All-in-one spaceship flight core. Press E for GUI",
 		"keywords": ["MJM"]
 	},
 	"ce729ebd-fb8f-48b4-9482-1cbacc19766d": {
