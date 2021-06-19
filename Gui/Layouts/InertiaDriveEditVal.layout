@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout" version="3.2.0">
-    <Widget type="MenuBar" skin="BackgroundPopup" position_real="0 0 0.197917 0.493519" name="BackPanel"/>
+    <Widget type="MenuBar" skin="BackgroundPopup" position="0 0 380 533" name="BackPanel"/>
     <Widget type="Widget" skin="PanelEmpty" position="0 0 380 505">
         <Widget type="TextBox" skin="SMTextBox" position="180 91 110 39" name="NewVal">
             <Property key="Caption" value="000.000"/>

@@ -74,11 +74,19 @@ function AutoLift.server_onFixedUpdate( self, dt )
 		-- do a raycast to see if lift can be used
 		local bodyWorldPosition_corner1,bodyWorldPosition_corner2 = self.shape.body:getWorldAabb()
 		local crrectBodyWorldPosition = (bodyWorldPosition_corner1 + bodyWorldPosition_corner2) / 2
-		local raycastStart = sm.vec3.new(crrectBodyWorldPosition.x,crrectBodyWorldPosition.y,math.min(bodyWorldPosition_corner1.z,bodyWorldPosition_corner2.z))
+		local raycastStart = sm.vec3.zero()
+		if self.secondTryUse then
+			raycastStart = self.shape.body:getCenterOfMassPosition()
+		else
+			raycastStart = sm.vec3.new(crrectBodyWorldPosition.x,crrectBodyWorldPosition.y,math.min(bodyWorldPosition_corner1.z,bodyWorldPosition_corner2.z))
+			self.secondTryUse = true
+		end
 		local castLen = 6
 		local raycastEnd = sm.vec3.new(raycastStart.x,raycastStart.y,(raycastStart.z - castLen))
 		local success, result = sm.physics.raycast(raycastStart, raycastEnd, self.shape.body)
+		print(success)
 		if success then
+			self.secondTryUse = nil
 			-- get position to place the lift
 			local liftPos = result.pointWorld
 			local liftHeight = 10
@@ -133,6 +141,8 @@ function AutoLift.server_onFixedUpdate( self, dt )
 			self.liftPlayer = closestPlayer
 			self.useLift = nil
 			self.interactable:setActive(true)
+		elseif not self.retriedUse then
+			
 		else
 			self.useLift = nil
 		end
@@ -144,21 +154,34 @@ function AutoLift.server_onFixedUpdate( self, dt )
 			if self.liftPlayer then
 				self.liftPlayer:removeLift()
 				self.liftPlayer = nil
-			-- otherwise try removing lifts of each player ()
-			else
-				if not self.triedPlayers then self.triedPlayers = {} end
+			-- otherwise try removing lift of closest player ()
+			elseif not self.triedRemoveClosest then
+				-- get the closest player
+				local closestPlayer = nil
+				local closestDistance = nil
 				for _,player in pairs(sm.player.getAllPlayers()) do
-					if not self.triedPlayers[player:getId()] then
-						self.triedPlayers[player:getId()] = true
-						player:removeLift()
-						break
+					local playerDistance = (player:getCharacter():getWorldPosition() - self.shape:getWorldPosition()):length()
+					if closestPlayer then
+						if playerDistance < closestDistance then
+							closestPlayer = player
+							closestDistance = playerDistance
+						end
+					else
+						closestPlayer = player
+						closestDistance = playerDistance
 					end
 				end
+				closestPlayer:removeLift()
+				self.triedRemoveClosest = true
+			-- fail if still on a lift
+			else
+				self.removeLift = nil
+				self.triedRemoveClosest = nil
 			end
 		-- if no longer on a lift, clear related flags
 		else
 			self.removeLift = nil
-			self.triedPlayers = nil
+			self.triedRemoveClosest = nil
 		end
 	end
 end

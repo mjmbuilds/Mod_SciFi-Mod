@@ -1,48 +1,48 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout" version="3.2.0">
-    <Widget type="Widget" skin="BackgroundPromptNarrow" position_real="0 0 0.269792 0.467593" name="BackPanel">
-        <Widget type="TextBox" skin="TextBox" position_real="0.1139 0.128713 0.772201 0.0732673" name="Title">
+    <Widget type="Widget" skin="BackgroundPromptNarrow" position="0 0 518 505" name="BackPanel">
+        <Widget type="TextBox" skin="TextBox" position="59 65 400 36" name="Title">
             <Property key="Caption" value="TANK TRACKS"/>
             <Property key="TextAlign" value="Center"/>
             <Property key="FontName" value="SM_HeaderLarge_Wide"/>
         </Widget>
-        <Widget type="TextBox" skin="TextBox" position_real="0.1139 0.237624 0.772201 0.0534653" name="SubTitle">
+        <Widget type="TextBox" skin="TextBox" position="59 120 400 26" name="SubTitle">
             <Property key="TextAlign" value="Center"/>
             <Property key="Caption" value="Select Mode"/>
             <Property key="FontName" value="SM_SubHeader"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.19112 0.336634 0.287645 0.0732673" name="Button3">
+        <Widget type="Button" skin="SecondaryButton" position="99 170 149 36" name="Button3">
             <Property key="Caption" value="LEFT"/>
             <Property key="TextAlign" value="Center"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.528958 0.336634 0.287645 0.0732673" name="Button2">
+        <Widget type="Button" skin="SecondaryButton" position="274 170 149 36" name="Button2">
             <Property key="Caption" value="RIGHT"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.19112 0.425743 0.287645 0.0732673" name="Button1">
+        <Widget type="Button" skin="SecondaryButton" position="99 215 149 36" name="Button1">
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
             <Property key="Caption" value="LEFT REVERSED"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.528958 0.425743 0.287645 0.0732673" name="Button4">
+        <Widget type="Button" skin="SecondaryButton" position="274 215 149 36" name="Button4">
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
             <Property key="Caption" value="RIGHT REVERSED"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.357143 0.548515 0.287645 0.0732673" name="Button5">
+        <Widget type="Button" skin="SecondaryButton" position="185 277 149 36" name="Button5">
             <Property key="Caption" value="MONOTRACK"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Button" skin="SecondaryButton" position_real="0.357143 0.639604 0.287645 0.0732673" name="Button6">
+        <Widget type="Button" skin="SecondaryButton" position="185 323 149 36" name="Button6">
             <Property key="Caption" value="MONO REVERSED"/>
             <Property key="TextAlign" value="Center"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
         </Widget>
-        <Widget type="Button" skin="CheckBox" position_real="0.202703 0.768317 0.0328185 0.039604" name="ButtonHideHint"/>
-        <Widget type="Button" skin="ButtonImage" position_real="0.241313 0.768317 0.299228 0.039604" name="ButtonHideHintText">
+        <Widget type="Button" skin="CheckBox" position="105 388 16 20" name="ButtonHideHint"/>
+        <Widget type="Button" skin="ButtonImage" position="125 388 155 20" name="ButtonHideHintText">
             <Property key="Caption" value=" Hide &quot;Mode&quot; hint"/>
             <Property key="TextAlign" value="Left VCenter"/>
             <Property key="FontName" value="SM_Label"/>

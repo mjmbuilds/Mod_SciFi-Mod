@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout" version="3.2.0">
-    <Widget type="MenuBar" skin="BackgroundPopup" position="0 0 1000 720" name="BackPanel"/>
-    <Widget type="Widget" skin="PanelEmpty" position="9 0 980 705">
+    <Widget type="MenuBar" skin="BackgroundPopup" position="0 0 1000 655" name="BackPanel"/>
+    <Widget type="Widget" skin="PanelEmpty" position="9 0 980 640">
         <Widget type="TextBox" skin="TextBox" position="130 10 715 30" name="Title">
             <Property key="Caption" value="Inertia Drive"/>
             <Property key="FontName" value="SM_HeaderLarge_Wide"/>
             <Property key="TextAlign" value="Center"/>
         </Widget>
-        <Widget type="Widget" skin="PanelEmpty" position="15 45 230 640" name="LabelsPanel">
+        <Widget type="Widget" skin="PanelEmpty" position="15 45 230 595" name="LabelsPanel">
             <Widget type="TextBox" skin="TextBox" position="0 0 215 30">
                 <Property key="Caption" value="MODE SETTINGS"/>
                 <Property key="TextAlign" value="Right VCenter"/>
@@ -42,12 +42,24 @@
                 <Property key="TextColour" value="0 1 0"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
             </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 150 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
+            </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 120 230 30">
                 <Property key="Caption" value=" POWER: AXIAL"/>
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
                 <Property key="TextColour" value="0 1 0"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 120 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 180 230 30">
                 <Property key="Caption" value=" POWER: VERTICAL"/>
@@ -56,12 +68,24 @@
                 <Property key="TextColour" value="0 1 0"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
             </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 180 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
+            </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 210 230 30">
                 <Property key="Caption" value=" POWER: PITCH"/>
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
                 <Property key="TextColour" value="0 1 0.4"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 210 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 240 230 30">
                 <Property key="Caption" value=" POWER: ROLL"/>
@@ -70,12 +94,24 @@
                 <Property key="TextColour" value="0 1 0.4"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
             </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 240 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
+            </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 270 230 30">
                 <Property key="Caption" value=" POWER: YAW"/>
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
                 <Property key="TextColour" value="0 1 0.4"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 270 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 330 230 30">
                 <Property key="Caption" value=" DAMPING: LATERAL"/>
@@ -84,12 +120,24 @@
                 <Property key="TextColour" value="1 1 0"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
             </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 330 15 30">
+                <Property key="Caption" value="%"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.8 0.8 0.8"/>
+            </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 300 230 30">
                 <Property key="Caption" value=" DAMPING: AXIAL"/>
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
                 <Property key="TextColour" value="1 1 0"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 300 15 30">
+                <Property key="Caption" value="%"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 360 230 30">
                 <Property key="Caption" value=" DAMPING: VERTICAL"/>
@@ -98,12 +146,24 @@
                 <Property key="TextColour" value="1 1 0"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
             </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 360 15 30">
+                <Property key="Caption" value="%"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.8 0.8 0.8"/>
+            </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 390 230 30">
                 <Property key="Caption" value=" DAMPING: PITCH"/>
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
                 <Property key="TextColour" value="1 1 0.4"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 390 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 420 230 30">
                 <Property key="Caption" value=" DAMPING: ROLL"/>
@@ -112,12 +172,24 @@
                 <Property key="TextColour" value="1 1 0.4"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
             </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 420 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
+            </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 450 230 30">
                 <Property key="Caption" value=" DAMPING: YAW"/>
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
                 <Property key="TextColour" value="1 1 0.4"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 450 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 480 230 30">
                 <Property key="Caption" value=" POWER: ANTIGRAV"/>
@@ -126,12 +198,24 @@
                 <Property key="TextColour" value="0.5 1 1"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
             </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 480 15 30">
+                <Property key="Caption" value="%"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.8 0.8 0.8"/>
+            </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 510 230 30">
                 <Property key="Caption" value=" POWER: AUTOLEVEL PITCH"/>
                 <Property key="FontName" value="SM_TextLabel"/>
                 <Property key="TextAlign" value="Left VCenter"/>
                 <Property key="TextColour" value="0.5 1 1"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
+            </Widget>
+            <Widget type="TextBox" skin="TextBox" position="215 510 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
+                <Property key="FontName" value="SM_TextLabel"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
             </Widget>
             <Widget type="TextBox" skin="TextBox" position="0 540 230 30">
                 <Property key="Caption" value=" POWER: AUTOLEVEL ROLL"/>
@@ -140,22 +224,14 @@
                 <Property key="TextColour" value="0.5 1 1"/>
                 <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
             </Widget>
-            <Widget type="TextBox" skin="TextBox" position="0 570 230 30">
-                <Property key="Caption" value=" POWER: ALTITUDE LOCK"/>
+            <Widget type="TextBox" skin="TextBox" position="215 540 15 30">
+                <Property key="Caption" value="n"/>
+                <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_TextLabel"/>
-                <Property key="TextAlign" value="Left VCenter"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-                <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
-            </Widget>
-            <Widget type="TextBox" skin="TextBox" position="0 600 230 30">
-                <Property key="Caption" value=" POWER: LOCATION LOCK"/>
-                <Property key="FontName" value="SM_TextLabel"/>
-                <Property key="TextAlign" value="Left VCenter"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-                <Widget type="Widget" skin="WhiteSkin" position="0 29 230 1" name="divider"/>
+                <Property key="TextColour" value="0.5 0.5 0.5"/>
             </Widget>
         </Widget>
-        <Widget type="Widget" skin="PanelEmpty" position="245 45 120 660" name="Gear1Panel">
+        <Widget type="Widget" skin="PanelEmpty" position="245 45 120 595" name="Gear1Panel">
             <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="MODE1">
                 <Property key="Caption" value="MODE 1"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
@@ -270,32 +346,20 @@
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 570 120 30" name="POWER ALTITUDE LOCK1">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 600 120 30" name="POWER LOCATION LOCK1">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 635 61 25" name="COPY1">
+            <Widget type="Button" skin="SecondaryButton" position="0 570 61 25" name="COPY1">
                 <Property key="Caption" value="COPY"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="59 635 61 25" name="PASTE1">
+            <Widget type="Button" skin="SecondaryButton" position="59 570 61 25" name="PASTE1">
                 <Property key="Caption" value="PASTE"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
         </Widget>
-        <Widget type="Widget" skin="PanelEmpty" position="365 45 120 660" name="Gear2Panel">
+        <Widget type="Widget" skin="PanelEmpty" position="365 45 120 595" name="Gear2Panel">
             <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="MODE2">
                 <Property key="Caption" value="MODE 2"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
@@ -410,32 +474,20 @@
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 570 120 30" name="POWER ALTITUDE LOCK2">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 600 120 30" name="POWER LOCATION LOCK2">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 635 61 25" name="COPY2">
+            <Widget type="Button" skin="SecondaryButton" position="0 570 61 25" name="COPY2">
                 <Property key="Caption" value="COPY"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="59 635 61 25" name="PASTE2">
+            <Widget type="Button" skin="SecondaryButton" position="59 570 61 25" name="PASTE2">
                 <Property key="Caption" value="PASTE"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
         </Widget>
-        <Widget type="Widget" skin="PanelEmpty" position="485 45 120 660" name="Gear3Panel">
+        <Widget type="Widget" skin="PanelEmpty" position="485 45 120 595" name="Gear3Panel">
             <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="MODE3">
                 <Property key="Caption" value="MODE 3"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
@@ -550,32 +602,20 @@
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 570 120 30" name="POWER ALTITUDE LOCK3">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 600 120 30" name="POWER LOCATION LOCK3">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 635 61 25" name="COPY3">
+            <Widget type="Button" skin="SecondaryButton" position="0 570 61 25" name="COPY3">
                 <Property key="Caption" value="COPY"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="59 635 61 25" name="PASTE3">
+            <Widget type="Button" skin="SecondaryButton" position="59 570 61 25" name="PASTE3">
                 <Property key="Caption" value="PASTE"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
         </Widget>
-        <Widget type="Widget" skin="PanelEmpty" position="605 45 120 660" name="Gear4Panel">
+        <Widget type="Widget" skin="PanelEmpty" position="605 45 120 595" name="Gear4Panel">
             <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="MODE4">
                 <Property key="Caption" value="MODE 4"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
@@ -690,32 +730,20 @@
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 570 120 30" name="POWER ALTITUDE LOCK4">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 600 120 30" name="POWER LOCATION LOCK4">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 635 61 25" name="COPY4">
+            <Widget type="Button" skin="SecondaryButton" position="0 570 61 25" name="COPY4">
                 <Property key="Caption" value="COPY"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="59 635 61 25" name="PASTE4">
+            <Widget type="Button" skin="SecondaryButton" position="59 570 61 25" name="PASTE4">
                 <Property key="Caption" value="PASTE"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
         </Widget>
-        <Widget type="Widget" skin="PanelEmpty" position="725 45 120 660" name="Gear5Panel">
+        <Widget type="Widget" skin="PanelEmpty" position="725 45 120 595" name="Gear5Panel">
             <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="MODE5">
                 <Property key="Caption" value="MODE 5"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
@@ -830,32 +858,20 @@
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 570 120 30" name="POWER ALTITUDE LOCK5">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 600 120 30" name="POWER LOCATION LOCK5">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 635 61 25" name="COPY5">
+            <Widget type="Button" skin="SecondaryButton" position="0 570 61 25" name="COPY5">
                 <Property key="Caption" value="COPY"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="59 635 61 25" name="PASTE5">
+            <Widget type="Button" skin="SecondaryButton" position="59 570 61 25" name="PASTE5">
                 <Property key="Caption" value="PASTE"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
         </Widget>
-        <Widget type="Widget" skin="PanelEmpty" position="845 45 120 660" name="Gear6Panel">
+        <Widget type="Widget" skin="PanelEmpty" position="845 45 120 595" name="Gear6Panel">
             <Widget type="Button" skin="InventoryTab" position="0 5 117 25" name="MODE6">
                 <Property key="Caption" value="MODE 6"/>
                 <Property key="FontName" value="ButtonCaptionSmall"/>
@@ -970,25 +986,13 @@
                 <Property key="TextAlign" value="Center"/>
                 <Property key="TextColour" value="0.5 1 1"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 570 120 30" name="POWER ALTITUDE LOCK6">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 600 120 30" name="POWER LOCATION LOCK6">
-                <Property key="Caption" value="0000"/>
-                <Property key="FontName" value="ButtonCaptionSmall"/>
-                <Property key="TextAlign" value="Center"/>
-                <Property key="TextColour" value="0.5 1 1"/>
-            </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="0 635 61 25" name="COPY6">
+            <Widget type="Button" skin="SecondaryButton" position="0 570 61 25" name="COPY6">
                 <Property key="Caption" value="COPY"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>
                 <Property key="TextColour" value="0.8 0.8 0.8"/>
             </Widget>
-            <Widget type="Button" skin="SecondaryButton" position="59 635 61 25" name="PASTE6">
+            <Widget type="Button" skin="SecondaryButton" position="59 570 61 25" name="PASTE6">
                 <Property key="Caption" value="PASTE"/>
                 <Property key="TextAlign" value="Center"/>
                 <Property key="FontName" value="SM_ButtonTiny"/>

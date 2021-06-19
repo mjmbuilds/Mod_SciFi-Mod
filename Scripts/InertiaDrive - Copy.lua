@@ -15,14 +15,16 @@ InertiaDrive.altitudeLockMargin = 0.1
 InertiaDrive.locationLockMargin = 0.1
 
 InertiaDrive.linPowerMult = 0.01
+InertiaDrive.linDampingMult = 0.0002
 InertiaDrive.rotPowerMult = 2
 InertiaDrive.rotDampingMult = 1
+InertiaDrive.altitudePowerMult = 0.001
+InertiaDrive.locationPowerMult = 0.001
 
 --[[ NOTES ---------------------------------------------------------------------
 ---- TODO:
 -add global yaw mode
 -add yaw lock mode
--ability to take input location values to automate movement
 -should have protection against more than one drive used on the same creation (check for others upon creation or lift)
 - ^ should have an error message GUI to tell the user things like "you can not use multiple drives"
 -should have out-of-bounds detection automatically activate the EMERGENCY LIFT
@@ -94,15 +96,17 @@ InertiaDrive.defaultMode = {
 	["POWER PITCH"] = 500,			-- power level pitch rotation
 	["POWER ROLL"] = 250,			-- power level roll rotation
 	["POWER YAW"] = 650,			-- power level yaw rotation
-	["DAMPING LATERAL"] = 100,		-- % drag damping left/right (max 200)
-	["DAMPING AXIAL"] = 100,		-- % drag damping forward/back (max 200)
-	["DAMPING VERTICAL"] = 100,		-- % drag damping up/down (max 200)
-	["DAMPING PITCH"] = 1,			-- drag damping pitch
-	["DAMPING ROLL"] = 1,			-- drag damping roll
-	["DAMPING YAW"] = 1,			-- drag damping yaw
-	["POWER ANTIGRAV"] = 100,		-- % antigrav power (max 110)
+	["DAMPING LATERAL"] = 500,		-- drag damping left/right
+	["DAMPING AXIAL"] = 500,		-- drag damping forward/back
+	["DAMPING VERTICAL"] = 500,		-- drag damping up/down
+	["DAMPING PITCH"] = 500,		-- drag damping pitch
+	["DAMPING ROLL"] = 500,			-- drag damping roll
+	["DAMPING YAW"] = 500,			-- drag damping yaw
+	["POWER ANTIGRAV"] = 100,		-- 0-100%
 	["POWER AUTOLEVEL PITCH"] = 1000,-- power level autolevel pitch
 	["POWER AUTOLEVEL ROLL"] = 500,	-- power level autolevel roll
+	["POWER ALTITUDE LOCK"] = 500,	-- power level altitude lock
+	["POWER LOCATION LOCK"] = 500	-- power level location lock
 }
 
 function InertiaDrive.server_onCreate( self )
@@ -140,8 +144,7 @@ function InertiaDrive.sv_requestGuiData( self, player )
 end
 
 function InertiaDrive.server_onFixedUpdate( self, dt )
-	--self.shape:destroyShape()
-	
+		
 	----- get inputs from advanced buttons
 	local inputs = {}
 	local player = nil
@@ -261,35 +264,35 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		end
 
 		----- calc linear input
-		local linInput = sm.vec3.zero()
+		local linearInput = sm.vec3.zero()
 		local inputRight = (inputs["RIGHT"] and 1 or 0) + (inputs["LEFT"] and -1 or 0)
 		if inputRight ~= 0 then
-			linInput = linInput + (driveRight * inputRight * d["POWER LATERAL"..m] * self.linPowerMult)
+			linearInput = linearInput + (driveRight * inputRight * d["POWER LATERAL"..m] * self.linPowerMult)
 		end
 		local inputUp = (inputs["UP"] and 1 or 0) + (inputs["DOWN"] and -1 or 0)
 		if inputUp ~= 0 then
-			linInput = linInput + (driveUp * inputUp * d["POWER VERTICAL"..m] * self.linPowerMult)
+			linearInput = linearInput + (driveUp * inputUp * d["POWER VERTICAL"..m] * self.linPowerMult)
 		end
 		local inputForward = (inputs["FORWARD"] and 1 or 0) + (inputs["BACK"] and -1 or 0)
 		if inputForward ~= 0 then
-			linInput = linInput + (driveFront * inputForward * d["POWER AXIAL"..m] * self.linPowerMult)
+			linearInput = linearInput + (driveFront * inputForward * d["POWER AXIAL"..m] * self.linPowerMult)
 		end
 		local inputRightGlobal = (inputs["RIGHT GLOBAL"] and 1 or 0) + (inputs["LEFT GLOBAL"] and -1 or 0)
 		if inputRightGlobal ~= 0 then
 			local globRight = driveRight
 			globRight.z = 0
-			linInput = linInput + (globRight * inputRightGlobal * d["POWER LATERAL"..m] * self.linPowerMult)
+			linearInput = linearInput + (globRight * inputRightGlobal * d["POWER LATERAL"..m] * self.linPowerMult)
 		end
 		local inputUpGlobal = (inputs["UP GLOBAL"] and 1 or 0) + (inputs["DOWN GLOBAL"] and -1 or 0)
 		if inputUpGlobal ~= 0 then
 			local globUp = sm.vec3.new(0,0,1)
-			linInput = linInput + (globUp * inputUpGlobal * d["POWER VERTICAL"..m] * self.linPowerMult)
+			linearInput = linearInput + (globUp * inputUpGlobal * d["POWER VERTICAL"..m] * self.linPowerMult)
 		end
 		local inputForwardGlobal = (inputs["FORWARD GLOBAL"] and 1 or 0) + (inputs["BACK GLOBAL"] and -1 or 0)
 		if inputForwardGlobal ~= 0 then
 			local globForward = driveFront
 			globForward.z = 0
-			linInput = linInput + (globForward * inputForwardGlobal * d["POWER AXIAL"..m] * self.linPowerMult)
+			linearInput = linearInput + (globForward * inputForwardGlobal * d["POWER AXIAL"..m] * self.linPowerMult)
 		end
 		
 		----- calc rotational input
@@ -309,67 +312,26 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 			yawInput = (driveRight * inputYaw * d["POWER YAW"..m] * self.rotPowerMult)
 		end
 		
-		----- setup for velocity and force
-		local body = self.shape.body
-		local pos = body:getCenterOfMassPosition()
-		local isStatic = body:isStatic()
-		if not isStatic and self.wasStatic then	self.lastPos = pos end	
-		if not self.lastPos then self.lastPos = pos end
-		
-		----- calc linear velocity and force for drag
-		local axialVel = sm.vec3.zero()
-		local lateralVel = sm.vec3.zero()
-		local verticalVel = sm.vec3.zero()
-		local axialForce = sm.vec3.zero()
-		local lateralForce = sm.vec3.zero()
-		local verticalForce = sm.vec3.zero()
-		local shape = self.shape
-		if moduleShape then	shape = moduleShape	elseif seatShape then shape = seatShape	end
-		local localVel = toLocal(shape, shape.velocity)
-		local localForce = toLocal(shape, (self.lastPos - pos))
-		if shape == seatShape then
-			axialVel = toGlobal(shape, sm.vec3.new(0,0,localVel.z))
-			lateralVel = toGlobal(shape, sm.vec3.new(localVel.x,0,0))
-			verticalVel = toGlobal(shape, sm.vec3.new(0,localVel.y,0))
-			if not inputs["ALTITUDE LOCK"] then
-				verticalForce = toGlobal(shape, sm.vec3.new(0,localForce.y,0))
-			end
-			if not inputs["LOCATION LOCK"] then
-				axialForce = toGlobal(shape, sm.vec3.new(0,0,localForce.z))
-				lateralForce = toGlobal(shape, sm.vec3.new(localForce.x,0,0))
-			end
+		----- calc linear drag
+		local linDragFwd = sm.vec3.zero()
+		local linDragRight = sm.vec3.zero()
+		local linDragUp = sm.vec3.zero()
+		if moduleShape then
+			local localLinDrag = toLocal(moduleShape, moduleShape.velocity) * -1
+			linDragFwd = toGlobal(moduleShape, sm.vec3.new(0,localLinDrag.y,0)) * d["DAMPING AXIAL"..m] * self.linDampingMult
+			linDragRight = toGlobal(moduleShape, sm.vec3.new(localLinDrag.x,0,0)) * d["DAMPING LATERAL"..m] * self.linDampingMult
+			linDragUp = toGlobal(moduleShape, sm.vec3.new(0,0,localLinDrag.z)) * d["DAMPING VERTICAL"..m] * self.linDampingMult
+		elseif seatShape then
+			local localLinDrag = toLocal(seatShape, seatShape.velocity) * -1
+			linDragFwd = toGlobal(seatShape, sm.vec3.new(0,0,localLinDrag.z)) * d["DAMPING AXIAL"..m] * self.linDampingMult
+			linDragRight = toGlobal(seatShape, sm.vec3.new(localLinDrag.x,0,0)) * d["DAMPING LATERAL"..m] * self.linDampingMult
+			linDragUp = toGlobal(seatShape, sm.vec3.new(0,localLinDrag.y,0)) * d["DAMPING VERTICAL"..m] * self.linDampingMult
 		else
-			axialVel = toGlobal(shape, sm.vec3.new(0,localVel.y,0))
-			lateralVel = toGlobal(shape, sm.vec3.new(localVel.x,0,0))
-			verticalVel = toGlobal(shape, sm.vec3.new(0,0,localVel.z))
-			if not inputs["ALTITUDE LOCK"] then
-				verticalForce = toGlobal(shape, sm.vec3.new(0,0,localForce.z))	
-			end
-			if not inputs["LOCATION LOCK"] then
-				axialForce = toGlobal(shape, sm.vec3.new(0,localForce.y,0))
-				lateralForce = toGlobal(shape, sm.vec3.new(localForce.x,0,0))
-			end		
+			local localLinDrag = toLocal(self.shape, self.shape.velocity) * -1
+			linDragFwd = toGlobal(self.shape, sm.vec3.new(0,localLinDrag.y,0)) * d["DAMPING AXIAL"..m] * self.linDampingMult
+			linDragRight = toGlobal(self.shape, sm.vec3.new(localLinDrag.x,0,0)) * d["DAMPING LATERAL"..m] * self.linDampingMult
+			linDragUp = toGlobal(self.shape, sm.vec3.new(0,0,localLinDrag.z)) * d["DAMPING VERTICAL"..m] * self.linDampingMult
 		end
-		
-		----- calc altitude lock
-		if inputs["ALTITUDE LOCK"] then
-			if not self.prevAltitudeLock then
-				self.lockZ = pos.z
-			end
-			verticalForce = sm.vec3.new(0,0,self.lockZ - pos.z)
-		end
-		self.prevAltitudeLock = inputs["ALTITUDE LOCK"]
-
-		----- calc location lock
-		if inputs["LOCATION LOCK"] then
-			if not self.prevLocationLock then
-				self.lockX = pos.x
-				self.lockY = pos.y
-			end
-			axialForce = sm.vec3.new(self.lockX - pos.x,0,0)
-			lateralForce = sm.vec3.new(0,self.lockY - pos.y,0)
-		end
-		self.prevLocationLock = inputs["LOCATION LOCK"]
 		
 		----- calc rotational drag
 		local angDragPitch = sm.vec3.zero()
@@ -386,7 +348,7 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 			angDragRoll = toGlobal(seatShape, sm.vec3.new(0,(localRotDrag.z * -1),0)) * d["DAMPING ROLL"..m] * self.rotDampingMult
 			angDragYaw = toGlobal(seatShape, sm.vec3.new((localRotDrag.y),0,0)) * d["DAMPING YAW"..m] * self.rotDampingMult
 		else
-			local localRotDrag = toLocal(self.shape, body.angularVelocity) * -1
+			local localRotDrag = toLocal(self.shape, self.shape.body.angularVelocity) * -1
 			angDragPitch = toGlobal(self.shape, sm.vec3.new(0,0,localRotDrag.x)) * d["DAMPING PITCH"..m] * self.rotDampingMult
 			angDragRoll = toGlobal(self.shape, sm.vec3.new(0,0,(localRotDrag.y * -1))) * d["DAMPING ROLL"..m] * self.rotDampingMult
 			angDragYaw = toGlobal(self.shape, sm.vec3.new((localRotDrag.z * -1),0,0)) * d["DAMPING YAW"..m] * self.rotDampingMult
@@ -431,7 +393,47 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		if inputs["AUTOLEVEL ROLL"] or d["AUTOLEVEL ROLL"..m] then
 			rollLeveling = driveUp * (driveLeft.z - driveRight.z)* d["POWER AUTOLEVEL ROLL"..m] * self.rotPowerMult
 		end
-				
+		
+		----- calc altitude lock
+		local altitudeVec = sm.vec3.zero()
+		if inputs["ALTITUDE LOCK"] then
+			if not self.prevAltitudeLock then
+				self.hoverAltitude = self.shape.worldPosition.z
+			end
+			local scailedForce = math.abs(self.shape.worldPosition.z - self.hoverAltitude)
+			scailedForce = scailedForce * scailedForce
+			if self.shape.worldPosition.z < self.hoverAltitude - self.altitudeLockMargin then
+				altitudeVec = altitudeVec + sm.vec3.new(0,0,d["POWER ALTITUDE LOCK"..m] * self.altitudePowerMult * scailedForce)
+			elseif self.shape.worldPosition.z > self.hoverAltitude + self.altitudeLockMargin then
+				altitudeVec = altitudeVec + sm.vec3.new(0,0,d["POWER ALTITUDE LOCK"..m] * -1 * self.altitudePowerMult * scailedForce)
+			end
+		end
+		self.prevAltitudeLock = inputs["ALTITUDE LOCK"]
+		
+		----- calc location lock
+		local locationVec = sm.vec3.zero()
+		if inputs["LOCATION LOCK"] then
+			if not self.prevLocationLock then
+				self.lockLocationX = self.shape.worldPosition.x
+				self.lockLocationY = self.shape.worldPosition.y
+			end
+			local scailedForceX = math.abs(self.shape.worldPosition.x - self.lockLocationX)
+			local scailedForceY = math.abs(self.shape.worldPosition.y - self.lockLocationY)
+			scailedForceX = scailedForceX * scailedForceX
+			scailedForceY = scailedForceY * scailedForceY
+			if self.shape.worldPosition.x < self.lockLocationX - self.locationLockMargin then
+				locationVec = locationVec + sm.vec3.new(d["POWER LOCATION LOCK"..m] * self.locationPowerMult * scailedForceX,0,0)
+			elseif self.shape.worldPosition.x > self.lockLocationX + self.locationLockMargin then
+				locationVec = locationVec + sm.vec3.new(d["POWER LOCATION LOCK"..m] * self.locationPowerMult * -1 * scailedForceX,0,0)
+			end
+			if self.shape.worldPosition.y < self.lockLocationY - self.locationLockMargin then
+				locationVec = locationVec + sm.vec3.new(0,d["POWER LOCATION LOCK"..m] * self.locationPowerMult * scailedForceY,0)
+			elseif self.shape.worldPosition.y > self.lockLocationY + self.locationLockMargin then
+				locationVec = locationVec + sm.vec3.new(0,d["POWER LOCATION LOCK"..m] * self.locationPowerMult * -1 * scailedForceY,0)
+			end
+		end
+		self.prevLocationLock = inputs["LOCATION LOCK"]
+		
 		----- calc compiled vec forces to apply
 		local rightVec = rollInput + rollLeveling + angDragRoll --    + rollNoise 
 		local leftVec = (rollInput * -1) - rollLeveling - angDragRoll --    - rollNoise
@@ -442,26 +444,17 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		---------- applyImpulse(target,impulse,global,offset) ----------
 		if applyImpulse then
 			-- translational impulses
-			for _,cBody in pairs(body:getCreationBodies()) do
-				local cbMass = cBody.mass
-				local cbAntigrav = antigrav * cbMass
-				local cbLinInput = linInput * cbMass
-				local linDragFwd = ((axialForce * cbMass * 2) - (axialVel * cbMass * 0.3)) * (d["DAMPING AXIAL"..m] / 100) * (dt * 40)
-				local linDragRight = ((lateralForce * cbMass * 2) - (lateralVel * cbMass * 0.3)) * (d["DAMPING LATERAL"..m] / 100) * (dt * 40)
-				local linDragUp = ((verticalForce * cbMass * 2) - (verticalVel * cbMass * 0.3)) * (d["DAMPING VERTICAL"..m] / 100) * (dt * 40)
-				local coreVec = cbAntigrav + cbLinInput + linDragFwd + linDragRight + linDragUp -- + (heightNoise * cbMass)
+			for _,body in pairs(self.shape.body:getCreationBodies()) do
+				local mass = body:getMass()
+				local coreVec = (antigrav * mass) + (linearInput * mass) + (linDragFwd * mass) + (linDragRight * mass) + (linDragUp * mass) + (altitudeVec * mass) + (locationVec * mass) --    + (heightNoise * mass)
 				sm.physics.applyImpulse(body, coreVec, true)
 			end
 			-- rotational impulses
-			sm.physics.applyImpulse(body, leftVec, true, driveRight * -1)
-			sm.physics.applyImpulse(body, rightVec, true, driveRight)
-			sm.physics.applyImpulse(body, frontVec, true, driveFront)
-			sm.physics.applyImpulse(body, backVec, true, driveFront * -1)
+			sm.physics.applyImpulse(self.shape.body, leftVec, true, driveRight * -1)
+			sm.physics.applyImpulse(self.shape.body, rightVec, true, driveRight)
+			sm.physics.applyImpulse(self.shape.body, frontVec, true, driveFront)
+			sm.physics.applyImpulse(self.shape.body, backVec, true, driveFront * -1)
 		end
-		
-		----- update values
-		self.wasStatic = isStatic
-		self.lastPos = pos
 		
 	end
 	self.prevPower = inputs["POWER"]
@@ -469,13 +462,7 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 end
 
 function InertiaDrive.sv_emergencyLift( self, player )
-	if self.shape.body:isOnLift() then 
-		if self.liftPlayer then
-			self.liftPlayer:removeLift()
-			self.liftPlayer = nil
-		end
-		return
-	end
+	if self.shape.body:isOnLift() then return end
 	if player == nil then player = sm.player.getAllPlayers()[1]	end
 	local liftPos = sm.vec3.zero()
 	local raycastStart = sm.vec3.new(liftPos.x,liftPos.y,(liftPos.z + 1000))
@@ -485,7 +472,6 @@ function InertiaDrive.sv_emergencyLift( self, player )
 	local liftRotation = 1
 	local liftHeight = 1
 	player:placeLift({self.shape:getBody()}, (liftPos * 4), liftHeight, liftRotation)
-	self.liftPlayer = player
 end
 
 -- ____________________________________ Client ____________________________________
@@ -671,13 +657,6 @@ end
 function InertiaDrive.cl_onEditValGuiClose( self )
 	if self.editValGui_buffer ~= "" then
 		local newVal = tonumber(self.editValGui_buffer)
-		local name = self.editValGui_selection:sub(1, -2)
-		if name == "DAMPING LATERAL" or name == "DAMPING AXIAL" or name == "DAMPING VERTICAL" then
-			newVal = sm.util.clamp(newVal,0,200) -- clamp some values to 200%
-		end
-		if newVal > 0 then
-			newVal = math.max(newVal, 0.001) -- smallest non-0 value is 0.001
-		end
 		self.cl_guiData[self.editValGui_selection] = newVal
 		self.network:sendToServer("sv_setData", {[self.editValGui_selection] = newVal})
 	end

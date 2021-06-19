@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MyGUI type="Layout" version="3.2.0">
-    <Widget type="MenuBar" skin="BackgroundMenuInGame" position="0 0 400 700" name="BackPanel"/>
-    <Widget type="Widget" skin="PanelEmpty" position="10 0 380 700">
-        <Widget type="Button" skin="ActiveButton" position="125 645 130 45" name="Ok">
+    <Widget type="MenuBar" skin="BackgroundPopup" position="0 0 800 800" name="BackPanel"/>
+    <Widget type="Widget" skin="PanelEmpty" position="10 0 780 800">
+        <Widget type="Button" skin="ActiveButton" position="335 740 120 45" name="Ok">
             <Property key="Caption" value="OK"/>
             <Property key="TextAlign" value="Center"/>
             <Property key="FontName" value="ButtonCaptionLarge"/>
             <Property key="TextColour" value="1 0.8 0"/>
         </Widget>
-        <Widget type="EditBox" skin="EditBoxEmpty" position="0 195 380 450" name="Message">
+        <Widget type="EditBox" skin="EditBoxEmpty" position="0 65 780 675" name="Message">
             <Property key="Caption" value="This is how to use the thing..."/>
             <Property key="TextAlign" value="Left Top"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
@@ -18,7 +18,7 @@
             <Property key="WordWrap" value="true"/>
             <Property key="VisibleVScroll" value="true"/>
         </Widget>
-        <Widget type="TextBox" skin="TextBox" position="0 15 380 40" name="Title">
+        <Widget type="TextBox" skin="TextBox" position="0 15 780 40" name="Title">
             <Property key="Caption" value="INSTRUCTIONS"/>
             <Property key="TextAlign" value="Center"/>
             <Property key="FontName" value="ButtonCaptionSmall"/>
