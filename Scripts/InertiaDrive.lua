@@ -111,7 +111,13 @@ function InertiaDrive.server_onCreate( self )
 	self.sv_data.currentMode = self.sv_data.currentMode or 1
 	for m = 1, 6 do
 		for k, v in pairs(self.defaultMode) do
-			self.sv_data[k..m] = self.sv_data[k..m] or v
+			local value = self.sv_data[k..m]
+			if value == nil then
+				self.sv_data[k..m] = v
+			else
+				self.sv_data[k..m] = value
+			end
+			--self.sv_data[k..m] = (value ~= nil) and value or v
 		end
 	end
 	self.publicData = {}

@@ -175,12 +175,16 @@ function AdvancedButton.client_onRefresh( self )
 end
 
 function AdvancedButton.client_onFixedUpdate( self, dt )
-	-- reset interaction of switches and single tick buttons (so they were only for 1 tick)
-	--if self.cl_interacting and (self.cl_data.modeIndex == 3 or self.cl_data.modeIndex > 4 ) then
-	--	self:cl_release()
-	--end
-	-- update pose
-	self.interactable:setPoseWeight(0, self.interactable:isActive() and 1 or 0)
+	-- update client button
+	local isActive = self.interactable:isActive()
+	if isActive and not self.prevActive then
+		sm.audio.play("Button on", self.shape.worldPosition)
+		self.interactable:setPoseWeight(0,1)
+	elseif self.prevActive and not isActive then
+		sm.audio.play("Button off", self.shape.worldPosition)
+		self.interactable:setPoseWeight(0,0)
+	end
+	self.prevActive = isActive
 end
 
 -- client_onAction will allow us to minitor some keys when the character is locked to the interactable
@@ -406,9 +410,6 @@ function AdvancedButton.cl_press( self, character )
 	self.actionLocks.button = true
 	self:cl_lockCharacter(character)
 	self.network:sendToServer( 'sv_setInteracting', {interacting = true, player = character:getPlayer()} )
-	if self.cl_data.modeIndex ~= 4 then -- don't make press noise for inverted single tick
-		sm.audio.play("Button on", self.shape.worldPosition)
-	end
 end
 
 -- for updating interactable lock and notifying the server when the player stops interacting
@@ -417,7 +418,6 @@ function AdvancedButton.cl_release( self )
 	self.actionLocks.button = false
 	self:cl_unlockCharacter()
 	self.network:sendToServer( 'sv_setInteracting', {interacting = false} )
-	sm.audio.play("Button off", self.shape.worldPosition)
 end
 
 -- locks the character to the interactable

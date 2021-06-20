@@ -51,7 +51,7 @@
 		"filename": "$MOD_DATA/Scripts/TankTrack1.lua",
 		"classname": "TankTrack1"
 		},
-	"physicsMaterial": "Steering",
+	"physicsMaterial": "Default",
 	"color": "7f7f7f",
 	"ratings": {
 		"density": 5,
@@ -113,7 +113,7 @@
 		"filename": "$MOD_DATA/Scripts/TankTrack1.lua",
 		"classname": "TankTrack1"
 		},
-	"physicsMaterial": "Grass",
+	"physicsMaterial": "Default",
 	"color": "7f7f7f",
 	"ratings": {
 		"density": 5,
