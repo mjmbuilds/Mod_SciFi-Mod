@@ -15,8 +15,9 @@ InertiaDrive.altitudeLockMargin = 0.1
 InertiaDrive.locationLockMargin = 0.1
 
 InertiaDrive.linPowerMult = 0.01
-InertiaDrive.rotPowerMult = 2
-InertiaDrive.rotDampingMult = 1
+InertiaDrive.angPowerMult = 2
+InertiaDrive.linDampingMult = 0.001
+InertiaDrive.angDampingMult = 0.01
 
 --[[ NOTES ---------------------------------------------------------------------
 ---- TODO:
@@ -27,7 +28,7 @@ InertiaDrive.rotDampingMult = 1
 - ^ should have an error message GUI to tell the user things like "you can not use multiple drives"
 -should have out-of-bounds detection automatically activate the EMERGENCY LIFT
 
----- Possible future upgrades:
+---- comPossible future upgrades:
 -speed ramping option (adjustable acceleration/decereration curves)
 -hover shake module (connect as input to generate hover wobble/shake for effect)
 -ground hover sensor (connect as input to maintain distance from terrain)
@@ -94,13 +95,13 @@ InertiaDrive.defaultMode = {
 	["POWER PITCH"] = 500,			-- power level pitch rotation
 	["POWER ROLL"] = 250,			-- power level roll rotation
 	["POWER YAW"] = 650,			-- power level yaw rotation
-	["DAMPING LATERAL"] = 100,		-- % drag damping left/right (max 200)
-	["DAMPING AXIAL"] = 100,		-- % drag damping forward/back (max 200)
-	["DAMPING VERTICAL"] = 100,		-- % drag damping up/down (max 200)
-	["DAMPING PITCH"] = 1,			-- drag damping pitch
-	["DAMPING ROLL"] = 1,			-- drag damping roll
-	["DAMPING YAW"] = 1,			-- drag damping yaw
-	["POWER ANTIGRAV"] = 100,		-- % antigrav power (max 110)
+	["DAMPING LATERAL"] = 1000,		-- drag damping left/right
+	["DAMPING AXIAL"] = 1000,		-- drag damping forward/back
+	["DAMPING VERTICAL"] = 1000,	-- drag damping up/down
+	["DAMPING PITCH"] = 500,		-- drag damping pitch
+	["DAMPING ROLL"] = 500,			-- drag damping roll
+	["DAMPING YAW"] = 500,			-- drag damping yaw
+	["POWER ANTIGRAV"] = 100,		-- % antigrav power
 	["POWER AUTOLEVEL PITCH"] = 1000,-- power level autolevel pitch
 	["POWER AUTOLEVEL ROLL"] = 500,	-- power level autolevel roll
 }
@@ -298,23 +299,23 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		local yawInput = sm.vec3.zero()
 		local inputPitch = (inputs["PITCH UP"] and 1 or 0) + (inputs["PITCH DOWN"] and -1 or 0)
 		if inputPitch ~= 0 then
-			pitchInput = (driveDown * inputPitch * d["POWER PITCH"..m] * self.rotPowerMult)
+			pitchInput = (driveDown * inputPitch * d["POWER PITCH"..m] * self.angPowerMult)
 		end
 		local inputRoll = (inputs["ROLL RIGHT"] and 1 or 0) + (inputs["ROLL LEFT"] and -1 or 0)
 		if inputRoll ~= 0 then
-			rollInput = (driveDown * inputRoll * d["POWER ROLL"..m] * self.rotPowerMult)
+			rollInput = (driveDown * inputRoll * d["POWER ROLL"..m] * self.angPowerMult)
 		end
 		local inputYaw = (inputs["YAW RIGHT"] and 1 or 0) + (inputs["YAW LEFT"] and -1 or 0)
 		if inputYaw ~= 0 then
-			yawInput = (driveRight * inputYaw * d["POWER YAW"..m] * self.rotPowerMult)
+			yawInput = (driveRight * inputYaw * d["POWER YAW"..m] * self.angPowerMult)
 		end
 		
 		----- setup for velocity and force
 		local body = self.shape.body
-		local pos = body:getCenterOfMassPosition()
+		local comPos = body:getCenterOfMassPosition()
 		local isStatic = body:isStatic()
-		if not isStatic and self.wasStatic then	self.lastPos = pos end	
-		if not self.lastPos then self.lastPos = pos end
+		if not isStatic and self.wasStatic then	self.lastComPos = comPos end	
+		if not self.lastComPos then self.lastComPos = comPos end
 		
 		----- calc linear velocity and force for drag
 		local axialVel = sm.vec3.zero()
@@ -326,7 +327,7 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		local shape = self.shape
 		if moduleShape then	shape = moduleShape	elseif seatShape then shape = seatShape	end
 		local localVel = toLocal(shape, shape.velocity)
-		local localForce = toLocal(shape, (self.lastPos - pos))
+		local localForce = toLocal(shape, (self.lastComPos - comPos))
 		if shape == seatShape then
 			axialVel = toGlobal(shape, sm.vec3.new(0,0,localVel.z))
 			lateralVel = toGlobal(shape, sm.vec3.new(localVel.x,0,0))
@@ -354,42 +355,85 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		----- calc altitude lock
 		if inputs["ALTITUDE LOCK"] then
 			if not self.prevAltitudeLock then
-				self.lockZ = pos.z
+				self.lockZ = comPos.z
 			end
-			verticalForce = sm.vec3.new(0,0,self.lockZ - pos.z)
+			verticalForce = sm.vec3.new(0,0,self.lockZ - comPos.z)
 		end
 		self.prevAltitudeLock = inputs["ALTITUDE LOCK"]
 
 		----- calc location lock
 		if inputs["LOCATION LOCK"] then
 			if not self.prevLocationLock then
-				self.lockX = pos.x
-				self.lockY = pos.y
+				self.lockX = comPos.x
+				self.lockY = comPos.y
 			end
-			axialForce = sm.vec3.new(self.lockX - pos.x,0,0)
-			lateralForce = sm.vec3.new(0,self.lockY - pos.y,0)
+			axialForce = sm.vec3.new(self.lockX - comPos.x,0,0)
+			lateralForce = sm.vec3.new(0,self.lockY - comPos.y,0)
 		end
 		self.prevLocationLock = inputs["LOCATION LOCK"]
 		
-		----- calc rotational drag
-		local angDragPitch = sm.vec3.zero()
-		local angDragRoll = sm.vec3.zero()
-		local angDragYaw = sm.vec3.zero()
-		if moduleShape then
-			local localRotDrag = toLocal(moduleShape, moduleShape.body.angularVelocity) * -1
-			angDragPitch = toGlobal(moduleShape, sm.vec3.new(0,0,localRotDrag.x)) * d["DAMPING PITCH"..m] * self.rotDampingMult
-			angDragRoll = toGlobal(moduleShape, sm.vec3.new(0,0,(localRotDrag.y * -1))) * d["DAMPING ROLL"..m] * self.rotDampingMult
-			angDragYaw = toGlobal(moduleShape, sm.vec3.new((localRotDrag.z * -1),0,0)) * d["DAMPING YAW"..m] * self.rotDampingMult
-		elseif seatShape then
-			local localRotDrag = toLocal(seatShape, seatShape.body.angularVelocity) * -1
-			angDragPitch = toGlobal(seatShape, sm.vec3.new(0,localRotDrag.x * -1,0)) * d["DAMPING PITCH"..m] * self.rotDampingMult
-			angDragRoll = toGlobal(seatShape, sm.vec3.new(0,(localRotDrag.z * -1),0)) * d["DAMPING ROLL"..m] * self.rotDampingMult
-			angDragYaw = toGlobal(seatShape, sm.vec3.new((localRotDrag.y),0,0)) * d["DAMPING YAW"..m] * self.rotDampingMult
+		----- calc rotational drag from moment of inertia and angular velocity
+		--[[
+		Angular Momentum = Angular Velocity * Moment of Inertia
+		Moment of Inertia = the sum of (the mass of each block times, the square of the distance each block is from the axis of rotation)
+		--]]
+		local creationMass = 0
+		for _,cBody in pairs(shape.body:getCreationBodies()) do
+			creationMass = creationMass + cBody.mass
+		end
+		--print(creationMass)
+		local pitchUnitSum = 0
+		local rollUnitSum = 0
+		local yawUnitSum = 0
+		for _,cShape in pairs(shape.body:getCreationShapes()) do
+			local localComOffset = toLocal(shape,(cShape.worldPosition - comPos))
+			pitchComOffset = sm.vec3.new(0,localComOffset.y,localComOffset.z)
+			rollComOffset = sm.vec3.new(localComOffset.x,0,localComOffset.z)
+			yawComOffset = sm.vec3.new(localComOffset.x,localComOffset.y,0)
+			local pitchDistance = pitchComOffset:length2()
+			local rollDistance = rollComOffset:length2()
+			local yawDistance = yawComOffset:length2()
+			if shape == seatShape then
+				pitchUnitSum = pitchUnitSum + (cShape.mass * pitchDistance)
+				rollUnitSum = rollUnitSum + (cShape.mass * yawDistance)
+				yawUnitSum = yawUnitSum + (cShape.mass * rollDistance)
+			else
+				pitchUnitSum = pitchUnitSum + (cShape.mass * pitchDistance)
+				rollUnitSum = rollUnitSum + (cShape.mass * rollDistance)
+				yawUnitSum = yawUnitSum + (cShape.mass * yawDistance)
+			end
+		end
+		pitchUnitSum = pitchUnitSum / 200
+		rollUnitSum = rollUnitSum / 200
+		yawUnitSum = yawUnitSum / 200
+		
+		local minUnit = 0.01
+		local pitchMOI = math.max(minUnit,pitchUnitSum)
+		local rollMOI = math.max(minUnit,rollUnitSum)
+		local yawMOI = math.max(minUnit,yawUnitSum)
+
+		local angVelPitch = sm.vec3.zero()
+		local angVelRoll = sm.vec3.zero()
+		local angVelYaw = sm.vec3.zero()
+		local localAngVelocity = toLocal(shape, shape.body.angularVelocity) * -1
+		if shape == seatShape then
+			angVelPitch = toGlobal(shape, sm.vec3.new(0,localAngVelocity.x * -1,0))
+			angVelRoll = toGlobal(shape, sm.vec3.new(0,(localAngVelocity.z * -1),0))
+			angVelYaw = toGlobal(shape, sm.vec3.new((localAngVelocity.y),0,0))
 		else
-			local localRotDrag = toLocal(self.shape, body.angularVelocity) * -1
-			angDragPitch = toGlobal(self.shape, sm.vec3.new(0,0,localRotDrag.x)) * d["DAMPING PITCH"..m] * self.rotDampingMult
-			angDragRoll = toGlobal(self.shape, sm.vec3.new(0,0,(localRotDrag.y * -1))) * d["DAMPING ROLL"..m] * self.rotDampingMult
-			angDragYaw = toGlobal(self.shape, sm.vec3.new((localRotDrag.z * -1),0,0)) * d["DAMPING YAW"..m] * self.rotDampingMult
+			angVelPitch = toGlobal(shape, sm.vec3.new(0,0,localAngVelocity.x))
+			angVelRoll = toGlobal(shape, sm.vec3.new(0,0,(localAngVelocity.y * -1)))
+			angVelYaw = toGlobal(shape, sm.vec3.new((localAngVelocity.z * -1),0,0))
+		end
+		
+		local dampingPitch = (angVelPitch * pitchMOI * 2.0) * (d["DAMPING PITCH"..m] * self.angDampingMult) * (dt * 40)
+		local dampingRoll = (angVelRoll * rollMOI * 2.0) * (d["DAMPING ROLL"..m] * self.angDampingMult) * (dt * 40)
+		local dampingYaw = (angVelYaw * yawMOI * 2.0) * (d["DAMPING YAW"..m] * self.angDampingMult) * (dt * 40)
+		
+		if creationMass < 50 then 
+			dampingPitch = dampingPitch / 3
+			dampingRoll = dampingRoll / 3
+			dampingYaw = dampingYaw / 3
 		end
 		
 		----- calc antigrav
@@ -426,29 +470,28 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 			inputs["AUTOLEVEL ROLL"] = true
 		end
 		if inputs["AUTOLEVEL PITCH"] or d["AUTOLEVEL PITCH"..m] then
-			pitchLeveling = driveUp * (driveBack.z - driveFront.z)* d["POWER AUTOLEVEL PITCH"..m] * self.rotPowerMult
+			pitchLeveling = driveUp * (driveBack.z - driveFront.z)* d["POWER AUTOLEVEL PITCH"..m] * self.angPowerMult
 		end
 		if inputs["AUTOLEVEL ROLL"] or d["AUTOLEVEL ROLL"..m] then
-			rollLeveling = driveUp * (driveLeft.z - driveRight.z)* d["POWER AUTOLEVEL ROLL"..m] * self.rotPowerMult
+			rollLeveling = driveUp * (driveLeft.z - driveRight.z)* d["POWER AUTOLEVEL ROLL"..m] * self.angPowerMult
 		end
 				
 		----- calc compiled vec forces to apply
-		local rightVec = rollInput + rollLeveling + angDragRoll --    + rollNoise 
-		local leftVec = (rollInput * -1) - rollLeveling - angDragRoll --    - rollNoise
-		local frontVec = pitchInput + angDragPitch + pitchLeveling + yawInput + angDragYaw --    + pitchNoise
-		local backVec = (pitchInput * -1) - angDragPitch - pitchLeveling - yawInput - angDragYaw --    - pitchNoise
+		local rightVec = rollInput + rollLeveling + dampingRoll --    + rollNoise 
+		local leftVec = (rollInput * -1) - rollLeveling - dampingRoll --    - rollNoise
+		local frontVec = pitchInput + dampingPitch + pitchLeveling + yawInput + dampingYaw --    + pitchNoise
+		local backVec = (pitchInput * -1) - dampingPitch - pitchLeveling - yawInput - dampingYaw --    - pitchNoise
 		
-		----- apply impulses
-		---------- applyImpulse(target,impulse,global,offset) ----------
+		----- applyImpulse(target,impulse,global,offset)
 		if applyImpulse then
 			-- translational impulses
 			for _,cBody in pairs(body:getCreationBodies()) do
 				local cbMass = cBody.mass
 				local cbAntigrav = antigrav * cbMass
 				local cbLinInput = linInput * cbMass
-				local linDragFwd = ((axialForce * cbMass * 2) - (axialVel * cbMass * 0.3)) * (d["DAMPING AXIAL"..m] / 100) * (dt * 40)
-				local linDragRight = ((lateralForce * cbMass * 2) - (lateralVel * cbMass * 0.3)) * (d["DAMPING LATERAL"..m] / 100) * (dt * 40)
-				local linDragUp = ((verticalForce * cbMass * 2) - (verticalVel * cbMass * 0.3)) * (d["DAMPING VERTICAL"..m] / 100) * (dt * 40)
+				local linDragFwd = ((axialForce * cbMass * 2) - (axialVel * cbMass * 0.3)) * (d["DAMPING AXIAL"..m] * self.linDampingMult) * (dt * 40)
+				local linDragRight = ((lateralForce * cbMass * 2) - (lateralVel * cbMass * 0.3)) * (d["DAMPING LATERAL"..m] * self.linDampingMult) * (dt * 40)
+				local linDragUp = ((verticalForce * cbMass * 2) - (verticalVel * cbMass * 0.3)) * (d["DAMPING VERTICAL"..m] * self.linDampingMult) * (dt * 40)
 				local coreVec = cbAntigrav + cbLinInput + linDragFwd + linDragRight + linDragUp -- + (heightNoise * cbMass)
 				sm.physics.applyImpulse(body, coreVec, true)
 			end
@@ -461,7 +504,7 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 		
 		----- update values
 		self.wasStatic = isStatic
-		self.lastPos = pos
+		self.lastComPos = comPos
 		
 	end
 	self.prevPower = inputs["POWER"]
@@ -491,7 +534,7 @@ end
 -- ____________________________________ Client ____________________________________
 
 function InertiaDrive.client_onFixedUpdate( self, dt )
-	-- set pose to show it power is on
+	-- set comPose to show it power is on
 	self.interactable:setPoseWeight(0, self.interactable:isActive() and 1 or 0)
 end
 
@@ -672,9 +715,6 @@ function InertiaDrive.cl_onEditValGuiClose( self )
 	if self.editValGui_buffer ~= "" then
 		local newVal = tonumber(self.editValGui_buffer)
 		local name = self.editValGui_selection:sub(1, -2)
-		if name == "DAMPING LATERAL" or name == "DAMPING AXIAL" or name == "DAMPING VERTICAL" then
-			newVal = sm.util.clamp(newVal,0,200) -- clamp some values to 200%
-		end
 		if newVal > 0 then
 			newVal = math.max(newVal, 0.001) -- smallest non-0 value is 0.001
 		end

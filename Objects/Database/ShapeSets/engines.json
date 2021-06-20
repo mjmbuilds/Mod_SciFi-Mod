@@ -33,6 +33,7 @@
 //--------------------------------------------------------------- Micro Inertia Drive
 {
 	"uuid": "f3d96978-887a-4751-b1d2-d1e831c92657",
+	"name": "mjm_micro_inertia_drive",
 	"renderable": {"lodList": [{
 	"subMeshList": [
 		{"textureList": [
@@ -52,8 +53,9 @@
 		"filename": "$MOD_DATA/Scripts/InertiaDrive.lua",
 		"classname": "InertiaDrive" },
 	"rotationSet": "PropFull",
-	"physicsMaterial": "Mechanical",
 	"color": "df7f00",
+	"physicsMaterial": "Mechanical",
+	"sphere": { "diameter": 1 },
 	"ratings": {
 		"density": 5,
 		"durability": 7,
