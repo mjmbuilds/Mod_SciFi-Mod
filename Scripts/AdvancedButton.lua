@@ -175,9 +175,13 @@ function AdvancedButton.client_onRefresh( self )
 end
 
 function AdvancedButton.client_onFixedUpdate( self, dt )
+	if self.cl_delayedRelease then
+		self.cl_delayedRelease = nil
+		self:cl_release()
+	end
 	-- reset interaction of switches and single tick buttons (so they were only for 1 tick)
 	if self.cl_interacting and (self.cl_data.modeIndex == 3 or self.cl_data.modeIndex > 4 ) then
-		self:cl_release()
+		self.cl_delayedRelease = true
 	end
 	-- update pose
 	self.interactable:setPoseWeight(0, self.interactable:isActive() and 1 or 0)

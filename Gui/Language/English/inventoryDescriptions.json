@@ -6,7 +6,7 @@
 	},
 	"9d21b8f6-71ba-4484-b725-1a96a9cf25ea": {
 		"title": "Orientation Module",
-		"description": "A passive module that can provide orientation data to parts which specify its use",
+		"description": "A passive module that can provide orientation data to parts which specify its use. (long arrow is forward, short arrow is up)",
 		"keywords": ["MJM"]
 	},
 	"229fd8b4-e098-4cb2-bd24-b4c01e470f53": {
@@ -16,7 +16,7 @@
 	},
 	"f3d96978-887a-4751-b1d2-d1e831c92657": {
 		"title": "Micro Inertia Drive",
-		"description": "All-in-one spaceship flight core. Press E for GUI. 1x1 size for micro builds"
+		"description": "All-in-one spaceship flight core. Press E for GUI. 1x1 size for micro builds. (long arrow is forward, short arrow is up)"
 	},
 	"416acd67-2372-4838-bc3a-1bf7b22f2a32": {
 		"title": "Small Fighter Radar",
