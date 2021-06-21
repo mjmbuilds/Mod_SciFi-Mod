@@ -46,8 +46,11 @@ InertiaDrive.helpMessage = ""..
 	"You must use trial and error to find the values that work best for your build's distribution of mass, but be careful, as setting values too high can launch you out of the world. For example, setting damping too high leads to exponentially worse overcorrection every tick. This is why you should use the \"EMERGENCY LIFT\" when dialing in your settings.\n"..
 	"For convenience, you can set a button to open the GUI and make changes while seated. The changes may not take effect until closing the GUI."
 
+---- custom GUI for Advanced Button to use when selecting inputs
+InertiaDrive.inputsLayout = "InertiaDriveInputs.layout"
+
 ---- list of the advanved input names that are recognized
-InertiaDrive.inputList = {
+InertiaDrive.logicInputs = {
 	"OPEN GUI",
 	"NEXT MODE",
 	"PREV MODE",
@@ -83,6 +86,10 @@ InertiaDrive.inputList = {
 	"ALTITUDE LOCK",
 	"LOCATION LOCK",
 	"EMERGENCY LIFT"
+}
+
+InertiaDrive.valueOutputs = {
+	"GEAR VALUE"
 }
 
 InertiaDrive.defaultMode = {
@@ -121,9 +128,13 @@ function InertiaDrive.server_onCreate( self )
 		end
 	end
 	self.publicData = {}
-	self.publicData.inputList = self.inputList
-	self.publicData.partName = "Inertia Drive"
-	self.publicData.gear = self.sv_data.currentMode -- "gear" will be the name a display would look for
+	self.publicData.logicInputs = self.logicInputs
+	--self.publicData.valueInputs = self.valueInputs -- not used
+	--self.publicData.logicOutputs = self.logicOutputs -- not used
+	self.publicData.valueOutputs = self.valueOutputs
+	self.publicData.name = "Inertia Drive"
+	self.publicData["GEAR VALUE"] = self.sv_data.currentMode
+	self.publicData.inputsLayout = self.inputsLayout
 	self.interactable:setPublicData(self.publicData)
 end
 function InertiaDrive.server_onRefresh( self )
@@ -137,7 +148,7 @@ function InertiaDrive.sv_setData( self, data )
 	end
 	self.storage:save(self.sv_data)
 	if data.currentMode then
-		self.publicData.gear = data.currentMode
+		self.publicData["GEAR VALUE"] = data.currentMode
 		self.interactable:setPublicData(self.publicData)
 	end
 end
@@ -148,21 +159,19 @@ end
 
 function InertiaDrive.server_onFixedUpdate( self, dt )
 	--self.shape:destroyShape()
-	
+
 	----- get inputs from advanced buttons
 	local inputs = {}
 	local player = nil
-	inputs["ANTIGRAV"] = nil
 	for _, input in pairs(self.interactable:getParents()) do
-		if input.type == "scripted" and input:getPublicData() and input:getPublicData().name then
-			local name = input:getPublicData().name
-			if name == "ANTIGRAV" then
-				inputs["ANTIGRAV"] = false
-			end
-			if input:isActive() then
-				inputs[name] = true
-				if name == "EMERGENCY LIFT" or name == "OPEN GUI" then
-					player = input:getPublicData().player
+		if input.type == "scripted" and input:getPublicData() then
+			for inputKey,inputValue in pairs(input:getPublicData()) do
+				if inputs[inputKey] then
+					if inputValue == true then
+						inputs[inputKey] = true
+					end
+				else
+					inputs[inputKey] = inputValue
 				end
 			end
 		end
@@ -205,14 +214,14 @@ function InertiaDrive.server_onFixedUpdate( self, dt )
 	end
 	
 	----- check for usage of Emergency Lift
-	if inputs["EMERGENCY LIFT"] and not self.prevEmergencyLift then
-		self:sv_emergencyLift(player)
+	if inputs["EMERGENCY LIFT"] and not self.prevEmergencyLift and inputs["PLAYER"] then
+		self:sv_emergencyLift(inputs["PLAYER"])
 	end
 	self.prevEmergencyLift = inputs["EMERGENCY LIFT"]
 
 	----- check for use of openeing Gui from button
-	if inputs["OPEN GUI"] and not self.prevOpenGui and player then
-		self:sv_requestGuiData(player)
+	if inputs["OPEN GUI"] and not self.prevOpenGui and inputs["PLAYER"] then
+		self:sv_requestGuiData(inputs["PLAYER"])
 	end
 	self.prevOpenGui = inputs["OPEN GUI"]
 

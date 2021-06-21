@@ -30,7 +30,11 @@ function AdvancedButton.server_onCreate( self )
 	self.sv_data.hideTinkerHint = self.sv_data.hideTinkerHint or false
 	self.sv_data.hideAllHints = self.sv_data.hideAllHints or false
 	self.sv_data.savedState = self.sv_data.savedState or false
-	self.publicData = {name = self.sv_data.name}
+	self.publicData = {}
+	self.publicData.name = self.sv_data.name
+	if self.publicData.name and self.sv_data.savedState then
+		self.publicData[self.publicData.name] = self.sv_data.savedState
+	end
 	self.interactable:setPublicData(self.publicData)
 end
 function AdvancedButton.server_onRefresh( self )
@@ -95,14 +99,21 @@ function AdvancedButton.server_onFixedUpdate( self, dt )
 		end
 		self.prevOnLift = isOnLift
 	end
-	self.interactable:setActive(newActive or false) -- "or false" because "nil" got in there somehow
+	newActive = newActive or false -- because "nil" somehow got in there before
+	self.interactable:setActive(newActive)
+	
+	-- update public data
+	if self.publicData.name then
+		self.publicData[self.publicData.name] = newActive
+		self.interactable:setPublicData(self.publicData)
+	end
 end
 
 -- function for the client to tell the server if they are interacting with the part
 function AdvancedButton.sv_setInteracting( self, data )
 	self.sv_interacting = data.interacting
 	if data.player then
-		self.publicData.player = data.player
+		self.publicData["PLAYER"] = data.player
 		self.interactable:setPublicData(self.publicData)
 	end
 end
@@ -115,12 +126,20 @@ end
 -- function updates and saves the server's data
 function AdvancedButton.sv_setData( self, data )
 	self.sv_data.modeIndex = data.modeIndex or self.sv_data.modeIndex
-	self.sv_data.name = data.name or self.sv_data.name
 	if data.hasBeenRenamed then
 		self.sv_data.hasBeenRenamed = true
 	end
-	self.publicData.name = self.sv_data.name
-	self.interactable:setPublicData(self.publicData)
+	if data.name ~= nil then
+		if data.name == false then
+			self.sv_data.name = ""
+		else
+			self.sv_data.name = data.name
+			self.publicData = {}
+			self.publicData.name = data.name
+			self.publicData[data.name] = self.interactable:isActive()
+			self.interactable:setPublicData(self.publicData)
+		end
+	end
 	if data.hideTinkerHint ~= nil then
 		self.sv_data.hideTinkerHint = data.hideTinkerHint
 	end
@@ -146,14 +165,15 @@ function AdvancedButton.sv_getRecognizedInputs( self, player )
 		if child.type == "scripted" then
 			local publicData = child:getPublicData()
 			if publicData then
-					data.inputList = publicData.inputList
-					data.partName = publicData.partName
+					data.logicInputs = publicData.logicInputs
+					data.name = publicData.name
+					data.inputsLayout = publicData.inputsLayout
 				break
 			end
 		end
 	end
 	-- if part of the data was nil, return nil, otherwise return data
-	if data.inputList == nil or data.partName == nil then data = nil end	
+	if data.logicInputs == nil or data.name == nil then data = nil end	
 	self.network:sendToClient(player, "cl_setRecognizedInputs", data)
 end
 
@@ -302,7 +322,7 @@ function AdvancedButton.cl_drawGui( self )
 	if self.recognizedData then
 		self.gui:setVisible("SelectFunctionButton", true)
 		self.gui:setVisible("RenameButton", false)
-		self.gui:setText("Title", self.recognizedData.partName)
+		self.gui:setText("Title", self.recognizedData.name)
 	else
 		self.gui:setVisible("RenameButton", true)
 		self.gui:setVisible("SelectFunctionButton", false)
