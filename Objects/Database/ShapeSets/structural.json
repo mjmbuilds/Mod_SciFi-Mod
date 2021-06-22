@@ -595,6 +595,60 @@
 	"qualityLevel": 4,
 	"stackSize": 10,
 	"previewRotation": [ 1, 0, 0, 0, 1, 0, 0, 0, 1 ]
+},
+//---------------------------------------------------------------- Pipe Adapter (small pipe to pipe)
+{
+	"uuid": "0092b542-e8a3-4700-8284-77f3f590772b",
+	"name": "mjm_pipe_adapter_1",
+	"renderable": {"lodList": [{
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+			"material": "DifAsg"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/PipeAdapter1.fbx"
+		}]},
+	"hull": { "x": 1, "y": 1, "z": 1, "margin": 0.25,
+		"col": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Objects/Collision/PipeAdapter1_COL.obj"},
+	"rotationSet": "PropFull",
+	"physicsMaterial": "Metal",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
+	"stackSize": 10
+},
+//---------------------------------------------------------------- Pipe Adapter (small pipe to block)
+{
+	"uuid": "a470a338-9fd8-4857-83aa-072b261e0de4",
+	"name": "mjm_pipe_adapter_2",
+	"renderable": {"lodList": [{
+		"subMeshList": [
+			{"textureList": [
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+			"material": "DifAsg"}
+		],
+		"mesh": "$MOD_DATA/Objects/Mesh/PipeAdapter2.fbx"
+		}]},
+	"hull": { "x": 1, "y": 1, "z": 1, "margin": 0.05,
+		"col": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Objects/Collision/PipeAdapter2_COL.obj"},
+	"rotationSet": "PropFull",
+	"physicsMaterial": "Metal",
+	"color": "df7f00",
+	"ratings": {
+		"density": 5,
+		"durability": 7,
+		"friction": 5,
+		"buoyancy": 2
+		},
+	"flammable": false,
+	"stackSize": 10
 }
 
 //---------------------------------------------------------------- END

@@ -1,4 +1,14 @@
 {
+	"0092b542-e8a3-4700-8284-77f3f590772b": {
+		"title": "Pipe Adapter (Small pipe to pipe)",
+		"description": "",
+		"keywords": ["MJM"]
+	},
+	"a470a338-9fd8-4857-83aa-072b261e0de4": {
+		"title": "Pipe Adapter (Small pipe to block)",
+		"description": "",
+		"keywords": ["MJM"]
+	},
 	"449e32a6-d720-4af0-8423-3246ce9771a2": {
 		"title": "Auto Lift",
 		"description": "Connect a button to use yor lift as landing gear or help your upsidedown car",
@@ -504,8 +514,8 @@
 		"keywords": ["MJM"]
 	},
 	"c60f83c3-3617-4a72-8308-57aa95bd2873": {
-		"title": "LED Switch",
-		"description": "Was LED Switch but Advanced version is redundant with LED Button",
+		"title": "Advanced Button Module",
+		"description": "Press U to select mode and rename",
 		"keywords": ["MJM"]
 	},
 	"71890bff-aacc-4a13-86b9-063ca33245f9": {

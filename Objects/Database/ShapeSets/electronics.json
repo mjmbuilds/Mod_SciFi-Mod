@@ -732,43 +732,26 @@
 	"qualityLevel": 3,
 	"stackSize": 10
 },
-
-//----------------------------------------------------------------------------
-//--------------------------------------------------------------- DEPRECATED
-//----------------------------------------------------------------------------
-
-//---------------------------------------------------------------- LED Switch
+//---------------------------------------------------------------- Advanced Button Module
 {
 	"uuid": "c60f83c3-3617-4a72-8308-57aa95bd2873",
-	"name": "mjm_led_switch",
+	"name": "mjm_advanced_button_module",
 	"renderable": {"lodList": [{
 		"subMeshList": [
 			{"textureList": [
 			"$MOD_DATA/Objects/Textures/mjm_pallet1_dif.tga",
-			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga",
-			"$MOD_DATA/Objects/Textures/mjm_pallet1_nor.tga"],
-			"material": "PoseAnimDifAsgNor"}
+			"$MOD_DATA/Objects/Textures/mjm_pallet1_asg.tga"],
+			"material": "PoseAnimDifAsg"}
 		],
-		"mesh": "$MOD_DATA/Objects/Mesh/LED_off.obj",
-		"pose0": "$MOD_DATA/Objects/Mesh/LED_on.obj"
+		"mesh": "$MOD_DATA/Objects/Mesh/advancedButtonModule_off.fbx",
+		"pose0": "$MOD_DATA/Objects/Mesh/advancedButtonModule_on.fbx"
 		}]},
-	"hull": { "x": 1, "y": 1, "z": 1,
-		"margin": 0.075, "pointList": [
-		{ "x": 0.5, "y": 0.0, "z": -1.0 },
-		{ "x": 0.0, "y": 0.5, "z": -1.0 },
-		{ "x": -0.5, "y": 0.0, "z": -1.0 },
-		{ "x": 0.0, "y": -0.5, "z": -1.0 },
-		{ "x": 0.5, "y": 0.0, "z": -0.8 },
-		{ "x": 0.0, "y": 0.5, "z": -0.8 },
-		{ "x": -0.5, "y": 0.0, "z": -0.8 },
-		{ "x": 0.0, "y": -0.5, "z": -0.8 }
-		]},
-	"sticky": "-X+X-Y+Y-Z",
-	"rotationSet": "PropZ",
+	"box": { "x": 1, "y": 1, "z": 1 },
+	"rotationSet": "PropFull",
 	"scripted": {
 		"filename": "$MOD_DATA/Scripts/AdvancedButton.lua",
 		"classname": "AdvancedButton",
-		"data": {"modeIndex": 5}
+		"data": {"modeIndex": 1}
 		},
 	"physicsMaterial": "Mechanical",
 	"color": "df7f00",
@@ -779,8 +762,7 @@
 		"buoyancy": 2
 		},
 	"flammable": false,
-	"stackSize": 10,
-	"showInInventory": false
+	"stackSize": 10
 }
 
 //---------------------------------------------------------------- END
