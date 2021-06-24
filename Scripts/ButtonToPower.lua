@@ -1,8 +1,3 @@
-dofile "Utility.lua"
---[[ 
-********** ButtonToPower by MJM ********** 
---]]
-
 ButtonToPower = class()
 ButtonToPower.maxParentCount = -1
 ButtonToPower.maxChildCount = -1
@@ -15,9 +10,16 @@ ButtonToPower.rampStep = 0.05
 ButtonToPower.targetVelocity = 10
 ButtonToPower.maxImpulse = 10000000
 ButtonToPower.reverseColors = {"222222ff", "323000ff", "375000ff", "064023ff", "0a4444ff", "0a1d5aff", "35086cff", "520653ff", "560202ff", "472800ff"}
--- ____________________________________ Server ____________________________________
+
+ButtonToPower.logicInputs = {
+	"INPUT 1",
+	"INPUT 2"
+}
 
 function ButtonToPower.server_onCreate( self ) --- Server setup ---
+	self.publicData = {}
+	self.publicData.logicInputs = self.logicInputs
+	self.interactable:setPublicData(self.publicData)
 	self.rampedInput = 0
 end
 
@@ -29,27 +31,39 @@ function ButtonToPower.server_onFixedUpdate( self, dt ) --- Server Fixed Update 
 	
 	-- get inputs
 	local targetInput = 0
-	for k,parent in pairs(self.interactable:getParents()) do
-		local color = tostring(parent.shape.color)
-		if isLogic(parent) then
-			if parent:isActive() then
-				local inputVal = 1
-				local color = tostring(parent.shape.color)
-				for k,revColor in pairs(self.reverseColors) do
-					if color == revColor then
-						inputVal = -1
-						break
-					end
+	
+	----- get inputs from advanced buttons
+	for _, input in pairs(self.interactable:getParents()) do
+		if input.type == "scripted" and input:getPublicData() then
+			for inputKey,inputValue in pairs(input:getPublicData()) do
+				if inputKey == "INPUT 1" and inputValue == true then
+					targetInput = targetInput + 1
+				elseif inputKey == "INPUT 2" and inputValue == true then
+					targetInput = targetInput - 1
 				end
-				targetInput = targetInput + inputVal
 			end
-		else -- numbers
-			if color == "eeaf5cff" then -- target value (orange 1)
-				targetValue = parent:getPower()
-			elseif color == "df7f00ff" then -- piston speed (orange 2)
-				pistonSpeed = parent:getPower()
-			elseif color == "673b00ff" then -- piston strength (orange 3)
-				pistonStrength = parent:getPower()
+		else
+			local color = tostring(input.shape.color)
+			if input:hasOutputType(sm.interactable.connectionType.logic) then
+				if input:isActive() then
+					local inputVal = 1
+					local color = tostring(input.shape.color)
+					for k,revColor in pairs(self.reverseColors) do
+						if color == revColor then
+							inputVal = -1
+							break
+						end
+					end
+					targetInput = targetInput + inputVal
+				end
+			else -- numbers
+				if color == "eeaf5cff" then -- target value (orange 1)
+					targetValue = input:getPower()
+				elseif color == "df7f00ff" then -- piston speed (orange 2)
+					pistonSpeed = input:getPower()
+				elseif color == "673b00ff" then -- piston strength (orange 3)
+					pistonStrength = input:getPower()
+				end
 			end
 		end
 	end

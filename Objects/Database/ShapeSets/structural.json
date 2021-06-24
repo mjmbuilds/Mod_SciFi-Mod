@@ -609,8 +609,14 @@
 		],
 		"mesh": "$MOD_DATA/Objects/Mesh/PipeAdapter1.fbx"
 		}]},
-	"hull": { "x": 1, "y": 1, "z": 1, "margin": 0.25,
-		"col": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Objects/Collision/PipeAdapter1_COL.obj"},
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.25, "pointList": [
+			{ "x": 0.50, "y": -1.00, "z": 0.00 },
+			{ "x": 0.00, "y": -1.00, "z": 0.50 },
+			{ "x": -0.50, "y": -1.00, "z": 0.00 },
+			{ "x": 0.00, "y": -1.00, "z": -0.50 },
+			{ "x": 0.00, "y": 1.00, "z": 0.00 }
+		]},
 	"rotationSet": "PropFull",
 	"physicsMaterial": "Metal",
 	"color": "df7f00",
@@ -636,8 +642,17 @@
 		],
 		"mesh": "$MOD_DATA/Objects/Mesh/PipeAdapter2.fbx"
 		}]},
-	"hull": { "x": 1, "y": 1, "z": 1, "margin": 0.05,
-		"col": "$CONTENT_5f4e3f9f-d25e-46f4-86b5-d93809470fb9/Objects/Collision/PipeAdapter2_COL.obj"},
+	"hull": { "x": 1, "y": 1, "z": 1,
+		"margin": 0.05, "pointList": [
+			{ "x": 1.00, "y": -1.00, "z": -1.00 },
+			{ "x": 0.42, "y": 0.47, "z": -1.00 },
+			{ "x": 0.42, "y": 0.47, "z": 1.00 },
+			{ "x": 1.00, "y": -1.00, "z": 1.00 },
+			{ "x": -1.00, "y": -1.00, "z": -1.00 },
+			{ "x": -0.42, "y": 0.47, "z": -1.00 },
+			{ "x": -1.00, "y": -1.00, "z": 1.00 },
+			{ "x": -0.42, "y": 0.47, "z": 1.00 }
+		]},
 	"rotationSet": "PropFull",
 	"physicsMaterial": "Metal",
 	"color": "df7f00",

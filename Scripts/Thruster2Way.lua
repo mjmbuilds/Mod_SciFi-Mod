@@ -12,9 +12,14 @@ Thruster2Way.colorNormal = sm.color.new( 0x20c5c9ff )
 Thruster2Way.colorHighlight = sm.color.new( 0x2cebf3ff )
 Thruster2Way.poseWeightCount = 1
 
--- ____________________________________ Server ____________________________________
-
+Thruster2Way.logicInputs = {
+	"THRUSTER",
+	"REVERSE THRUSTER"
+}
 function Thruster2Way.server_onCreate( self ) --- Server setup ---
+	self.publicData = {}
+	self.publicData.logicInputs = self.logicInputs
+	self.interactable:setPublicData(self.publicData)
 	self.thrust = 0
 	self.defaultThrust = 1000
 end
@@ -43,17 +48,28 @@ function Thruster2Way.client_onFixedUpdate( self, dt ) --- Client Fixed Update -
 	local active = true
 	local hasSwitch = false
 	local hasNum = false
+	local revinput = false
 	-- check for logic gating the signal
-	for _,parent in pairs(self.interactable:getParents()) do
-		if isLogic(parent) then
-			hasSwitch = true
-			if not parent:isActive() then
-				active = false
-				break
+	for _,input in pairs(self.interactable:getParents()) do
+		if input.type == "scripted" and input:getPublicData() then
+			for inputKey,inputValue in pairs(input:getPublicData()) do
+				if inputKey == "REVERSE THRUSTER" then
+					revinput = inputValue
+				else
+					active = inputValue
+				end
 			end
 		else
-			hasNum = true
-			thrust = thrust + parent:getPower()
+			if input:hasOutputType(sm.interactable.connectionType.logic) then
+				hasSwitch = true
+				if not input:isActive() then
+					active = false
+					break
+				end
+			else
+				hasNum = true
+				thrust = thrust + input:getPower()
+			end
 		end
 	end
 	if active then

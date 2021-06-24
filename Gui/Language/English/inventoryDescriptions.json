@@ -199,8 +199,8 @@
 		"keywords": ["MJM"]
 	},
 	"c911424f-93a5-43c8-8c23-d4f05e4fdcf6": {
-		"title": "Universal Controller for Piston, Bearing, and Motor",
-		"description": "Bottom row colors = reverse, other colors = forward. Takes input bottons/logic. Controlls Piston, Bearing, or Motor. Piston advanced settings: Orange1 = position, Orange2 = speed, Orange3 = strength",
+		"title": "Controller for Piston or Motor",
+		"description": "Bottom row colors = reverse, other colors = forward. Takes input bottons/logic. Controlls Piston or Motor. Piston advanced settings: Orange1 = position, Orange2 = speed, Orange3 = strength",
 		"keywords": ["MJM"]
 	},
 	"a829d150-5020-47a8-b2ad-7cbbeeb0d96a": {

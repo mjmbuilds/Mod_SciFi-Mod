@@ -1,7 +1,4 @@
 dofile "Utility.lua"
---[[ 
-********** ThrusterScifi by MJM ********** 
---]]
 
 ThrusterScifi = class()
 ThrusterScifi.maxParentCount = -1
@@ -12,9 +9,14 @@ ThrusterScifi.colorNormal = sm.color.new( 0x20c5c9ff )
 ThrusterScifi.colorHighlight = sm.color.new( 0x2cebf3ff )
 ThrusterScifi.poseWeightCount = 1
 
--- ____________________________________ Server ____________________________________
+ThrusterScifi.logicInputs = {
+	"THRUSTER"
+}
 
 function ThrusterScifi.server_onCreate( self ) --- Server setup ---
+	self.publicData = {}
+	self.publicData.logicInputs = self.logicInputs
+	self.interactable:setPublicData(self.publicData)
 	self.thrust = 0
 	self.defaultThrust = 1000
 end
@@ -45,16 +47,23 @@ function ThrusterScifi.client_onFixedUpdate( self, dt ) --- Client Fixed Update 
 	local hasSwitch = false
 	local hasNum = false
 	-- check for logic gating the signal
-	for _,parent in pairs(self.interactable:getParents()) do
-		if isLogic(parent) then
+	for _,input in pairs(self.interactable:getParents()) do
+		if input.type == "scripted" and input:getPublicData() then
 			hasSwitch = true
-			if not parent:isActive() then
-				active = false
-				break
+			for inputKey,inputValue in pairs(input:getPublicData()) do
+				active = inputValue
 			end
 		else
-			hasNum = true
-			thrust = thrust + parent:getPower()
+			if input:hasOutputType(sm.interactable.connectionType.logic) then
+				hasSwitch = true
+				if not input:isActive() then
+					active = false
+					break
+				end
+			else
+				hasNum = true
+				thrust = thrust + input:getPower()
+			end
 		end
 	end
 	if active then
